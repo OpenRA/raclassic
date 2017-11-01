@@ -288,7 +288,7 @@ IRON:
 		BuildPaletteOrder: 130
 		Prerequisites: stek, ~structures.soviet
 		BuildLimit: 1
-		Description: Makes a group of units invulnerable\nfor a short time.\nRequires power to operate.\n  Special Ability: Invulnerability\nMaximum 1 can be built.
+		Description: Makes a unit invulnerable\nfor a while.\nRequires power to operate.\n  Special Ability: Invulnerability\nMaximum 1 can be built.
 	Valued:
 		Cost: 2800
 	Tooltip:
@@ -321,12 +321,12 @@ IRON:
 	WithBuildingBib:
 		HasMinibib: Yes
 	GrantExternalConditionPower@IRONCURTAIN:
-		PauseOnCondition: disabled
 		Icon: invuln
-		ChargeTime: 120
+		ChargeTime: 660
 		Description: Invulnerability
-		LongDesc: Makes a group of units invulnerable\nfor 20 seconds.
-		Duration: 500
+		LongDesc: Makes a unit invulnerable\nfor 45 seconds.
+		Range: 0
+		Duration: 1125
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		BeginChargeSpeechNotification: IronCurtainCharging
@@ -349,7 +349,7 @@ PDOX:
 		BuildPaletteOrder: 120
 		Prerequisites: atek, ~structures.allies
 		BuildLimit: 1
-		Description: Teleports a group of units across the\nmap for a short time.\nRequires power to operate.\n  Special Ability: Chronoshift\nMaximum 1 can be built.
+		Description: Teleports a unit across the\nmap for a short time.\nRequires power to operate.\n  Special Ability: Chronoshift\nMaximum 1 can be built.
 	Valued:
 		Cost: 2800
 	Tooltip:
@@ -379,17 +379,16 @@ PDOX:
 		HasMinibib: Yes
 	ChronoshiftPower@chronoshift:
 		OrderName: Chronoshift
-		PauseOnCondition: disabled
-		Prerequisites: !pdox.germany
 		Icon: chrono
-		ChargeTime: 120
+		ChargeTime: 420
 		Description: Chronoshift
-		LongDesc: Teleports a group of units across\nthe map for 20 seconds.
+		LongDesc: Teleports a unit across\nthe map for 3 minutes.
+		Range: 0
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		BeginChargeSpeechNotification: ChronosphereCharging
 		EndChargeSpeechNotification: ChronosphereReady
-		Duration: 20
+		Duration: 180
 		KillCargo: yes
 		DisplayRadarPing: True
 	SupportPowerChargeBar:
