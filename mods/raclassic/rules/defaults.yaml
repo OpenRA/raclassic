@@ -593,7 +593,6 @@
 	RepairableBuilding:
 		PlayerExperience: 25
 	EngineerRepairable:
-	AcceptsDeliveredCash:
 	WithMakeAnimation:
 	Capturable:
 	EmitInfantryOnSell:
@@ -615,7 +614,6 @@
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	-GivesBuildableArea:
-	-AcceptsDeliveredCash:
 	DrawLineToTarget:
 	RenderRangeCircle:
 	Explodes:

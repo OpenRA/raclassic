@@ -57,6 +57,7 @@ MSLO:
 		PowerdownSound: DisablePower
 	RequiresPower:
 	SupportPowerChargeBar:
+	ProvidesPrerequisite@buildingname:
 	Power:
 		Amount: -100
 	MustBeDestroyed:

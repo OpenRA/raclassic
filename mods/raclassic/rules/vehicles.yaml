@@ -462,11 +462,6 @@ MNLY:
 
 TRUK:
 	Inherits: ^Vehicle
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 20
-		# Prerequisites:
-		Description: Transports cash to other players.\n  Unarmed
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -481,11 +476,6 @@ TRUK:
 		Speed: 128
 	RevealsShroud:
 		Range: 4c0
-	DeliversCash:
-		Payload: 500
-		PlayerExperience: 50
-	SpawnActorOnDeath:
-		Actor: moneycrate
 
 MGG:
 	Inherits: ^Vehicle
@@ -565,7 +555,7 @@ TTNK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 170
-		# Prerequisites: tsla, stek
+		Prerequisites: tsla, stek, ~disabled
 		BuildDuration: 1166
 		Description: Tank with mounted tesla coil.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
 	Valued:
@@ -596,57 +586,12 @@ TTNK:
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
 
-FTRK:
-	Inherits: ^Vehicle
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 60
-		# Prerequisites: ~vehicles.soviet
-		Description: Mobile unit with mounted Flak Cannon.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Tanks
-	Valued:
-		Cost: 600
-	Tooltip:
-		Name: Mobile Flak
-	Health:
-		HP: 150
-	Armor:
-		Type: Light
-	Mobile:
-		TurnSpeed: 10
-		Speed: 128
-	RevealsShroud:
-		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
-	Turreted:
-		TurnSpeed: 10
-		Offset: -298,0,298
-	Armament@AA:
-		Weapon: FLAK-23-AA
-		Recoil: 85
-		LocalOffset: 512,0,192
-		MuzzleSequence: muzzle
-	Armament@AG:
-		Weapon: FLAK-23-AG
-		Recoil: 85
-		LocalOffset: 512,0,192
-		MuzzleSequence: muzzle
-	AttackTurreted:
-	WithMuzzleOverlay:
-	WithSpriteTurret:
-	SelectionDecorations:
-		VisualBounds: 28,28
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded
-
 DTRK:
 	Inherits: ^Vehicle
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 160
-		# Prerequisites: stek
+		Prerequisites: mslo, ~disabled
 		Description: Demolition Truck, actively armed with\nnuclear explosives. Has very weak armor.
 	Valued:
 		Cost: 2500
@@ -676,7 +621,7 @@ CTNK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
-		# Prerequisites: atek
+		Prerequisites: atek, ~disabled
 		BuildDuration: 1166
 		Description: Chrono Tank, teleports to areas within range.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft\n  Special ability: Can teleport
 	Valued:
@@ -716,7 +661,7 @@ QTNK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 190
-		# Prerequisites: fix, stek
+		Prerequisites: stek, ~disabled
 		Description: Deals seismic damage to nearby vehicles\nand structures.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 2000
@@ -746,7 +691,7 @@ STNK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 130
-		# Prerequisites: atek
+		Prerequisites: atek, ~disabled
 		BuildDuration: 1166
 		Description: Lightly armored infantry transport\nwhich can cloak. Can detect cloaked units.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
 	Valued:
