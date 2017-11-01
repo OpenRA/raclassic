@@ -68,8 +68,6 @@ E1:
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
 
 E2:
 	Inherits: ^Soldier
@@ -100,8 +98,6 @@ E2:
 	Explodes:
 		Weapon: UnitExplodeSmall
 		Chance: 50
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
 
 E3:
 	Inherits: ^Soldier
@@ -132,8 +128,6 @@ E3:
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
 	AutoTarget:
 		ScanRadius: 5
 
@@ -161,8 +155,6 @@ E4:
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
 
 E6:
 	Inherits: ^Soldier
@@ -281,8 +273,6 @@ E7:
 	AnnounceOnKill:
 	Voiced:
 		VoiceSet: TanyaVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
 
 MEDI:
 	Inherits: ^Soldier
@@ -464,8 +454,6 @@ SHOK:
 		DefaultAttackSequence: shoot
 	Voiced:
 		VoiceSet: ShokVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
 
 ANT:
 	Inherits: ^Infantry
