@@ -344,7 +344,6 @@
 		Notification: NavalUnitLost
 	ProximityCaptor:
 		Types: Ship
-	GivesBounty:
 	Chronoshiftable:
 	RepairableNear:
 	WithDamageOverlay:
