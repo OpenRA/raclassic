@@ -7,20 +7,17 @@ V2RL:
 		Prerequisites: dome, ~vehicles.soviet
 		Description: Long-range rocket artillery.\n  Strong vs Infantry, Light armor, Buildings\n  Weak vs Tanks, Aircraft
 	Valued:
-		Cost: 900
+		Cost: 700
 	Tooltip:
 		Name: V2 Rocket
 	Health:
-		HP: 200
+		HP: 150
 	Armor:
 		Type: Light
 	Mobile:
 		Speed: 85
 	RevealsShroud:
 		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
 	Armament:
 		Weapon: SCUD
 	AttackFrontal:
@@ -45,19 +42,16 @@ V2RL:
 	Tooltip:
 		Name: Light Tank
 	Health:
-		HP: 220
+		HP: 300
 	Armor:
 		Type: Heavy
 	Mobile:
 		Speed: 128
 		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
 		Range: 4c0
 	Turreted:
-		TurnSpeed: 7
+		TurnSpeed: 5
 	Armament:
 		Weapon: 75mm
 		Recoil: 85
@@ -79,21 +73,18 @@ V2RL:
 		Prerequisites: ~vehicles.allies
 		Description: Allied Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
-		Cost: 850
+		Cost: 800
 	Tooltip:
 		Name: Medium Tank
 	Health:
-		HP: 450
+		HP: 400
 	Armor:
 		Type: Heavy
 	Mobile:
 		Speed: 85
 		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
-		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+		Range: 5c0
 	Turreted:
 		TurnSpeed: 5
 	Armament:
@@ -119,21 +110,18 @@ V2RL:
 		Prerequisites: ~vehicles.soviet
 		Description: Soviet Main Battle Tank, with dual cannons\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
-		Cost: 1150
+		Cost: 950
 	Tooltip:
 		Name: Heavy Tank
 	Health:
-		HP: 600
+		HP: 400
 	Armor:
 		Type: Heavy
 	Mobile:
 		Speed: 71
 		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
-		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+		Range: 5c0
 	Turreted:
 		TurnSpeed: 5
 	Armament:
@@ -157,27 +145,22 @@ V2RL:
 		Queue: Vehicle
 		BuildPaletteOrder: 180
 		Prerequisites: stek, ~vehicles.soviet
-		BuildDuration: 2500
-		BuildDurationModifier: 40
 		Description: Big and slow tank, with anti-air capability.\n  Strong vs Vehicles, Infantry, Aircraft\n  Weak vs Nothing
 	Valued:
-		Cost: 2000
+		Cost: 1700
 	Tooltip:
 		Name: Mammoth Tank
 	Health:
-		HP: 900
+		HP: 600
 	Armor:
 		Type: Heavy
 	Mobile:
 		Speed: 50
 		Crushes: wall, mine, crate, infantry, heavywall
 	RevealsShroud:
-		Range: 7c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+		Range: 6c0
 	Turreted:
-		TurnSpeed: 2
+		TurnSpeed: 5
 	Armament@PRIMARY:
 		Weapon: 120mm
 		LocalOffset: 900,180,340, 900,-180,340
@@ -203,8 +186,6 @@ V2RL:
 		DamageCooldown: 150
 	SelectionDecorations:
 		VisualBounds: 44,38,0,-4
-	DetectCloaked:
-		Range: 6c0
 
 ARTY:
 	Inherits: ^Tank
@@ -215,11 +196,11 @@ ARTY:
 		Prerequisites: ~vehicles.allies
 		Description: Long-range artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
 	Valued:
-		Cost: 800
+		Cost: 600
 	Tooltip:
 		Name: Artillery
 	Health:
-		HP: 100
+		HP: 75
 	Armor:
 		Type: Light
 	Mobile:
@@ -227,9 +208,6 @@ ARTY:
 		Speed: 85
 	RevealsShroud:
 		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
 	Armament:
 		Weapon: 155mm
 		LocalOffset: 624,0,208
@@ -249,7 +227,7 @@ HARV:
 		Prerequisites: proc
 		Description: Collects Ore and Gems for processing.\n  Unarmed
 	Valued:
-		Cost: 1100
+		Cost: 1400
 	Tooltip:
 		Name: Ore Truck
 		GenericName: Harvester
@@ -258,7 +236,7 @@ HARV:
 	SelectionDecorations:
 		VisualBounds: 42,42
 	Harvester:
-		Capacity: 20
+		Capacity: 28
 		Resources: Ore,Gems
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 30
@@ -296,11 +274,9 @@ MCV:
 		Queue: Vehicle
 		BuildPaletteOrder: 90
 		Prerequisites: fix
-		BuildDuration: 2500
-		BuildDurationModifier: 40
 		Description: Deploys into another Construction Yard.\n  Unarmed
 	Valued:
-		Cost: 2000
+		Cost: 2500
 	Tooltip:
 		Name: Mobile Construction Vehicle
 	Selectable:
@@ -337,7 +313,7 @@ JEEP:
 		Prerequisites: ~vehicles.allies
 		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Valued:
-		Cost: 500
+		Cost: 600
 	Tooltip:
 		Name: Ranger
 	Health:
@@ -347,12 +323,8 @@ JEEP:
 	Mobile:
 		TurnSpeed: 10
 		Speed: 170
-		RequiresCondition: !notmobile
 	RevealsShroud:
-		Range: 8c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+		Range: 6c0
 	Turreted:
 		TurnSpeed: 10
 		Offset: 0,0,128
@@ -363,11 +335,6 @@ JEEP:
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
-	Cargo:
-		Types: Infantry
-		MaxWeight: 1
-		PipCount: 1
-		LoadingCondition: notmobile
 
 APC:
 	Inherits: ^Tank
@@ -378,11 +345,11 @@ APC:
 		Prerequisites: ~vehicles.allies, tent
 		Description: Tough infantry transport.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
-		Cost: 850
+		Cost: 800
 	Tooltip:
 		Name: Armored Personnel Carrier
 	Health:
-		HP: 300
+		HP: 200
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -391,9 +358,6 @@ APC:
 		RequiresCondition: !notmobile
 	RevealsShroud:
 		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
 	Armament:
 		Weapon: M60mg
 		LocalOffset: 85,0,171
@@ -418,7 +382,7 @@ MNLY:
 	Tooltip:
 		Name: Minelayer
 	Health:
-		HP: 150
+		HP: 100
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -426,9 +390,6 @@ MNLY:
 		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
 	Minelayer:
 		Mine: MINV
 	MineImmune:
@@ -467,29 +428,24 @@ MGG:
 		Queue: Vehicle
 		BuildPaletteOrder: 150
 		Prerequisites: atek
-		BuildDuration: 1500
-		BuildDurationModifier: 40
 		Description: Regenerates the shroud nearby, \nobscuring the area.\n  Unarmed
 	Valued:
-		Cost: 1200
+		Cost: 600
 	Tooltip:
 		Name: Mobile Gap Generator
 	Health:
-		HP: 220
+		HP: 110
 	Armor:
-		Type: Heavy
+		Type: Light
 	Mobile:
 		Speed: 99
 	WithIdleOverlay@SPINNER:
 		Offset: -299,0,171
 		Sequence: spinner
 	RevealsShroud:
-		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
 		Range: 4c0
 	CreatesShroud:
-		Range: 6c0
+		Range: 4c0
 	RenderShroudCircle:
 	SpawnActorOnDeath:
 		Actor: MGG.Husk
@@ -497,20 +453,18 @@ MGG:
 MRJ:
 	Inherits: ^Vehicle
 	Valued:
-		Cost: 1100
+		Cost: 600
 	Tooltip:
 		Name: Mobile Radar Jammer
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 140
 		Prerequisites: atek
-		BuildDuration: 1370
-		BuildDurationModifier: 40
 		Description: Jams nearby enemy radar domes\nand deflects incoming missiles.\nCan detect cloaked units.\n  Unarmed
 	Health:
-		HP: 220
+		HP: 110
 	Armor:
-		Type: Heavy
+		Type: Light
 	Mobile:
 		Speed: 99
 	RevealsShroud:
@@ -519,19 +473,13 @@ MRJ:
 		Sequence: spinner
 		Offset: -256,0,256
 	ProximityExternalCondition@JAMMER:
-		Range: 18c0
+		Range: 15c0
 		ValidStances: Enemy, Neutral
 		Condition: jammed
 	WithRangeCircle@JAMMER:
 		Type: jammer
-		Range: 18c0
+		Range: 15c0
 		Color: 0000FF80
-	JamsMissiles:
-		Range: 5c0
-		DeflectionStances: Neutral, Enemy
-	RenderJammerCircle:
-	DetectCloaked:
-		Range: 6c0
 
 TTNK:
 	Inherits: ^Tank
