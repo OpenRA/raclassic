@@ -9,16 +9,16 @@ MSLO:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter, ~techlevel.unrestricted
+		Prerequisites: techcenter
 		BuildLimit: 1
 		Description: Provides an atomic bomb.\nRequires power to operate.\n  Special Ability: Atom Bomb\nMaximum 1 can be built.
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
 	Health:
-		HP: 1000
+		HP: 400
 	Armor:
-		Type: Wood
+		Type: Heavy
 	RevealsShroud:
 		Range: 6c0
 		RequiresCondition: !disabled
@@ -58,7 +58,7 @@ MSLO:
 	RequiresPower:
 	SupportPowerChargeBar:
 	Power:
-		Amount: -150
+		Amount: -100
 	MustBeDestroyed:
 		RequiredForShortGame: false
 
@@ -66,13 +66,13 @@ GAP:
 	Inherits: ^ScienceBuilding
 	Inherits@IDISABLE: ^DisabledOverlay
 	Valued:
-		Cost: 800
+		Cost: 500
 	Tooltip:
 		Name: Gap Generator
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 110
-		Prerequisites: atek, ~structures.allies, ~techlevel.high
+		Prerequisites: atek, ~structures.allies
 		Description: Obscures the enemy's view with shroud.\nRequires power to operate.
 	Selectable:
 		Bounds: 24,24
@@ -85,9 +85,9 @@ GAP:
 	WithSpriteBody:
 		PauseAnimationWhenDisabled: true
 	Health:
-		HP: 500
+		HP: 1000
 	Armor:
-		Type: Heavy
+		Type: Wood
 	RevealsShroud:
 		Range: 6c0
 		RevealGeneratedShroud: False
@@ -115,7 +115,7 @@ SPEN:
 	InfiltrateForSupportPower:
 		Proxy: powerproxy.sonarpulse
 	Valued:
-		Cost: 800
+		Cost: 650
 	Tooltip:
 		Name: Sub Pen
 	Buildable:
@@ -134,7 +134,7 @@ SPEN:
 	Health:
 		HP: 1000
 	Armor:
-		Type: Wood
+		Type: Light
 	RevealsShroud:
 		Range: 5c0
 		RevealGeneratedShroud: False
@@ -204,7 +204,7 @@ SYRD:
 		Prerequisites: anypower, ~structures.allies
 		Description: Produces and repairs ships\nand transports.
 	Valued:
-		Cost: 1000
+		Cost: 650
 	Tooltip:
 		Name: Naval Yard
 	Targetable:
@@ -218,7 +218,7 @@ SYRD:
 	Health:
 		HP: 1000
 	Armor:
-		Type: Wood
+		Type: Light
 	RevealsShroud:
 		Range: 5c0
 		RevealGeneratedShroud: False
@@ -253,7 +253,7 @@ SYRD:
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@allies:
-		Factions: allies, england, france, germany
+		Factions: allies
 		Prerequisite: ships.allies
 	ProvidesPrerequisite@alliedstructure:
 		RequiresPrerequisites: structures.allies
@@ -290,7 +290,7 @@ IRON:
 		BuildLimit: 1
 		Description: Makes a group of units invulnerable\nfor a short time.\nRequires power to operate.\n  Special Ability: Invulnerability\nMaximum 1 can be built.
 	Valued:
-		Cost: 1500
+		Cost: 2800
 	Tooltip:
 		Name: Iron Curtain
 	Building:
@@ -305,7 +305,7 @@ IRON:
 	SelectionDecorations:
 		VisualBounds: 50,50,0,-12
 	Health:
-		HP: 1000
+		HP: 400
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -351,7 +351,7 @@ PDOX:
 		BuildLimit: 1
 		Description: Teleports a group of units across the\nmap for a short time.\nRequires power to operate.\n  Special Ability: Chronoshift\nMaximum 1 can be built.
 	Valued:
-		Cost: 1500
+		Cost: 2800
 	Tooltip:
 		Name: Chronosphere
 	Building:
@@ -362,7 +362,7 @@ PDOX:
 		PowerupSound: EnablePower
 		PowerdownSound: DisablePower
 	Health:
-		HP: 1000
+		HP: 400
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -377,12 +377,6 @@ PDOX:
 		RequiresCondition: !disabled
 	WithBuildingBib:
 		HasMinibib: Yes
-	ProvidesPrerequisite@germany:
-		Factions: germany
-		Prerequisite: pdox.germany
-	ProvidesPrerequisite@germanstructure:
-		RequiresPrerequisites: structures.germany
-		Prerequisite: pdox.germany
 	ChronoshiftPower@chronoshift:
 		OrderName: Chronoshift
 		PauseOnCondition: disabled
@@ -398,22 +392,6 @@ PDOX:
 		Duration: 20
 		KillCargo: yes
 		DisplayRadarPing: True
-	ChronoshiftPower@advancedchronoshift:
-		OrderName: AdvancedChronoshift
-		PauseOnCondition: disabled
-		Prerequisites: pdox.germany
-		Icon: chrono
-		ChargeTime: 120
-		Description: Advanced Chronoshift
-		LongDesc: Teleports a large group of units across\nthe map for 20 seconds.
-		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		BeginChargeSpeechNotification: ChronosphereCharging
-		EndChargeSpeechNotification: ChronosphereReady
-		Duration: 20
-		KillCargo: yes
-		DisplayRadarPing: True
-		Range: 2
 	SupportPowerChargeBar:
 	-AcceptsDeliveredCash:
 	Power:
@@ -432,7 +410,7 @@ TSLA:
 		Prerequisites: weap, ~structures.soviet
 		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
 	Valued:
-		Cost: 1200
+		Cost: 1500
 	Tooltip:
 		Name: Tesla Coil
 	RequiresPower:
@@ -463,7 +441,7 @@ TSLA:
 		MaxCharges: 3
 		ReloadDelay: 120
 	Power:
-		Amount: -100
+		Amount: -150
 	DetectCloaked:
 		Range: 6c0
 	ProvidesPrerequisite@buildingname:
@@ -478,7 +456,7 @@ AGUN:
 		Prerequisites: dome, ~structures.allies
 		Description: Anti-Air base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
-		Cost: 800
+		Cost: 600
 	Tooltip:
 		Name: AA Gun
 	Selectable:
@@ -531,7 +509,7 @@ DOME:
 		Prerequisites: proc
 		Description: Provides an overview\nof the battlefield.\nCan detect cloaked units.\n  Requires power to operate.
 	Valued:
-		Cost: 1800
+		Cost: 1000
 	Tooltip:
 		Name: Radar Dome
 	Building:
@@ -582,13 +560,11 @@ PBOX:
 		Prerequisites: tent, ~structures.allies
 		Description: Static defense with a fireport for a\ngarrisoned soldier.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
-		Cost: 600
-	CustomSellValue:
-		Value: 400
+		Cost: 400
 	Health:
 		HP: 400
 	Armor:
-		Type: Heavy
+		Type: Wood
 	RevealsShroud:
 		Range: 6c0
 		RevealGeneratedShroud: False
@@ -601,19 +577,9 @@ PBOX:
 	-QuantizeFacingsFromSequence:
 	BodyOrientation:
 		QuantizedFacings: 8
-	Cargo:
-		Types: Infantry
-		MaxWeight: 1
-		PipCount: 1
-		InitialUnits: e1
 	-EmitInfantryOnSell:
-	AttackGarrisoned:
-		Armaments: garrisoned
-		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
-		PortYaws: 0, 176, 341, 512, 682, 853
-		PortCones: 88, 88, 88, 88, 88, 88
-	RenderRangeCircle:
-		FallbackRange: 6c0
+	# RenderRangeCircle:  # TODO
+		# FallbackRange: 6c0
 	Power:
 		Amount: -15
 	DetectCloaked:
@@ -631,9 +597,7 @@ HBOX:
 		Prerequisites: tent, ~structures.allies
 		Description: Camouflaged static defense with a fireport\nfor a garrisoned soldier.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
-		Cost: 700
-	CustomSellValue:
-		Value: 500
+		Cost: 600
 	Health:
 		HP: 600
 	Armor:
@@ -643,29 +607,16 @@ HBOX:
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 5c0
-	Cloak:
-		InitialDelay: 125
-		CloakDelay: 60
-		IsPlayerPalette: true
-		RequiresCondition: !cloak-force-disabled
-	GrantConditionOnDamageState@UNCLOAK:
-		Condition: cloak-force-disabled
-		ValidDamageStates: Critical
 	Turreted:
 		TurnSpeed: 255
 	-QuantizeFacingsFromSequence:
 	BodyOrientation:
 		QuantizedFacings: 8
-	Cargo:
-		Types: Infantry
-		MaxWeight: 1
-		PipCount: 1
-		InitialUnits: e1
 	-EmitInfantryOnSell:
 	DetectCloaked:
 		Range: 6c0
-	RenderRangeCircle:
-		FallbackRange: 6c0
+	# RenderRangeCircle:  # TODO
+		# FallbackRange: 6c0
 	AttackGarrisoned:
 		Armaments: garrisoned
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
@@ -684,7 +635,7 @@ GUN:
 		Prerequisites: tent, ~structures.allies
 		Description: Anti-Armor base defense.\nCan detect cloaked units.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
-		Cost: 800
+		Cost: 600
 	Tooltip:
 		Name: Turret
 	Building:
@@ -775,7 +726,7 @@ SAM:
 		Prerequisites: dome, ~structures.soviet
 		Description: Anti-Air base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
-		Cost: 700
+		Cost: 750
 	Tooltip:
 		Name: SAM Site
 	Building:
@@ -810,7 +761,7 @@ SAM:
 	RenderRangeCircle:
 		RangeCircleType: aa
 	Power:
-		Amount: -40
+		Amount: -20
 	BodyOrientation:
 		UseClassicFacingFudge: True
 
@@ -834,7 +785,7 @@ ATEK:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 600
+		HP: 400
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -876,9 +827,9 @@ WEAP:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 1500
+		HP: 1000
 	Armor:
-		Type: Wood
+		Type: Light
 	RevealsShroud:
 		Range: 5c0
 		RevealGeneratedShroud: False
@@ -941,9 +892,9 @@ FACT:
 		Factions: soviet
 		Prerequisite: structures.soviet
 	Health:
-		HP: 1500
+		HP: 1000
 	Armor:
-		Type: Wood
+		Type: Heavy
 	RevealsShroud:
 		Range: 5c0
 		RevealGeneratedShroud: False
@@ -993,7 +944,7 @@ PROC:
 		Prerequisites: anypower
 		Description: Refines Ore and Gems\ninto credits.
 	Valued:
-		Cost: 1400
+		Cost: 2000
 	Tooltip:
 		Name: Ore Refinery
 	Building:
@@ -1080,7 +1031,7 @@ SILO:
 	WithSiloAnimation:
 	StoresResources:
 		PipCount: 5
-		Capacity: 3000
+		Capacity: 1500
 	-EmitInfantryOnSell:
 	Power:
 		Amount: -10
@@ -1169,7 +1120,7 @@ AFLD:
 		Prerequisites: dome, ~structures.soviet
 		Description: Produces and reloads aircraft.\n  Special Ability: Paratroopers\n  Special Ability: Spy Plane
 	Valued:
-		Cost: 500
+		Cost: 600
 	Tooltip:
 		Name: Airfield
 	Building:
@@ -1178,7 +1129,7 @@ AFLD:
 	Health:
 		HP: 1000
 	Armor:
-		Type: Wood
+		Type: Heavy
 	RevealsShroud:
 		Range: 7c0
 		RevealGeneratedShroud: False
@@ -1238,7 +1189,7 @@ AFLD:
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	Power:
-		Amount: -20
+		Amount: -30
 	ProvidesPrerequisite@buildingname:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
@@ -1355,7 +1306,7 @@ STEK:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 800
+		HP: 600
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1367,8 +1318,6 @@ STEK:
 	Power:
 		Amount: -100
 	ProvidesPrerequisite@buildingname:
-	ProvidesPrerequisite@tech:
-		Prerequisite: techcenter
 
 BARR:
 	Inherits: ^Building
@@ -1382,7 +1331,7 @@ BARR:
 		Prerequisites: anypower, ~structures.soviet
 		Description: Trains infantry.
 	Valued:
-		Cost: 500
+		Cost: 300
 	Tooltip:
 		Name: Soviet Barracks
 	Building:
@@ -1390,7 +1339,7 @@ BARR:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 600
+		HP: 800
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1442,14 +1391,14 @@ KENN:
 		Prerequisites: barr, ~structures.soviet
 		Description: Trains Attack Dogs.
 	Valued:
-		Cost: 100
+		Cost: 200
 	Tooltip:
 		Name: Kennel
 	Building:
 		Adjacent: 2
 	-GivesBuildableArea:
 	Health:
-		HP: 300
+		HP: 400
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1493,7 +1442,7 @@ TENT:
 		Prerequisites: anypower, ~structures.allies
 		Description: Trains infantry.
 	Valued:
-		Cost: 500
+		Cost: 300
 	Tooltip:
 		Name: Allied Barracks
 	Building:
@@ -1501,7 +1450,7 @@ TENT:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 600
+		HP: 800
 	Armor:
 		Type: Wood
 	RevealsShroud:
