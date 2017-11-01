@@ -1,17 +1,17 @@
 ^FireWeapon:
 	ValidTargets: Ground, Water, Trees
-	ReloadDelay: 65
+	ReloadDelay: 50
 	Range: 5c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: 150
+		Damage: 125
 		ValidTargets: Ground, Water, Trees
 		Versus:
 			None: 90
-			Wood: 50
+			Wood: 100
 			Light: 60
 			Heavy: 25
-			Concrete: 20
+			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
@@ -23,34 +23,24 @@
 
 FireballLauncher:
 	Inherits: ^FireWeapon
-	Burst: 2
-	BurstDelay: 20
 	Projectile: Bullet
 		Speed: 250
 		TrailImage: fb2
+		TrailInterval: 1
 		Image: FB1
-	Warhead@1Dam: SpreadDamage
-		Versus:
-			Light: 50
 
 Flamer:
 	Inherits: ^FireWeapon
-	ReloadDelay: 50
-	Burst: 15
-	BurstDelay: 1
+	Range: 3c512
 	Projectile: Bullet
-		Speed: 170
-		TrailImage: fb4
-		Image: fb3
-		LaunchAngle: 62
-		Inaccuracy: 853
+		Speed: 250
+		TrailImage: fb2
+		TrailInterval: 1
+		Image: FB1
 	Warhead@1Dam: SpreadDamage
-		Spread: 341
-		Damage: 8
-		Versus:
-			Wood: 100
+		Damage: 70
 	Warhead@3Eff: CreateEffect
-		Explosions: small_napalm
+		Explosions: napalm
 
 Napalm:
 	Inherits: ^FireWeapon

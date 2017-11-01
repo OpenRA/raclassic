@@ -148,7 +148,7 @@ E4:
 		HP: 40
 	Armament@PRIMARY:
 		Weapon: Flamer
-		LocalOffset: 700,0,500
+		LocalOffset: 700,0,400
 		FireDelay: 8
 	TakeCover:
 		ProneOffset: 160,0,-288
