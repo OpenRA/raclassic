@@ -31,8 +31,6 @@ V2RL:
 	WithAttackAnimation:
 		AimSequence: aim
 		ReloadPrefix: empty-
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded
 
 1TNK:
 	Inherits: ^Tank
@@ -71,8 +69,6 @@ V2RL:
 	WithSpriteTurret:
 	SpawnActorOnDeath:
 		Actor: 1TNK.Husk
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded
 
 2TNK:
 	Inherits: ^Tank
@@ -113,8 +109,6 @@ V2RL:
 		Actor: 2TNK.Husk
 	SelectionDecorations:
 		VisualBounds: 28,28
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded
 
 3TNK:
 	Inherits: ^Tank
@@ -155,8 +149,6 @@ V2RL:
 		Actor: 3TNK.Husk
 	SelectionDecorations:
 		VisualBounds: 28,28
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded
 
 4TNK:
 	Inherits: ^Tank
@@ -211,8 +203,6 @@ V2RL:
 		DamageCooldown: 150
 	SelectionDecorations:
 		VisualBounds: 44,38,0,-4
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded
 	DetectCloaked:
 		Range: 6c0
 
@@ -250,8 +240,6 @@ ARTY:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: UnitExplodeSmall
 		LoadedChance: 75
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded
 
 HARV:
 	Inherits: ^Vehicle
@@ -380,8 +368,6 @@ JEEP:
 		MaxWeight: 1
 		PipCount: 1
 		LoadingCondition: notmobile
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded
 
 APC:
 	Inherits: ^Tank
@@ -419,8 +405,6 @@ APC:
 		MaxWeight: 5
 		PipCount: 5
 		LoadingCondition: notmobile
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded
 
 MNLY:
 	Inherits: ^Tank
@@ -583,8 +567,6 @@ TTNK:
 		Sequence: spinner
 	SelectionDecorations:
 		VisualBounds: 30,30
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded
 
 DTRK:
 	Inherits: ^Vehicle
@@ -653,8 +635,6 @@ CTNK:
 	AttackFrontal:
 	PortableChrono:
 		ChargeDelay: 300
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded
 
 QTNK:
 	Inherits: ^Tank
@@ -739,5 +719,3 @@ STNK:
 	DetectCloaked:
 		Range: 7c0
 	-MustBeDestroyed:
-	ProducibleWithLevel:
-		Prerequisites: vehicles.upgraded

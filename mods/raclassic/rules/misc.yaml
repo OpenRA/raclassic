@@ -21,8 +21,6 @@ CRATE:
 		Amount: 1000
 		SelectionShares: 50
 		UseCashTick: true
-	LevelUpCrateAction:
-		SelectionShares: 40
 	ExplodeCrateAction@fire:
 		Weapon: CrateNapalm
 		SelectionShares: 5

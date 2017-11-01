@@ -47,8 +47,5 @@ Player:
 	PlaceBeacon:
 	GrantConditionOnPrerequisiteManager:
 	EnemyWatcher:
-	VeteranProductionIconOverlay:
-		Image: iconchevrons
-		Sequence: veteran
 	ResourceStorageWarning:
 	PlayerExperience:
