@@ -3,7 +3,7 @@ BADR:
 	ParaDrop:
 		DropRange: 4c0
 	Health:
-		HP: 300
+		HP: 60
 	Armor:
 		Type: Light
 	Aircraft:
@@ -20,10 +20,6 @@ BADR:
 	-Voiced:
 	Tooltip:
 		Name: Badger
-	Contrail@1:
-		Offset: -432,560,0
-	Contrail@2:
-		Offset: -432,-560,0
 	SpawnActorOnDeath:
 		Actor: BADR.Husk
 	SmokeTrailWhenDamaged@0:
@@ -42,7 +38,7 @@ BADR.Bomber:
 	Armament:
 		Weapon: ParaBomb
 	Health:
-		HP: 300
+		HP: 60
 	Armor:
 		Type: Light
 	Aircraft:
@@ -59,10 +55,6 @@ BADR.Bomber:
 	-Voiced:
 	Tooltip:
 		Name: Badger
-	Contrail@1:
-		Offset: -432,560,0
-	Contrail@2:
-		Offset: -432,-560,0
 	SpawnActorOnDeath:
 		Actor: BADR.Husk
 	SmokeTrailWhenDamaged@0:
@@ -85,23 +77,15 @@ MIG:
 		BuildAtProductionType: Plane
 		BuildPaletteOrder: 50
 		Prerequisites: ~afld, stek
-		BuildDuration: 1750
 		Description: Fast Ground-Attack Plane.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry, Light armor, Aircraft
 	Valued:
-		Cost: 2000
+		Cost: 1200
 	Tooltip:
 		Name: Mig Attack Plane
 	Health:
-		HP: 70
+		HP: 50
 	Armor:
 		Type: Light
-	RevealsShroud:
-		Range: 13c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 11c0
-		Type: GroundPosition
 	Armament:
 		Weapon: Maverick
 		LocalOffset: 0,-640,0, 0,640,0
@@ -111,7 +95,7 @@ MIG:
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 192
-		TurnSpeed: 4
+		TurnSpeed: 5
 		Speed: 223
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -125,10 +109,6 @@ MIG:
 		Bounds: 36,28,0,2
 	SelectionDecorations:
 		VisualBounds: 40,29,0,1
-	Contrail@1:
-		Offset: -598,-683,0
-	Contrail@2:
-		Offset: -598,683,0
 	SpawnActorOnDeath:
 		Actor: MIG.Husk
 	SmokeTrailWhenDamaged:
@@ -145,20 +125,13 @@ YAK:
 		Prerequisites: ~afld
 		Description: Anti-Tanks & Anti-Infantry Plane.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Valued:
-		Cost: 1350
+		Cost: 600
 	Tooltip:
 		Name: Yak Attack Plane
 	Health:
 		HP: 60
 	Armor:
 		Type: Light
-	RevealsShroud:
-		Range: 11c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 9c0
-		Type: GroundPosition
 	Armament@PRIMARY:
 		Weapon: ChainGun.Yak
 		LocalOffset: 256,-213,0
@@ -173,7 +146,7 @@ YAK:
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 192
-		TurnSpeed: 4
+		TurnSpeed: 5
 		Speed: 178
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -188,8 +161,6 @@ YAK:
 	SelectionDecorations:
 		VisualBounds: 30,28,0,2
 	WithMuzzleOverlay:
-	Contrail:
-		Offset: -853,0,0
 	SpawnActorOnDeath:
 		Actor: YAK.Husk
 	SmokeTrailWhenDamaged:
@@ -205,20 +176,13 @@ TRAN:
 		Prerequisites: ~hpad
 		Description: Fast Infantry Transport Helicopter.\n  Unarmed
 	Valued:
-		Cost: 900
+		Cost: 1200
 	Tooltip:
 		Name: Chinook
 	Health:
-		HP: 140
+		HP: 90
 	Armor:
 		Type: Light
-	RevealsShroud:
-		Range: 8c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 6c0
-		Type: GroundPosition
 	Aircraft:
 		InitialFacing: 224
 		TurnSpeed: 5
@@ -243,8 +207,8 @@ TRAN:
 		RequiresCondition: !airborne
 	Cargo:
 		Types: Infantry
-		MaxWeight: 8
-		PipCount: 8
+		MaxWeight: 5
+		PipCount: 5
 	SpawnActorOnDeath:
 		Actor: TRAN.Husk
 	SelectionDecorations:
@@ -252,29 +216,21 @@ TRAN:
 
 HELI:
 	Inherits: ^Helicopter
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Aircraft
 		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 40
 		Prerequisites: ~hpad, atek
-		BuildDuration: 1750
 		Description: Helicopter gunship armed\nwith multi-purpose missiles.\n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
 	Valued:
-		Cost: 2000
+		Cost: 1200
 	Tooltip:
 		Name: Longbow
 	Health:
-		HP: 120
+		HP: 225
 	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 12c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 10c0
-		Type: GroundPosition
+		Type: Heavy
 	Armament@PRIMARY:
 		Weapon: HellfireAA
 		LocalOffset: 0,-213,-85
@@ -318,20 +274,13 @@ HIND:
 		Prerequisites: ~hpad
 		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor.\n  Weak vs Tanks, Aircraft
 	Valued:
-		Cost: 1350
+		Cost: 1200
 	Tooltip:
 		Name: Hind
 	Health:
-		HP: 100
+		HP: 225
 	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 10c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 8c0
-		Type: GroundPosition
+		Type: Heavy
 	Armament@PRIMARY:
 		Weapon: ChainGun
 		LocalOffset: 85,-213,-85
