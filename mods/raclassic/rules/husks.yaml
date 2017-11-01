@@ -94,13 +94,6 @@ TRAN.Husk:
 	WithIdleOverlay@SECONDARY:
 		Offset: 597,0,213
 		Sequence: rotor2
-	RevealsShroud:
-		Range: 8c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 6c0
-		Type: GroundPosition
 	RenderSprites:
 		Image: tran
 
@@ -141,10 +134,6 @@ MIG.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
 		Name: Mig Attack Plane
-	Contrail@1:
-		Offset: -598,-683,0
-	Contrail@2:
-		Offset: -598,683,0
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 186
@@ -152,13 +141,6 @@ MIG.Husk:
 		Offset: -853,0,171
 		Interval: 2
 		MinDamage: Undamaged
-	RevealsShroud:
-		Range: 13c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 11c0
-		Type: GroundPosition
 	RenderSprites:
 		Image: mig
 
@@ -166,8 +148,6 @@ YAK.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
 		Name: Yak Attack Plane
-	Contrail:
-		Offset: -853,0,0
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 149
@@ -175,13 +155,6 @@ YAK.Husk:
 		Offset: -853,0,0
 		Interval: 2
 		MinDamage: Undamaged
-	RevealsShroud:
-		Range: 11c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 9c0
-		Type: GroundPosition
 	RenderSprites:
 		Image: yak
 
@@ -198,13 +171,6 @@ HELI.Husk:
 	SmokeTrailWhenDamaged:
 		Offset: -427,0,0
 		MinDamage: Undamaged
-	RevealsShroud:
-		Range: 12c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 10c0
-		Type: GroundPosition
 	RenderSprites:
 		Image: heli
 
@@ -220,13 +186,6 @@ HIND.Husk:
 	SmokeTrailWhenDamaged:
 		Offset: -427,0,0
 		MinDamage: Undamaged
-	RevealsShroud:
-		Range: 10c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 8c0
-		Type: GroundPosition
 	RenderSprites:
 		Image: hind
 
