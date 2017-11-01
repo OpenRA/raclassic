@@ -83,8 +83,6 @@ GAP:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	CreatesShroud:
 		Range: 10c0
 	RenderShroudCircle:
@@ -294,8 +292,6 @@ IRON:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	GrantExternalConditionPower@IRONCURTAIN:
 		Icon: invuln
 		ChargeTime: 660
@@ -343,8 +339,6 @@ PDOX:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	ChronoshiftPower@chronoshift:
 		OrderName: Chronoshift
 		Icon: chrono
@@ -393,8 +387,6 @@ TSLA:
 		Type: Heavy
 	RevealsShroud:
 		Range: 8c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	WithTeslaChargeAnimation:
 	Armament:
 		Weapon: TeslaZap
@@ -436,8 +428,6 @@ AGUN:
 		Type: Heavy
 	RevealsShroud:
 		Range: 6c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	Turreted:
 		TurnSpeed: 15
 		InitialFacing: 224
@@ -519,8 +509,6 @@ PBOX:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	Turreted:
 		TurnSpeed: 255
 		Offset: 0,0,64
@@ -596,8 +584,6 @@ GUN:
 		Type: Heavy
 	RevealsShroud:
 		Range: 6c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	Turreted:
 		TurnSpeed: 12
 		InitialFacing: 56
@@ -635,8 +621,6 @@ FTUR:
 		Type: Heavy
 	RevealsShroud:
 		Range: 6c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	Turreted:
 		TurnSpeed: 255
 		Offset: 0,0,112
@@ -687,8 +671,6 @@ SAM:
 		Type: Heavy
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	Turreted:
 		TurnSpeed: 30
 		InitialFacing: 0
@@ -945,15 +927,12 @@ SILO:
 		Name: Silo
 	Building:
 		Adjacent: 2
-	-GivesBuildableArea:
 	Health:
 		HP: 300
 	Armor:
 		Type: Wood
 	RevealsShroud:
 		Range: 4c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	WithSiloAnimation:
 	StoresResources:
 		PipCount: 5
@@ -1310,15 +1289,12 @@ KENN:
 		Name: Kennel
 	Building:
 		Adjacent: 2
-	-GivesBuildableArea:
 	Health:
 		HP: 400
 	Armor:
 		Type: Wood
 	RevealsShroud:
 		Range: 4c0
-	WithBuildingBib:
-		HasMinibib: True
 	RallyPoint:
 		Offset: 0,2
 	Exit@1:
@@ -1429,8 +1405,6 @@ FIX:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	Reservable:
 	RallyPoint:
 	RepairsUnits:

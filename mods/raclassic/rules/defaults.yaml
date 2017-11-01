@@ -500,7 +500,6 @@
 		TargetTypes: Ground, C4, DetonateAttack, Structure, Defense
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	-GivesBuildableArea:
 	DrawLineToTarget:
 	RenderRangeCircle:
 	Explodes:
