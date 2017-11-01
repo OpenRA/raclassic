@@ -70,26 +70,21 @@ FCOM:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 800
+		HP: 400
 	Armor:
 		Type: Wood
 	Tooltip:
 		Name: Forward Command
 	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+		Range: 10c0
+		#RevealGeneratedShroud: False
+	#RevealsShroud@GAPGEN:
+		#Range: 4c0
 	WithBuildingBib:
-	ExternalCapturable: 
-		CaptureCompleteTime: 30
-	ExternalCapturableBar:
-	GivesBuildableArea:
-	BaseProvider:
-		Range: 8c0
+	Capturable:
 	EngineerRepairable:
 	Power:
-		Amount: 0
+		Amount: -200
 	ProvidesPrerequisite@buildingname:
 
 HOSP:
@@ -101,9 +96,8 @@ HOSP:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 800
-	ExternalCapturable:
-	ExternalCapturableBar:
+		HP: 400
+	Capturable:
 	EngineerRepairable:
 	Tooltip:
 		Name: Hospital
@@ -364,19 +358,18 @@ MISS:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 600
+		HP: 400
 	RevealsShroud:
-		Range: 10c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 6c0
+		Range: 4c0
+		#RevealGeneratedShroud: False
+	#RevealsShroud@GAPGEN:
+		#Range: 6c0
 	Armor:
 		Type: Wood
 	Tooltip:
-		Name: Communications Center
+		Name: Technology center
 	WithBuildingBib:
-	ExternalCapturable: 
-	ExternalCapturableBar:
+	Capturable:
 	EngineerRepairable:
 	WithDeathAnimation:
 		DeathSequence: dead
@@ -389,13 +382,16 @@ BIO:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
+	Health:
+		HP: 600
+	Power:
+		Amount: -40
 	RevealsShroud:
-		Range: 3c0
-	ExternalCapturable:
-	ExternalCapturableBar:
+		Range: 4c0
+	Capturable:
 	EngineerRepairable:
 	Tooltip:
-		Name: Biological Lab
+		Name: Bio-research laboratory
 	WithDeathAnimation:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
