@@ -10,9 +10,10 @@
 		Spread: 128
 		Damage: 40
 		Versus:
-			None: 20
+			None: 30
 			Wood: 75
 			Light: 75
+			Heavy: 100
 			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
@@ -28,22 +29,22 @@
 		ValidTargets: Water, Underwater
 		InvalidTargets: Ship, Structure, Bridge
 
-25mm:
+75mm:
 	Inherits: ^Cannon
-	ReloadDelay: 22
+	ReloadDelay: 40
 	Range: 4c0
 	Report: cannon2.aud
 	Projectile: Bullet
-		Speed: 853
+		Speed: 682
 		Image: 50CAL
 	Warhead@1Dam: SpreadDamage
-		Damage: 27
+		Damage: 25
 		Versus:
 			None: 30
-			Wood: 40
-			Light: 110
-			Heavy: 45
-			Concrete: 30
+			Wood: 75
+			Light: 75
+			Heavy: 100
+			Concrete: 50
 	-Warhead@2Smu: LeaveSmudge
 	Warhead@3Eff: CreateEffect
 		-ImpactSounds:
@@ -52,47 +53,33 @@
 
 90mm:
 	Inherits: ^Cannon
-	Warhead@1Dam: SpreadDamage
-		Versus:
-			None: 30
-			Heavy: 115
 
 105mm:
 	Inherits: ^Cannon
 	ReloadDelay: 70
 	Burst: 2
 	BurstDelay: 4
-	Warhead@1Dam: SpreadDamage
-		Versus:
-			None: 30
-			Heavy: 115
 
 120mm:
 	Inherits: ^Cannon
-	ReloadDelay: 90
+	ReloadDelay: 80
 	Burst: 2
 	InvalidTargets: Air, Infantry
 	Warhead@1Dam: SpreadDamage
-		Damage: 60
-		Versus:
-			None: 30
-			Heavy: 115
-		InvalidTargets: Air
+		Damage: 40
 
 TurretGun:
 	Inherits: ^Cannon
-	ReloadDelay: 30
-	Range: 7c0
+	ReloadDelay: 50
+	Range: 6c0
 	Report: turret1.aud
 	Warhead@1Dam: SpreadDamage
-		Damage: 60
-		Versus:
-			Wood: 50
+		Damage: 40
 
 ^Artillery:
 	Inherits: ^Cannon
-	ReloadDelay: 85
-	Range: 12c0
+	ReloadDelay: 65
+	Range: 6c0
 	Projectile: Bullet
 		Speed: 204
 		Blockable: false
@@ -100,13 +87,13 @@ TurretGun:
 		Inaccuracy: 1c938
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 230
+		Damage: 150
 		Versus:
 			None: 90
-			Wood: 40
+			Wood: 75
 			Light: 60
 			Heavy: 25
-			Concrete: 50
+			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: artillery_explosion
@@ -116,7 +103,6 @@ TurretGun:
 
 155mm:
 	Inherits: ^Artillery
-	MinRange: 3c0
 	Report: tank5.aud
 	TargetActorCenter: true
 	Projectile: Bullet
@@ -124,9 +110,8 @@ TurretGun:
 
 8Inch:
 	Inherits: ^Artillery
-	MinRange: 3c0
-	ReloadDelay: 250
-	Range: 16c0
+	ReloadDelay: 160
+	Range: 22c0
 	Burst: 2
 	Report: turret1.aud
 	TargetActorCenter: true
@@ -138,8 +123,8 @@ TurretGun:
 		Damage: 25
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
-			None: 60
-			Wood: 35
+			None: 90
+			Wood: 75
 			Light: 60
 			Heavy: 25
 			Concrete: 100
@@ -156,8 +141,6 @@ TurretGun:
 		Speed: 426
 	Warhead@1Dam: SpreadDamage
 		Damage: 25
-		Versus:
-			None: 30
 
 Grenade:
 	Inherits: ^Artillery
@@ -170,11 +153,11 @@ Grenade:
 		Image: BOMB
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 60
+		Damage: 50
 		Versus:
-			None: 60
-			Wood: 100
-			Light: 25
+			None: 90
+			Wood: 75
+			Light: 60
 			Heavy: 25
 			Concrete: 100
 	Warhead@3Eff: CreateEffect
