@@ -12,17 +12,14 @@ SS:
 	Tooltip:
 		Name: Submarine
 	Health:
-		HP: 250
+		HP: 120
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 4
+		TurnSpeed: 7
 		Speed: 71
 	RevealsShroud:
 		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
 	Targetable:
 		TargetTypes: Ground, Water, Ship, Submarine, Repair
 		RequiresCondition: !underwater
@@ -66,30 +63,26 @@ SS:
 
 MSUB:
 	Inherits: ^Ship
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Submarine
 		BuildPaletteOrder: 60
-		Prerequisites: ~spen, stek, ~techlevel.high
-		BuildDuration: 1750
+		Prerequisites: ~spen, stek, ~techlevel.high, ~disabled
 		Description: Submerged anti-ground siege unit\nwith anti-air capabilities.\nCan detect other submarines.\n  Strong vs Buildings, Ground units, Aircraft\n  Weak vs Naval units\n  Special Ability: Submerge
 	Valued:
-		Cost: 2000
+		Cost: 1650
 	Tooltip:
 		Name: Missile Submarine
 	Health:
-		HP: 400
+		HP: 150
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 3
+		TurnSpeed: 7
 		Speed: 42
 	RevealsShroud:
 		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
 	Targetable:
 		TargetTypes: Ground, Water, Ship, Submarine, Repair
 		RequiresCondition: !underwater
@@ -153,9 +146,6 @@ DD:
 		Speed: 85
 	RevealsShroud:
 		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
 	Turreted:
 		TurnSpeed: 7
 		Offset: 341,0,128
@@ -191,21 +181,18 @@ CA:
 		BuildDuration: 2000
 		Description: Very slow long-range ship.\n  Strong vs Buildings, Ground units\n  Weak vs Naval units, Aircraft
 	Valued:
-		Cost: 2400
+		Cost: 2000
 	Tooltip:
 		Name: Cruiser
 	Health:
-		HP: 800
+		HP: 700
 	Armor:
 		Type: Heavy
 	Mobile:
-		TurnSpeed: 3
+		TurnSpeed: 5
 		Speed: 42
 	RevealsShroud:
 		Range: 7c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
 	Turreted@PRIMARY:
 		Turret: primary
 		Offset: -864,0,128
@@ -261,9 +248,6 @@ LST:
 		RequiresCondition: !notmobile
 	RevealsShroud:
 		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
 	SelectionDecorations:
 		VisualBounds: 36,36
 	WithLandingCraftAnimation:
@@ -298,9 +282,6 @@ PT:
 		Speed: 128
 	RevealsShroud:
 		Range: 7c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
 	Turreted:
 		TurnSpeed: 7
 		Offset: 512,0,0
