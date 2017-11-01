@@ -257,18 +257,6 @@ ttnk:
 		Length: 32
 	icon: ttnkicon
 
-ftrk:
-	idle:
-		Facings: 32
-		UseClassicFacingFudge: True
-	turret:
-		Start: 32
-		Facings: 32
-		UseClassicFacingFudge: True
-	muzzle: gunfire2
-		Length: 2
-	icon: ftrkicon
-
 dtrk:
 	idle:
 		Facings: 32

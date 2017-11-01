@@ -324,7 +324,7 @@ MECH:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 100
-		# Prerequisites: ~tent, fix
+		Prerequisites: ~tent, fix, ~disabled
 		Description: Repairs nearby vehicles.\n  Unarmed
 	Valued:
 		Cost: 500
@@ -435,7 +435,7 @@ SHOK:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 130
-		Prerequisites: ~barr, stek, tsla
+		Prerequisites: ~barr, stek, tsla, ~disabled
 		Description: Elite infantry with portable tesla coils.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Valued:
 		Cost: 300
@@ -479,7 +479,7 @@ ANT:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 1954
-		# Prerequisites: ~barracks, ~bio
+		Prerequisites: ~barracks, ~bio, ~disabled
 		Description: Irradiated insect that grew oversize.
 	Selectable:
 		Bounds: 24,24,0,-5
