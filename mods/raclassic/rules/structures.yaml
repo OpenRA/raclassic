@@ -20,15 +20,7 @@ MSLO:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
-		Range: 6c0
-		RequiresCondition: !disabled
-		RevealGeneratedShroud: False
-	RevealsShroud@Offline:
 		Range: 5c0
-		RequiresCondition: disabled
-	RevealsShroud@GAPGEN:
-		Range: 5c0
-		RequiresCondition: !disabled
 	NukePower:
 		PauseOnCondition: disabled
 		Cursor: nuke
@@ -90,14 +82,11 @@ GAP:
 	Armor:
 		Type: Wood
 	RevealsShroud:
-		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
+		Range: 10c0
 	WithBuildingBib:
 		HasMinibib: Yes
 	CreatesShroud:
-		Range: 6c0
+		Range: 10c0
 	RenderShroudCircle:
 	Power:
 		Amount: -60
@@ -137,9 +126,6 @@ SPEN:
 	Armor:
 		Type: Light
 	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
 		Range: 4c0
 	Exit@1:
 		SpawnOffset: 0,-213,0
@@ -221,9 +207,6 @@ SYRD:
 	Armor:
 		Type: Light
 	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
 		Range: 4c0
 	Exit@1:
 		SpawnOffset: -1024,1024,0
@@ -310,15 +293,7 @@ IRON:
 	Armor:
 		Type: Wood
 	RevealsShroud:
-		Range: 6c0
-		RequiresCondition: !disabled
-		RevealGeneratedShroud: False
-	RevealsShroud@Offline:
-		Range: 5c0
-		RequiresCondition: disabled
-	RevealsShroud@GAPGEN:
-		Range: 5c0
-		RequiresCondition: !disabled
+		Range: 10c0
 	WithBuildingBib:
 		HasMinibib: Yes
 	GrantExternalConditionPower@IRONCURTAIN:
@@ -367,15 +342,7 @@ PDOX:
 	Armor:
 		Type: Wood
 	RevealsShroud:
-		Range: 6c0
-		RequiresCondition: !disabled
-		RevealGeneratedShroud: False
-	RevealsShroud@Offline:
-		Range: 5c0
-		RequiresCondition: disabled
-	RevealsShroud@GAPGEN:
-		Range: 5c0
-		RequiresCondition: !disabled
+		Range: 10c0
 	WithBuildingBib:
 		HasMinibib: Yes
 	ChronoshiftPower@chronoshift:
@@ -426,9 +393,6 @@ TSLA:
 		Type: Heavy
 	RevealsShroud:
 		Range: 8c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 6c0
 	WithBuildingBib:
 		HasMinibib: Yes
 	WithTeslaChargeAnimation:
@@ -472,9 +436,6 @@ AGUN:
 		Type: Heavy
 	RevealsShroud:
 		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
 	WithBuildingBib:
 		HasMinibib: Yes
 	Turreted:
@@ -527,14 +488,6 @@ DOME:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-		RequiresCondition: !disabled
-		RevealGeneratedShroud: False
-	RevealsShroud@Offline:
-		Range: 5c0
-		RequiresCondition: disabled
-	RevealsShroud@GAPGEN:
-		Range: 6c0
-		RequiresCondition: !disabled
 	WithBuildingBib:
 	ProvidesRadar:
 		RequiresCondition: !jammed && !disabled
@@ -565,9 +518,6 @@ PBOX:
 	Armor:
 		Type: Wood
 	RevealsShroud:
-		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
 		Range: 5c0
 	WithBuildingBib:
 		HasMinibib: Yes
@@ -587,7 +537,7 @@ PBOX:
 	Power:
 		Amount: -15
 	DetectCloaked:
-		Range: 6c0
+		Range: 5c0
 
 HBOX:
 	Inherits: ^Defense
@@ -607,9 +557,6 @@ HBOX:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
-		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
 		Range: 5c0
 	Turreted:
 		TurnSpeed: 255
@@ -623,7 +570,7 @@ HBOX:
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
-		Range: 6c0
+		Range: 5c0
 	WithMuzzleOverlay:
 	RenderRangeCircle:
 	Power:
@@ -648,10 +595,7 @@ GUN:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
-		Range: 7c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
+		Range: 6c0
 	WithBuildingBib:
 		HasMinibib: Yes
 	Turreted:
@@ -691,9 +635,6 @@ FTUR:
 		Type: Heavy
 	RevealsShroud:
 		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 5c0
 	WithBuildingBib:
 		HasMinibib: Yes
 	Turreted:
@@ -745,9 +686,6 @@ SAM:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
-		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
 		Range: 5c0
 	WithBuildingBib:
 		HasMinibib: Yes
@@ -794,9 +732,6 @@ ATEK:
 		Type: Wood
 	RevealsShroud:
 		Range: 10c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 6c0
 	WithBuildingBib:
 	GpsPower:
 		PauseOnCondition: disabled
@@ -835,9 +770,6 @@ WEAP:
 	Armor:
 		Type: Light
 	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
 		Range: 4c0
 	WithBuildingBib:
 	WithProductionDoorOverlay:
@@ -901,9 +833,6 @@ FACT:
 		Type: Heavy
 	RevealsShroud:
 		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
 	WithBuildingBib:
 	Production:
 		Produces: Building,Defense
@@ -911,15 +840,13 @@ FACT:
 		Cost: 2500
 	Tooltip:
 		Name: Construction Yard
-	CustomSellValue:
-		Value: 2500
 	EmitInfantryOnSell:
 		ActorTypes: e1,e1,e1,tecn,tecn,e6
 	BaseBuilding:
-	Transforms:
-		IntoActor: mcv
-		Offset: 1,1
-		Facing: 96
+	#Transforms:
+		#IntoActor: mcv
+		#Offset: 1,1
+		#Facing: 96
 	ProductionBar@Building:
 		ProductionType: Building
 	ProductionBar@Defense:
@@ -966,10 +893,7 @@ PROC:
 	Armor:
 		Type: Wood
 	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+		Range: 6c0
 	WithBuildingBib:
 	Refinery:
 		DockAngle: 64
@@ -978,8 +902,6 @@ PROC:
 		PipCount: 17
 		Capacity: 2000
 	DrawLineToTarget:
-	CustomSellValue:
-		Value: 600
 	FreeActor:
 		Actor: HARV
 		SpawnOffset: 1,2
@@ -1055,7 +977,7 @@ HPAD:
 		Prerequisites: dome
 		Description: Produces and reloads\nhelicopters.
 	Valued:
-		Cost: 500
+		Cost: 1500
 	Tooltip:
 		Name: Helipad
 	Building:
@@ -1068,9 +990,6 @@ HPAD:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
 	WithBuildingBib:
 	Exit@1:
 		SpawnOffset: 0,-256,0
@@ -1136,9 +1055,6 @@ AFLD:
 		Type: Heavy
 	RevealsShroud:
 		Range: 7c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
 	Exit@1:
 		ExitCell: 1,1
 		Facing: 192
@@ -1314,9 +1230,6 @@ STEK:
 	Armor:
 		Type: Wood
 	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
 		Range: 4c0
 	WithBuildingBib:
 	Power:
@@ -1348,9 +1261,6 @@ BARR:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
 	WithBuildingBib:
 	RallyPoint:
 	Exit@1:
@@ -1459,9 +1369,6 @@ TENT:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
 	WithBuildingBib:
 	RallyPoint:
 	Exit@1:
@@ -1522,9 +1429,6 @@ FIX:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
 	WithBuildingBib:
 		HasMinibib: Yes
 	Reservable:
@@ -1556,7 +1460,7 @@ SBAG:
 		Prerequisites: fact, ~structures.allies
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
-		Cost: 50
+		Cost: 25
 	CustomSellValue:
 		Value: 0
 	Tooltip:
@@ -1581,7 +1485,7 @@ FENC:
 		Prerequisites: fact, ~structures.soviet
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
-		Cost: 50
+		Cost: 25
 	CustomSellValue:
 		Value: 0
 	Tooltip:
@@ -1606,7 +1510,7 @@ BRIK:
 		Prerequisites: fact
 		Description: Stop units and blocks enemy fire.
 	Valued:
-		Cost: 200
+		Cost: 100
 	CustomSellValue:
 		Value: 0
 	Tooltip:
