@@ -393,7 +393,6 @@ PDOX:
 		KillCargo: yes
 		DisplayRadarPing: True
 	SupportPowerChargeBar:
-	-AcceptsDeliveredCash:
 	Power:
 		Amount: -200
 	MustBeDestroyed:

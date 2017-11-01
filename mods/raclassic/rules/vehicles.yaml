@@ -59,7 +59,7 @@ V2RL:
 	Turreted:
 		TurnSpeed: 7
 	Armament:
-		Weapon: 25mm
+		Weapon: 75mm
 		Recoil: 85
 		RecoilRecovery: 25
 		LocalOffset: 768,0,90
