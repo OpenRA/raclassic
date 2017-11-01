@@ -240,6 +240,7 @@
 	ActorLostNotification:
 	Crushable:
 		CrushSound: squishy2.aud
+		WarnProbability: 0
 	Guard:
 	Guardable:
 	Tooltip:
