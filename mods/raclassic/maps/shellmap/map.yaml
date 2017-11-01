@@ -1,0 +1,30 @@
+MapFormat: 11
+
+RequiresMod: raclassic
+
+Title: Shellmap
+
+Author: hamb
+
+Tileset: TEMPERAT
+
+MapSize: 130,130
+
+Bounds: 1,1,128,128
+
+Visibility: Shellmap
+
+Categories: Shellmap
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: england
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: england
+
+Actors:

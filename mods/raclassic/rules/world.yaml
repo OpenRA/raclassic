@@ -1,0 +1,107 @@
+^BaseWorld:
+	Inherits: ^Palettes
+	AlwaysVisible:
+	ActorMap:
+	ScreenMap:
+	MusicPlaylist:
+		VictoryMusic: score
+		DefeatMusic: map
+	TerrainGeometryOverlay:
+	ShroudRenderer:
+		FogVariants: shroud
+		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
+		UseExtendedIndex: true
+	Faction@allies:
+		Name: Allies
+		InternalName: allies
+	Faction@soviet:
+		Name: Soviet
+		InternalName: soviet
+	Faction@random:
+		Name: Any
+		InternalName: Random
+		RandomFactionMembers: allies, soviet
+		Description: Random Faction\nA random faction will be chosen when the game starts.
+	ResourceType@ore:
+		Type: Ore
+		Name: Valuable Minerals
+		PipColor: Yellow
+		ResourceType: 1
+		TerrainType: Ore
+		Palette: player
+		Sequences: gold01,gold02,gold03,gold04
+		MaxDensity: 12
+		ValuePerUnit: 25
+		AllowedTerrainTypes: Clear,Road
+		AllowUnderActors: true
+	ResourceType@gem:
+		Type: Gems
+		Name: Valuable Minerals
+		PipColor: Red
+		ResourceType: 2
+		TerrainType: Gems
+		Palette: player
+		Sequences: gem01,gem02,gem03,gem04
+		MaxDensity: 3
+		ValuePerUnit: 50
+		AllowedTerrainTypes: Clear,Road
+		AllowUnderActors: true
+
+World:
+	Inherits: ^BaseWorld
+	ChatCommands:
+	DevCommands:
+	PlayerCommands:
+	HelpCommand:
+	ScreenShaker:
+	BuildingInfluence:
+	ProductionQueueFromSelection:
+		ProductionPaletteWidget: PRODUCTION_PALETTE
+	LegacyBridgeLayer:
+		Bridges: bridge1, bridge2, br1, br2, br3, sbridge1, sbridge2, sbridge3, sbridge4
+	CustomTerrainDebugOverlay:
+	CrateSpawner:
+		DeliveryAircraft: badr
+		QuantizedFacings: 16
+		Minimum: 1
+		Maximum: 3
+		SpawnInterval: 3000
+		WaterChance: 20
+		InitialSpawnDelay: 1500
+	DomainIndex:
+	SmudgeLayer@SCORCH:
+		Type: Scorch
+		Sequence: scorches
+		SmokePercentage: 50
+	SmudgeLayer@CRATER:
+		Type: Crater
+		Sequence: craters
+	ResourceLayer:
+	ResourceClaimLayer:
+	WarheadDebugOverlay:
+	SpawnMapActors:
+	MapBuildRadius:
+	MapOptions:
+	CreateMPPlayers:
+	MPStartUnits@mcvonly:
+		Class: none
+		ClassName: MCV Only
+		Factions: allies, soviet
+		BaseActor: mcv
+	MPStartLocations:
+	SpawnMPUnits:
+	PathFinder:
+	ValidateOrder:
+	DebugPauseState:
+	RadarPings:
+	StartGameNotification:
+	ObjectivesPanel:
+		PanelName: SKIRMISH_STATS
+	LoadWidgetAtGameStart:
+
+EditorWorld:
+	Inherits: ^BaseWorld
+	EditorActorLayer:
+	EditorResourceLayer:
+	EditorSelectionLayer:
+	LoadWidgetAtGameStart:

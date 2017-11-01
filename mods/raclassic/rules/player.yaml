@@ -1,0 +1,54 @@
+Player:
+	AlwaysVisible:
+	TechTree:
+	ClassicProductionQueue@Building:
+		Type: Building
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+	ClassicProductionQueue@Defense:
+		Type: Defense
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+	ClassicProductionQueue@Vehicle:
+		Type: Vehicle
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@Infantry:
+		Type: Infantry
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@Ship:
+		Type: Ship
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@Aircraft:
+		Type: Aircraft
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	PlaceBuilding:
+	SupportPowerManager:
+	ScriptTriggers:
+	MissionObjectives:
+	ConquestVictoryConditions:
+	PowerManager:
+	AllyRepair:
+	PlayerResources:
+		InsufficientFundsNotification: InsufficientFunds
+	DeveloperMode:
+	GpsWatcher:
+	Shroud:
+	FrozenActorLayer:
+	BaseAttackNotifier:
+	PlayerStatistics:
+	PlaceBeacon:
+	GrantConditionOnPrerequisiteManager:
+	EnemyWatcher:
+	VeteranProductionIconOverlay:
+		Image: iconchevrons
+		Sequence: veteran
+	ResourceStorageWarning:
+	PlayerExperience:
