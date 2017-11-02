@@ -7,8 +7,8 @@ MSLO:
 	Tooltip:
 		Name: Missile Silo
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 140
+		Queue: Building
+		BuildPaletteOrder: 200
 		Prerequisites: techcenter, ~techlevel.10
 		BuildLimit: 1
 		Description: Provides an atomic bomb.\nRequires power to operate.\n  Special Ability: Atom Bomb\nMaximum 1 can be built.
@@ -63,8 +63,8 @@ GAP:
 	Tooltip:
 		Name: Gap Generator
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 110
+		Queue: Building
+		BuildPaletteOrder: 170
 		Prerequisites: atek, ~structures.allies, ~techlevel.7
 		Description: Obscures the enemy's view with shroud.\nRequires power to operate.
 	Selectable:
@@ -108,7 +108,6 @@ SPEN:
 		Name: Sub Pen
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 50
 		Prerequisites: anypower, ~structures.soviet, ~techlevel.2
 		Description: Produces and repairs\nsubmarines and transports.
 	Targetable:
@@ -185,7 +184,7 @@ SYRD:
 		Proxy: powerproxy.sonarpulse
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 70
 		Prerequisites: anypower, ~structures.allies, ~techlevel.2
 		Description: Produces and repairs ships\nand transports.
 	Valued:
@@ -266,8 +265,8 @@ IRON:
 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^2x1Shape
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 130
+		Queue: Building
+		BuildPaletteOrder: 190
 		Prerequisites: stek, ~structures.soviet, ~techlevel.9
 		BuildLimit: 1
 		Description: Makes a unit invulnerable\nfor a while.\nRequires power to operate.\n  Special Ability: Invulnerability\nMaximum 1 can be built.
@@ -317,8 +316,8 @@ PDOX:
 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^2x2Shape
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 120
+		Queue: Building
+		BuildPaletteOrder: 190
 		Prerequisites: atek, ~structures.allies, ~techlevel.9
 		BuildLimit: 1
 		Description: Teleports a unit across the\nmap for a short time.\nRequires power to operate.\n  Special Ability: Chronoshift\nMaximum 1 can be built.
@@ -365,8 +364,8 @@ TSLA:
 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 80
+		Queue: Building
+		BuildPaletteOrder: 150
 		Prerequisites: weap, ~structures.soviet, ~techlevel.5
 		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
 	Valued:
@@ -406,8 +405,8 @@ AGUN:
 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 90
+		Queue: Building
+		BuildPaletteOrder: 180
 		Prerequisites: dome, ~structures.allies, ~techlevel.3
 		Description: Anti-Air base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
@@ -455,7 +454,7 @@ DOME:
 		TargetableOffsets: 0,0,0, 630,-384,0, 630,384,0, -700,-512,0, -700,512,0
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 110
 		Prerequisites: proc, ~techlevel.2
 		Description: Provides an overview\nof the battlefield.\nCan detect cloaked units.\n  Requires power to operate.
 	Valued:
@@ -497,8 +496,8 @@ PBOX:
 		Name: Pillbox
 	Building:
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 40
+		Queue: Building
+		BuildPaletteOrder: 90
 		Prerequisites: tent, ~structures.allies, ~techlevel.1
 		Description: Static defense with a heavy machine gun.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
@@ -534,8 +533,8 @@ HBOX:
 		Name: Camo Pillbox
 	Building:
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 50
+		Queue: Building
+		BuildPaletteOrder: 120
 		Prerequisites: tent, ~structures.allies, ~techlevel.2
 		Description: Camouflaged static defense with a heavy machine gun.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
@@ -569,8 +568,8 @@ GUN:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 70
+		Queue: Building
+		BuildPaletteOrder: 150
 		Prerequisites: tent, ~structures.allies, ~techlevel.2
 		Description: Anti-Armor base defense.\nCan detect cloaked units.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
@@ -606,8 +605,8 @@ FTUR:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 60
+		Queue: Building
+		BuildPaletteOrder: 90
 		Prerequisites: barr, ~structures.soviet, ~techlevel.1
 		Description: Anti-Infantry base defense.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
@@ -650,8 +649,8 @@ SAM:
 			TopLeft: -768,-512
 			BottomRight: 768,512
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 100
+		Queue: Building
+		BuildPaletteOrder: 180
 		Prerequisites: dome, ~structures.soviet, ~techlevel.6
 		Description: Anti-Air base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
@@ -695,7 +694,7 @@ ATEK:
 	Inherits@shape: ^2x2Shape
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 140
+		BuildPaletteOrder: 160
 		Prerequisites: weap, dome, ~structures.allies, ~techlevel.7
 		Description: Provides Allied advanced technologies.\n  Special Ability: GPS Satellite
 	Valued:
@@ -736,7 +735,7 @@ WEAP:
 	Inherits@shape: ^3x2Shape
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 100
 		Prerequisites: proc, ~techlevel.2
 		Description: Produces vehicles.
 	Valued:
@@ -817,7 +816,7 @@ FACT:
 		Range: 5c0
 	WithBuildingBib:
 	Production:
-		Produces: Building,Defense
+		Produces: Building
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -831,9 +830,6 @@ FACT:
 		#Facing: 96
 	ProductionBar@Building:
 		ProductionType: Building
-	ProductionBar@Defense:
-		ProductionType: Defense
-		Color: 8A8A8A
 	WithBuildingPlacedAnimation:
 	Power:
 		Amount: 0
@@ -851,7 +847,7 @@ PROC:
 	Inherits: ^Building
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 50
 		Prerequisites: anypower, ~techlevel.1
 		Description: Refines Ore and Gems\ninto credits.
 	Valued:
@@ -915,8 +911,8 @@ PROC:
 SILO:
 	Inherits: ^Building
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 35
+		Queue: Building
+		BuildPaletteOrder: 80
 		Prerequisites: proc, ~techlevel.1
 		Description: Stores excess refined\nOre and Gems.
 	Valued:
@@ -950,7 +946,7 @@ HPAD:
 		TargetableOffsets: 0,0,0, 768,-512,0, 768,512,0, -281,-512,0, -630,512,0
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 120
+		BuildPaletteOrder: 140
 		Prerequisites: dome, ~techlevel.6
 		Description: Produces and reloads\nhelicopters.
 	Valued:
@@ -1016,7 +1012,7 @@ AFLD:
 		TargetableOffsets: 0,0,0, 420,0,0, 420,-1024,0, 420,1024,0, -777,0,0, -777,-1024,0, -777,1024,0
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 130
+		BuildPaletteOrder: 170
 		Prerequisites: dome, ~structures.soviet, ~techlevel.3
 		Description: Produces and reloads aircraft.\n  Special Ability: Paratroopers\n  Special Ability: Spy Plane
 	Valued:
@@ -1149,7 +1145,6 @@ APWR:
 		TargetableOffsets: -355,-1024,0
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 110
 		Prerequisites: anypower, ~techlevel.5
 		Description: Provides double the power of a\nstandard Power Plant.
 	Valued:
@@ -1189,7 +1184,7 @@ STEK:
 		TargetableOffsets: 420,-768,0, 420,768,0, -770,-768,0, -770,768,0
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 150
+		BuildPaletteOrder: 160
 		Prerequisites: weap, dome, ~structures.soviet, ~techlevel.4
 		Description: Provides Soviet advanced technologies.
 	Valued:
@@ -1221,7 +1216,7 @@ BARR:
 		TargetableOffsets: 0,0,0, 490,-470,0, 355,512,0, -355,-512,0, -630,512,0
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 40
 		Prerequisites: anypower, ~structures.soviet, ~techlevel.1
 		Description: Trains infantry.
 	Valued:
@@ -1278,7 +1273,7 @@ KENN:
 	Inherits: ^Building
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 175
+		BuildPaletteOrder: 120
 		Prerequisites: barr, ~structures.soviet, ~techlevel.2
 		Description: Trains Attack Dogs.
 	Valued:
@@ -1326,7 +1321,7 @@ TENT:
 		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 40
 		Prerequisites: anypower, ~structures.allies, ~techlevel.1
 		Description: Trains infantry.
 	Valued:
@@ -1383,7 +1378,7 @@ FIX:
 	Inherits: ^Building
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 130
 		Prerequisites: weap, ~techlevel.2
 		Description: Repairs vehicles for credits.
 	Valued:
@@ -1427,8 +1422,8 @@ FIX:
 SBAG:
 	Inherits: ^Wall
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 10
+		Queue: Building
+		BuildPaletteOrder: 30
 		Prerequisites: fact, ~structures.allies, ~techlevel.1
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
@@ -1452,8 +1447,8 @@ SBAG:
 FENC:
 	Inherits: ^Wall
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 20
+		Queue: Building
+		BuildPaletteOrder: 30
 		Prerequisites: fact, ~structures.soviet, ~techlevel.1
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
@@ -1477,8 +1472,8 @@ FENC:
 BRIK:
 	Inherits: ^Wall
 	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 30
+		Queue: Building
+		BuildPaletteOrder: 60
 		Prerequisites: fact, ~techlevel.5
 		Description: Stop units and blocks enemy fire.
 	Valued:

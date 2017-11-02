@@ -2,8 +2,8 @@ SYRF:
 	Inherits: ^FakeBuilding
 	Inherits@infiltrate: ^InfiltratableFake
 	Buildable:
-		BuildPaletteOrder: 890
-		Queue: Defense
+		BuildPaletteOrder: 870
+		Queue: Building
 		Prerequisites: anypower, ~structures.allies
 		Description: Looks like a Shipyard.
 		Icon: fake-icon
@@ -46,8 +46,8 @@ SPEF:
 	Targetable:
 		TargetTypes: Ground, Water, Structure, SpyInfiltrate
 	Buildable:
-		BuildPaletteOrder: 890
-		Queue: Defense
+		BuildPaletteOrder: 870
+		Queue: Building
 		Prerequisites: anypower, ~disabled
 		Description: Looks like a Sub Pen.
 		Icon: fake-icon
@@ -86,9 +86,9 @@ WEAF:
 	Inherits@infiltrate: ^InfiltratableFake
 	Inherits@shape: ^3x2Shape
 	Buildable:
-		BuildPaletteOrder: 920
+		BuildPaletteOrder: 880
 		Prerequisites: proc, ~structures.allies
-		Queue: Defense
+		Queue: Building
 		Description: Looks like a War Factory.
 		Icon: fake-icon
 	Tooltip:
@@ -126,8 +126,8 @@ DOMF:
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Buildable:
-		BuildPaletteOrder: 930
-		Queue: Defense
+		BuildPaletteOrder: 890
+		Queue: Building
 		Prerequisites: proc, ~structures.allies
 		Description: Looks like a Radar Dome.
 		Icon: fake-icon
@@ -149,8 +149,8 @@ DOMF:
 FACF:
 	Inherits: ^FakeBuilding
 	Buildable:
-		BuildPaletteOrder: 1000
-		Queue: Defense
+		BuildPaletteOrder: 900
+		Queue: Building
 		Prerequisites: ~structures.allies
 		Description: Looks like a Construction Yard.
 		Icon: fake-icon
