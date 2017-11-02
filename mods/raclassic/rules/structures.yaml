@@ -108,6 +108,7 @@ SPEN:
 		Name: Sub Pen
 	Buildable:
 		Queue: Building
+		BuildPaletteOrder: 70
 		Prerequisites: anypower, ~structures.soviet, ~techlevel.2
 		Description: Produces and repairs\nsubmarines and transports.
 	Targetable:
@@ -1145,6 +1146,7 @@ APWR:
 		TargetableOffsets: -355,-1024,0
 	Buildable:
 		Queue: Building
+		BuildPaletteOrder: 20
 		Prerequisites: anypower, ~techlevel.5
 		Description: Provides double the power of a\nstandard Power Plant.
 	Valued:
