@@ -48,6 +48,46 @@ Player:
 	BaseAttackNotifier:
 	PlayerStatistics:
 	PlaceBeacon:
+	ProvidesTechPrerequisite@infonly:
+		Name: 1
+		Prerequisites: techlevel.1
+		Id: 1
+	ProvidesTechPrerequisite@low:
+		Name: 2
+		Prerequisites: techlevel.1, techlevel.2
+		Id: 2
+	ProvidesTechPrerequisite@medium:
+		Name: 3
+		Prerequisites: techlevel.1, techlevel.2, techlevel.3
+		Id: 3
+	ProvidesTechPrerequisite@4:
+		Name: 4
+		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4
+		Id: 4
+	ProvidesTechPrerequisite@5:
+		Name: 5
+		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5
+		Id: 5
+	ProvidesTechPrerequisite@6:
+		Name: 6
+		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6
+		Id: 6
+	ProvidesTechPrerequisite@7:
+		Name: 7
+		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7
+		Id: 7
+	ProvidesTechPrerequisite@8:
+		Name: 8
+		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7, techlevel.8
+		Id: 8
+	ProvidesTechPrerequisite@9:
+		Name: 9
+		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7, techlevel.8, techlevel.9
+		Id: 9
+	ProvidesTechPrerequisite@10:
+		Name: 10
+		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7, techlevel.8, techlevel.9, techlevel.10
+		Id: 10
 	GrantConditionOnPrerequisiteManager:
 	EnemyWatcher:
 	ResourceStorageWarning:

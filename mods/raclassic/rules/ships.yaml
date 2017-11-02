@@ -5,7 +5,7 @@ SS:
 		Queue: Ship
 		BuildAtProductionType: Submarine
 		BuildPaletteOrder: 30
-		Prerequisites: ~spen, ~techlevel.medium
+		Prerequisites: ~spen, ~techlevel.3
 		Description: Submerged anti-ship unit\narmed with torpedoes.\nCan detect other submarines.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft\n  Special Ability: Submerge
 	Valued:
 		Cost: 950
@@ -68,7 +68,7 @@ MSUB:
 		Queue: Ship
 		BuildAtProductionType: Submarine
 		BuildPaletteOrder: 60
-		Prerequisites: ~spen, stek, ~techlevel.high, ~disabled
+		Prerequisites: ~spen, stek, ~disabled, ~techlevel.6
 		Description: Submerged anti-ground siege unit\nwith anti-air capabilities.\nCan detect other submarines.\n  Strong vs Buildings, Ground units, Aircraft\n  Weak vs Naval units\n  Special Ability: Submerge
 	Valued:
 		Cost: 1650
@@ -131,7 +131,7 @@ DD:
 		Queue: Ship
 		BuildAtProductionType: Boat
 		BuildPaletteOrder: 40
-		Prerequisites: ~syrd, dome, ~techlevel.medium
+		Prerequisites: ~syrd, dome, ~techlevel.5
 		Description: Fast multi-role ship.\nCan detect submarines.\n  Strong vs Naval units, Light armor, Aircraft\n  Weak vs Infantry, Tanks
 	Valued:
 		Cost: 1000
@@ -177,7 +177,7 @@ CA:
 		Queue: Ship
 		BuildAtProductionType: Boat
 		BuildPaletteOrder: 50
-		Prerequisites: ~syrd, atek, ~techlevel.high
+		Prerequisites: ~syrd, atek, ~techlevel.7
 		BuildDuration: 2000
 		Description: Very slow long-range ship.\n  Strong vs Buildings, Ground units\n  Weak vs Naval units, Aircraft
 	Valued:
@@ -230,7 +230,7 @@ LST:
 	Buildable:
 		Queue: Ship
 		BuildPaletteOrder: 10
-		Prerequisites: ~techlevel.low
+		Prerequisites: ~techlevel.2
 		Description: General-purpose naval transport.\nCan carry infantry and tanks.\n  Unarmed
 	Valued:
 		Cost: 700
@@ -267,7 +267,7 @@ PT:
 		Queue: Ship
 		BuildAtProductionType: Boat
 		BuildPaletteOrder: 20
-		Prerequisites: ~syrd, ~techlevel.medium
+		Prerequisites: ~syrd, ~techlevel.3
 		Description: Light scout & support ship.\nCan detect submarines.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft
 	Valued:
 		Cost: 500
