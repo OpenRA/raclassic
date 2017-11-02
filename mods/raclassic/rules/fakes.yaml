@@ -4,7 +4,7 @@ SYRF:
 	Buildable:
 		BuildPaletteOrder: 870
 		Queue: Building
-		Prerequisites: anypower, ~structures.allies
+		Prerequisites: anypower, ~structures.allies, ~techlevel.2
 		Description: Looks like a Shipyard.
 		Icon: fake-icon
 	Tooltip:
@@ -48,7 +48,7 @@ SPEF:
 	Buildable:
 		BuildPaletteOrder: 870
 		Queue: Building
-		Prerequisites: anypower, ~disabled
+		Prerequisites: anypower, ~disabled, ~techlevel.2
 		Description: Looks like a Sub Pen.
 		Icon: fake-icon
 	Tooltip:
@@ -87,7 +87,7 @@ WEAF:
 	Inherits@shape: ^3x2Shape
 	Buildable:
 		BuildPaletteOrder: 880
-		Prerequisites: proc, ~structures.allies
+		Prerequisites: proc, ~structures.allies, ~techlevel.2
 		Queue: Building
 		Description: Looks like a War Factory.
 		Icon: fake-icon
@@ -128,7 +128,7 @@ DOMF:
 	Buildable:
 		BuildPaletteOrder: 890
 		Queue: Building
-		Prerequisites: proc, ~structures.allies
+		Prerequisites: proc, ~structures.allies, ~techlevel.2
 		Description: Looks like a Radar Dome.
 		Icon: fake-icon
 	Building:
@@ -151,7 +151,7 @@ FACF:
 	Buildable:
 		BuildPaletteOrder: 900
 		Queue: Building
-		Prerequisites: ~structures.allies
+		Prerequisites: ~structures.allies, ~techlevel.1
 		Description: Looks like a Construction Yard.
 		Icon: fake-icon
 	Tooltip:
