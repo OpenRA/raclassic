@@ -364,7 +364,10 @@ APC:
 		MuzzleSequence: muzzle
 	AttackFrontal:
 	WithMuzzleOverlay:
+	Sellable:
+		RequiresCondition: unit.sellable && !Loaded
 	Cargo:
+		LoadedCondition: Loaded
 		Types: Infantry
 		MaxWeight: 5
 		PipCount: 5
