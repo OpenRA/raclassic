@@ -54,7 +54,6 @@ Player:
 			jeep: 40%
 			arty: 15%
 			v2rl: 40%
-			ftrk: 50%
 			1tnk: 70%
 			2tnk: 25%
 			3tnk: 50%
@@ -177,7 +176,6 @@ Player:
 			jeep: 40%
 			arty: 15%
 			v2rl: 40%
-			ftrk: 50%
 			1tnk: 70%
 			2tnk: 25%
 			3tnk: 50%
@@ -309,7 +307,6 @@ Player:
 			jeep: 40%
 			arty: 15%
 			v2rl: 40%
-			ftrk: 50%
 			1tnk: 70%
 			2tnk: 25%
 			3tnk: 50%
