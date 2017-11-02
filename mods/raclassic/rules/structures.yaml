@@ -66,9 +66,6 @@ GAP:
 	SelectionDecorations:
 		VisualBounds: 24,48,0,-12
 	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	WithSpriteBody:
 		PauseAnimationWhenDisabled: true
 	Health:
@@ -362,9 +359,6 @@ TSLA:
 		Bounds: 24,24
 	SelectionDecorations:
 		VisualBounds: 24,40,0,-8
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	Health:
 		HP: 400
 	Armor:
@@ -403,9 +397,6 @@ AGUN:
 	SelectionDecorations:
 		VisualBounds: 24,32,0,-4
 	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	Health:
 		HP: 400
 	Armor:
@@ -453,9 +444,6 @@ DOME:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	Health:
 		HP: 1000
 	Armor:
@@ -646,9 +634,6 @@ SAM:
 		Footprint: xx
 		Dimensions: 2,1
 	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	Health:
 		HP: 400
 	Armor:
