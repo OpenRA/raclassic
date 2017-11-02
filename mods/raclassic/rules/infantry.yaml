@@ -16,7 +16,7 @@ DOG:
 	SelectionDecorations:
 		VisualBounds: 12,17,-1,-4
 	Health:
-		HP: 18
+		HP: 12
 	Mobile:
 		Speed: 99
 		Voice: Move
@@ -283,11 +283,11 @@ MEDI:
 		Prerequisites: ~tent
 		Description: Heals nearby infantry.\n  Unarmed
 	Valued:
-		Cost: 200
+		Cost: 800
 	Tooltip:
 		Name: Medic
 	Health:
-		HP: 60
+		HP: 80
 	RevealsShroud:
 		Range: 3c0
 	Passenger:
@@ -317,11 +317,11 @@ MECH:
 		Prerequisites: ~tent, fix, ~disabled
 		Description: Repairs nearby vehicles.\n  Unarmed
 	Valued:
-		Cost: 500
+		Cost: 950
 	Tooltip:
 		Name: Mechanic
 	Health:
-		HP: 80
+		HP: 60
 	Mobile:
 		Voice: Move
 	RevealsShroud:
@@ -400,7 +400,7 @@ GNRL:
 THF:
 	Inherits: ^Soldier
 	Valued:
-		Cost: 400
+		Cost: 500
 	Tooltip:
 		Name: Thief
 	RevealsShroud:
@@ -408,7 +408,7 @@ THF:
 	Passenger:
 		PipType: Yellow
 	Infiltrates:
-		InfiltrateTypes: Cash
+		Types: Cash
 		PlayerExperience: 50
 	Voiced:
 		VoiceSet: ThiefVoice
@@ -417,6 +417,7 @@ THF:
 		StandSequences: stand
 	Buildable:
 		Description: Steals enemy credits.\n  Unarmed
+		Prerequisites: ~tent, atek
 
 SHOK:
 	Inherits: ^Soldier
@@ -428,15 +429,16 @@ SHOK:
 		Prerequisites: ~barr, stek, tsla, ~disabled
 		Description: Elite infantry with portable tesla coils.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Valued:
-		Cost: 300
+		Cost: 900
 	Tooltip:
 		Name: Shock Trooper
 	Health:
-		HP: 50
+		HP: 80
 	Mobile:
 		Voice: Move
+	-Crushable:
 	RevealsShroud:
-		Range: 5c0
+		Range: 4c0
 	Armament@PRIMARY:
 		Weapon: PortaTesla
 		LocalOffset: 427,0,341
