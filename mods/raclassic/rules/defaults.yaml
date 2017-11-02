@@ -127,6 +127,15 @@
 		RequiresCondition: !parachute
 	Repairable:
 	Chronoshiftable:
+	Sellable:
+		SellSounds: cashturn.aud
+		RequiresCondition: unit.sellable
+		#+Cursor: sell2
+	ProximityExternalCondition:
+		Condition: unit.docked
+		Range: 1c0
+	ExternalCondition@Sellable:
+		Condition: unit.sellable
 	Passenger:
 		CargoType: Vehicle
 	AttackMove:
@@ -389,6 +398,15 @@
 		RequiresCondition: airborne
 	HiddenUnderFog:
 		Type: GroundPosition
+	Sellable:
+		SellSounds: cashturn.aud
+		RequiresCondition: unit.sellable && !airborne
+		#+Cursor: sell2
+	ProximityExternalCondition:
+		Condition: unit.docked
+		Range: 1c0
+	ExternalCondition@Sellable:
+		Condition: unit.sellable
 	AttackMove:
 	Guard:
 	Guardable:
