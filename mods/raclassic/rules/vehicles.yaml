@@ -369,6 +369,7 @@ APC:
 		MaxWeight: 5
 		PipCount: 5
 		LoadingCondition: notmobile
+		EjectOnDeath: true
 
 MNLY:
 	Inherits: ^Tank
