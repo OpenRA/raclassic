@@ -863,7 +863,7 @@ PROC:
 	SelectionDecorations:
 		VisualBounds: 72,70,0,-2
 	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: Ground, Structure, C4, DetonateAttack, Cash
 	Health:
 		HP: 900
 	Armor:
@@ -921,6 +921,8 @@ SILO:
 		Name: Silo
 	Building:
 		Adjacent: 2
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, Cash
 	Health:
 		HP: 300
 	Armor:
@@ -931,6 +933,9 @@ SILO:
 	StoresResources:
 		PipCount: 5
 		Capacity: 1500
+	InfiltrateForCash:
+		Percentage: 50
+		Notification: CreditsStolen
 	-EmitInfantryOnSell:
 	Power:
 		Amount: -10
