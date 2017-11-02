@@ -41,6 +41,7 @@ Player:
 	DeveloperMode:
 	GpsWatcher:
 	Shroud:
+		FogEnabled: false
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:
