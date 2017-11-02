@@ -80,6 +80,7 @@ World:
 	SpawnMapActors:
 	MapBuildRadius:
 	MapOptions:
+		TechLevel: 10
 	CreateMPPlayers:
 	MPStartUnits@0:
 		Class: none

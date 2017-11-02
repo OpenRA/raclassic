@@ -9,7 +9,7 @@ MSLO:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter
+		Prerequisites: techcenter, ~techlevel.10
 		BuildLimit: 1
 		Description: Provides an atomic bomb.\nRequires power to operate.\n  Special Ability: Atom Bomb\nMaximum 1 can be built.
 	Building:
@@ -65,7 +65,7 @@ GAP:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 110
-		Prerequisites: atek, ~structures.allies
+		Prerequisites: atek, ~structures.allies, ~techlevel.7
 		Description: Obscures the enemy's view with shroud.\nRequires power to operate.
 	Selectable:
 		Bounds: 24,24
@@ -109,7 +109,7 @@ SPEN:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
-		Prerequisites: anypower, ~structures.soviet
+		Prerequisites: anypower, ~structures.soviet, ~techlevel.2
 		Description: Produces and repairs\nsubmarines and transports.
 	Targetable:
 		TargetTypes: Ground, Water, Structure, WaterStructure, C4, DetonateAttack, SpyInfiltrate
@@ -186,7 +186,7 @@ SYRD:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 40
-		Prerequisites: anypower, ~structures.allies
+		Prerequisites: anypower, ~structures.allies, ~techlevel.2
 		Description: Produces and repairs ships\nand transports.
 	Valued:
 		Cost: 650
@@ -268,7 +268,7 @@ IRON:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 130
-		Prerequisites: stek, ~structures.soviet
+		Prerequisites: stek, ~structures.soviet, ~techlevel.9
 		BuildLimit: 1
 		Description: Makes a unit invulnerable\nfor a while.\nRequires power to operate.\n  Special Ability: Invulnerability\nMaximum 1 can be built.
 	Valued:
@@ -319,7 +319,7 @@ PDOX:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 120
-		Prerequisites: atek, ~structures.allies
+		Prerequisites: atek, ~structures.allies, ~techlevel.9
 		BuildLimit: 1
 		Description: Teleports a unit across the\nmap for a short time.\nRequires power to operate.\n  Special Ability: Chronoshift\nMaximum 1 can be built.
 	Valued:
@@ -367,7 +367,7 @@ TSLA:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 80
-		Prerequisites: weap, ~structures.soviet
+		Prerequisites: weap, ~structures.soviet, ~techlevel.5
 		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
 	Valued:
 		Cost: 1500
@@ -408,7 +408,7 @@ AGUN:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: dome, ~structures.allies
+		Prerequisites: dome, ~structures.allies, ~techlevel.3
 		Description: Anti-Air base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
 		Cost: 600
@@ -456,7 +456,7 @@ DOME:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
-		Prerequisites: proc
+		Prerequisites: proc, ~techlevel.2
 		Description: Provides an overview\nof the battlefield.\nCan detect cloaked units.\n  Requires power to operate.
 	Valued:
 		Cost: 1000
@@ -499,7 +499,7 @@ PBOX:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 40
-		Prerequisites: tent, ~structures.allies
+		Prerequisites: tent, ~structures.allies, ~techlevel.1
 		Description: Static defense with a heavy machine gun.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 400
@@ -536,7 +536,7 @@ HBOX:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 50
-		Prerequisites: tent, ~structures.allies
+		Prerequisites: tent, ~structures.allies, ~techlevel.2
 		Description: Camouflaged static defense with a heavy machine gun.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 600
@@ -571,7 +571,7 @@ GUN:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 70
-		Prerequisites: tent, ~structures.allies
+		Prerequisites: tent, ~structures.allies, ~techlevel.2
 		Description: Anti-Armor base defense.\nCan detect cloaked units.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 600
@@ -608,7 +608,7 @@ FTUR:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 60
-		Prerequisites: barr, ~structures.soviet
+		Prerequisites: barr, ~structures.soviet, ~techlevel.1
 		Description: Anti-Infantry base defense.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 600
@@ -652,7 +652,7 @@ SAM:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 100
-		Prerequisites: dome, ~structures.soviet
+		Prerequisites: dome, ~structures.soviet, ~techlevel.6
 		Description: Anti-Air base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
 		Cost: 750
@@ -696,7 +696,7 @@ ATEK:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 140
-		Prerequisites: weap, dome, ~structures.allies
+		Prerequisites: weap, dome, ~structures.allies, ~techlevel.7
 		Description: Provides Allied advanced technologies.\n  Special Ability: GPS Satellite
 	Valued:
 		Cost: 1500
@@ -737,7 +737,7 @@ WEAP:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 80
-		Prerequisites: proc
+		Prerequisites: proc, ~techlevel.2
 		Description: Produces vehicles.
 	Valued:
 		Cost: 2000
@@ -852,7 +852,7 @@ PROC:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 60
-		Prerequisites: anypower
+		Prerequisites: anypower, ~techlevel.1
 		Description: Refines Ore and Gems\ninto credits.
 	Valued:
 		Cost: 2000
@@ -917,7 +917,7 @@ SILO:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 35
-		Prerequisites: proc
+		Prerequisites: proc, ~techlevel.1
 		Description: Stores excess refined\nOre and Gems.
 	Valued:
 		Cost: 150
@@ -951,7 +951,7 @@ HPAD:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 120
-		Prerequisites: dome
+		Prerequisites: dome, ~techlevel.6
 		Description: Produces and reloads\nhelicopters.
 	Valued:
 		Cost: 1500
@@ -1017,7 +1017,7 @@ AFLD:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 130
-		Prerequisites: dome, ~structures.soviet
+		Prerequisites: dome, ~structures.soviet, ~techlevel.3
 		Description: Produces and reloads aircraft.\n  Special Ability: Paratroopers\n  Special Ability: Spy Plane
 	Valued:
 		Cost: 600
@@ -1048,7 +1048,7 @@ AFLD:
 		Prerequisite: aircraft.soviet
 	AirstrikePower@spyplane:
 		OrderName: SovietSpyPlane
-		Prerequisites: aircraft.soviet
+		Prerequisites: aircraft.soviet, ~techlevel.3
 		Icon: spyplane
 		ChargeTime: 150
 		Description: Spy Plane
@@ -1066,7 +1066,7 @@ AFLD:
 		CircleSequence: circles
 	ParatroopersPower@paratroopers:
 		OrderName: SovietParatroopers
-		Prerequisites: aircraft.soviet
+		Prerequisites: aircraft.soviet, ~techlevel.3
 		Icon: paratroopers
 		ChargeTime: 300
 		Description: Paratroopers
@@ -1112,7 +1112,7 @@ POWR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 10
-		Prerequisites:
+		Prerequisites: ~techlevel.1
 		Description: Provides power for other structures.
 	Valued:
 		Cost: 300
@@ -1150,7 +1150,7 @@ APWR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 110
-		Prerequisites: anypower
+		Prerequisites: anypower, ~techlevel.5
 		Description: Provides double the power of a\nstandard Power Plant.
 	Valued:
 		Cost: 500
@@ -1190,7 +1190,7 @@ STEK:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 150
-		Prerequisites: weap, dome, ~structures.soviet
+		Prerequisites: weap, dome, ~structures.soviet, ~techlevel.4
 		Description: Provides Soviet advanced technologies.
 	Valued:
 		Cost: 1500
@@ -1222,7 +1222,7 @@ BARR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
-		Prerequisites: anypower, ~structures.soviet
+		Prerequisites: anypower, ~structures.soviet, ~techlevel.1
 		Description: Trains infantry.
 	Valued:
 		Cost: 300
@@ -1279,7 +1279,7 @@ KENN:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 175
-		Prerequisites: barr, ~structures.soviet
+		Prerequisites: barr, ~structures.soviet, ~techlevel.2
 		Description: Trains Attack Dogs.
 	Valued:
 		Cost: 200
@@ -1327,7 +1327,7 @@ TENT:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 20
-		Prerequisites: anypower, ~structures.allies
+		Prerequisites: anypower, ~structures.allies, ~techlevel.1
 		Description: Trains infantry.
 	Valued:
 		Cost: 300
@@ -1384,7 +1384,7 @@ FIX:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
-		Prerequisites: weap
+		Prerequisites: weap, ~techlevel.2
 		Description: Repairs vehicles for credits.
 	Valued:
 		Cost: 1200
@@ -1429,7 +1429,7 @@ SBAG:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 10
-		Prerequisites: fact, ~structures.allies
+		Prerequisites: fact, ~structures.allies, ~techlevel.1
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
 		Cost: 25
@@ -1454,7 +1454,7 @@ FENC:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 20
-		Prerequisites: fact, ~structures.soviet
+		Prerequisites: fact, ~structures.soviet, ~techlevel.1
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
 		Cost: 25
@@ -1479,7 +1479,7 @@ BRIK:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 30
-		Prerequisites: fact
+		Prerequisites: fact, ~techlevel.5
 		Description: Stop units and blocks enemy fire.
 	Valued:
 		Cost: 100
