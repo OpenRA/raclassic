@@ -489,25 +489,9 @@ Container@PLAYER_WIDGETS:
 									X: 6
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@DEFENSE:
-							Logic: AddFactionSuffixLogic
-							Y: 31
-							Width: 28
-							Height: 28
-							VisualHeight: 0
-							Background: sidebar-button
-							TooltipText: Defense
-							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Defense
-							HotkeyName: ProductionTypeDefenseKey
-							Children:
-								Image@ICON:
-									X: 6
-									Y: 6
-									ImageCollection: production-icons
 						ProductionTypeButton@INFANTRY:
 							Logic: AddFactionSuffixLogic
-							Y: 62
+							Y: 31
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -523,7 +507,7 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: production-icons
 						ProductionTypeButton@VEHICLE:
 							Logic: AddFactionSuffixLogic
-							Y: 93
+							Y: 62
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -539,7 +523,7 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: production-icons
 						ProductionTypeButton@AIRCRAFT:
 							Logic: AddFactionSuffixLogic
-							Y: 124
+							Y: 93
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -555,7 +539,7 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: production-icons
 						ProductionTypeButton@NAVAL:
 							Logic: AddFactionSuffixLogic
-							Y: 155
+							Y: 124
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -571,7 +555,7 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: production-icons
 						Button@SCROLL_UP_BUTTON:
 							Logic: AddFactionSuffixLogic
-							Y: 186
+							Y: 155
 							Width: 28
 							Height: 22
 							VisualHeight: 0
@@ -586,7 +570,7 @@ Container@PLAYER_WIDGETS:
 									ImageName: up_arrow
 						Button@SCROLL_DOWN_BUTTON:
 							Logic: AddFactionSuffixLogic
-							Y: 211
+							Y: 180
 							Width: 28
 							Height: 22
 							VisualHeight: 0

@@ -7,12 +7,6 @@ Player:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		SpeedUp: True
-	ClassicProductionQueue@Defense:
-		Type: Defense
-		LowPowerSlowdown: 3
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-		SpeedUp: True
 	ClassicProductionQueue@Vehicle:
 		Type: Vehicle
 		LowPowerSlowdown: 3
