@@ -81,7 +81,7 @@ MIG:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Mig Attack Plane
+		Name: MiG
 	Health:
 		HP: 50
 	Armor:
@@ -128,7 +128,7 @@ YAK:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Yak Attack Plane
+		Name: Yak
 	Health:
 		HP: 60
 	Armor:
