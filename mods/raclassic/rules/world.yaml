@@ -83,13 +83,198 @@ World:
 	MapBuildRadius:
 	MapOptions:
 	CreateMPPlayers:
-	MPStartUnits@mcvonly:
+	MPStartUnits@0:
 		Class: none
-		ClassName: MCV Only
+		ClassName: 0
 		Factions: allies, soviet
 		BaseActor: mcv
+	MPStartUnits@1:
+		Class: 1
+		ClassName: 1
+		Factions: allies, soviet
+		BaseActor: mcv
+		SupportActors: e1
+		InnerSupportRadius: 3
+		OuterSupportRadius: 3
+	MPStartUnits@2_allies:
+		Class: 2
+		ClassName: 2
+		Factions: allies
+		BaseActor: mcv
+		SupportActors: e1, 1tnk, 2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 4
+	MPStartUnits@2_soviet:
+		Class: 2
+		ClassName: 2
+		Factions: soviet
+		BaseActor: mcv
+		SupportActors: e1, 3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 4
+	MPStartUnits@3_allies:
+		Class: 3
+		ClassName: 3
+		Factions: allies
+		BaseActor: mcv
+		SupportActors: e1, 1tnk, 2tnk, apc
+		InnerSupportRadius: 3
+		OuterSupportRadius: 4
+	MPStartUnits@3_soviet:
+		Class: 3
+		ClassName: 3
+		Factions: soviet
+		BaseActor: mcv
+		SupportActors: e1, 3tnk, v2rl
+		InnerSupportRadius: 3
+		OuterSupportRadius: 4
+	MPStartUnits@4_allies:
+		Class: 4
+		ClassName: 4
+		Factions: allies
+		BaseActor: mcv
+		SupportActors: e1, 1tnk, 2tnk, apc, e3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@4_soviet:
+		Class: 4
+		ClassName: 4
+		Factions: soviet
+		BaseActor: mcv
+		SupportActors: e1, 3tnk, v2rl, e2
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@5_allies:
+		Class: 5
+		ClassName: 5
+		Factions: allies
+		BaseActor: mcv
+		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@5_soviet:
+		Class: 5
+		ClassName: 5
+		Factions: soviet
+		BaseActor: mcv
+		SupportActors: e1, 3tnk, v2rl, e2, 3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@6_allies:
+		Class: 6
+		ClassName: 6
+		Factions: allies
+		BaseActor: mcv
+		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@6_soviet:
+		Class: 6
+		ClassName: 6
+		Factions: soviet
+		BaseActor: mcv
+		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@7_allies:
+		Class: 7
+		ClassName: 7
+		Factions: allies
+		BaseActor: mcv
+		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@7_soviet:
+		Class: 7
+		ClassName: 7
+		Factions: soviet
+		BaseActor: mcv
+		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@8_allies:
+		Class: 8
+		ClassName: 8
+		Factions: allies
+		BaseActor: mcv
+		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk 
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@8_soviet:
+		Class: 8
+		ClassName: 8
+		Factions: soviet
+		BaseActor: mcv
+		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@9_allies:
+		Class: 9
+		ClassName: 9
+		Factions: allies
+		BaseActor: mcv
+		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@9_soviet:
+		Class: 9
+		ClassName: 9
+		Factions: soviet
+		BaseActor: mcv
+		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@10_allies:
+		Class: 10
+		ClassName: 10
+		Factions: allies
+		BaseActor: mcv
+		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc, e1
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@10_soviet:
+		Class: 10
+		ClassName: 10
+		Factions: soviet
+		BaseActor: mcv
+		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl, e1
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@11_allies:
+		Class: 11
+		ClassName: 11
+		Factions: allies
+		BaseActor: mcv
+		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc, e1, jeep, arty
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@11_soviet:
+		Class: 11
+		ClassName: 11
+		Factions: soviet
+		BaseActor: mcv
+		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl, e1, 3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@12_allies:
+		Class: 12
+		ClassName: 12
+		Factions: allies
+		BaseActor: mcv
+		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc, e1, jeep, arty, 2tnk, 2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	MPStartUnits@12_soviet:
+		Class: 12
+		ClassName: 12
+		Factions: soviet
+		BaseActor: mcv
+		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl, e1, 3tnk, 4tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
 	MPStartLocations:
 	SpawnMPUnits:
+		StartingUnitsClass: 6
 	PathFinder:
 	ValidateOrder:
 	DebugPauseState:
