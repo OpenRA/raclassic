@@ -16,9 +16,6 @@ hosp:
 	damaged-idle:
 		Start: 4
 		Length: 4
-	dead:
-		Start: 8
-		Tick: 800
 	make: hospmake
 		Length: *
 	bib: mbHOSP
@@ -31,9 +28,6 @@ bio:
 	idle:
 	damaged-idle:
 		Start: 1
-	dead:
-		Start: 2
-		Tick: 800
 	make: biomake
 		Length: *
 
@@ -64,8 +58,6 @@ fact:
 	damaged-build:
 		Start: 27
 		Length: 25
-	dead: factdead
-		Tick: 800
 	bib: bib2
 		Length: *
 		UseTilesetExtension: true
@@ -86,8 +78,6 @@ proc:
 		ZOffset: 0
 	make: procmake
 		Length: *
-	dead: procdead
-		Tick: 800
 	bib: bib2
 		Length: *
 		UseTilesetExtension: true
@@ -122,8 +112,6 @@ powr:
 		Start: 1
 	make: powrmake
 		Length: *
-	dead: powrdead
-		Tick: 800
 	bib: bib3
 		Length: *
 		UseTilesetExtension: true
@@ -140,9 +128,6 @@ apwr:
 		Offset: 0,-10
 	make: apwrmake
 		Length: *
-		Offset: 0,-10
-	dead: apwrdead
-		Tick: 800
 		Offset: 0,-10
 	bib: bib2
 		Length: *

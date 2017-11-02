@@ -105,9 +105,6 @@ HOSP:
 		Range: 4c0
 	WithBuildingBib:
 		HasMinibib: Yes
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 	ProvidesPrerequisite@buildingname:
 	GpsDot:
 		String: Hospital
@@ -371,9 +368,6 @@ MISS:
 	WithBuildingBib:
 	Capturable:
 	EngineerRepairable:
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 	ProvidesPrerequisite@buildingname:
 
 BIO:
@@ -392,9 +386,6 @@ BIO:
 	EngineerRepairable:
 	Tooltip:
 		Name: Bio-research laboratory
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 	ProvidesPrerequisite@buildingname:
 	GpsDot:
 		String: Biohazard
