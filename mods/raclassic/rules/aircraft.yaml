@@ -208,7 +208,10 @@ TRAN:
 		Offset: -597,0,341
 		Sequence: slow-rotor2
 		RequiresCondition: !airborne
+	Sellable:
+		RequiresCondition: unit.sell && !airborne && !Loaded
 	Cargo:
+		LoadedCondition: Loaded
 		Types: Infantry
 		MaxWeight: 5
 		PipCount: 5
