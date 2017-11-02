@@ -407,7 +407,7 @@ THF:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 110
-		Prerequisites: ~tent, atek, ~disabled, ~techlevel.8
+		Prerequisites: ~tent, atek, ~techlevel.8
 		Description: Steals enemy credits.\n  Unarmed
 	RevealsShroud:
 		Range: 5c0
