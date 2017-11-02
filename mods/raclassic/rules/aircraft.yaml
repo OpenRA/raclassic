@@ -99,6 +99,7 @@ MIG:
 		Speed: 223
 		RepulsionSpeed: 40
 		MaximumPitch: 56
+		MoveIntoShroud: false
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
@@ -150,6 +151,7 @@ YAK:
 		Speed: 178
 		RepulsionSpeed: 40
 		MaximumPitch: 56
+		MoveIntoShroud: false
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
@@ -189,6 +191,7 @@ TRAN:
 		Speed: 128
 		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach,Gems
 		AltitudeVelocity: 0c58
+		MoveIntoShroud: false
 	WithIdleOverlay@ROTOR1AIR:
 		Offset: 597,0,213
 		Sequence: rotor
@@ -244,6 +247,7 @@ HELI:
 		InitialFacing: 224
 		TurnSpeed: 4
 		Speed: 149
+		MoveIntoShroud: false
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
@@ -297,6 +301,7 @@ HIND:
 		InitialFacing: 224
 		TurnSpeed: 4
 		Speed: 112
+		MoveIntoShroud: false
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
