@@ -874,6 +874,7 @@ PROC:
 	Refinery:
 		DockAngle: 64
 		DockOffset: 1,2
+		ShowTicks: false
 	StoresResources:
 		PipCount: 17
 		Capacity: 2000

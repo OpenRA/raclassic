@@ -20,7 +20,7 @@ CRATE:
 	GiveCashCrateAction:
 		Amount: 1000
 		SelectionShares: 50
-		UseCashTick: true
+		Effect: dollar
 	ExplodeCrateAction@fire:
 		Weapon: CrateNapalm
 		SelectionShares: 5
@@ -109,7 +109,7 @@ MONEYCRATE:
 	GiveCashCrateAction:
 		Amount: 500
 		SelectionShares: 1
-		UseCashTick: true
+		Effect: dollar
 	RenderSprites:
 		Image: wcrate
 
