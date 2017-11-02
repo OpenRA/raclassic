@@ -1367,6 +1367,13 @@ FIX:
 		Interval: 7
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
+	ProximityExternalCondition:
+		Condition: unit.sellable
+		Range: 1c0
+	Sellable:
+		RequiresCondition: !unit.docked
+	ExternalCondition@Docked:
+		Condition: unit.docked
 	WithRepairAnimation:
 	WithRearmAnimation:
 	Power:
