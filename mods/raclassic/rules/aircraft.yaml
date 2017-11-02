@@ -209,7 +209,7 @@ TRAN:
 		Sequence: slow-rotor2
 		RequiresCondition: !airborne
 	Sellable:
-		RequiresCondition: unit.sell && !airborne && !Loaded
+		RequiresCondition: unit.sellable && !airborne && !Loaded
 	Cargo:
 		LoadedCondition: Loaded
 		Types: Infantry
