@@ -1,6 +1,5 @@
 MSLO:
 	Inherits: ^ScienceBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^2x1Shape
 	Valued:
 		Cost: 2500
@@ -22,7 +21,6 @@ MSLO:
 	RevealsShroud:
 		Range: 5c0
 	NukePower:
-		PauseOnCondition: disabled
 		Cursor: nuke
 		Icon: abomb
 		ChargeTime: 540
@@ -44,10 +42,6 @@ MSLO:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
-	RequiresPower:
 	SupportPowerChargeBar:
 	ProvidesPrerequisite@buildingname:
 	Power:
@@ -263,7 +257,6 @@ SYRD:
 
 IRON:
 	Inherits: ^ScienceBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^2x1Shape
 	Buildable:
 		Queue: Building
@@ -278,10 +271,6 @@ IRON:
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	Selectable:
 		Bounds: 48,28,0,2
 	SelectionDecorations:
@@ -314,7 +303,6 @@ IRON:
 
 PDOX:
 	Inherits: ^ScienceBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^2x2Shape
 	Buildable:
 		Queue: Building
@@ -329,10 +317,6 @@ PDOX:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	Health:
 		HP: 400
 	Armor:
@@ -1101,7 +1085,6 @@ AFLD:
 POWR:
 	Inherits: ^Building
 	Inherits@IDISABLE: ^DisabledOverlay
-	Inherits@POWER_OUTAGE: ^DisabledByPowerOutage
 	Inherits@shape: ^2x2Shape
 	HitShape:
 		UseTargetableCellsOffsets: false
@@ -1137,7 +1120,6 @@ POWR:
 APWR:
 	Inherits: ^Building
 	Inherits@IDISABLE: ^DisabledOverlay
-	Inherits@POWER_OUTAGE: ^DisabledByPowerOutage
 	Inherits@shape: ^3x2Shape
 	HitShape:
 		TargetableOffsets: -355,-1024,0
