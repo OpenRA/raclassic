@@ -833,9 +833,6 @@ FACT:
 	WithBuildingPlacedAnimation:
 	Power:
 		Amount: 0
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 	ProvidesPrerequisite@buildingname:
 	HitShape:
 		TargetableOffsets: 1273,939,0, -980,-640,0, -980,640,0
@@ -889,9 +886,6 @@ PROC:
 		Sequence: idle-top
 	Power:
 		Amount: -30
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 	ProvidesPrerequisite@buildingname:
 	HitShape:
 		Type: Rectangle
@@ -1132,9 +1126,6 @@ POWR:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 
 APWR:
 	Inherits: ^Building
@@ -1173,9 +1164,6 @@ APWR:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 
 STEK:
 	Inherits: ^ScienceBuilding
