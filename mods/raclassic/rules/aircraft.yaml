@@ -227,7 +227,7 @@ HELI:
 		Queue: Aircraft
 		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 40
-		Prerequisites: ~hpad, ~techlevel.6
+		Prerequisites: ~hpad, ~heli.allies, ~techlevel.6
 		Description: Helicopter gunship armed\nwith multi-purpose missiles.\n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
 	Valued:
 		Cost: 1200
@@ -278,7 +278,7 @@ HIND:
 		Queue: Aircraft
 		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 20
-		Prerequisites: ~hpad, ~techlevel.6
+		Prerequisites: ~hpad, ~heli.soviet, ~techlevel.6
 		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor.\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 1200
