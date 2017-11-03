@@ -240,8 +240,10 @@ E7:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 120
 		Prerequisites: barracks, techcenter, ~techlevel.8
-		BuildLimit: 1
-		Description: Elite commando infantry. Armed with\ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4\nMaximum 1 can be trained.
+		Description: Elite commando infantry. Armed with\ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4
+	AutoTarget:
+		InitialStance: ReturnFire
+		InitialStanceAI: ReturnFire
 	Valued:
 		Cost: 1200
 	Tooltip:
