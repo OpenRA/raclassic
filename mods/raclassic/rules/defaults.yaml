@@ -500,6 +500,7 @@
 	EngineerRepairable:
 	WithMakeAnimation:
 	Capturable:
+		CaptureThreshold: 66
 	EmitInfantryOnSell:
 		ActorTypes: e1,e1,e1,tecn,tecn
 	MustBeDestroyed:

@@ -69,7 +69,7 @@ GAP:
 	WithSpriteBody:
 		PauseAnimationWhenDisabled: true
 	Health:
-		HP: 1000
+		HP: 700
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -78,7 +78,7 @@ GAP:
 		Range: 10c0
 	RenderShroudCircle:
 	Power:
-		Amount: -60
+		Amount: -90
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	Explodes:
@@ -284,7 +284,7 @@ IRON:
 		Description: Invulnerability
 		LongDesc: Makes a unit invulnerable\nfor 45 seconds.
 		Range: 0
-		Duration: 1125
+		Duration: 300
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		BeginChargeSpeechNotification: IronCurtainCharging
@@ -360,7 +360,7 @@ TSLA:
 	SelectionDecorations:
 		VisualBounds: 24,40,0,-8
 	Health:
-		HP: 400
+		HP: 600
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -546,7 +546,7 @@ GUN:
 		Prerequisites: tent, ~structures.allies, ~techlevel.2
 		Description: Anti-Armor base defense.\nCan detect cloaked units.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
-		Cost: 600
+		Cost: 800
 	Tooltip:
 		Name: Turret
 	Building:
@@ -568,7 +568,7 @@ GUN:
 	AttackTurreted:
 	WithMuzzleOverlay:
 	Power:
-		Amount: -40
+		Amount: -55
 	DetectCloaked:
 		Range: 6c0
 	BodyOrientation:
@@ -1445,7 +1445,7 @@ BRIK:
 		Prerequisites: fact, ~techlevel.5
 		Description: Stop units and blocks enemy fire.
 	Valued:
-		Cost: 100
+		Cost: 50
 	CustomSellValue:
 		Value: 0
 	Tooltip:
