@@ -614,7 +614,6 @@ FTUR:
 
 SAM:
 	Inherits: ^Defense
-	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@shape: ^2x1Shape
 	HitShape:
@@ -625,7 +624,7 @@ SAM:
 		Queue: Building
 		BuildPaletteOrder: 180
 		Prerequisites: dome, ~structures.soviet, ~techlevel.6
-		Description: Anti-Air base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
+		Description: Anti-Air base defense.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -633,7 +632,6 @@ SAM:
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
-	RequiresPower:
 	Health:
 		HP: 400
 	Armor:
