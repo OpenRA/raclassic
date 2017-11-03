@@ -93,7 +93,7 @@ World:
 		Factions: allies, soviet
 		BaseActor: mcv
 		SupportActors: e1
-		InnerSupportRadius: 3
+		InnerSupportRadius: 2
 		OuterSupportRadius: 3
 	MPStartUnits@2_allies:
 		Class: 2
