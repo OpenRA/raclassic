@@ -18,7 +18,7 @@ MINP:
 CRATE:
 	Inherits: ^Crate
 	GiveCashCrateAction:
-		Amount: 1000
+		Amount: 2000
 		SelectionShares: 50
 		Effect: dollar
 	ExplodeCrateAction@fire:
@@ -27,80 +27,102 @@ CRATE:
 	ExplodeCrateAction@boom:
 		Weapon: CrateExplosion
 		SelectionShares: 5
-	HideMapCrateAction:
-		SelectionShares: 5
-		Effect: hide-map
+	ExplodeCrateAction@timequake:
+		Weapon: TimeQuake
+		SelectionShares: 3
+		Effect: timequake
 	HealUnitsCrateAction:
 		Notification: heal2.aud
-		SelectionShares: 2
+		SelectionShares: 1
 		Effect: heal
+	HideMapCrateAction:
+		SelectionShares: 1
+		Effect: hide-map
 	RevealMapCrateAction:
 		SelectionShares: 1
 		Effect: reveal-map
-	DuplicateUnitCrateAction:
-		SelectionShares: 10
-		MaxAmount: 5
-		MinAmount: 1
-		MaxDuplicateValue: 1500
+	SupportPowerCrateAction@parabombs:
+		SelectionShares: 3
+		Proxy: powerproxy.parabombs
+		Effect: parabombs
+	SupportPowerCrateAction@sonar:
+		SelectionShares: 3
+		Proxy: powerproxy.sonarpulse.instant
+		Effect: sonar
+#	SupportPowerCrateAction@nuke:
+#		SelectionShares: 1
+#		Proxy: powerproxy.abomb
+#		Effect: nuke
 	GiveMcvCrateAction:
 		SelectionShares: 0
 		NoBaseSelectionShares: 100
 		Units: mcv
+	GiveUnitCrateAction@harv:
+		SelectionShares: 2
+		Units: harv
 	GiveUnitCrateAction@jeep:
-		SelectionShares: 7
+		SelectionShares: 2
 		Units: jeep
-		ValidFactions: allies, england, france, germany
-		Prerequisites: techlevel.low
+	GiveUnitCrateAction@apc:
+		SelectionShares: 2
+		Units: apc
 	GiveUnitCrateAction@arty:
-		SelectionShares: 6
+		SelectionShares: 2
 		Units: arty
-		ValidFactions: allies, england, france, germany
-		Prerequisites: techlevel.medium, dome
 	GiveUnitCrateAction@v2rl:
-		SelectionShares: 6
+		SelectionShares: 2
 		Units: v2rl
-		ValidFactions: soviet, russia, ukraine
-		Prerequisites: techlevel.medium, dome
 	GiveUnitCrateAction@1tnk:
-		SelectionShares: 5
+		SelectionShares: 2
 		Units: 1tnk
-		ValidFactions: allies, england, france, germany
-		Prerequisites: techlevel.low
 	GiveUnitCrateAction@2tnk:
-		SelectionShares: 4
+		SelectionShares: 2
 		Units: 2tnk
-		ValidFactions: allies, england, france, germany
-		Prerequisites: techlevel.medium, fix
 	GiveUnitCrateAction@3tnk:
-		SelectionShares: 4
+		SelectionShares: 2
 		Units: 3tnk
-		ValidFactions: soviet, russia, ukraine
-		Prerequisites: techlevel.medium, fix
+	GiveUnitCrateAction@mrj:
+		SelectionShares: 2
+		Units: mrj
+	GiveUnitCrateAction@mnly:
+		SelectionShares: 2
+		Units: mnly
 	GiveUnitCrateAction@4tnk:
-		SelectionShares: 3
+		SelectionShares: 1
 		Units: 4tnk
-		ValidFactions: soviet, russia, ukraine
-		Prerequisites: techlevel.high, fix, techcenter
-	GiveUnitCrateAction@squadlight:
-		SelectionShares: 7
-		Units: e1,e1,e1,e3,e3
-		ValidFactions: allies, england, france, germany, soviet, russia, ukraine
-	GiveUnitCrateAction@squadheavyallies:
-		SelectionShares: 7
-		Units: e1,e1,e1,e1,e3,e3,e3,e6,medi
-		ValidFactions: allies, england, france, germany
-		TimeDelay: 4500
-	GiveUnitCrateAction@squadheavysoviet:
-		SelectionShares: 7
-		Units: e1,e1,e4,e4,e3,e3,e3
-		ValidFactions: soviet, russia, ukraine
-		TimeDelay: 4500
-	GrantExternalConditionCrateAction@invuln:
+	GiveUnitCrateAction@mgg:
+		SelectionShares: 1
+		Units: mgg
+	GiveUnitCrateAction@squad1:
 		SelectionShares: 5
+		Units: e1,e1,e1,e1,e3
+	GiveUnitCrateAction@squad2:
+		SelectionShares: 5
+		Units: e1,e1,e1,e3,e3
+	GiveUnitCrateAction@squad3:
+		SelectionShares: 5
+		Units: e1,e1,e3,e3,e3
+	GiveUnitCrateAction@squad3:
+		SelectionShares: 5
+		Units: e1,e3,e3,e3,e3
+	GrantExternalConditionCrateAction@armor:
+		SelectionShares: 10
+		Effect: armor
+		Condition: crate.armor
+	GrantExternalConditionCrateAction@speed:
+		SelectionShares: 10
+		Effect: fpower
+		Condition: crate.fire_power
+	GrantExternalConditionCrateAction@firepower:
+		SelectionShares: 10
+		Effect: speed
+		Condition: crate.speed
+	GrantExternalConditionCrateAction@invuln:
+		SelectionShares: 3
 		Effect: invuln
 		Notification: ironcur9.aud
 		Condition: invulnerability
-		Duration: 600
+		Duration: 1500
 
 MONEYCRATE:
 	Inherits: ^Crate
@@ -288,7 +310,7 @@ powerproxy.parabombs:
 	AlwaysVisible:
 	AirstrikePower:
 		Icon: parabombs
-		Description: Parabombs (Single Use)
+		Description: Parabombs
 		LongDesc: A Badger drops a load of parachuted\nbombs on your target.
 		OneShot: true
 		AllowMultiple: true
@@ -316,6 +338,44 @@ powerproxy.sonarpulse:
 		DeploySound: sonpulse.aud
 		EffectImage: moveflsh
 		EffectPalette: moveflash
+
+powerproxy.sonarpulse.instant:
+	AlwaysVisible:
+	SpawnActorPower:
+		Icon: sonar
+		Description: Sonar Pulse
+		LongDesc: Reveals all submarines in the vicinity for a \nshort time.
+		OneShot: true
+		AllowMultiple: true
+		SelectTargetSpeechNotification: SelectTarget
+		Actor: sonar
+		LifeTime: 250
+		DeploySound: sonpulse.aud
+		EffectImage: moveflsh
+		EffectPalette: moveflash
+
+powerproxy.abomb:
+	AlwaysVisible:
+	NukePower:
+		Cursor: nuke
+		Icon: abomb
+		Description: Atom Bomb
+		LongDesc: Launches a devastating atomic bomb\nat a target location.
+		OneShot: true
+		AllowMultiple: true
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: AbombLaunchDetected
+		SkipAscent: true
+		ActivationSequence:
+		MissileWeapon: atomic
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		BeaconPoster: atomicon
+		FlashType: Nuke
+		CameraRange: 10c0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
 
 powerproxy.paratroopers:
 	AlwaysVisible:
