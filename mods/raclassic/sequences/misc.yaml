@@ -614,6 +614,3 @@ ctflag:
 		Length: 9
 		Tick: 50
 		Offset: 0,-12
-	bib: mbGAP
-		Length: *
-		UseTilesetExtension: true
