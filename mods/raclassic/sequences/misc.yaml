@@ -426,19 +426,6 @@ fire:
 		Offset: 0,-3
 		ZOffset: 1023
 
-rank:
-	rank-veteran-1:
-	rank-veteran-2:
-		Start: 1
-	rank-veteran-3:
-		Start: 2
-	rank-elite:
-		Start: 3
-
-iconchevrons:
-	veteran:
-		Offset: 2, 2
-
 atomic:
 	up: atomicup
 		Length: *
