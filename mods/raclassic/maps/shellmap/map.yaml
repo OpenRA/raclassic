@@ -352,5 +352,8 @@ Actors:
 		Owner: Greece
 		Location: 42,78
 		Facing: 64
+	Actor93: apwr
+		Owner: Greece
+		Location: 41,65
 
 Rules: raclassic|rules/campaign-palettes.yaml, rules.yaml
