@@ -605,10 +605,11 @@
 	Inherits: ^Building
 	-GivesBuildableArea:
 	Health:
-		HP: 100
-	Explodes:
-		Weapon: Demolish
-		DamageThreshold: 90
+		HP: 30
+	Armor:
+		Type: None
+	Valued:
+		Cost: 50
 	RevealsShroud:
 		Range: 4c0
 	WithDecoration@fake:
@@ -619,6 +620,9 @@
 		ZOffset: 256
 	-EmitInfantryOnSell:
 	-MustBeDestroyed:
+	Power:
+		Amount: -2
+	Capturable:
 	EditorTilesetFilter:
 		Categories: Fake
 
