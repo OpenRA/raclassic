@@ -951,12 +951,12 @@ HPAD:
 	ProvidesPrerequisite@allies:
 		Factions: allies
 		Prerequisite: heli.allies
-	ProvidesPrerequisite@alliedstructure:
-		RequiresPrerequisites: structures.allies
-		Prerequisite: heli.allies
 	ProvidesPrerequisite@soviet:
 		Factions: soviet
 		Prerequisite: heli.soviet
+	ProvidesPrerequisite@alliedstructure:
+		RequiresPrerequisites: structures.allies
+		Prerequisite: heli.allies
 	ProvidesPrerequisite@sovietstructure:
 		RequiresPrerequisites: structures.soviet
 		Prerequisite: heli.soviet
