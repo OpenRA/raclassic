@@ -180,3 +180,10 @@ MADTankDetonate:
 		Explosions: med_explosion
 		ImpactSounds: mineblo1.aud
 		VictimScanRadius: 0
+
+TimeQuake:
+	InvalidTargets: Infantry
+	Warhead@1Dam: HealthPercentageDamage
+		Spread: 100c0
+		Damage: 33
+		InvalidTargets: Infantry
