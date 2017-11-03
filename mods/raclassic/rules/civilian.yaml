@@ -106,8 +106,6 @@ HOSP:
 	WithBuildingBib:
 		HasMinibib: Yes
 	ProvidesPrerequisite@buildingname:
-	GpsDot:
-		String: Hospital
 
 V01:
 	Inherits: ^CivBuilding
@@ -387,8 +385,6 @@ BIO:
 	Tooltip:
 		Name: Bio-research laboratory
 	ProvidesPrerequisite@buildingname:
-	GpsDot:
-		String: Biohazard
 
 OILB:
 	Inherits: ^TechBuilding
@@ -415,8 +411,6 @@ OILB:
 		Name: Oil Derrick
 	Explodes:
 		Weapon: BarrelExplode
-	GpsDot:
-		String: Oil
 	GivesCashOnCapture:
 		Amount: 100
 

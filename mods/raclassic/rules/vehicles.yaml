@@ -253,8 +253,6 @@ HARV:
 	WithHarvestAnimation:
 		PrefixByFullness: empty-, half-, full-
 	WithDockingAnimation:
-	GpsDot:
-		String: Harvester
 	SpawnActorOnDeath:
 		Actor: HARV.EmptyHusk
 	HarvesterHuskModifier:
