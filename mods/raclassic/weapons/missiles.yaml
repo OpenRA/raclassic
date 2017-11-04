@@ -284,7 +284,7 @@ TorpTube:
 			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@3Eff: CreateEffect
-		Explosions: artillery_explosion
+		Explosions: building
 		ImpactSounds: kaboom15.aud
 	Warhead@4EffWater: CreateEffect
 		Explosions: large_splash
@@ -339,7 +339,7 @@ SCUD:
 			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, Incendiary
 	Warhead@3Eff: CreateEffect
-		Explosions: napalm
+		Explosions: building
 		ImpactSounds: firebl3.aud
 	Warhead@4EffWater: CreateEffect
 		Explosions: large_splash
