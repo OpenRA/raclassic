@@ -47,7 +47,7 @@ CRATE:
 		Effect: parabombs
 	SupportPowerCrateAction@sonar:
 		SelectionShares: 3
-		Proxy: powerproxy.sonarpulse.instant
+		Proxy: powerproxy.sonarpulse.crate
 		Effect: sonar
 #	SupportPowerCrateAction@nuke:
 #		SelectionShares: 1
@@ -57,68 +57,118 @@ CRATE:
 		SelectionShares: 0
 		NoBaseSelectionShares: 100
 		Units: mcv
-	GiveUnitCrateAction@harv:
+	GiveUnitCrateAction@harv_all:
 		SelectionShares: 2
 		Units: harv
+		ValidFactions: allies
+	GiveUnitCrateAction@harv_sov:
+		SelectionShares: 3
+		Units: harv
+		ValidFactions: soviet
 	GiveUnitCrateAction@jeep:
 		SelectionShares: 2
 		Units: jeep
+		ValidFactions: allies
 	GiveUnitCrateAction@apc:
 		SelectionShares: 2
 		Units: apc
+		ValidFactions: allies
 	GiveUnitCrateAction@arty:
 		SelectionShares: 2
 		Units: arty
+		ValidFactions: allies
 	GiveUnitCrateAction@v2rl:
-		SelectionShares: 2
+		SelectionShares: 3
 		Units: v2rl
+		ValidFactions: soviet
 	GiveUnitCrateAction@1tnk:
 		SelectionShares: 2
 		Units: 1tnk
+		ValidFactions: allies
 	GiveUnitCrateAction@2tnk:
 		SelectionShares: 2
 		Units: 2tnk
+		ValidFactions: allies
 	GiveUnitCrateAction@3tnk:
-		SelectionShares: 2
+		SelectionShares: 4
 		Units: 3tnk
+		ValidFactions: soviet
 	GiveUnitCrateAction@mrj:
 		SelectionShares: 2
 		Units: mrj
-	GiveUnitCrateAction@mnly:
+		ValidFactions: allies
+	GiveUnitCrateAction@mnly_all:
 		SelectionShares: 2
 		Units: mnly
+		ValidFactions: allies
+	GiveUnitCrateAction@mnly_sov:
+		SelectionShares: 4
+		Units: mnly
+		ValidFactions: soviet
+	GiveUnitCrateAction@mcv_all:
+		SelectionShares: 2
+		Units: mcv
+		ValidFactions: allies
+	GiveUnitCrateAction@mcv_sov:
+		SelectionShares: 3
+		Units: mcv
+		ValidFactions: soviet
 	GiveUnitCrateAction@4tnk:
-		SelectionShares: 1
+		SelectionShares: 3
 		Units: 4tnk
+		ValidFactions: soviet
 	GiveUnitCrateAction@mgg:
-		SelectionShares: 1
+		SelectionShares: 2
 		Units: mgg
+		ValidFactions: allies
 	GiveUnitCrateAction@squad1:
-		SelectionShares: 5
-		Units: e1,e1,e1,e1,e3
+		SelectionShares: 2
+		Units: e1,e1,e1,e1,e1
 	GiveUnitCrateAction@squad2:
-		SelectionShares: 5
+		SelectionShares: 2
+		Units: e1,e1,e1,e1,e2
+	GiveUnitCrateAction@squad3:
+		SelectionShares: 2
+		Units: e1,e1,e1,e1,e3
+	GiveUnitCrateAction@squad4:
+		SelectionShares: 2
+		Units: e1,e1,e1,e1,e6
+	GiveUnitCrateAction@squad5:
+		SelectionShares: 2
+		Units: e1,e1,e1,e2,e6
+	GiveUnitCrateAction@squad6:
+		SelectionShares: 2
+		Units: e1,e1,e1,e3,e6
+	GiveUnitCrateAction@squad7:
+		SelectionShares: 2
+		Units: e1,e1,e2,e3,e6
+	GiveUnitCrateAction@squad8:
+		SelectionShares: 2
+		Units: e1,e1,e1,e6,e6
+	GiveUnitCrateAction@squad9:
+		SelectionShares: 2
 		Units: e1,e1,e1,e3,e3
-	GiveUnitCrateAction@squad3:
-		SelectionShares: 5
-		Units: e1,e1,e3,e3,e3
-	GiveUnitCrateAction@squad3:
-		SelectionShares: 5
-		Units: e1,e3,e3,e3,e3
+	GiveUnitCrateAction@squad10:
+		SelectionShares: 2
+		Units: e1,e1,e1,e2,e2
 	GrantExternalConditionCrateAction@armor:
 		SelectionShares: 10
+		Range: 3c0
 		Effect: armor
 		Condition: crate.armor
 	GrantExternalConditionCrateAction@speed:
 		SelectionShares: 10
+		Range: 3c0
 		Effect: fpower
 		Condition: crate.fire_power
 	GrantExternalConditionCrateAction@firepower:
 		SelectionShares: 10
+		Range: 3c0
 		Effect: speed
 		Condition: crate.speed
 	GrantExternalConditionCrateAction@invuln:
 		SelectionShares: 3
+		Range: 3c0
 		Effect: invuln
 		Notification: ironcur9.aud
 		Condition: invulnerability
@@ -311,6 +361,7 @@ powerproxy.parabombs:
 	AirstrikePower:
 		Icon: parabombs
 		Description: Parabombs
+		ChargeTime: 840
 		LongDesc: A Badger drops a load of parachuted\nbombs on your target.
 		OneShot: true
 		AllowMultiple: true
@@ -339,12 +390,13 @@ powerproxy.sonarpulse:
 		EffectImage: moveflsh
 		EffectPalette: moveflash
 
-powerproxy.sonarpulse.instant:
+powerproxy.sonarpulse.crate:
 	AlwaysVisible:
 	SpawnActorPower:
 		Icon: sonar
 		Description: Sonar Pulse
 		LongDesc: Reveals all submarines in the vicinity for a \nshort time.
+		ChargeTime: 30
 		OneShot: true
 		AllowMultiple: true
 		SelectTargetSpeechNotification: SelectTarget
@@ -359,6 +411,7 @@ powerproxy.abomb:
 	NukePower:
 		Cursor: nuke
 		Icon: abomb
+		ChargeTime: 780
 		Description: Atom Bomb
 		LongDesc: Launches a devastating atomic bomb\nat a target location.
 		OneShot: true

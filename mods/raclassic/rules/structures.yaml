@@ -23,7 +23,7 @@ MSLO:
 	NukePower:
 		Cursor: nuke
 		Icon: abomb
-		ChargeTime: 540
+		ChargeTime: 780
 		Description: Atom Bomb
 		LongDesc: Launches a devastating atomic bomb\nat a target location.
 		BeginChargeSpeechNotification: AbombPrepping
