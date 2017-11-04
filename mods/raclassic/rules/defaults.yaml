@@ -521,9 +521,6 @@
 		RequiredForShortGame: false
 	DrawLineToTarget:
 	RenderRangeCircle:
-	Explodes:
-		Weapon: SmallBuildingExplode
-		EmptyWeapon: SmallBuildingExplode
 	EditorTilesetFilter:
 		Categories: Defense
 	-CommandBarBlacklist:

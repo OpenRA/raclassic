@@ -96,18 +96,13 @@ V2Explode:
 
 BuildingExplode:
 	Warhead@2Eff: CreateEffect
-		Explosions: building, building_napalm, large_explosion, self_destruct, large_napalm
+		Explosions: building
 	Warhead@Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Wall, Trees
 
-SmallBuildingExplode:
-	Inherits: BuildingExplode
-	Warhead@2Eff: CreateEffect
-		Explosions: building, building_napalm, large_explosion, self_destruct
-
 CivBuildingExplosion:
-	Inherits: SmallBuildingExplode
+	Inherits: BuildingExplode
 	Warhead@1Dam: SpreadDamage # Used to panic civilians which are emitted from a killed CivBuilding
 		Spread: 64
 		Damage: 1

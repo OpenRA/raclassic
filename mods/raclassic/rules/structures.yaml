@@ -81,9 +81,6 @@ GAP:
 		Amount: -90
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	Explodes:
-		Weapon: SmallBuildingExplode
-		EmptyWeapon: SmallBuildingExplode
 	HitShape:
 		Type: Rectangle
 			TopLeft: -512, -512
@@ -608,9 +605,6 @@ FTUR:
 	DetectCloaked:
 		Range: 6c0
 	ProvidesPrerequisite@buildingname:
-	Explodes:
-		Weapon: BuildingExplode
-		EmptyWeapon: BuildingExplode
 
 SAM:
 	Inherits: ^Defense
@@ -902,9 +896,6 @@ SILO:
 	-EmitInfantryOnSell:
 	Power:
 		Amount: -10
-	Explodes:
-		Weapon: SmallBuildingExplode
-		EmptyWeapon: SmallBuildingExplode
 
 HPAD:
 	Inherits: ^Building
