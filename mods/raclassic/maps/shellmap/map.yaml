@@ -205,10 +205,10 @@ Actors:
 	Actor54: proc
 		Owner: Greece
 		Location: 41,70
-	Actor55: tent
+	ABarracks1: tent
 		Owner: Greece
 		Location: 46,65
-	Actor56: syrd
+	ANavalYard1: syrd
 		Owner: Greece
 		Location: 54,76
 	Actor57: pbox
@@ -236,35 +236,35 @@ Actors:
 	Actor64: powr
 		Owner: USSR
 		Location: 77,54
-	Actor65: barr
+	SBarracks1: barr
 		Owner: USSR
 		Location: 73,59
-	Actor66: kenn
+	SKennel1: kenn
 		Owner: USSR
 		Location: 80,61
-	Actor67: dog
+	SDog1: dog
 		Owner: USSR
 		Location: 81,62
 		SubCell: 3
 		Facing: 128
-	Actor68: dog
+	SDog2: dog
 		Owner: USSR
 		Location: 79,62
 		SubCell: 3
 		Facing: 128
-	Actor69: e1
+	SRifle1: e1
 		Owner: USSR
 		Location: 72,59
 		SubCell: 3
 		Facing: 64
 		TurretFacing: 64
-	Actor70: e1
+	SRifle2: e1
 		Owner: USSR
 		Location: 72,60
 		SubCell: 3
 		Facing: 64
 		TurretFacing: 64
-	Actor71: e2
+	SGren1: e2
 		Owner: USSR
 		Location: 76,56
 		SubCell: 3
@@ -304,37 +304,37 @@ Actors:
 		Owner: USSR
 		Location: 70,58
 		TurretFacing: 92
-	Actor83: spen
+	SSubPen1: spen
 		Owner: USSR
 		Location: 70,73
-	Actor84: ss
+	SSub1: ss
 		Owner: USSR
 		Location: 69,73
 		Facing: 64
-	Actor85: pt
+	SGBoat1: pt
 		Owner: Greece
 		Location: 55,79
 		Facing: 192
 		TurretFacing: 192
-	Actor86: e1
+	ARifle1: e1
 		Owner: Greece
 		Location: 49,68
 		SubCell: 3
 		Facing: 224
 		TurretFacing: 224
-	Actor87: e1
+	ARifle2: e1
 		Owner: Greece
 		Location: 53,68
 		SubCell: 3
 		Facing: 0
 		TurretFacing: 0
-	Actor88: e3
+	ARocket1: e3
 		Owner: Greece
 		Location: 47,64
 		SubCell: 3
 		Facing: 0
 		TurretFacing: 0
-	Actor89: medi
+	AMedic1: medi
 		Owner: Greece
 		Location: 50,70
 		SubCell: 3
