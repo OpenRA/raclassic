@@ -16,6 +16,16 @@ World:
 		Scripts: shellmap.lua
 	-StartGameNotification:
 
+^AutoTargetGround:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Structure, Defense
+		InvalidTargets: NoAutoTarget
+
+^AutoTargetAll:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Structure, Defense
+		InvalidTargets: NoAutoTarget
+
 ^Vehicle:
 	DamageMultiplier@UNKILLABLE:
 		RequiresCondition: unkillable
@@ -63,3 +73,14 @@ World:
 		Modifier: 0
 	ExternalCondition@UNKILLABLE:
 		Condition: unkillable
+
+^Wall:
+	DamageMultiplier@UNKILLABLE:
+		RequiresCondition: unkillable
+		Modifier: 0
+	ExternalCondition@UNKILLABLE:
+		Condition: unkillable
+
+^Bridge:
+	DamageMultiplier@UNKILLABLE:
+		Modifier: 0
