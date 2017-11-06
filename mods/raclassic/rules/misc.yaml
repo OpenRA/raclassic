@@ -182,8 +182,6 @@ MONEYCRATE:
 		Amount: 500
 		SelectionShares: 1
 		Effect: dollar
-	RenderSprites:
-		Image: wcrate
 
 HEALCRATE:
 	Inherits: ^Crate
@@ -198,13 +196,13 @@ WCRATE:
 	Inherits: ^Crate
 	Tooltip:
 		Name: Wooden Crate
-	RenderSprites:
-		Image: wcrate
 
 SCRATE:
 	Inherits: ^Crate
 	Tooltip:
 		Name: Steel Crate
+	RenderSprites:
+		Image: scrate
 
 CAMERA:
 	EditorOnlyTooltip:

@@ -876,7 +876,7 @@
 		TerrainTypes: Clear, Rough, Road, Ore, Beach
 	RenderSprites:
 		Palette: effect
-		Image: scrate
+		Image: wcrate
 	WithCrateBody:
 		XmasImages: xcratea, xcrateb, xcratec, xcrated
 		LandSequence: land
