@@ -84,7 +84,6 @@ TurretGun:
 		Speed: 204
 		Blockable: false
 		LaunchAngle: 62
-		Inaccuracy: 1c938
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
 		Damage: 150
@@ -105,8 +104,6 @@ TurretGun:
 	Inherits: ^Artillery
 	Report: tank5.aud
 	TargetActorCenter: true
-	Projectile: Bullet
-		ContrailLength: 30
 
 8Inch:
 	Inherits: ^Artillery
@@ -117,7 +114,6 @@ TurretGun:
 	TargetActorCenter: true
 	Projectile: Bullet
 		Inaccuracy: 2c938
-		ContrailLength: 30
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
 		Damage: 25
