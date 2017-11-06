@@ -5,11 +5,11 @@ SYRF:
 		BuildPaletteOrder: 870
 		Queue: Building
 		Prerequisites: anypower, ~structures.allies, ~techlevel.2
-		Description: Looks like a Shipyard.
+		Description: Looks like a Naval Yard.
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake Shipyard
-		GenericName: Shipyard
+		Name: Fake Naval Yard
+		GenericName: Naval Yard
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Targetable:
