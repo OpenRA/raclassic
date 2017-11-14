@@ -35,13 +35,10 @@ DOG:
 	AutoTarget:
 		InitialStance: AttackAnything
 	AutoTargetPriority@DEFAULT:
-		Types: Infantry
-	Targetable:
-		TargetTypes: Ground, Infantry
+		ValidTargets: Infantry, Spy
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		StandSequences: stand
-	IgnoresDisguise:
 	Voiced:
 		VoiceSet: DogVoice
 	-TakeCover:
@@ -183,53 +180,27 @@ E6:
 
 SPY:
 	Inherits: ^Soldier
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 90
 		Prerequisites: dome, ~tent, ~techlevel.4
-		Description: Infiltrates enemy structures for intel or\nsabotage. Exact effect depends on the\nbuilding infiltrated.\nLoses disguise when attacking.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft\n  Special Ability: Disguised
+		Description: Infiltrates enemy structures for intel.\nExact effect depends on the building infiltrated.
 	Valued:
 		Cost: 500
-	-Tooltip:
-	DisguiseTooltip:
+	Tooltip:
 		Name: Spy
-		GenericName: Soldier
-	-Guard:
 	RevealsShroud:
 		Range: 5c0
 	Passenger:
 		PipType: Yellow
 		Voice: Move
-	Disguise:
-		Voice: Move
-		DisguisedCondition: disguise
 	Infiltrates:
 		Types: SpyInfiltrate
 		PlayerExperience: 50
-	AutoTarget:
-		InitialStance: HoldFire
-		InitialStanceAI: HoldFire
-		ScanRadius: 5
-	-WithInfantryBody:
-	WithDisguisingInfantryBody:
-		DefaultAttackSequence: shoot
-		IdleSequences: idle1,idle2
-		StandSequences: stand,stand2
-	WithDecoration@disguise:
-		Image: pips
-		Sequence: pip-disguise
-		Palette: effect
-		ReferencePoint: Top, Right
-		ZOffset: 256
-		RequiresCondition: disguise
-	IgnoresDisguise:
-	Armament:
-		Weapon: SilencedPPK
-	AttackFrontal:
-	AttackMove:
-		Voice: Move
+	WithInfantryBody:
+	Targetable:
+		TargetTypes: Ground, Infantry, Spy
 	Voiced:
 		VoiceSet: SpyVoice
 
@@ -309,7 +280,7 @@ MEDI:
 		VoiceSet: MedicVoice
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
-		Types: Infantry
+		ValidTargets: Infantry
 
 MECH:
 	Inherits: ^Soldier
@@ -347,7 +318,7 @@ MECH:
 		VoiceSet: MechanicVoice
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
-		Types: Vehicle
+		ValidTargets: Vehicle
 
 EINSTEIN:
 	Inherits: ^CivInfantry

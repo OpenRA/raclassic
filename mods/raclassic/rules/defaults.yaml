@@ -58,11 +58,11 @@
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
 		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Defense
-		InvalidTargets: NoAutoTarget, WaterStructure
+		InvalidTargets: NoAutoTarget, WaterStructure, Spy
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Structure, Defense
-		InvalidTargets: NoAutoTarget
+		InvalidTargets: NoAutoTarget, Spy
 
 ^AutoTargetGroundAssaultMove:
 	Inherits: ^AutoTargetGround
@@ -85,11 +85,11 @@
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
 		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Air, Defense
-		InvalidTargets: NoAutoTarget, WaterStructure
+		InvalidTargets: NoAutoTarget, WaterStructure, Spy
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Air, Structure, Defense
-		InvalidTargets: NoAutoTarget
+		InvalidTargets: NoAutoTarget, Spy
 
 ^AutoTargetAllAssaultMove:
 	Inherits: ^AutoTargetAll
@@ -228,7 +228,7 @@
 	Selectable:
 		Bounds: 12,18,0,-8
 	Targetable:
-		TargetTypes: Ground, Infantry, Disguise
+		TargetTypes: Ground, Infantry
 		RequiresCondition: !parachute
 	QuantizeFacingsFromSequence:
 		Sequence: stand
