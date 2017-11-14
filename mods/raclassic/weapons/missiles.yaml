@@ -7,8 +7,9 @@
 		Speed: 213
 		Arm: 2
 		Blockable: false
-		ContrailLength: 10
 		Inaccuracy: 128
+		TrailImage: smokey
+		TrailInterval: 1
 		Image: DRAGON
 		Shadow: True
 		HorizontalRateOfTurn: 5
@@ -66,8 +67,6 @@ Maverick:
 
 Dragon:
 	Inherits: ^AntiGroundMissile
-	Projectile: Missile
-		TrailImage: smokey
 
 HellfireAG:
 	Inherits: ^AntiGroundMissile
@@ -127,6 +126,7 @@ MammothTusk:
 			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@3Eff: CreateEffect
+		Explosions: artillery_explosion
 		ImpactSounds: kaboom12.aud
 		ValidTargets: Ground, Trees
 	Warhead@5EffAir: CreateEffect
@@ -205,19 +205,21 @@ StingerAA:
 
 APTusk:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 60
-	Range: 6c0
+	ReloadDelay: 80
+	Range: 5c0
 	Projectile: Missile
 		Speed: 298
-		TrailImage: smokey
 		HorizontalRateOfTurn: 10
 		RangeLimit: 7c204
 	Warhead@1Dam: SpreadDamage
-		Damage: 30
+		Damage: 75
 		Versus:
-			None: 25
+			None: 30
+			Wood: 75
 			Light: 75
 			Concrete: 50
+	Warhead@3Eff: CreateEffect
+		Explosions: building
 
 TorpTube:
 	ReloadDelay: 100
@@ -258,29 +260,30 @@ TorpTube:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure, Underwater, Bridge
 
-^SubMissileDefault:
+SubSCUD:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 300
-	Range: 8c0
+	ReloadDelay: 120
+	Range: 14c0
+	TargetActorCenter: true
 	Burst: 2
 	Projectile: Missile
 		Speed: 234
 		Inaccuracy: 0c614
-		HorizontalRateOfTurn: 15
-		RangeLimit: 9c0
+		HorizontalRateOfTurn: 5
+		RangeLimit: 15c0
 		LaunchAngle: 120
 		Image: MISSILE
 		TrailImage: smokey
-		ContrailLength: 30
+		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 25
+		Damage: 40
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
-			None: 40
-			Wood: 40
-			Light: 30
-			Heavy: 30
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
 			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@3Eff: CreateEffect
@@ -289,27 +292,6 @@ TorpTube:
 	Warhead@4EffWater: CreateEffect
 		Explosions: large_splash
 		ImpactSounds: splash9.aud
-
-SubMissile:
-	Inherits: ^SubMissileDefault
-	Range: 16c0
-	TargetActorCenter: true
-	-Projectile:
-	Projectile: Bullet
-		Speed: 162
-		Blockable: false
-		LaunchAngle: 120
-		Inaccuracy: 2c938
-		Image: MISSILE
-		Shadow: True
-		TrailImage: smokey
-		ContrailLength: 30
-
-SubMissileAA:
-	Inherits: ^SubMissileDefault
-	ValidTargets: Air
-	Warhead@1Dam: SpreadDamage
-		Damage: 15
 
 SCUD:
 	Inherits: ^AntiGroundMissile
@@ -323,6 +305,7 @@ SCUD:
 		Blockable: false
 		TrailImage: smokey
 		TrailDelay: 5
+		TrailInterval: 1
 		Inaccuracy: 213
 		Image: V2
 		Shadow: True
