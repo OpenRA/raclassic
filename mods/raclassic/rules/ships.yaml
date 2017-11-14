@@ -213,6 +213,7 @@ CA:
 		LocalOffset: 480,-100,40, 480,100,40
 		Recoil: 171
 		RecoilRecovery: 34
+		FireDelay: 5
 		MuzzleSequence: muzzle
 	AttackTurreted:
 	WithMuzzleOverlay:

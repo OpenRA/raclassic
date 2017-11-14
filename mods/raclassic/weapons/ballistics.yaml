@@ -109,14 +109,13 @@ TurretGun:
 	Inherits: ^Artillery
 	ReloadDelay: 160
 	Range: 22c0
-	Burst: 2
 	Report: turret1.aud
 	TargetActorCenter: true
 	Projectile: Bullet
 		Inaccuracy: 2c938
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: 25
+		Damage: 50
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 90
