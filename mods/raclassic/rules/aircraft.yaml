@@ -239,10 +239,10 @@ HELI:
 		Type: Heavy
 	Armament@PRIMARY:
 		Weapon: HellfireAA
-		LocalOffset: 0,-213,-85
+		LocalOffset: 0,-213,-85, 0,213,-85
 	Armament@SECONDARY:
 		Weapon: HellfireAG
-		LocalOffset: 0,213,-85
+		LocalOffset: 0,-213,-85, 0,213,-85
 	AttackHeli:
 		FacingTolerance: 20
 	Aircraft:
