@@ -487,15 +487,14 @@ TTNK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 170
-		Prerequisites: tsla, ~disabled, ~techlevel.5
-		BuildDuration: 1166
+		Prerequisites: ~vehicle.soviet, tsla, ~disabled, ~techlevel.5
 		Description: Tank with mounted tesla coil.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
 	Valued:
-		Cost: 1350
+		Cost: 1500
 	Tooltip:
 		Name: Tesla Tank
 	Health:
-		HP: 450
+		HP: 110
 	Armor:
 		Type: Light
 	Mobile:
@@ -503,9 +502,6 @@ TTNK:
 		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 7c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 6c0
 	Armament:
 		Weapon: TTankZap
 		LocalOffset: 0,0,213
@@ -524,17 +520,17 @@ DTRK:
 		Prerequisites: mslo, ~disabled, ~techlevel.10
 		Description: Demolition Truck, actively armed with\nnuclear explosives. Has very weak armor.
 	Valued:
-		Cost: 2500
+		Cost: 2400
 	Tooltip:
 		Name: Demolition Truck
 	Health:
-		HP: 50
+		HP: 110
 	Armor:
 		Type: Light
 	Mobile:
 		Speed: 85
 	RevealsShroud:
-		Range: 4c0
+		Range: 3c0
 	Explodes:
 		Weapon: MiniNuke
 		EmptyWeapon: MiniNuke
@@ -551,27 +547,23 @@ CTNK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
-		Prerequisites: atek, ~disabled, ~techlevel.9
-		BuildDuration: 1166
+		Prerequisites: ~vehicle.allies, atek, ~disabled, ~techlevel.9
 		Description: Chrono Tank, teleports to areas within range.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft\n  Special ability: Can teleport
 	Valued:
-		Cost: 1350
+		Cost: 2400
 	Tooltip:
 		Name: Chrono Tank
 	SelectionDecorations:
 		VisualBounds: 30,30
 	Health:
-		HP: 450
+		HP: 350
 	Armor:
 		Type: Light
 	Mobile:
 		Speed: 113
 		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
-		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+		Range: 5c0
 	Armament@PRIMARY:
 		Weapon: APTusk
 		LocalOffset: -160,-276,232
@@ -589,14 +581,14 @@ QTNK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 190
-		Prerequisites: stek, ~disabled, ~techlevel.7
+		Prerequisites: ~vehicle.soviet, stek, ~disabled, ~techlevel.7
 		Description: Deals seismic damage to nearby vehicles\nand structures.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
 	Valued:
-		Cost: 2000
+		Cost: 2300
 	Tooltip:
 		Name: MAD Tank
 	Health:
-		HP: 900
+		HP: 300
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -604,9 +596,6 @@ QTNK:
 		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 6c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
 	SelectionDecorations:
 		VisualBounds: 44,38,0,-4
 	MadTank:
@@ -619,26 +608,22 @@ STNK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 130
-		Prerequisites: atek, ~disabled
-		BuildDuration: 1166
-		Description: Lightly armored infantry transport\nwhich can cloak. Can detect cloaked units.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
+		Prerequisites: ~vehicle.allies, atek, ~disabled
+		Description: Lightly armored infantry transport\nwhich can cloak.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
 	Valued:
-		Cost: 1350
+		Cost: 800
 	Tooltip:
 		Name: Phase Transport
 	Health:
-		HP: 300
+		HP: 200
 	Armor:
-		Type: Light
+		Type: Heavy
 	Mobile:
 		Speed: 142
 		Crushes: wall, mine, crate, infantry
 		RequiresCondition: !notmobile
 	RevealsShroud:
-		Range: 7c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+		Range: 5c0
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
@@ -651,8 +636,8 @@ STNK:
 	WithSpriteTurret:
 	Cargo:
 		Types: Infantry
-		MaxWeight: 4
-		PipCount: 4
+		MaxWeight: 1
+		PipCount: 1
 		LoadingCondition: notmobile
 	Cloak:
 		InitialDelay: 0
@@ -663,6 +648,4 @@ STNK:
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
-	DetectCloaked:
-		Range: 7c0
 	-MustBeDestroyed:
