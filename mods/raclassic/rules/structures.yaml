@@ -719,7 +719,6 @@ WEAP:
 		Sequence: build-top
 	RallyPoint:
 	Exit@1:
-		SpawnOffset: 213,-128,0
 		ExitCell: 1,2
 	Production:
 		Produces: Vehicle
