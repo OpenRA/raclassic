@@ -238,8 +238,6 @@ LST:
 	Mobile:
 		TurnSpeed: 10
 		Speed: 113
-		TerrainSpeeds:
-			Beach: 70
 		RequiresCondition: !notmobile
 	RevealsShroud:
 		Range: 6c0
