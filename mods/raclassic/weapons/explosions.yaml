@@ -93,6 +93,9 @@ ArtilleryExplode:
 V2Explode:
 	Inherits: SCUD
 	-Report:
+	Warhead@3Eff: CreateEffect
+		Explosions: large_napalm
+		ImpactSounds: firebl3.aud
 
 BuildingExplode:
 	Warhead@2Eff: CreateEffect

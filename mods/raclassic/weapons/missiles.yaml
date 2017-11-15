@@ -323,6 +323,6 @@ SCUD:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, Incendiary
 	Warhead@3Eff: CreateEffect
 		Explosions: building
-		ImpactSounds: firebl3.aud
+		ImpactSounds: kaboom15.aud
 	Warhead@4EffWater: CreateEffect
 		Explosions: large_splash
