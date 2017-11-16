@@ -16,13 +16,12 @@
 		RangeLimit: 6c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 50
+		Damage: 35
 		ValidTargets: Ground, Water, Air
 		Versus:
-			None: 10
+			None: 30
 			Wood: 75
-			Light: 35
-			Heavy: 100
+			Light: 75
 			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
@@ -46,69 +45,49 @@
 
 Maverick:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 30
-	Range: 9c0
+	ReloadDelay: 3
+	Range: 6c0
 	MinRange: 3c0
 	Report: missile7.aud
 	Burst: 2
-	BurstDelay: 7
 	Projectile: Missile
 		Speed: 256
 		Inaccuracy: 512
 		CruiseAltitude: 2c0
-		RangeLimit: 14c410
+		RangeLimit: 9c410
 	Warhead@1Dam: SpreadDamage
-		Damage: 70
+		Damage: 50
 		Versus:
 			None: 30
-			Wood: 90
-			Light: 90
-			Concrete: 100
+			Wood: 75
+			Light: 75
+			Concrete: 50
 
 Dragon:
 	Inherits: ^AntiGroundMissile
 
-HellfireAG:
+Hellfire:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 60
+	Range: 4c0
 	MinRange: 1c256
-	Burst: 4
-	BurstDelay: 14
+	Burst: 2
 	Projectile: Missile
 		Speed: 256
 		HorizontalRateOfTurn: 10
-		RangeLimit: 8c512
-	Warhead@1Dam: SpreadDamage
-		Damage: 60
-		Versus:
-			None: 30
-			Wood: 90
-			Light: 90
-			Concrete: 100
-
-HellfireAA:
-	Inherits: ^AntiAirMissile
-	ReloadDelay: 60
-	MinRange: 1c256
-	Burst: 2
-	BurstDelay: 10
-	Projectile: Missile
-		Speed: 384
-		Inaccuracy: 128
-		HorizontalRateOfTurn: 10
-		RangeLimit: 7c0
+		RangeLimit: 5c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 40
-		ValidTargets: Air
 		Versus:
+			None: 30
+			Wood: 75
 			Light: 75
-	Warhead@3Eff: CreateEffect
-		Explosions: med_explosion_air
+			Concrete: 50
 
 MammothTusk:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 60
-	Range: 8c0
+	ReloadDelay: 80
+	Range: 5c0
 	Burst: 2
 	ValidTargets: Air, Infantry
 	Projectile: Missile
@@ -117,13 +96,13 @@ MammothTusk:
 		RangeLimit: 9c614
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 50
+		Damage: 75
 		ValidTargets: Air, Infantry
 		Versus:
-			None: 100
+			None: 90
+			Wood: 75
 			Light: 60
 			Heavy: 25
-			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: artillery_explosion
@@ -136,7 +115,7 @@ MammothTusk:
 
 Nike:
 	Inherits: ^AntiAirMissile
-	ReloadDelay: 15
+	ReloadDelay: 20
 	Range: 7c512
 	Report: missile1.aud
 	Projectile: Missile
@@ -150,9 +129,10 @@ Nike:
 		Damage: 50
 		ValidTargets: Air
 		Versus:
-			None: 90
-			Light: 90
-			Heavy: 50
+			None: 30
+			Wood: 75
+			Light: 75
+			Concrete: 50
 	Warhead@3Eff: CreateEffect
 		Explosions: med_explosion_air
 		ImpactSounds: kaboom25.aud
@@ -160,22 +140,11 @@ Nike:
 RedEye:
 	Inherits: Nike
 	ReloadDelay: 50
-	Projectile: Missile
-		Inaccuracy: 0
-		HorizontalRateOfTurn: 20
-		Speed: 298
-	Warhead@1Dam: SpreadDamage
-		Damage: 40
-		ValidTargets: Air
-		Versus:
-			Wood: 75
-			Light: 60
-			Heavy: 25
 
 Stinger:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 60
-	Range: 7c512
+	Range: 9c0
 	Burst: 2
 	BurstDelay: 0
 	InvalidTargets: Underwater
@@ -190,6 +159,7 @@ Stinger:
 		Damage: 30
 		Versus:
 			None: 30
+			Wood: 75
 			Light: 75
 			Concrete: 50
 
@@ -222,12 +192,10 @@ APTusk:
 		Explosions: building
 
 TorpTube:
-	ReloadDelay: 100
+	ReloadDelay: 60
 	Range: 9c0
 	Report: torpedo1.aud
 	ValidTargets: Water, Underwater, Bridge
-	Burst: 2
-	BurstDelay: 20
 	Projectile: Missile
 		Image: torpedo
 		Arm: 3
@@ -241,13 +209,12 @@ TorpTube:
 		CruiseAltitude: 0
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 180
+		Damage: 90
 		ValidTargets: Water, Underwater, Bridge
 		Versus:
 			None: 30
 			Wood: 75
 			Light: 75
-			Heavy: 100
 			Concrete: 500
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
@@ -284,7 +251,6 @@ SubSCUD:
 			Wood: 75
 			Light: 60
 			Heavy: 25
-			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: building
@@ -295,9 +261,8 @@ SubSCUD:
 
 SCUD:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 240
+	ReloadDelay: 400
 	Range: 10c0
-	MinRange: 3c0
 	Report: missile1.aud
 	-Projectile:
 	Projectile: Bullet
@@ -309,17 +274,16 @@ SCUD:
 		Inaccuracy: 213
 		Image: V2
 		Shadow: True
-		LaunchAngle: 62
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 45
+		Damage: 40
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Trees
 		Versus:
 			None: 90
-			Light: 70
-			Heavy: 40
-			Concrete: 100
+			Wood: 75
+			Light: 60
+			Heavy: 25
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, Incendiary
 	Warhead@3Eff: CreateEffect
 		Explosions: building
