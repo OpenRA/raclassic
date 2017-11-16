@@ -4,63 +4,59 @@ C1:
 
 C2:
 	Inherits: ^CivInfantry
-	Voiced:
-		VoiceSet: CivilianFemaleVoice
 
 C3:
 	Inherits: ^CivInfantry
+	Voiced:
+		VoiceSet: CivilianFemaleVoice
 
 C4:
 	Inherits: ^CivInfantry
-	RenderSprites:
-		Image: C2
 	Voiced:
 		VoiceSet: CivilianFemaleVoice
 
 C5:
 	Inherits: ^CivInfantry
-	RenderSprites:
-		Image: C1
+	Voiced:
+		VoiceSet: CivilianFemaleVoice
 
 C6:
 	Inherits: ^CivInfantry
-	RenderSprites:
-		Image: C2
-	Voiced:
-		VoiceSet: CivilianFemaleVoice
 
 C7:
 	Inherits@1: ^CivInfantry
 	Inherits@2: ^ArmedCivilian
-	RenderSprites:
-		Image: C1
 
 C8:
 	Inherits: ^CivInfantry
-	RenderSprites:
-		Image: C2
-	Voiced:
-		VoiceSet: CivilianFemaleVoice
 
 C9:
 	Inherits: ^CivInfantry
-	RenderSprites:
-		Image: C1
 
 C10:
 	Inherits: ^CivInfantry
-	RenderSprites:
-		Image: C2
-	Voiced:
-		VoiceSet: CivilianFemaleVoice
+	Tooltip:
+		Name: Scientist
 
 TECN:
 	Inherits@1: ^CivInfantry
 	Inherits@2: ^ArmedCivilian
 	Tooltip:
 		Name: Technician
+	Selectable:
+		Class: C1
 	RenderSprites:
 		Image: C1
+
+TECN_YELLOW:
+	Inherits@1: ^CivInfantry
+	Inherits@2: ^ArmedCivilian
+	Tooltip:
+		Name: Technician
+	Selectable:
+		Class: C7
+	RenderSprites:
+		Image: C7
 
 FCOM:
 	Inherits: ^TechBuilding
@@ -77,9 +73,6 @@ FCOM:
 		Name: Forward Command
 	RevealsShroud:
 		Range: 10c0
-		#RevealGeneratedShroud: False
-	#RevealsShroud@GAPGEN:
-		#Range: 4c0
 	WithBuildingBib:
 	Capturable:
 	EngineerRepairable:

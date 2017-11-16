@@ -59,6 +59,7 @@ Sequences:
 	raclassic|sequences/vehicles.yaml
 	raclassic|sequences/structures.yaml
 	raclassic|sequences/infantry.yaml
+	raclassic|sequences/civilian.yaml
 	raclassic|sequences/aircraft.yaml
 	raclassic|sequences/misc.yaml
 	raclassic|sequences/decorations.yaml

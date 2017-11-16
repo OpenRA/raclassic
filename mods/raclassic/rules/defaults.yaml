@@ -502,16 +502,11 @@
 	Capturable:
 		CaptureThreshold: 66
 	EmitInfantryOnSell:
-		ActorTypes: e1,e1,e1,tecn,tecn
+		ActorTypes: e1,e1,e1,e1,e1,tecn,tecn_yellow
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	Sellable:
 		SellSounds: cashturn.aud
-
-^ScienceBuilding:
-	Inherits: ^Building
-	EmitInfantryOnSell:
-		ActorTypes: e1,e1,e1,e1,tecn,tecn,tecn,tecn,tecn,tecn,tecn,tecn,tecn,tecn,e6,e6,e6,e6,e6,chan,chan,chan,chan
 
 ^Defense:
 	Inherits: ^Building

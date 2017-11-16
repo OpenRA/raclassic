@@ -1,5 +1,5 @@
 MSLO:
-	Inherits: ^ScienceBuilding
+	Inherits: ^Building
 	Inherits@shape: ^2x1Shape
 	Valued:
 		Cost: 2500
@@ -50,7 +50,7 @@ MSLO:
 		RequiredForShortGame: false
 
 GAP:
-	Inherits: ^ScienceBuilding
+	Inherits: ^Building
 	Inherits@IDISABLE: ^DisabledOverlay
 	Valued:
 		Cost: 500
@@ -250,7 +250,7 @@ SYRD:
 			BottomRight: 512, 1110
 
 IRON:
-	Inherits: ^ScienceBuilding
+	Inherits: ^Building
 	Inherits@shape: ^2x1Shape
 	Buildable:
 		Queue: Building
@@ -296,7 +296,7 @@ IRON:
 		RequiredForShortGame: false
 
 PDOX:
-	Inherits: ^ScienceBuilding
+	Inherits: ^Building
 	Inherits@shape: ^2x2Shape
 	Buildable:
 		Queue: Building
@@ -651,7 +651,7 @@ SAM:
 		UseClassicFacingFudge: True
 
 ATEK:
-	Inherits: ^ScienceBuilding
+	Inherits: ^Building
 	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^2x2Shape
 	Buildable:
@@ -783,7 +783,7 @@ FACT:
 	Tooltip:
 		Name: Construction Yard
 	EmitInfantryOnSell:
-		ActorTypes: e1,e1,e1,tecn,tecn,e6
+		ActorTypes: e1,e1,e1,e1,e6,tecn,tecn_yellow
 	BaseBuilding:
 	#Transforms:
 		#IntoActor: mcv
@@ -1129,7 +1129,7 @@ APWR:
 	ScalePowerWithHealth:
 
 STEK:
-	Inherits: ^ScienceBuilding
+	Inherits: ^Building
 	Inherits@shape: ^3x2Shape
 	HitShape:
 		TargetableOffsets: 420,-768,0, 420,768,0, -770,-768,0, -770,768,0
