@@ -345,7 +345,7 @@ CHAN:
 	Selectable:
 		Class: CHAN
 	Tooltip:
-		Name: Scientist
+		Name: Agent Chan
 
 GNRL:
 	Inherits@1: ^CivInfantry
