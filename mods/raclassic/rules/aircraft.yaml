@@ -104,7 +104,8 @@ MIG:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
 	AmmoPool:
-		Ammo: 8
+		Ammo: 3
+		PipCount: 5
 	ReturnOnIdle:
 	Selectable:
 		Bounds: 36,28,0,2
@@ -156,8 +157,8 @@ YAK:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
 	AmmoPool:
-		Ammo: 18
-		PipCount: 6
+		Ammo: 15
+		PipCount: 5
 		ReloadDelay: 11
 	ReturnOnIdle:
 	SelectionDecorations:
@@ -237,11 +238,8 @@ HELI:
 		HP: 225
 	Armor:
 		Type: Heavy
-	Armament@PRIMARY:
-		Weapon: HellfireAA
-		LocalOffset: 0,-213,-85, 0,213,-85
-	Armament@SECONDARY:
-		Weapon: HellfireAG
+	Armament:
+		Weapon: Hellfire
 		LocalOffset: 0,-213,-85, 0,213,-85
 	AttackHeli:
 		FacingTolerance: 20
@@ -263,7 +261,8 @@ HELI:
 		Sequence: slow-rotor
 		RequiresCondition: !airborne
 	AmmoPool:
-		Ammo: 8
+		Ammo: 6
+		PipCount: 5
 	SelectionDecorations:
 		VisualBounds: 36,28
 	SpawnActorOnDeath:
@@ -315,8 +314,8 @@ HIND:
 		Sequence: slow-rotor
 		RequiresCondition: !airborne
 	AmmoPool:
-		Ammo: 24
-		PipCount: 6
+		Ammo: 12
+		PipCount: 5
 		ReloadDelay: 8
 	SelectionDecorations:
 		VisualBounds: 38,32
