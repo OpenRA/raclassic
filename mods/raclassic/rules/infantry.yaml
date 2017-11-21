@@ -211,7 +211,7 @@ E7:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 120
-		Prerequisites: barracks, techcenter, ~techlevel.8
+		Prerequisites: ~barracks, techcenter, ~techlevel.8
 		Description: Elite commando infantry. Armed with\ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4
 	AutoTarget:
 		InitialStance: ReturnFire
