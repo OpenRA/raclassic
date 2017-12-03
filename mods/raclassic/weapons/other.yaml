@@ -57,7 +57,7 @@ Napalm:
 			Wood: 100
 			Concrete: 50
 
-^TeslaWeapon:
+TeslaZap:
 	ReloadDelay: 3
 	Range: 8c512
 	Report: tesla1.aud
@@ -65,28 +65,17 @@ Napalm:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 100
-		Versus:
-			None: 1000
 		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath
 
-TeslaZap:
-	Inherits: ^TeslaWeapon
-	Warhead@1Dam: SpreadDamage
-		Versus:
-			Wood: 60
-
 PortaTesla:
-	Inherits: ^TeslaWeapon
+	Inherits: TeslaZap
 	ReloadDelay: 70
-	Range: 6c0
+	Range: 3c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 45
-		Versus:
-			Wood: 75
-			Heavy: 60
 
 TTankZap:
-	Inherits: ^TeslaWeapon
+	Inherits: TeslaZap
 	ReloadDelay: 120
 	Range: 7c0
 
@@ -104,13 +93,13 @@ DogJaw:
 
 Heal:
 	ReloadDelay: 80
-	Range: 4c0
+	Range: 1c849
 	Report: heal2.aud
 	ValidTargets: Infantry
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
-		Spread: 213
+		Spread: 32
 		Damage: -50
 		ValidStances: Ally
 		ValidTargets: Infantry
@@ -121,7 +110,7 @@ Repair:
 	Report: fixit1.aud
 	ValidTargets: Repair
 	Warhead@1Dam: SpreadDamage
-		Damage: -20
+		Damage: -100
 		ValidTargets: Repair
 
 Crush:
