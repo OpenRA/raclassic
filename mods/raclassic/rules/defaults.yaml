@@ -110,12 +110,12 @@
 	Mobile:
 		Crushes: mine, crate
 		TerrainSpeeds:
-			Clear: 80
+			Clear: 60
 			Rough: 40
 			Road: 100
 			Bridge: 100
-			Ore: 70
-			Gems: 70
+			Ore: 50
+			Gems: 50
 			Beach: 40
 		TurnSpeed: 5
 	SelectionDecorations:
@@ -183,8 +183,15 @@
 
 ^Tank:
 	Inherits: ^Vehicle
+	Targetable:
+		TargetTypes: Ground, C4, Repair, Tank
+	ProximityCaptor:
+		Types: Tank
+	Tooltip:
+		GenericName: Tank
+
+^TrackedVehicle:
 	Mobile:
-		Crushes: wall, mine, crate
 		TerrainSpeeds:
 			Clear: 80
 			Rough: 70
@@ -193,12 +200,10 @@
 			Ore: 70
 			Gems: 70
 			Beach: 70
-	Targetable:
-		TargetTypes: Ground, C4, Repair, Tank
-	ProximityCaptor:
-		Types: Tank
-	Tooltip:
-		GenericName: Tank
+
+^CrusherVehicle:
+	Mobile:
+		Crushes: wall, mine, crate, infantry
 
 ^Infantry:
 	Inherits@1: ^ExistsInWorld
@@ -220,8 +225,8 @@
 			Rough: 80
 			Road: 100
 			Bridge: 100
-			Ore: 80
-			Gems: 80
+			Ore: 90
+			Gems: 90
 			Beach: 80
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:

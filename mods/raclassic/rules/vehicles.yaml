@@ -1,5 +1,7 @@
 V2RL:
 	Inherits: ^Vehicle
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -31,6 +33,8 @@ V2RL:
 
 1TNK:
 	Inherits: ^Tank
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -47,7 +51,6 @@ V2RL:
 		Type: Heavy
 	Mobile:
 		Speed: 128
-		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 4c0
 	Turreted:
@@ -66,6 +69,8 @@ V2RL:
 
 2TNK:
 	Inherits: ^Tank
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -82,7 +87,6 @@ V2RL:
 		Type: Heavy
 	Mobile:
 		Speed: 85
-		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
@@ -103,6 +107,8 @@ V2RL:
 
 3TNK:
 	Inherits: ^Tank
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -119,7 +125,6 @@ V2RL:
 		Type: Heavy
 	Mobile:
 		Speed: 71
-		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
@@ -140,6 +145,8 @@ V2RL:
 
 4TNK:
 	Inherits: ^Tank
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -188,6 +195,7 @@ V2RL:
 
 ARTY:
 	Inherits: ^Tank
+	Inherits@TRACK: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -220,6 +228,8 @@ ARTY:
 
 HARV:
 	Inherits: ^Vehicle
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
@@ -246,7 +256,6 @@ HARV:
 		Type: Heavy
 	Mobile:
 		Speed: 85
-		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 4c0
 	WithHarvestAnimation:
@@ -267,6 +276,7 @@ HARV:
 
 MCV:
 	Inherits: ^Vehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 90
@@ -286,7 +296,6 @@ MCV:
 		Type: Light
 	Mobile:
 		Speed: 71
-		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 4c0
 	Transforms:
@@ -335,6 +344,8 @@ JEEP:
 
 APC:
 	Inherits: ^Tank
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -351,7 +362,6 @@ APC:
 		Type: Heavy
 	Mobile:
 		Speed: 142
-		Crushes: wall, mine, crate, infantry
 		RequiresCondition: !notmobile
 	RevealsShroud:
 		Range: 5c0
@@ -373,6 +383,8 @@ APC:
 
 MNLY:
 	Inherits: ^Tank
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 80
@@ -388,7 +400,6 @@ MNLY:
 		Type: Heavy
 	Mobile:
 		Speed: 128
-		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 5c0
 	Minelayer:
@@ -423,6 +434,7 @@ TRUK:
 
 MGG:
 	Inherits: ^Vehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 100
@@ -451,6 +463,8 @@ MGG:
 
 MRJ:
 	Inherits: ^Vehicle
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -482,6 +496,8 @@ MRJ:
 
 TTNK:
 	Inherits: ^Tank
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -498,7 +514,6 @@ TTNK:
 		Type: Light
 	Mobile:
 		Speed: 113
-		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 7c0
 	Armament:
@@ -542,6 +557,8 @@ DTRK:
 
 CTNK:
 	Inherits: ^Vehicle
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -560,7 +577,6 @@ CTNK:
 		Type: Light
 	Mobile:
 		Speed: 113
-		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 5c0
 	Armament@PRIMARY:
@@ -577,6 +593,8 @@ CTNK:
 
 QTNK:
 	Inherits: ^Tank
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 190
@@ -592,7 +610,6 @@ QTNK:
 		Type: Heavy
 	Mobile:
 		Speed: 56
-		Crushes: wall, mine, crate, infantry
 	RevealsShroud:
 		Range: 6c0
 	SelectionDecorations:
@@ -603,6 +620,8 @@ QTNK:
 
 STNK:
 	Inherits: ^Vehicle
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -619,7 +638,6 @@ STNK:
 		Type: Heavy
 	Mobile:
 		Speed: 142
-		Crushes: wall, mine, crate, infantry
 		RequiresCondition: !notmobile
 	RevealsShroud:
 		Range: 5c0
