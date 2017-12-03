@@ -34,6 +34,7 @@ DOG:
 		Voice: Move
 	AutoTarget:
 		InitialStance: AttackAnything
+		ScanRadius: 7
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry, Spy
 	WithInfantryBody:
@@ -126,7 +127,6 @@ E3:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	AutoTarget:
-		ScanRadius: 5
 
 E4:
 	Inherits: ^Soldier
