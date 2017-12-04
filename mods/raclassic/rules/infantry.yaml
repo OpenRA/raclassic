@@ -126,7 +126,6 @@ E3:
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-	AutoTarget:
 
 E4:
 	Inherits: ^Soldier
