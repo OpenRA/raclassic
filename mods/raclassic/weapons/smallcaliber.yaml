@@ -5,9 +5,7 @@ ZSU-23:
 	Range: 6c0
 	Report: aacanon3.aud
 	ValidTargets: Air
-	Projectile: Bullet
-		Speed: 1c682
-		Blockable: false
+	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
 		Damage: 25
@@ -26,8 +24,8 @@ ZSU-23:
 	ReloadDelay: 30
 	Range: 5c0
 	Report: gun13.aud
-	Projectile: Bullet
-		Speed: 1c682
+	Projectile: InstantHit
+		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 40
@@ -54,7 +52,7 @@ ChainGun:
 	Inherits: ^MachineGun
 	ReloadDelay: 3
 	MinRange: 0c768
-	Projectile: Bullet
+	Projectile: InstantHit
 		Blockable: false
 
 ChainGun.Yak:
@@ -92,8 +90,7 @@ Colt45:
 	Report: gun5.aud
 	ValidTargets: Ground, Infantry
 	InvalidTargets: Vehicle, Tank, Water, Structure, Wall, Husk
-	Projectile: Bullet
-		Speed: 1c682
+	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 50
