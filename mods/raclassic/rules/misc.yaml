@@ -1,19 +1,16 @@
-MINV:
-	Inherits: ^Mine
-	RenderSprites:
-		Image: minv
-		FactionImages:
-			soviet: minp
-			russia: minp
-			ukraine: minp
-	Explodes:
-		Weapon: ATMine
-
-# Only kept for backwards-compatibility with existing and imported maps, use MINV instead
 MINP:
-	Inherits: MINV
+	Inherits: ^Mine
+	Mine:
+		DetonateClasses: mine_ap
 	Explodes:
 		Weapon: APMine
+
+MINV:
+	Inherits: ^Mine
+	Mine:
+		DetonateClasses: mine_av
+ 	Explodes:
+		Weapon: AVMine
 
 CRATE:
 	Inherits: ^Crate
@@ -99,11 +96,11 @@ CRATE:
 		ValidFactions: allies
 	GiveUnitCrateAction@mnly_all:
 		SelectionShares: 2
-		Units: mnly
+		Units: mnly.av
 		ValidFactions: allies
 	GiveUnitCrateAction@mnly_sov:
 		SelectionShares: 4
-		Units: mnly
+		Units: mnly.ap
 		ValidFactions: soviet
 	GiveUnitCrateAction@mcv_all:
 		SelectionShares: 2
