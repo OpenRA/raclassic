@@ -133,28 +133,34 @@ BarrelExplode:
 		Size: 2
 		Delay: 5
 
-ATMine:
+AVMine:
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 400
+		Damage: 1200
 		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		InvalidTargets: Mine
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: large_explosion
+		Explosions: building
+		ImpactSounds: mine1.aud
+		InvalidTargets: Vehicle, Tank
+	Warhead@3Eff: CreateEffect
+		Explosions: artillery_explosion
 		ImpactSounds: mineblo1.aud
-	Warhead@Smu: LeaveSmudge
+		ValidTargets: Vehicle, Tank
+	Warhead@4Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Structure, Wall, Trees
 
 APMine:
-	Inherits: ATMine
+	Inherits: AVMine
 	Warhead@1Dam: SpreadDamage
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: napalm
-		ImpactSounds: mine1.aud
-	Warhead@Smu: LeaveSmudge
-		SmudgeType: Scorch
+		Damage: 1000
+		Versus:
+			Light: 1
+			Heavy: 1
+	Warhead@3Eff: CreateEffect
+		Explosions: small_explosion
 
 OreExplosion:
 	Warhead@1Dam: SpreadDamage

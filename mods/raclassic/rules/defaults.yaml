@@ -108,7 +108,7 @@
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
 	Mobile:
-		Crushes: mine, crate
+		Crushes: mine, mine_ap, mine_av, crate
 		TerrainSpeeds:
 			Clear: 60
 			Rough: 40
@@ -203,7 +203,7 @@
 
 ^CrusherVehicle:
 	Mobile:
-		Crushes: wall, mine, crate, infantry
+		Crushes: wall, mine, mine_ap, mine_av, crate, infantry
 
 ^Infantry:
 	Inherits@1: ^ExistsInWorld
@@ -218,7 +218,7 @@
 		Range: 4c0
 	Mobile:
 		Speed: 56
-		Crushes: mine, crate
+		Crushes: mine, mine_ap, crate
 		SharesCell: true
 		TerrainSpeeds:
 			Clear: 90
@@ -897,13 +897,37 @@
 	EditorTilesetFilter:
 		Categories: System
 
+^Minelayer:
+	Inherits: ^Tank
+	Inherits@TRACK: ^TrackedVehicle
+	Inherits@CRUSH: ^CrusherVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Minelayer
+	Health:
+		HP: 100
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 128
+		Crushes: wall, mine, mine_ap, mine_av, crate, infantry
+	RevealsShroud:
+		Range: 5c0
+	AmmoPool:
+		Ammo: 5
+		RearmSound: minelay1.aud
+	Explodes:
+		Weapon: UnitExplodeSmall
+	RenderSprites:
+		Image: MNLY
+
 ^Mine:
 	Inherits: ^SpriteActor
 	WithSpriteBody:
 	HiddenUnderFog:
 	Mine:
 		CrushClasses: mine
-		DetonateClasses: mine
 		AvoidFriendly: true
 		BlockFriendly: false
 	Health:
@@ -920,7 +944,7 @@
 	Tooltip:
 		Name: Mine
 	Targetable:
-		TargetTypes: Ground
+		TargetTypes: Ground, Mine
 	Immobile:
 		OccupiesSpace: true
 	HitShape:
