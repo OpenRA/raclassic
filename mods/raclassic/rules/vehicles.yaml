@@ -386,7 +386,7 @@ MNLY.AP:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 80
-		Prerequisites: ~vehicles.soviets, fix, ~techlevel.2
+		Prerequisites: ~vehicles.soviet, fix, ~techlevel.2
 		Description: Lays anti-personnel mines to destroy\nunwary enemy units.\n  Unarmed
 	Tooltip:
 		Name: Minelayer (Anti-Personnel)
