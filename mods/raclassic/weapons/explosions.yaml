@@ -162,23 +162,6 @@ APMine:
 	Warhead@3Eff: CreateEffect
 		Explosions: small_explosion
 
-OreExplosion:
-	Warhead@1Dam: SpreadDamage
-		Spread: 9
-		Damage: 10
-		Versus:
-			None: 90
-			Wood: 75
-			Light: 60
-			Heavy: 25
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@3Res: CreateResource
-		AddsResourceType: Ore
-		Size: 1,1
-	Warhead@2Eff: CreateEffect
-		Explosions: med_explosion
-		ImpactSounds: kaboom25.aud
-
 CrateNuke:
 	ValidTargets: Ground, Trees, Water, Air
 	Warhead@1Dam_impact: SpreadDamage
