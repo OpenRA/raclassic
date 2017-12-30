@@ -271,8 +271,6 @@ HARV:
 		Delay: 25
 		HealIfBelow: 50
 		DamageCooldown: 500
-	Explodes:
-		Weapon: OreExplosion
 
 MCV:
 	Inherits: ^Vehicle
