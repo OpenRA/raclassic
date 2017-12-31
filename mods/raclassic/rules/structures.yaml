@@ -277,11 +277,11 @@ IRON:
 		Range: 10c0
 	GrantExternalConditionPower@IRONCURTAIN:
 		Icon: invuln
-		ChargeTime: 660
+		ChargeTime: 300
 		Description: Invulnerability
 		LongDesc: Makes a unit invulnerable\nfor 45 seconds.
 		Range: 0
-		Duration: 300
+		Duration: 1125
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		BeginChargeSpeechNotification: IronCurtainCharging
