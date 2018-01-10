@@ -624,6 +624,11 @@ STNK:
 		HP: 200
 	Armor:
 		Type: Heavy
+	Targetable:
+		RequiresCondition: !parachute && !cloaked
+	Targetable@CLOAKED:
+		TargetTypes: Ground, Vehicle
+		RequiresCondition: !parachute && cloaked
 	Mobile:
 		Speed: 142
 		RequiresCondition: !notmobile
@@ -649,6 +654,7 @@ STNK:
 		CloakDelay: 250
 		CloakSound: appear1.aud
 		UncloakSound: appear1.aud
+		CloakedCondition: cloaked
 		RequiresCondition: !cloak-force-disabled
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
