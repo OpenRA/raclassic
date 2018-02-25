@@ -22,13 +22,23 @@ V2RL:
 		Range: 5c0
 	Armament:
 		Weapon: SCUD
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 1
+		PipCount: 0
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 400
+		Count: 1
 	AttackFrontal:
+	WithFacingSpriteBody:
+		RequiresCondition: ammo
+	WithFacingSpriteBody@EMPTY:
+		RequiresCondition: !ammo
+		Sequence: empty-idle
 	SelectionDecorations:
 	Explodes:
 		Weapon: V2Explode
-	WithAttackAnimation:
-		AimSequence: aim
-		ReloadPrefix: empty-
 	Selectable:
 		DecorationBounds: 28,28
 
