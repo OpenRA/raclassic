@@ -58,7 +58,7 @@
 	Inherits: ^Cannon
 	ReloadDelay: 70
 	Burst: 2
-	BurstDelay: 4
+	BurstDelays: 4
 
 120mm:
 	Inherits: ^Cannon
