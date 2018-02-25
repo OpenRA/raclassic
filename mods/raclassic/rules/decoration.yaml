@@ -7,6 +7,8 @@ T01:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T01.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T02:
 	Inherits: ^Tree
@@ -17,6 +19,8 @@ T02:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T02.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T03:
 	Inherits: ^Tree
@@ -27,6 +31,8 @@ T03:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T03.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T04:
 	Inherits: ^Tree
@@ -37,6 +43,8 @@ T04:
 		ExcludeTilesets: INTERIOR
 	SpawnActorOnDeath:
 		Actor: T04.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T05:
 	Inherits: ^Tree
@@ -47,6 +55,8 @@ T05:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T05.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T06:
 	Inherits: ^Tree
@@ -57,6 +67,8 @@ T06:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T06.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T07:
 	Inherits: ^Tree
@@ -67,6 +79,8 @@ T07:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T07.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T08:
 	Inherits: ^Tree
@@ -75,6 +89,8 @@ T08:
 		Dimensions: 2,1
 	SpawnActorOnDeath:
 		Actor: T08.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T09:
 	Inherits: ^Tree
@@ -92,6 +108,8 @@ T10:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T10.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T11:
 	Inherits: ^Tree
@@ -102,6 +120,8 @@ T11:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T11.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T12:
 	Inherits: ^Tree
@@ -112,6 +132,8 @@ T12:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T12.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T13:
 	Inherits: ^Tree
@@ -122,6 +144,8 @@ T13:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T13.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T14:
 	Inherits: ^Tree
@@ -132,6 +156,8 @@ T14:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T14.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T15:
 	Inherits: ^Tree
@@ -142,6 +168,8 @@ T15:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T15.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T16:
 	Inherits: ^Tree
@@ -152,6 +180,8 @@ T16:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T16.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T17:
 	Inherits: ^Tree
@@ -162,6 +192,8 @@ T17:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: T17.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 TC01:
 	Inherits: ^Tree
@@ -172,6 +204,8 @@ TC01:
 		ExcludeTilesets: INTERIOR
 	SpawnActorOnDeath:
 		Actor: TC01.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 TC02:
 	Inherits: ^Tree
@@ -182,6 +216,8 @@ TC02:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: TC02.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 TC03:
 	Inherits: ^Tree
@@ -192,6 +228,8 @@ TC03:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: TC03.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 TC04:
 	Inherits: ^Tree
@@ -202,6 +240,8 @@ TC04:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: TC04.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 TC05:
 	Inherits: ^Tree
@@ -212,6 +252,8 @@ TC05:
 		ExcludeTilesets: DESERT, INTERIOR
 	SpawnActorOnDeath:
 		Actor: TC05.Husk
+	RequiresBuildableArea:
+		AreaTypes: building
 
 BOXES01:
 	Inherits: ^Tree
@@ -295,6 +337,8 @@ ICE01:
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
 		Categories: Decoration
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ICE02:
 	Inherits: ^Tree
@@ -306,6 +350,8 @@ ICE02:
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
 		Categories: Decoration
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ICE03:
 	Inherits: ^Tree
@@ -317,6 +363,8 @@ ICE03:
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
 		Categories: Decoration
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ICE04:
 	Inherits: ^Tree
@@ -339,42 +387,56 @@ ROCK1:
 	Building:
 		Footprint: ___ xx_
 		Dimensions: 3,2
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ROCK2:
 	Inherits: ^Rock
 	Building:
 		Footprint: xx_
 		Dimensions: 3,1
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ROCK3:
 	Inherits: ^Rock
 	Building:
 		Footprint: ___ xx_
 		Dimensions: 3,2
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ROCK4:
 	Inherits: ^Rock
 	Building:
 		Footprint: x_
 		Dimensions: 2,1
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ROCK5:
 	Inherits: ^Rock
 	Building:
 		Footprint: x_
 		Dimensions: 2,1
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ROCK6:
 	Inherits: ^Rock
 	Building:
 		Footprint: ___ xxx
 		Dimensions: 3,2
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ROCK7:
 	Inherits: ^Rock
 	Building:
 		Footprint: xxxx_
 		Dimensions: 5,1
+	RequiresBuildableArea:
+		AreaTypes: building
 
 UTILPOL1:
 	Inherits: ^Tree
@@ -402,6 +464,8 @@ TANKTRAP1:
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
 		RequireTilesets: TEMPERAT, SNOW, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 TANKTRAP2:
 	Inherits: ^Rock
@@ -413,3 +477,5 @@ TANKTRAP2:
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
 		RequireTilesets: TEMPERAT, SNOW, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building

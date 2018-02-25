@@ -43,7 +43,6 @@ SS:
 		FireDelay: 2
 	AttackFrontal:
 	SelectionDecorations:
-		VisualBounds: 38,38
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
@@ -59,6 +58,8 @@ SS:
 		Weapon: UnitExplodeSubmarine
 		EmptyWeapon: UnitExplodeSubmarine
 	-MustBeDestroyed:
+	Selectable:
+		DecorationBounds: 38,38
 
 MSUB:
 	Inherits: ^Ship
@@ -105,7 +106,6 @@ MSUB:
 		FireDelay: 2
 	AttackFrontal:
 	SelectionDecorations:
-		VisualBounds: 44,44
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
@@ -117,6 +117,8 @@ MSUB:
 		Weapon: UnitExplodeSubmarine
 		EmptyWeapon: UnitExplodeSubmarine
 	-MustBeDestroyed:
+	Selectable:
+		DecorationBounds: 44,44
 
 DD:
 	Inherits: ^Ship
@@ -157,12 +159,13 @@ DD:
 		LocalYaw: 64, -64
 	AttackTurreted:
 	SelectionDecorations:
-		VisualBounds: 38,38
 	WithSpriteTurret:
 	DetectCloaked:
 		CloakTypes: Underwater
 		Range: 4c0
 	RenderDetectionCircle:
+	Selectable:
+		DecorationBounds: 38,38
 
 CA:
 	Inherits: ^Ship
@@ -214,11 +217,12 @@ CA:
 	AttackTurreted:
 	WithMuzzleOverlay:
 	SelectionDecorations:
-		VisualBounds: 44,44
 	WithSpriteTurret@PRIMARY:
 		Turret: primary
 	WithSpriteTurret@SECONDARY:
 		Turret: secondary
+	Selectable:
+		DecorationBounds: 44,44
 
 LST:
 	Inherits: ^Ship
@@ -242,7 +246,6 @@ LST:
 	RevealsShroud:
 		Range: 6c0
 	SelectionDecorations:
-		VisualBounds: 36,36
 	WithLandingCraftAnimation:
 		OpenTerrainTypes: Clear, Rough, Road, Ore, Gems, Beach
 	Cargo:
@@ -252,6 +255,8 @@ LST:
 		PassengerFacing: 0
 		LoadingCondition: notmobile
 	-Chronoshiftable:
+	Selectable:
+		DecorationBounds: 36,36
 
 PT:
 	Inherits: ^Ship
@@ -289,9 +294,10 @@ PT:
 	AttackTurreted:
 	WithMuzzleOverlay:
 	SelectionDecorations:
-		VisualBounds: 36,36
 	WithSpriteTurret:
 	DetectCloaked:
 		CloakTypes: Underwater
 		Range: 4c0
 	RenderDetectionCircle:
+	Selectable:
+		DecorationBounds: 36,36

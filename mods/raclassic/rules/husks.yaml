@@ -214,6 +214,8 @@ T01.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T02.Husk:
 	Inherits: ^TreeHusk
@@ -222,6 +224,8 @@ T02.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T03.Husk:
 	Inherits: ^TreeHusk
@@ -230,6 +234,8 @@ T03.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T04.Husk:
 	Inherits: ^TreeHusk
@@ -238,6 +244,8 @@ T04.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERAT, SNOW, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T05.Husk:
 	Inherits: ^TreeHusk
@@ -246,6 +254,8 @@ T05.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T06.Husk:
 	Inherits: ^TreeHusk
@@ -254,6 +264,8 @@ T06.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T07.Husk:
 	Inherits: ^TreeHusk
@@ -262,12 +274,16 @@ T07.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T08.Husk:
 	Inherits: ^TreeHusk
 	Building:
 		Footprint: x_
 		Dimensions: 2,1
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T09.Husk:
 	Inherits: ^TreeHusk
@@ -281,6 +297,8 @@ T10.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T11.Husk:
 	Inherits: ^TreeHusk
@@ -289,6 +307,8 @@ T11.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T12.Husk:
 	Inherits: ^TreeHusk
@@ -297,6 +317,8 @@ T12.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T13.Husk:
 	Inherits: ^TreeHusk
@@ -305,6 +327,8 @@ T13.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T14.Husk:
 	Inherits: ^TreeHusk
@@ -313,6 +337,8 @@ T14.Husk:
 		Dimensions: 3,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T15.Husk:
 	Inherits: ^TreeHusk
@@ -321,6 +347,8 @@ T15.Husk:
 		Dimensions: 3,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T16.Husk:
 	Inherits: ^TreeHusk
@@ -329,6 +357,8 @@ T16.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 T17.Husk:
 	Inherits: ^TreeHusk
@@ -337,6 +367,8 @@ T17.Husk:
 		Dimensions: 2,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 TC01.Husk:
 	Inherits: ^TreeHusk
@@ -345,6 +377,8 @@ TC01.Husk:
 		Dimensions: 3,2
 	EditorTilesetFilter:
 		ExcludeTilesets: INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 TC02.Husk:
 	Inherits: ^TreeHusk
@@ -353,6 +387,8 @@ TC02.Husk:
 		Dimensions: 3,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 TC03.Husk:
 	Inherits: ^TreeHusk
@@ -361,6 +397,8 @@ TC03.Husk:
 		Dimensions: 3,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 TC04.Husk:
 	Inherits: ^TreeHusk
@@ -369,6 +407,8 @@ TC04.Husk:
 		Dimensions: 4,3
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building
 
 TC05.Husk:
 	Inherits: ^TreeHusk
@@ -377,3 +417,5 @@ TC05.Husk:
 		Dimensions: 4,3
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT, INTERIOR
+	RequiresBuildableArea:
+		AreaTypes: building

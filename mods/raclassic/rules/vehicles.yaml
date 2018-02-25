@@ -24,12 +24,13 @@ V2RL:
 		Weapon: SCUD
 	AttackFrontal:
 	SelectionDecorations:
-		VisualBounds: 28,28
 	Explodes:
 		Weapon: V2Explode
 	WithAttackAnimation:
 		AimSequence: aim
 		ReloadPrefix: empty-
+	Selectable:
+		DecorationBounds: 28,28
 
 1TNK:
 	Inherits: ^Tank
@@ -103,7 +104,8 @@ V2RL:
 	SpawnActorOnDeath:
 		Actor: 2TNK.Husk
 	SelectionDecorations:
-		VisualBounds: 28,28
+	Selectable:
+		DecorationBounds: 28,28
 
 3TNK:
 	Inherits: ^Tank
@@ -141,7 +143,8 @@ V2RL:
 	SpawnActorOnDeath:
 		Actor: 3TNK.Husk
 	SelectionDecorations:
-		VisualBounds: 28,28
+	Selectable:
+		DecorationBounds: 28,28
 
 4TNK:
 	Inherits: ^Tank
@@ -191,7 +194,8 @@ V2RL:
 		HealIfBelow: 50
 		DamageCooldown: 150
 	SelectionDecorations:
-		VisualBounds: 44,38,0,-4
+	Selectable:
+		DecorationBounds: 44,38,0,-4
 
 ARTY:
 	Inherits: ^Tank
@@ -242,8 +246,8 @@ HARV:
 		GenericName: Harvester
 	Selectable:
 		Priority: 7
+		DecorationBounds: 42,42
 	SelectionDecorations:
-		VisualBounds: 42,42
 	Harvester:
 		Capacity: 28
 		Resources: Ore,Gems
@@ -286,8 +290,8 @@ MCV:
 		Name: Mobile Construction Vehicle
 	Selectable:
 		Priority: 4
+		DecorationBounds: 42,42
 	SelectionDecorations:
-		VisualBounds: 42,42
 	Health:
 		HP: 600
 	Armor:
@@ -400,8 +404,8 @@ MNLY.AV:
 		Description: Lays anti-tank mines to destroy\nunwary enemy units.\n  Unarmed
 	Tooltip:
 		Name: Minelayer (Anti-Tank)
- 	Minelayer:
- 		Mine: MINV
+	Minelayer:
+		Mine: MINV
 
 TRUK:
 	Inherits: ^Vehicle
@@ -512,7 +516,8 @@ TTNK:
 	WithIdleOverlay@SPINNER:
 		Sequence: spinner
 	SelectionDecorations:
-		VisualBounds: 30,30
+	Selectable:
+		DecorationBounds: 30,30
 
 DTRK:
 	Inherits: ^Vehicle
@@ -558,7 +563,6 @@ CTNK:
 	Tooltip:
 		Name: Chrono Tank
 	SelectionDecorations:
-		VisualBounds: 30,30
 	Health:
 		HP: 350
 	Armor:
@@ -578,6 +582,8 @@ CTNK:
 	AttackFrontal:
 	PortableChrono:
 		ChargeDelay: 300
+	Selectable:
+		DecorationBounds: 30,30
 
 QTNK:
 	Inherits: ^Tank
@@ -601,10 +607,11 @@ QTNK:
 	RevealsShroud:
 		Range: 6c0
 	SelectionDecorations:
-		VisualBounds: 44,38,0,-4
 	MadTank:
 	Targetable:
 		TargetTypes: Ground, MADTank, Repair, Vehicle
+	Selectable:
+		DecorationBounds: 44,38,0,-4
 
 STNK:
 	Inherits: ^Vehicle

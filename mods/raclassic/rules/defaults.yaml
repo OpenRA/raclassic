@@ -10,8 +10,8 @@
 ^SpriteActor:
 	BodyOrientation:
 	QuantizeFacingsFromSequence:
-	AutoSelectionSize:
 	RenderSprites:
+	Interactable:
 
 ^1x1Shape:
 	HitShape:
@@ -149,7 +149,7 @@
 	Tooltip:
 		GenericName: Vehicle
 	Capturable:
-		Type: vehicle
+		Types: vehicle
 		CaptureThreshold: 100
 		CancelActivity: True
 	MustBeDestroyed:
@@ -452,6 +452,8 @@
 		CanHover: True
 		CruisingCondition: cruising
 		WaitDistanceFromResupplyBase: 4c0
+		TakeOffOnResupply: true
+		VTOL: true
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	BodyOrientation:
@@ -494,12 +496,15 @@
 	EditorTilesetFilter:
 		Categories: Building
 	CommandBarBlacklist:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ^Building:
 	Inherits: ^BasicBuilding
 	Huntable:
 	UpdatesPlayerStatistics:
 	GivesBuildableArea:
+		AreaTypes: building
 	RepairableBuilding:
 		PlayerExperience: 25
 	EngineerRepairable:
@@ -533,7 +538,6 @@
 		Dimensions: 1,1
 		Footprint: x
 		BuildSounds: placbldg.aud
-		Adjacent: 7
 		TerrainTypes: Clear,Road
 	SoundOnDamageTransition:
 		DamagedSounds: sandbag2.aud
@@ -559,6 +563,9 @@
 		HP: 100
 	EditorTilesetFilter:
 		Categories: Wall
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 7
 
 ^Gate:
 	Inherits: ^BasicBuilding
@@ -575,15 +582,16 @@
 	WithGateSpriteBody:
 	Tooltip:
 		Name: Gate
-	Gate:
+	Building:
 		Adjacent: 4
-		BlocksProjectilesHeight: 0
 		BuildSounds: place2.aud
-		OpeningSound: cashturn.aud
-		ClosingSound: cashturn.aud
 		TerrainTypes: Clear, Road
 	EditorTilesetFilter:
 		Categories: Wall
+	Gate:
+		OpeningSound: cashturn.aud
+		ClosingSound: cashturn.aud
+		BlocksProjectilesHeight: 0
 
 ^TechBuilding:
 	Inherits: ^BasicBuilding
@@ -639,8 +647,6 @@
 	-Selectable:
 	SelectionDecorations:
 		RenderSelectionBars: False
-	CustomSelectionSize:
-		CustomBounds: 24,24
 	Health:
 		HP: 10
 	Explodes:
@@ -653,6 +659,9 @@
 		Type: Light
 	EditorTilesetFilter:
 		Categories: Decoration
+	Interactable:
+		Bounds: 24,24
+	Interactable:
 
 ^CivBuilding:
 	Inherits: ^TechBuilding
@@ -686,6 +695,7 @@
 	-Demolishable:
 	EditorTilesetFilter:
 		ExcludeTilesets: INTERIOR
+	Interactable:
 
 ^Tree:
 	Inherits@1: ^SpriteActor
@@ -728,6 +738,8 @@
 	EditorTilesetFilter:
 		ExcludeTilesets: INTERIOR
 		Categories: Tree
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ^TreeHusk:
 	Inherits@1: ^SpriteActor
@@ -743,6 +755,8 @@
 	ScriptTriggers:
 	EditorTilesetFilter:
 		Categories: Tree
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ^BasicHusk:
 	Inherits@1: ^SpriteActor
@@ -765,9 +779,9 @@
 	Burns:
 		Damage: 2
 	Capturable:
-		Type: husk
-		AllowAllies: true
+		Types: husk
 		CaptureThreshold: 100
+		ValidStances: Enemy, Neutral, Ally
 	TransformOnCapture:
 		ForceHealthPercentage: 25
 	WithColoredOverlay@IDISABLE:
@@ -808,6 +822,8 @@
 		GenericName: Destroyed Helicopter
 	Aircraft:
 		CanHover: True
+		TakeOffOnResupply: true
+		VTOL: true
 	FallsToEarth:
 	BodyOrientation:
 		UseClassicFacingFudge: True
@@ -827,8 +843,6 @@
 	Building:
 		Footprint: ____ ____
 		Dimensions: 4,2
-	CustomSelectionSize:
-		CustomBounds: 96,48
 	Health:
 		HP: 1000
 	Armor:
@@ -836,6 +850,10 @@
 	ScriptTriggers:
 	BodyOrientation:
 		QuantizedFacings: 1
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
+		Bounds: 96,48
 
 ^Rock:
 	Inherits@1: ^SpriteActor
@@ -856,6 +874,8 @@
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
 		Categories: Decoration
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ^DesertCivBuilding:
 	Inherits: ^CivBuilding
@@ -952,5 +972,3 @@
 		Categories: System
 
 ^DisabledOverlay:
-	GrantConditionOnDisabled@IDISABLE:
-		Condition: disabled
