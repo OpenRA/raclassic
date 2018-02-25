@@ -146,7 +146,7 @@ Stinger:
 	ReloadDelay: 60
 	Range: 9c0
 	Burst: 2
-	BurstDelay: 0
+	BurstDelays: 0
 	InvalidTargets: Underwater
 	Projectile: Missile
 		Arm: 3
