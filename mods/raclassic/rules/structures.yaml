@@ -1,5 +1,6 @@
 MSLO:
 	Inherits: ^Building
+	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x1Shape
 	Valued:
 		Cost: 2500
@@ -21,6 +22,7 @@ MSLO:
 	RevealsShroud:
 		Range: 5c0
 	NukePower:
+		PauseOnCondition: disabled
 		Cursor: nuke
 		Icon: abomb
 		ChargeInterval: 19500
@@ -54,7 +56,7 @@ MSLO:
 
 GAP:
 	Inherits: ^Building
-	Inherits@IDISABLE: ^DisabledOverlay
+	Inherits@IDISABLE: ^DisableOnLowPower
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -68,9 +70,6 @@ GAP:
 		Bounds: 24,24
 		DecorationBounds: 24,48,0,-12
 	SelectionDecorations:
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	WithSpriteBody:
 		PauseOnCondition: disabled
 	Health:
@@ -260,6 +259,7 @@ SYRD:
 
 IRON:
 	Inherits: ^Building
+	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x1Shape
 	Buildable:
 		Queue: Building
@@ -285,6 +285,7 @@ IRON:
 	RevealsShroud:
 		Range: 10c0
 	GrantExternalConditionPower@IRONCURTAIN:
+		PauseOnCondition: disabled
 		Icon: invuln
 		ChargeInterval: 7500
 		Description: Invulnerability
@@ -308,6 +309,7 @@ IRON:
 
 PDOX:
 	Inherits: ^Building
+	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x2Shape
 	Buildable:
 		Queue: Building
@@ -330,6 +332,7 @@ PDOX:
 		Range: 10c0
 	ChronoshiftPower@chronoshift:
 		OrderName: Chronoshift
+		PauseOnCondition: disabled
 		Icon: chrono
 		ChargeInterval: 10500
 		Description: Chronoshift
@@ -353,7 +356,7 @@ PDOX:
 
 TSLA:
 	Inherits: ^Defense
-	Inherits@IDISABLE: ^DisabledOverlay
+	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
 		Queue: Building
@@ -364,9 +367,6 @@ TSLA:
 		Cost: 1500
 	Tooltip:
 		Name: Tesla Coil
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	Selectable:
 		Bounds: 24,24
 		DecorationBounds: 24,40,0,-8
@@ -393,7 +393,7 @@ TSLA:
 
 AGUN:
 	Inherits: ^Defense
-	Inherits@IDISABLE: ^DisabledOverlay
+	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Buildable:
 		Queue: Building
@@ -408,9 +408,6 @@ AGUN:
 		Bounds: 24,24
 		DecorationBounds: 24,32,0,-4
 	SelectionDecorations:
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	Health:
 		HP: 400
 	Armor:
@@ -437,7 +434,7 @@ AGUN:
 
 DOME:
 	Inherits: ^Building
-	Inherits@IDISABLE: ^DisabledOverlay
+	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x2Shape
 	HitShape:
 		UseTargetableCellsOffsets: false
@@ -457,9 +454,6 @@ DOME:
 		LocalCenterOffset: 0,-512,0
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1000
 	Armor:
@@ -635,6 +629,7 @@ FTUR:
 
 SAM:
 	Inherits: ^Defense
+	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@shape: ^2x1Shape
 	HitShape:
@@ -681,7 +676,7 @@ SAM:
 
 ATEK:
 	Inherits: ^Building
-	Inherits@IDISABLE: ^DisabledOverlay
+	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x2Shape
 	Buildable:
 		Queue: Building
@@ -716,9 +711,6 @@ ATEK:
 		LaunchSpeechNotification: SatelliteLaunched
 		DisplayTimerStances: Ally, Neutral, Enemy
 	SupportPowerChargeBar:
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	Power:
 		Amount: -200
 	ProvidesPrerequisite@buildingname:
@@ -1098,7 +1090,6 @@ AFLD:
 
 POWR:
 	Inherits: ^Building
-	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^2x2Shape
 	HitShape:
 		UseTargetableCellsOffsets: false
@@ -1135,7 +1126,6 @@ POWR:
 
 APWR:
 	Inherits: ^Building
-	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@shape: ^3x2Shape
 	HitShape:
 		TargetableOffsets: -355,-1024,0

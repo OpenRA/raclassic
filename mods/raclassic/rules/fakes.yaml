@@ -102,7 +102,6 @@ WEAF:
 
 DOMF:
 	Inherits: ^FakeBuilding
-	Inherits@IDISABLE: ^DisabledOverlay
 	Inherits@infiltrate: ^InfiltratableFake
 	Inherits@shape: ^2x2Shape
 	HitShape:

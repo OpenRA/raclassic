@@ -971,4 +971,13 @@
 	EditorTilesetFilter:
 		Categories: System
 
-^DisabledOverlay:
+^DisableOnLowPower:
+	#WithColoredOverlay@IDISABLE:
+		#RequiresCondition: disabled
+		#Palette: disabled
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
+	GrantCondition@IDISABLE:
+		RequiresCondition: lowpower
+		Condition: disabled
