@@ -31,12 +31,14 @@ BADR:
 	RejectsOrders:
 	GivesExperience:
 		Experience: 1000
+	Interactable:
 
 BADR.Bomber:
 	Inherits: ^Plane
 	AttackBomber:
 	Armament:
 		Weapon: ParaBomb
+		PauseOnCondition: !ammo
 	Health:
 		HP: 60
 	Armor:
@@ -49,6 +51,7 @@ BADR.Bomber:
 		MaximumPitch: 56
 	AmmoPool:
 		Ammo: 7
+		AmmoCondition: ammo
 	-Selectable:
 	SelectionDecorations:
 		RenderSelectionBars: False
@@ -68,6 +71,7 @@ BADR.Bomber:
 		Image: badr
 	GivesExperience:
 		Experience: 1000
+	Interactable:
 
 MIG:
 	Inherits: ^Plane
@@ -90,6 +94,7 @@ MIG:
 		Weapon: Maverick
 		LocalOffset: 0,-640,0, 0,640,0
 		LocalYaw: -40, 24
+		PauseOnCondition: !ammo
 	AttackPlane:
 		FacingTolerance: 20
 	Aircraft:
@@ -106,11 +111,12 @@ MIG:
 	AmmoPool:
 		Ammo: 3
 		PipCount: 5
+		AmmoCondition: ammo
 	ReturnOnIdle:
 	Selectable:
 		Bounds: 36,28,0,2
+		DecorationBounds: 40,29,0,1
 	SelectionDecorations:
-		VisualBounds: 40,29,0,1
 	SpawnActorOnDeath:
 		Actor: MIG.Husk
 	SmokeTrailWhenDamaged:
@@ -138,11 +144,13 @@ YAK:
 		Weapon: ChainGun.Yak
 		LocalOffset: 256,-213,0
 		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
 	Armament@SECONDARY:
 		Name: secondary
 		Weapon: ChainGun.Yak
 		LocalOffset: 256,213,0
 		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
 	AttackPlane:
 		FacingTolerance: 20
 	Aircraft:
@@ -160,15 +168,17 @@ YAK:
 		Ammo: 15
 		PipCount: 5
 		ReloadDelay: 11
+		AmmoCondition: ammo
 	ReturnOnIdle:
 	SelectionDecorations:
-		VisualBounds: 30,28,0,2
 	WithMuzzleOverlay:
 	SpawnActorOnDeath:
 		Actor: YAK.Husk
 	SmokeTrailWhenDamaged:
 		Offset: -853,0,0
 		Interval: 2
+	Selectable:
+		DecorationBounds: 30,28,0,2
 
 TRAN:
 	Inherits: ^Helicopter
@@ -219,7 +229,8 @@ TRAN:
 	SpawnActorOnDeath:
 		Actor: TRAN.Husk
 	SelectionDecorations:
-		VisualBounds: 40,36
+	Selectable:
+		DecorationBounds: 40,36
 
 HELI:
 	Inherits: ^Helicopter
@@ -241,6 +252,7 @@ HELI:
 	Armament:
 		Weapon: Hellfire
 		LocalOffset: 0,-213,-85, 0,213,-85
+		PauseOnCondition: !ammo
 	AttackHeli:
 		FacingTolerance: 20
 	Aircraft:
@@ -263,12 +275,14 @@ HELI:
 	AmmoPool:
 		Ammo: 6
 		PipCount: 5
+		AmmoCondition: ammo
 	SelectionDecorations:
-		VisualBounds: 36,28
 	SpawnActorOnDeath:
 		Actor: HELI.Husk
 	SmokeTrailWhenDamaged:
 		Offset: -427,0,0
+	Selectable:
+		DecorationBounds: 36,28
 
 HIND:
 	Inherits: ^Helicopter
@@ -291,11 +305,13 @@ HIND:
 		Weapon: ChainGun
 		LocalOffset: 85,-213,-85
 		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
 	Armament@SECONDARY:
 		Name: secondary
 		Weapon: ChainGun
 		LocalOffset: 85,213,-85
 		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
 	AttackHeli:
 		FacingTolerance: 20
 	Aircraft:
@@ -317,13 +333,15 @@ HIND:
 		Ammo: 12
 		PipCount: 5
 		ReloadDelay: 8
+		AmmoCondition: ammo
 	SelectionDecorations:
-		VisualBounds: 38,32
 	WithMuzzleOverlay:
 	SpawnActorOnDeath:
 		Actor: HIND.Husk
 	SmokeTrailWhenDamaged:
 		Offset: -427,0,0
+	Selectable:
+		DecorationBounds: 38,32
 
 U2:
 	Inherits: ^Plane
@@ -355,3 +373,4 @@ U2:
 		Offset: -1c43,0,0
 		Interval: 2
 	RejectsOrders:
+	Interactable:

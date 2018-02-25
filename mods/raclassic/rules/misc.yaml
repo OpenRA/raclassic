@@ -9,7 +9,7 @@ MINV:
 	Inherits: ^Mine
 	Mine:
 		DetonateClasses: mine_av
- 	Explodes:
+	Explodes:
 		Weapon: AVMine
 
 CRATE:
@@ -46,10 +46,6 @@ CRATE:
 		SelectionShares: 3
 		Proxy: powerproxy.sonarpulse.crate
 		Effect: sonar
-#	SupportPowerCrateAction@nuke:
-#		SelectionShares: 1
-#		Proxy: powerproxy.abomb
-#		Effect: nuke
 	GiveMcvCrateAction:
 		SelectionShares: 0
 		NoBaseSelectionShares: 100
@@ -258,9 +254,9 @@ FLARE:
 	Tooltip:
 		Name: Flare
 		ShowOwnerRow: false
-	AutoSelectionSize:
 	EditorTilesetFilter:
 		Categories: Decoration
+	Interactable:
 
 MINE:
 	Inherits@1: ^SpriteActor
@@ -279,6 +275,8 @@ MINE:
 	SeedsResource:
 	EditorTilesetFilter:
 		Categories: Resource spawn
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GMINE:
 	Inherits@1: ^SpriteActor
@@ -298,6 +296,8 @@ GMINE:
 		ResourceType: Gems
 	EditorTilesetFilter:
 		Categories: Resource spawn
+	RequiresBuildableArea:
+		AreaTypes: building
 
 RAILMINE:
 	Inherits@1: ^SpriteActor
@@ -313,6 +313,8 @@ RAILMINE:
 	EditorTilesetFilter:
 		ExcludeTilesets: INTERIOR
 		Categories: Civilian building
+	RequiresBuildableArea:
+		AreaTypes: building
 
 QUEE:
 	Inherits@1: ^SpriteActor
@@ -328,6 +330,8 @@ QUEE:
 	EditorTilesetFilter:
 		RequireTilesets: INTERIOR
 		Categories: Critter
+	RequiresBuildableArea:
+		AreaTypes: building
 
 LAR1:
 	Inherits@1: ^SpriteActor
@@ -345,6 +349,8 @@ LAR1:
 	EditorTilesetFilter:
 		RequireTilesets: INTERIOR
 		Categories: Critter
+	RequiresBuildableArea:
+		AreaTypes: building
 
 LAR2:
 	Inherits@1: LAR1
@@ -356,7 +362,7 @@ powerproxy.parabombs:
 	AirstrikePower:
 		Icon: parabombs
 		Description: Parabombs
-		ChargeTime: 840
+		ChargeInterval: 21000
 		LongDesc: A Badger drops a load of parachuted\nbombs on your target.
 		OneShot: true
 		AllowMultiple: true
@@ -376,7 +382,7 @@ powerproxy.sonarpulse:
 		Icon: sonar
 		Description: Sonar Pulse
 		LongDesc: Reveals all submarines in the vicinity for a \nshort time.
-		ChargeTime: 30
+		ChargeInterval: 750
 		EndChargeSpeechNotification: SonarPulseReady
 		SelectTargetSpeechNotification: SelectTarget
 		Actor: sonar
@@ -391,7 +397,7 @@ powerproxy.sonarpulse.crate:
 		Icon: sonar
 		Description: Sonar Pulse
 		LongDesc: Reveals all submarines in the vicinity for a \nshort time.
-		ChargeTime: 30
+		ChargeInterval: 750
 		OneShot: true
 		AllowMultiple: true
 		SelectTargetSpeechNotification: SelectTarget
@@ -406,7 +412,7 @@ powerproxy.abomb:
 	NukePower:
 		Cursor: nuke
 		Icon: abomb
-		ChargeTime: 780
+		ChargeInterval: 19500
 		Description: Atom Bomb
 		LongDesc: Launches a devastating atomic bomb\nat a target location.
 		OneShot: true
@@ -414,7 +420,6 @@ powerproxy.abomb:
 		SelectTargetSpeechNotification: SelectTarget
 		IncomingSpeechNotification: AbombLaunchDetected
 		SkipAscent: true
-		ActivationSequence:
 		MissileWeapon: atomic
 		DisplayBeacon: True
 		DisplayRadarPing: True
@@ -424,6 +429,7 @@ powerproxy.abomb:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
+	WithNukeLaunchAnimation:
 
 powerproxy.paratroopers:
 	AlwaysVisible:
@@ -503,3 +509,6 @@ CTFLAG:
 	-Targetable:
 	EditorTilesetFilter:
 		Categories: Decoration
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
