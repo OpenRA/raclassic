@@ -35,9 +35,11 @@ Player:
 		DefaultCash: 10000
 		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
+		DisplayOrder: 6
 	GpsWatcher:
 	Shroud:
 		FogCheckboxEnabled: false
+		FogDisplayOrder: 3
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:
