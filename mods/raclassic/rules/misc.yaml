@@ -198,6 +198,7 @@ SCRATE:
 		Image: scrate
 
 CAMERA:
+	Interactable:
 	EditorOnlyTooltip:
 		Name: (reveals area to owner)
 	AlwaysVisible:
@@ -251,6 +252,7 @@ FLARE:
 		QuantizedFacings: 1
 	HiddenUnderFog:
 		Type: CenterPosition
+	Interactable:
 	Tooltip:
 		Name: Flare
 		ShowOwnerRow: false
@@ -260,6 +262,7 @@ FLARE:
 
 MINE:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
 		Name: Ore Mine
@@ -280,6 +283,7 @@ MINE:
 
 GMINE:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
 		Name: Gem Mine
@@ -301,6 +305,7 @@ GMINE:
 
 RAILMINE:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
 		Name: Abandoned Mine
@@ -319,6 +324,7 @@ RAILMINE:
 QUEE:
 	Inherits@1: ^SpriteActor
 	Inherits@shape: ^2x1Shape
+	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
 		Name: Queen Ant
@@ -336,6 +342,7 @@ QUEE:
 LAR1:
 	Inherits@1: ^SpriteActor
 	Inherits@shape: ^1x1Shape
+	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
 		Name: Ant Larva
@@ -461,6 +468,7 @@ aircraft.upgraded:
 	ProvidesPrerequisite:
 
 mpspawn:
+	Interactable:
 	EditorOnlyTooltip:
 		Name: (multiplayer player starting point)
 	AlwaysVisible:
@@ -474,6 +482,7 @@ mpspawn:
 		Categories: System
 
 waypoint:
+	Interactable:
 	EditorOnlyTooltip:
 		Name: (waypoint for scripted behavior)
 	AlwaysVisible:
