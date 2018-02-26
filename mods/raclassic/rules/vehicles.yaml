@@ -661,7 +661,10 @@ STNK:
 		TurnSpeed: 5
 	AttackTurreted:
 	WithSpriteTurret:
+	Sellable:
+		RequiresCondition: unit.sellable && !Loaded
 	Cargo:
+		LoadedCondition: Loaded
 		Types: Infantry
 		MaxWeight: 1
 		PipCount: 1
