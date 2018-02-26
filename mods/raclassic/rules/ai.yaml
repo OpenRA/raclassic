@@ -13,6 +13,7 @@ Player:
 			Silo: silo
 		UnitsCommonNames:
 			Mcv: mcv
+			NavalUnits: ss,msub,dd,ca,lst,pt
 		BuildingLimits:
 			proc: 4
 			barr: 1
@@ -127,6 +128,7 @@ Player:
 			Silo: silo
 		UnitsCommonNames:
 			Mcv: mcv
+			NavalUnits: ss,msub,dd,ca,lst,pt
 		BuildingLimits:
 			proc: 4
 			barr: 1
@@ -258,6 +260,7 @@ Player:
 			Silo: silo
 		UnitsCommonNames:
 			Mcv: mcv
+			NavalUnits: ss,msub,dd,ca,lst,pt
 		BuildingLimits:
 			proc: 4
 			barr: 1
@@ -388,6 +391,7 @@ Player:
 			Silo: silo
 		UnitsCommonNames:
 			Mcv: mcv
+			NavalUnits: ss,msub,dd,ca,lst,pt
 		BuildingLimits:
 			proc: 4
 			dome: 1
