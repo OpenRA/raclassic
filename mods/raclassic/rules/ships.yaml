@@ -215,6 +215,7 @@ CA:
 		FireDelay: 5
 		MuzzleSequence: muzzle
 	AttackTurreted:
+		Turrets: primary, secondary
 	WithMuzzleOverlay:
 	SelectionDecorations:
 	WithSpriteTurret@PRIMARY:
