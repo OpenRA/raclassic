@@ -68,7 +68,7 @@ MSUB:
 		Queue: Ship
 		BuildAtProductionType: Submarine
 		BuildPaletteOrder: 60
-		Prerequisites: ~spen, stek, ~disabled, ~techlevel.6
+		Prerequisites: ~spen, stek, ~global-aftermath, ~techlevel.6
 		Description: Submerged anti-ground siege unit.\nCan detect other submarines.\n  Strong vs Buildings, Ground units, Aircraft\n  Weak vs Naval units\n  Special Ability: Submerge
 	Valued:
 		Cost: 1650

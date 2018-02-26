@@ -291,7 +291,7 @@ MCV:
 	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 100
 		Prerequisites: fix, ~techlevel.8
 		Description: Deploys into another Construction Yard.\n  Unarmed
 	Valued:
@@ -397,7 +397,7 @@ MNLY.AP:
 	Inherits: ^Minelayer
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 90
 		Prerequisites: ~vehicles.soviet, fix, ~techlevel.2
 		Description: Lays anti-personnel mines to destroy\nunwary enemy units.\n  Unarmed
 	Tooltip:
@@ -409,7 +409,7 @@ MNLY.AV:
 	Inherits: ^Minelayer
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 90
 		Prerequisites: ~vehicles.allies, fix, ~techlevel.2
 		Description: Lays anti-tank mines to destroy\nunwary enemy units.\n  Unarmed
 	Tooltip:
@@ -439,7 +439,7 @@ MGG:
 	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 120
 		Prerequisites: ~vehicles.allies, atek, ~techlevel.8
 		Description: Regenerates the shroud nearby, \nobscuring the area.\n  Unarmed
 	Valued:
@@ -473,7 +473,7 @@ MRJ:
 		Name: Mobile Radar Jammer
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 80
 		Prerequisites: ~vehicles.allies, dome, ~techlevel.9
 		Description: Jams nearby enemy radar domes.\n  Unarmed
 	Health:
@@ -503,8 +503,8 @@ TTNK:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 170
-		Prerequisites: ~vehicle.soviet, tsla, ~disabled, ~techlevel.5
+		BuildPaletteOrder: 70
+		Prerequisites: ~vehicles.soviet, tsla, ~global-aftermath, ~techlevel.5
 		Description: Tank with mounted tesla coil.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
 	Valued:
 		Cost: 1500
@@ -534,7 +534,7 @@ DTRK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 160
-		Prerequisites: mslo, ~disabled, ~techlevel.10
+		Prerequisites: mslo, ~global-aftermath, ~techlevel.10
 		Description: Demolition Truck, actively armed with\nnuclear explosives. Has very weak armor.
 	Valued:
 		Cost: 2400
@@ -565,8 +565,8 @@ CTNK:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 200
-		Prerequisites: ~vehicle.allies, atek, ~disabled, ~techlevel.9
+		BuildPaletteOrder: 110
+		Prerequisites: ~vehicles.allies, atek, ~global-aftermath, ~techlevel.9
 		Description: Chrono Tank, teleports to areas within range.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft\n  Special ability: Can teleport
 	Valued:
 		Cost: 2400
@@ -601,8 +601,8 @@ QTNK:
 	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 190
-		Prerequisites: ~vehicle.soviet, stek, ~disabled, ~techlevel.7
+		BuildPaletteOrder: 140
+		Prerequisites: ~vehicles.soviet, stek, ~global-aftermath, ~techlevel.7
 		Description: Deals seismic damage to nearby vehicles\nand structures.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 2300
@@ -630,8 +630,8 @@ STNK:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 130
-		Prerequisites: ~vehicle.allies, atek, ~disabled
+		BuildPaletteOrder: 150
+		Prerequisites: ~vehicles.allies, atek, ~disabled
 		Description: Lightly armored infantry transport\nwhich can cloak.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
 	Valued:
 		Cost: 800

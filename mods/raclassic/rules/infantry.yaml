@@ -103,7 +103,7 @@ E3:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 20
 		Prerequisites: ~barracks, ~techlevel.1
 		Description: Anti-tank/Anti-aircraft infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Selectable:
@@ -133,7 +133,7 @@ E4:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 100
 		Prerequisites: ~barr, stek, ~techlevel.4
 		Description: Advanced anti-structure unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
 	Valued:
@@ -157,7 +157,7 @@ E6:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 40
 		Prerequisites: ~barracks, ~techlevel.3
 		Description: Infiltrates and captures\nenemy structures.\n  Unarmed
 	Valued:
@@ -182,7 +182,7 @@ SPY:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 70
 		Prerequisites: dome, ~tent, ~techlevel.4
 		Description: Infiltrates enemy structures for intel.\nExact effect depends on the building infiltrated.
 	Valued:
@@ -209,7 +209,7 @@ E7:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 120
+		BuildPaletteOrder: 110
 		Prerequisites: ~barracks, techcenter, ~techlevel.8
 		Description: Elite commando infantry. Armed with\ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4
 	AutoTarget:
@@ -252,7 +252,7 @@ MEDI:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 30
 		Prerequisites: ~tent, ~techlevel.1
 		Description: Heals nearby infantry.\n  Unarmed
 	Valued:
@@ -286,8 +286,8 @@ MECH:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 100
-		Prerequisites: ~tent, fix, ~disabled, ~techlevel.5
+		BuildPaletteOrder: 80
+		Prerequisites: ~tent, fix, ~global-aftermath, ~techlevel.5
 		Description: Repairs nearby vehicles.\n  Unarmed
 	Valued:
 		Cost: 950
@@ -379,7 +379,7 @@ THF:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 110
+		BuildPaletteOrder: 90
 		Prerequisites: ~tent, atek, ~techlevel.8
 		Description: Steals enemy credits.\n  Unarmed
 	RevealsShroud:
@@ -401,8 +401,8 @@ SHOK:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 130
-		Prerequisites: ~barr, tsla, ~disabled, ~techlevel.5
+		BuildPaletteOrder: 60
+		Prerequisites: ~barr, tsla, ~global-aftermath, ~techlevel.5
 		Description: Elite infantry with portable tesla coils.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Valued:
 		Cost: 900

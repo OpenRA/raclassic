@@ -35,11 +35,25 @@ Player:
 		DefaultCash: 10000
 		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
-		DisplayOrder: 6
+		CheckboxDisplayOrder: 8
 	GpsWatcher:
 	Shroud:
 		FogCheckboxEnabled: false
-		FogDisplayOrder: 3
+		FogCheckboxDisplayOrder: 3
+	LobbyPrerequisiteCheckbox@GLOBALAFTERMATH:
+		ID: aftermath
+		Label: Aftermath Units
+		Description: Enables the units that came with Aftermath expansion.
+		Enabled: false
+		DisplayOrder: 6
+		Prerequisites: global-aftermath
+	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
+		ID: factundeploy
+		Label: Redeployable MCVs
+		Description: Allow undeploying Construction Yard.
+		Enabled: false
+		DisplayOrder: 7
+		Prerequisites: global-factundeploy
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:
