@@ -2,26 +2,18 @@ ProductionTypeBuilding: E
 	Description: Building Tab
 	Types: Production
 
-ProductionTypeDefense: R
-	Description: Defense Tab
-	Types: Production
-
-ProductionTypeInfantry: T
+ProductionTypeInfantry: R
 	Description: Infantry Tab
 	Types: Production
 
-ProductionTypeVehicle: Y
+ProductionTypeVehicle: T
 	Description: Vehicle Tab
 	Types: Production
 
-ProductionTypeAircraft: U
+ProductionTypeAircraft: Y
 	Description: Aircraft Tab
 	Types: Production
 
-ProductionTypeNaval: I
+ProductionTypeNaval: U
 	Description: Naval Tab 
 	Types: Production
-
-PowerDown: X
-	Description: Power-down mode
-	Types: OrderGenerator
