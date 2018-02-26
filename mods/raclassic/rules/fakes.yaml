@@ -33,7 +33,6 @@ SYRF:
 			TopLeft: -512, 598
 			BottomRight: 512, 1110
 	RequiresBuildableArea:
-		AreaTypes: building
 		Adjacent: 8
 
 SPEF:
@@ -70,7 +69,6 @@ SPEF:
 			TopLeft: -555, -1110
 			BottomRight: 555, 1110
 	RequiresBuildableArea:
-		AreaTypes: building
 		Adjacent: 8
 
 WEAF:
@@ -97,8 +95,6 @@ WEAF:
 		Image: WEAP
 	WithProductionDoorOverlay:
 		Sequence: build-top
-	RequiresBuildableArea:
-		AreaTypes: building
 
 DOMF:
 	Inherits: ^FakeBuilding
@@ -125,11 +121,6 @@ DOMF:
 	WithBuildingBib:
 	RenderSprites:
 		Image: DOME
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
-	RequiresBuildableArea:
-		AreaTypes: building
 
 FACF:
 	Inherits: ^FakeBuilding
@@ -156,5 +147,3 @@ FACF:
 		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
-	RequiresBuildableArea:
-		AreaTypes: building

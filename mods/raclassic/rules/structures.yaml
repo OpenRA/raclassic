@@ -50,8 +50,6 @@ MSLO:
 		Amount: -100
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	RequiresBuildableArea:
-		AreaTypes: building
 	WithNukeLaunchAnimation:
 
 GAP:
@@ -80,6 +78,7 @@ GAP:
 		Range: 10c0
 	CreatesShroud:
 		Range: 10c0
+		RequiresCondition: !disabled
 	RenderShroudCircle:
 	Power:
 		Amount: -90
@@ -170,7 +169,6 @@ SPEN:
 			TopLeft: -555, -1110
 			BottomRight: 555, 1110
 	RequiresBuildableArea:
-		AreaTypes: building
 		Adjacent: 8
 
 SYRD:
@@ -254,7 +252,6 @@ SYRD:
 			TopLeft: -512, 598
 			BottomRight: 512, 1110
 	RequiresBuildableArea:
-		AreaTypes: building
 		Adjacent: 8
 
 IRON:
@@ -304,8 +301,6 @@ IRON:
 		Amount: -200
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	RequiresBuildableArea:
-		AreaTypes: building
 
 PDOX:
 	Inherits: ^Building
@@ -351,8 +346,6 @@ PDOX:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	ProvidesPrerequisite@buildingname:
-	RequiresBuildableArea:
-		AreaTypes: building
 
 TSLA:
 	Inherits: ^Defense
@@ -382,6 +375,7 @@ TSLA:
 		Weapon: TeslaZap
 		LocalOffset: 0,0,896
 	AttackTesla:
+		PauseOnCondition: disabled
 		ChargeAudio: tslachg2.aud
 		MaxCharges: 3
 		ReloadDelay: 120
@@ -424,6 +418,7 @@ AGUN:
 		LocalOffset: 520,100,450, 520,-150,450
 		MuzzleSequence: muzzle
 	AttackTurreted:
+		PauseOnCondition: disabled
 	WithMuzzleOverlay:
 	RenderRangeCircle:
 		RangeCircleType: aa
@@ -469,8 +464,6 @@ DOME:
 	ProvidesPrerequisite@buildingname:
 	ExternalCondition@JAMMED:
 		Condition: jammed
-	RequiresBuildableArea:
-		AreaTypes: building
 
 PBOX:
 	Inherits: ^Defense
@@ -508,8 +501,6 @@ PBOX:
 		Amount: -15
 	DetectCloaked:
 		Range: 5c0
-	RequiresBuildableArea:
-		AreaTypes: building
 
 HBOX:
 	Inherits: ^Defense
@@ -548,8 +539,6 @@ HBOX:
 	Power:
 		Amount: -15
 	-MustBeDestroyed:
-	RequiresBuildableArea:
-		AreaTypes: building
 
 GUN:
 	Inherits: ^Defense
@@ -587,8 +576,6 @@ GUN:
 		Range: 6c0
 	BodyOrientation:
 		UseClassicFacingFudge: True
-	RequiresBuildableArea:
-		AreaTypes: building
 
 FTUR:
 	Inherits: ^Defense
@@ -624,12 +611,9 @@ FTUR:
 	DetectCloaked:
 		Range: 6c0
 	ProvidesPrerequisite@buildingname:
-	RequiresBuildableArea:
-		AreaTypes: building
 
 SAM:
 	Inherits: ^Defense
-	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@shape: ^2x1Shape
 	HitShape:
@@ -671,8 +655,6 @@ SAM:
 		Amount: -20
 	BodyOrientation:
 		UseClassicFacingFudge: True
-	RequiresBuildableArea:
-		AreaTypes: building
 
 ATEK:
 	Inherits: ^Building
@@ -714,8 +696,6 @@ ATEK:
 	Power:
 		Amount: -200
 	ProvidesPrerequisite@buildingname:
-	RequiresBuildableArea:
-		AreaTypes: building
 
 WEAP:
 	Inherits: ^Building
@@ -776,8 +756,6 @@ WEAP:
 		ReferencePoint: Top
 		ZOffset: 256
 		RequiresCondition: primary
-	RequiresBuildableArea:
-		AreaTypes: building
 
 FACT:
 	Inherits: ^Building
@@ -812,6 +790,14 @@ FACT:
 	EmitInfantryOnSell:
 		ActorTypes: e1,e1,e1,e1,e6,tecn,tecn_yellow
 	BaseBuilding:
+	Transforms:
+		IntoActor: mcv
+		Offset: 1,1
+		Facing: 96
+		RequiresCondition: factundeploy
+	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
+		Condition: factundeploy
+		Prerequisites: global-factundeploy
 	ProductionBar@Building:
 		ProductionType: Building
 	WithBuildingPlacedAnimation:
@@ -823,8 +809,6 @@ FACT:
 		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
-	RequiresBuildableArea:
-		AreaTypes: building
 
 PROC:
 	Inherits: ^Building
@@ -868,6 +852,7 @@ PROC:
 		Facing: 64
 	InfiltrateForCash:
 		Percentage: 50
+		ShowTicks: false
 		Notification: CreditsStolen
 	WithIdleOverlay@TOP:
 		Sequence: idle-top
@@ -888,8 +873,6 @@ PROC:
 		Type: Rectangle
 			TopLeft: -1536, 598
 			BottomRight: -512, 1280
-	RequiresBuildableArea:
-		AreaTypes: building
 
 SILO:
 	Inherits: ^Building
@@ -902,7 +885,6 @@ SILO:
 		Cost: 150
 	Tooltip:
 		Name: Silo
-	Building:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, Cash
 	Health:
@@ -917,13 +899,11 @@ SILO:
 		Capacity: 1500
 	InfiltrateForCash:
 		Percentage: 50
+		ShowTicks: false
 		Notification: CreditsStolen
 	-EmitInfantryOnSell:
 	Power:
 		Amount: -10
-	RequiresBuildableArea:
-		AreaTypes: building
-		Adjacent: 2
 
 HPAD:
 	Inherits: ^Building
@@ -990,8 +970,6 @@ HPAD:
 		ZOffset: 256
 		RequiresCondition: primary
 	WithRearmAnimation:
-	RequiresBuildableArea:
-		AreaTypes: building
 
 AFLD:
 	Inherits: ^Building
@@ -1085,8 +1063,6 @@ AFLD:
 		ZOffset: 256
 		RequiresCondition: primary
 	WithRearmAnimation:
-	RequiresBuildableArea:
-		AreaTypes: building
 
 POWR:
 	Inherits: ^Building
@@ -1121,8 +1097,6 @@ POWR:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
-	RequiresBuildableArea:
-		AreaTypes: building
 
 APWR:
 	Inherits: ^Building
@@ -1160,8 +1134,6 @@ APWR:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
-	RequiresBuildableArea:
-		AreaTypes: building
 
 STEK:
 	Inherits: ^Building
@@ -1193,8 +1165,6 @@ STEK:
 	Power:
 		Amount: -100
 	ProvidesPrerequisite@buildingname:
-	RequiresBuildableArea:
-		AreaTypes: building
 
 BARR:
 	Inherits: ^Building
@@ -1256,8 +1226,6 @@ BARR:
 		ReferencePoint: Top
 		ZOffset: 256
 		RequiresCondition: primary
-	RequiresBuildableArea:
-		AreaTypes: building
 
 KENN:
 	Inherits: ^Building
@@ -1270,7 +1238,6 @@ KENN:
 		Cost: 200
 	Tooltip:
 		Name: Kennel
-	Building:
 	Health:
 		HP: 400
 	Armor:
@@ -1301,9 +1268,6 @@ KENN:
 		ReferencePoint: Top
 		ZOffset: 256
 		RequiresCondition: primary
-	RequiresBuildableArea:
-		AreaTypes: building
-		Adjacent: 2
 
 TENT:
 	Inherits: ^Building
@@ -1365,8 +1329,6 @@ TENT:
 		ReferencePoint: Top
 		ZOffset: 256
 		RequiresCondition: primary
-	RequiresBuildableArea:
-		AreaTypes: building
 
 FIX:
 	Inherits: ^Building
@@ -1419,8 +1381,6 @@ FIX:
 		Type: Rectangle
 			TopLeft: -640, -768
 			BottomRight: 640, 1024
-	RequiresBuildableArea:
-		AreaTypes: building
 
 SBAG:
 	Inherits: ^Wall
@@ -1590,6 +1550,7 @@ WOOD:
 
 BARRACKS:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Infantry Production
 	Buildable:
@@ -1597,6 +1558,7 @@ BARRACKS:
 
 TECHCENTER:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Tech Center
 	Buildable:
@@ -1604,6 +1566,7 @@ TECHCENTER:
 
 ANYPOWER:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Power Plant
 	Buildable:

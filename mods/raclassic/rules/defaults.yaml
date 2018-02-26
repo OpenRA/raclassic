@@ -11,7 +11,6 @@
 	BodyOrientation:
 	QuantizeFacingsFromSequence:
 	RenderSprites:
-	Interactable:
 
 ^1x1Shape:
 	HitShape:
@@ -129,8 +128,9 @@
 	Chronoshiftable:
 	Sellable:
 		SellSounds: cashturn.aud
+		Cursor: sell2
+		ShowTicks: false
 		RequiresCondition: unit.sellable
-		#+Cursor: sell2
 	ProximityExternalCondition:
 		Condition: unit.docked
 		Range: 1c0
@@ -405,8 +405,9 @@
 		Type: GroundPosition
 	Sellable:
 		SellSounds: cashturn.aud
+		Cursor: sell2
+		ShowTicks: false
 		RequiresCondition: unit.sellable && !airborne
-		#+Cursor: sell2
 	ProximityExternalCondition:
 		Condition: unit.docked
 		Range: 1c0
@@ -517,6 +518,7 @@
 		RequiredForShortGame: true
 	Sellable:
 		SellSounds: cashturn.aud
+		ShowTicks: false
 
 ^Defense:
 	Inherits: ^Building
@@ -534,6 +536,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@shape: ^1x1Shape
+	Interactable:
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -556,6 +559,7 @@
 	WithWallSpriteBody:
 	Sellable:
 		SellSounds: cashturn.aud
+		ShowTicks: false
 	Guardable:
 	FrozenUnderFog:
 	FrozenUnderFogUpdatedByGps:
@@ -700,6 +704,7 @@
 ^Tree:
 	Inherits@1: ^SpriteActor
 	Inherits@shape: ^1x1Shape
+	Interactable:
 	Tooltip:
 		Name: Tree
 		ShowOwnerRow: false
@@ -738,11 +743,10 @@
 	EditorTilesetFilter:
 		ExcludeTilesets: INTERIOR
 		Categories: Tree
-	RequiresBuildableArea:
-		AreaTypes: building
 
 ^TreeHusk:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	AppearsOnRadar:
 	Building:
 		Footprint: x
@@ -755,11 +759,10 @@
 	ScriptTriggers:
 	EditorTilesetFilter:
 		Categories: Tree
-	RequiresBuildableArea:
-		AreaTypes: building
 
 ^BasicHusk:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	Health:
 		HP: 280
 	Armor:
@@ -850,13 +853,12 @@
 	ScriptTriggers:
 	BodyOrientation:
 		QuantizedFacings: 1
-	RequiresBuildableArea:
-		AreaTypes: building
 	Interactable:
 		Bounds: 96,48
 
 ^Rock:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	Tooltip:
 		Name: Rock
 		ShowOwnerRow: false
@@ -874,8 +876,6 @@
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
 		Categories: Decoration
-	RequiresBuildableArea:
-		AreaTypes: building
 
 ^DesertCivBuilding:
 	Inherits: ^CivBuilding
@@ -886,6 +886,7 @@
 
 ^Crate:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	HiddenUnderFog:
 	Tooltip:
 		Name: Crate
@@ -944,6 +945,7 @@
 
 ^Mine:
 	Inherits: ^SpriteActor
+	Interactable:
 	WithSpriteBody:
 	HiddenUnderFog:
 	Mine:
@@ -972,9 +974,6 @@
 		Categories: System
 
 ^DisableOnLowPower:
-	#WithColoredOverlay@IDISABLE:
-		#RequiresCondition: disabled
-		#Palette: disabled
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
