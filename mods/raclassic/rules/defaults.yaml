@@ -665,7 +665,6 @@
 		Categories: Decoration
 	Interactable:
 		Bounds: 24,24
-	Interactable:
 
 ^CivBuilding:
 	Inherits: ^TechBuilding
