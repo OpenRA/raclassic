@@ -2,9 +2,10 @@ SYRF:
 	Inherits: ^FakeBuilding
 	Inherits@infiltrate: ^InfiltratableFake
 	Buildable:
-		BuildPaletteOrder: 870
 		Queue: Building
-		Prerequisites: anypower, ~structures.allies, ~techlevel.2
+		BuildDuration: 50
+		BuildPaletteOrder: 860
+		Prerequisites: anypower, ~structures.allies, ~player.normal, ~techlevel.2
 		Description: Looks like a Naval Yard.
 		Icon: fake-icon
 	Tooltip:
@@ -18,6 +19,8 @@ SYRF:
 		Footprint: XXX xxx XXX
 		Dimensions: 3,3
 		TerrainTypes: Water
+	Selectable:
+		Class: SYRF
 	RenderSprites:
 		Image: SYRD
 	EditorTilesetFilter:
@@ -41,9 +44,10 @@ SPEF:
 	Targetable:
 		TargetTypes: Ground, Water, Structure, SpyInfiltrate
 	Buildable:
-		BuildPaletteOrder: 870
 		Queue: Building
-		Prerequisites: anypower, ~disabled, ~techlevel.2
+		BuildDuration: 50
+		BuildPaletteOrder: 870
+		Prerequisites: anypower, ~disabled, ~player.normal, ~techlevel.2
 		Description: Looks like a Sub Pen.
 		Icon: fake-icon
 	Tooltip:
@@ -55,6 +59,8 @@ SPEF:
 		Footprint: XXX xxx XXX
 		Dimensions: 3,3
 		TerrainTypes: Water
+	Selectable:
+		Class: SPEF
 	RenderSprites:
 		Image: SPEN
 	EditorTilesetFilter:
@@ -76,9 +82,10 @@ WEAF:
 	Inherits@infiltrate: ^InfiltratableFake
 	Inherits@shape: ^3x2Shape
 	Buildable:
-		BuildPaletteOrder: 880
-		Prerequisites: proc, ~structures.allies, ~techlevel.2
 		Queue: Building
+		BuildDuration: 50
+		BuildPaletteOrder: 880
+		Prerequisites: proc, ~structures.allies, ~player.normal, ~techlevel.2
 		Description: Looks like a War Factory.
 		Icon: fake-icon
 	Tooltip:
@@ -91,6 +98,8 @@ WEAF:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	WithBuildingBib:
+	Selectable:
+		Class: WEAF
 	RenderSprites:
 		Image: WEAP
 	WithProductionDoorOverlay:
@@ -109,9 +118,10 @@ DOMF:
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Buildable:
-		BuildPaletteOrder: 890
 		Queue: Building
-		Prerequisites: proc, ~structures.allies, ~techlevel.2
+		BuildDuration: 50
+		BuildPaletteOrder: 890
+		Prerequisites: proc, ~structures.allies, ~player.normal, ~techlevel.2
 		Description: Looks like a Radar Dome.
 		Icon: fake-icon
 	Building:
@@ -119,15 +129,18 @@ DOMF:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	WithBuildingBib:
+	Selectable:
+		Class: DOMF
 	RenderSprites:
 		Image: DOME
 
 FACF:
 	Inherits: ^FakeBuilding
 	Buildable:
-		BuildPaletteOrder: 900
 		Queue: Building
-		Prerequisites: ~structures.allies, ~techlevel.1
+		BuildDuration: 50
+		BuildPaletteOrder: 900
+		Prerequisites: ~structures.allies, ~player.normal, ~techlevel.1
 		Description: Looks like a Construction Yard.
 		Icon: fake-icon
 	Tooltip:
@@ -140,6 +153,8 @@ FACF:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	WithBuildingBib:
+	Selectable:
+		Class: FACF
 	RenderSprites:
 		Image: FACT
 	HitShape:

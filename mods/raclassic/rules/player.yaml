@@ -102,3 +102,33 @@ Player:
 	EnemyWatcher:
 	ResourceStorageWarning:
 	PlayerExperience:
+	ProvidesPrerequisite@Russia:
+		Factions: russia
+		Prerequisite: player.russia
+	ProvidesPrerequisite@Turkey:
+		Factions: turkey
+		Prerequisite: player.turkey
+	ProvidesPrerequisite@Normal:
+		Factions: allies, england, germany, france, spain, greece, soviet, ukraine
+		Prerequisite: player.normal
+	ProvidesPrerequisite@Normal_power:
+		Factions: allies, england, germany, france, spain, soviet, ukraine
+		Prerequisite: player.normal_power
+	ProvidesPrerequisite@England:
+		Factions: england
+		Prerequisite: player.england
+	ProvidesPrerequisite@Germany:
+		Factions: germany
+		Prerequisite: player.germany
+	ProvidesPrerequisite@France:
+		Factions: france
+		Prerequisite: player.france
+	ProvidesPrerequisite@Spain:
+		Factions: spain
+		Prerequisite: player.spain
+	ProvidesPrerequisite@Greece:
+		Factions: greece
+		Prerequisite: player.greece
+	ProvidesPrerequisite@Ukraine:
+		Factions: ukraine
+		Prerequisite: player.ukraine

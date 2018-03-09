@@ -53,67 +53,67 @@ CRATE:
 	GiveUnitCrateAction@harv_all:
 		SelectionShares: 2
 		Units: harv
-		ValidFactions: allies
+		ValidFactions: allies, england, germany, france, spain, greece, turkey
 	GiveUnitCrateAction@harv_sov:
 		SelectionShares: 3
 		Units: harv
-		ValidFactions: soviet
+		ValidFactions: soviet, russia, ukraine
 	GiveUnitCrateAction@jeep:
 		SelectionShares: 2
 		Units: jeep
-		ValidFactions: allies
+		ValidFactions: allies, england, germany, france, spain, greece, turkey
 	GiveUnitCrateAction@apc:
 		SelectionShares: 2
 		Units: apc
-		ValidFactions: allies
+		ValidFactions: allies, england, germany, france, spain, greece, turkey
 	GiveUnitCrateAction@arty:
 		SelectionShares: 2
 		Units: arty
-		ValidFactions: allies
+		ValidFactions: allies, england, germany, france, spain, greece, turkey
 	GiveUnitCrateAction@v2rl:
 		SelectionShares: 3
 		Units: v2rl
-		ValidFactions: soviet
+		ValidFactions: soviet, russia, ukraine
 	GiveUnitCrateAction@1tnk:
 		SelectionShares: 2
 		Units: 1tnk
-		ValidFactions: allies
+		ValidFactions: allies, england, germany, france, spain, greece, turkey
 	GiveUnitCrateAction@2tnk:
 		SelectionShares: 2
 		Units: 2tnk
-		ValidFactions: allies
+		ValidFactions: allies, england, germany, france, spain, greece, turkey
 	GiveUnitCrateAction@3tnk:
 		SelectionShares: 4
 		Units: 3tnk
-		ValidFactions: soviet
+		ValidFactions: soviet, russia, ukraine
 	GiveUnitCrateAction@mrj:
 		SelectionShares: 2
 		Units: mrj
-		ValidFactions: allies
+		ValidFactions: allies, england, germany, france, spain, greece, turkey
 	GiveUnitCrateAction@mnly_all:
 		SelectionShares: 2
 		Units: mnly.av
-		ValidFactions: allies
+		ValidFactions: allies, england, germany, france, spain, greece, turkey
 	GiveUnitCrateAction@mnly_sov:
 		SelectionShares: 4
 		Units: mnly.ap
-		ValidFactions: soviet
+		ValidFactions: soviet, russia, ukraine
 	GiveUnitCrateAction@mcv_all:
 		SelectionShares: 2
 		Units: mcv
-		ValidFactions: allies
+		ValidFactions: allies, england, germany, france, spain, greece, turkey
 	GiveUnitCrateAction@mcv_sov:
 		SelectionShares: 3
 		Units: mcv
-		ValidFactions: soviet
+		ValidFactions: soviet, russia, ukraine
 	GiveUnitCrateAction@4tnk:
 		SelectionShares: 3
 		Units: 4tnk
-		ValidFactions: soviet
+		ValidFactions: soviet, russia, ukraine
 	GiveUnitCrateAction@mgg:
 		SelectionShares: 2
 		Units: mgg
-		ValidFactions: allies
+		ValidFactions: allies, england, germany, france, spain, greece, turkey
 	GiveUnitCrateAction@squad1:
 		SelectionShares: 2
 		Units: e1,e1,e1,e1,e1

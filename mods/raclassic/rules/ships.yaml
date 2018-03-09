@@ -1,11 +1,15 @@
 SS:
 	Inherits: ^Ship
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 111
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Submarine
+		BuildDuration: 950
 		BuildPaletteOrder: 30
-		Prerequisites: ~spen, ~techlevel.3
+		Prerequisites: ~spen, ~player.normal, ~techlevel.3
 		Description: Submerged anti-ship unit\narmed with torpedoes.\nCan detect other submarines.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft\n  Special Ability: Submerge
 	Valued:
 		Cost: 950
@@ -59,16 +63,23 @@ SS:
 		EmptyWeapon: UnitExplodeSubmarine
 	-MustBeDestroyed:
 	Selectable:
+		Class: SS
 		DecorationBounds: 38,38
+	RenderSprites:
+		Image: SS
 
 MSUB:
 	Inherits: ^Ship
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 107
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Submarine
+		BuildDuration: 1650
 		BuildPaletteOrder: 60
-		Prerequisites: ~spen, stek, ~global-aftermath, ~techlevel.6
+		Prerequisites: ~spen, stek, ~global-aftermath, ~player.normal, ~techlevel.6
 		Description: Submerged anti-ground siege unit.\nCan detect other submarines.\n  Strong vs Buildings, Ground units, Aircraft\n  Weak vs Naval units\n  Special Ability: Submerge
 	Valued:
 		Cost: 1650
@@ -118,7 +129,10 @@ MSUB:
 		EmptyWeapon: UnitExplodeSubmarine
 	-MustBeDestroyed:
 	Selectable:
+		Class: MSUB
 		DecorationBounds: 44,44
+	RenderSprites:
+		Image: MSUB
 
 DD:
 	Inherits: ^Ship
@@ -126,8 +140,9 @@ DD:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Boat
+		BuildDuration: 1000
 		BuildPaletteOrder: 40
-		Prerequisites: ~syrd, dome, ~techlevel.5
+		Prerequisites: ~syrd, dome, ~player.normal, ~techlevel.5
 		Description: Fast multi-role ship.\nCan detect submarines.\n  Strong vs Naval units, Light armor, Aircraft\n  Weak vs Infantry, Tanks
 	Valued:
 		Cost: 1000
@@ -149,14 +164,32 @@ DD:
 		Weapon: Stinger
 		LocalOffset: 0,-100,0, 0,100,0
 		LocalYaw: 64, -64
+		RequiresCondition: !spain
 	Armament@SECONDARY:
 		Weapon: DepthCharge
 		LocalOffset: 0,-100,0, 0,100,0
 		LocalYaw: 80, -80
+		RequiresCondition: !spain
 	Armament@TERTIARY:
 		Weapon: StingerAA
 		LocalOffset: 0,-100,0, 0,100,0
 		LocalYaw: 64, -64
+		RequiresCondition: !spain
+	Armament@PRIMARY_SPAIN:
+		Weapon: Stinger.spain
+		LocalOffset: 0,-100,0, 0,100,0
+		LocalYaw: 64, -64
+		RequiresCondition: spain
+	Armament@SECONDARY_SPAIN:
+		Weapon: DepthCharge.spain
+		LocalOffset: 0,-100,0, 0,100,0
+		LocalYaw: 80, -80
+		RequiresCondition: spain
+	Armament@TERTIARY_SPAIN:
+		Weapon: StingerAA.spain
+		LocalOffset: 0,-100,0, 0,100,0
+		LocalYaw: 64, -64
+		RequiresCondition: spain
 	AttackTurreted:
 	SelectionDecorations:
 	WithSpriteTurret:
@@ -165,17 +198,23 @@ DD:
 		Range: 4c0
 	RenderDetectionCircle:
 	Selectable:
+		Class: DD
 		DecorationBounds: 38,38
+	RenderSprites:
+		Image: DD
 
 CA:
 	Inherits: ^Ship
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 105
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Boat
-		BuildPaletteOrder: 50
-		Prerequisites: ~syrd, atek, ~techlevel.7
 		BuildDuration: 2000
+		BuildPaletteOrder: 50
+		Prerequisites: ~syrd, atek, ~player.normal, ~techlevel.7
 		Description: Very slow long-range ship.\n  Strong vs Buildings, Ground units\n  Weak vs Naval units, Aircraft
 	Valued:
 		Cost: 2000
@@ -223,14 +262,18 @@ CA:
 	WithSpriteTurret@SECONDARY:
 		Turret: secondary
 	Selectable:
+		Class: CA
 		DecorationBounds: 44,44
+	RenderSprites:
+		Image: CA
 
 LST:
 	Inherits: ^Ship
 	Buildable:
 		Queue: Ship
+		BuildDuration: 700
 		BuildPaletteOrder: 10
-		Prerequisites: ~techlevel.2
+		Prerequisites: ~player.normal, ~techlevel.2
 		Description: General-purpose naval transport.\nCan carry infantry and tanks.\n  Unarmed
 	Valued:
 		Cost: 700
@@ -257,16 +300,20 @@ LST:
 		LoadingCondition: notmobile
 	-Chronoshiftable:
 	Selectable:
+		Class: LST
 		DecorationBounds: 36,36
+	RenderSprites:
+		Image: LST
 
 PT:
 	Inherits: ^Ship
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Ship
+		BuildDuration: 500
 		BuildAtProductionType: Boat
 		BuildPaletteOrder: 20
-		Prerequisites: ~syrd, ~techlevel.3
+		Prerequisites: ~syrd, ~player.normal, ~techlevel.3
 		Description: Light scout & support ship.\nCan detect submarines.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft
 	Valued:
 		Cost: 500
@@ -288,10 +335,22 @@ PT:
 		Weapon: 2Inch
 		LocalOffset: 208,0,48
 		MuzzleSequence: muzzle
+		RequiresCondition: !spain
 	Armament@SECONDARY:
 		Name: secondary
 		Weapon: DepthCharge
 		MuzzleSequence: muzzle
+		RequiresCondition: !spain
+	Armament@PRIMARY_SPAIN:
+		Weapon: 2Inch.spain
+		LocalOffset: 208,0,48
+		MuzzleSequence: muzzle
+		RequiresCondition: spain
+	Armament@SECONDARY_SPAIN:
+		Name: secondary
+		Weapon: DepthCharge.spain
+		MuzzleSequence: muzzle
+		RequiresCondition: spain
 	AttackTurreted:
 	WithMuzzleOverlay:
 	SelectionDecorations:
@@ -301,4 +360,7 @@ PT:
 		Range: 4c0
 	RenderDetectionCircle:
 	Selectable:
+		Class: PT
 		DecorationBounds: 36,36
+	RenderSprites:
+		Image: PT

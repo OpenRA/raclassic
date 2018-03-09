@@ -3,10 +3,14 @@ V2RL:
 	Inherits@TRACK: ^TrackedVehicle
 	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 110
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 50
-		Prerequisites: dome, ~vehicles.soviet, ~techlevel.2
+		BuildDuration: 700
+		BuildPaletteOrder: 70
+		Prerequisites: dome, ~vehicles.soviet, ~player.normal, ~techlevel.2
 		Description: Long-range rocket artillery.\n  Strong vs Infantry, Light armor, Buildings\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 700
@@ -40,17 +44,24 @@ V2RL:
 	Explodes:
 		Weapon: V2Explode
 	Selectable:
+		Class: V2RL
 		DecorationBounds: 28,28
+	RenderSprites:
+		Image: V2RL
 
 1TNK:
 	Inherits: ^Tank
 	Inherits@TRACK: ^TrackedVehicle
 	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 125
 	Buildable:
 		Queue: Vehicle
+		BuildDuration: 700
 		BuildPaletteOrder: 30
-		Prerequisites: ~vehicles.allies, ~techlevel.2
+		Prerequisites: ~vehicles.allies, ~player.normal, ~techlevel.2
 		Description: Light Tank, good for scouting.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
 	Valued:
 		Cost: 700
@@ -77,16 +88,24 @@ V2RL:
 	WithSpriteTurret:
 	SpawnActorOnDeath:
 		Actor: 1TNK.Husk
+	Selectable:
+		Class: 1TNK
+	RenderSprites:
+		Image: 1TNK
 
 2TNK:
 	Inherits: ^Tank
 	Inherits@TRACK: ^TrackedVehicle
 	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 121
 	Buildable:
 		Queue: Vehicle
+		BuildDuration: 800
 		BuildPaletteOrder: 40
-		Prerequisites: ~vehicles.allies, ~techlevel.4
+		Prerequisites: ~vehicles.allies, ~player.normal, ~techlevel.4
 		Description: Allied Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 800
@@ -115,17 +134,24 @@ V2RL:
 		Actor: 2TNK.Husk
 	SelectionDecorations:
 	Selectable:
+		Class: 2TNK
 		DecorationBounds: 28,28
+	RenderSprites:
+		Image: 2TNK
 
 3TNK:
 	Inherits: ^Tank
 	Inherits@TRACK: ^TrackedVehicle
 	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 121
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 40
-		Prerequisites: ~vehicles.soviet, ~techlevel.2
+		BuildDuration: 950
+		BuildPaletteOrder: 50
+		Prerequisites: ~vehicles.soviet, ~player.normal, ~techlevel.2
 		Description: Soviet Main Battle Tank, with dual cannons\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 950
@@ -154,7 +180,10 @@ V2RL:
 		Actor: 3TNK.Husk
 	SelectionDecorations:
 	Selectable:
+		Class: 3TNK
 		DecorationBounds: 28,28
+	RenderSprites:
+		Image: 3TNK
 
 4TNK:
 	Inherits: ^Tank
@@ -163,8 +192,9 @@ V2RL:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 100
-		Prerequisites: stek, ~vehicles.soviet, ~techlevel.7
+		BuildDuration: 1700
+		BuildPaletteOrder: 140
+		Prerequisites: stek, ~vehicles.soviet, ~player.normal, ~techlevel.7
 		Description: Big and slow tank, with anti-air capability.\n  Strong vs Vehicles, Infantry, Aircraft\n  Weak vs Nothing
 	Valued:
 		Cost: 1700
@@ -186,6 +216,7 @@ V2RL:
 		Recoil: 171
 		RecoilRecovery: 30
 		MuzzleSequence: muzzle
+		RequiresCondition: !spain
 	Armament@SECONDARY:
 		Name: secondary
 		Weapon: MammothTusk
@@ -193,6 +224,22 @@ V2RL:
 		LocalYaw: -100,100
 		Recoil: 43
 		MuzzleSequence: muzzle
+		RequiresCondition: !spain
+	Armament@PRIMARY_SPAIN:
+		Weapon: 120mm.spain
+		LocalOffset: 900,180,340, 900,-180,340
+		Recoil: 171
+		RecoilRecovery: 30
+		MuzzleSequence: muzzle
+		RequiresCondition: spain
+	Armament@SECONDARY_SPAIN:
+		Name: secondary
+		Weapon: MammothTusk.spain
+		LocalOffset: -85,384,340, -85,-384,340
+		LocalYaw: -100,100
+		Recoil: 43
+		MuzzleSequence: muzzle
+		RequiresCondition: spain
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -205,16 +252,23 @@ V2RL:
 		DamageCooldown: 150
 	SelectionDecorations:
 	Selectable:
+		Class: 4TNK
 		DecorationBounds: 44,38,0,-4
+	RenderSprites:
+		Image: 4TNK
 
 ARTY:
 	Inherits: ^Tank
 	Inherits@TRACK: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 117
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 50
-		Prerequisites: ~vehicles.allies, ~techlevel.5
+		BuildDuration: 600
+		BuildPaletteOrder: 60
+		Prerequisites: ~vehicles.allies, ~player.normal, ~techlevel.5
 		Description: Long-range artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
 	Valued:
 		Cost: 600
@@ -239,6 +293,10 @@ ARTY:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: UnitExplodeSmall
 		LoadedChance: 75
+	Selectable:
+		Class: ARTY
+	RenderSprites:
+		Image: ARTY
 
 HARV:
 	Inherits: ^Vehicle
@@ -246,8 +304,9 @@ HARV:
 	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
+		BuildDuration: 1400
 		BuildPaletteOrder: 10
-		Prerequisites: proc, ~techlevel.1
+		Prerequisites: proc, ~player.normal, ~techlevel.1
 		Description: Collects Ore and Gems for processing.\n  Unarmed
 	Valued:
 		Cost: 1400
@@ -255,6 +314,7 @@ HARV:
 		Name: Ore Truck
 		GenericName: Harvester
 	Selectable:
+		Class: HARV
 		Priority: 7
 		DecorationBounds: 42,42
 	SelectionDecorations:
@@ -285,20 +345,24 @@ HARV:
 		Delay: 25
 		HealIfBelow: 50
 		DamageCooldown: 500
+	RenderSprites:
+		Image: HARV
 
 MCV:
 	Inherits: ^Vehicle
 	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 100
-		Prerequisites: fix, ~techlevel.8
+		BuildDuration: 2500
+		BuildPaletteOrder: 130
+		Prerequisites: fix, ~player.normal, ~techlevel.8
 		Description: Deploys into another Construction Yard.\n  Unarmed
 	Valued:
 		Cost: 2500
 	Tooltip:
 		Name: Mobile Construction Vehicle
 	Selectable:
+		Class: MCV
 		Priority: 4
 		DecorationBounds: 42,42
 	SelectionDecorations:
@@ -321,14 +385,20 @@ MCV:
 	BaseBuilding:
 	SpawnActorOnDeath:
 		Actor: MCV.Husk
+	RenderSprites:
+		Image: MCV
 
 JEEP:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 125
 	Buildable:
 		Queue: Vehicle
+		BuildDuration: 600
 		BuildPaletteOrder: 20
-		Prerequisites: ~vehicles.allies, ~techlevel.2
+		Prerequisites: ~vehicles.allies, ~player.normal, ~techlevel.2
 		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Valued:
 		Cost: 600
@@ -353,16 +423,24 @@ JEEP:
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
+	Selectable:
+		Class: JEEP
+	RenderSprites:
+		Image: JEEP
 
 APC:
 	Inherits: ^Tank
 	Inherits@TRACK: ^TrackedVehicle
 	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 125
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 60
-		Prerequisites: ~vehicles.allies, tent, ~techlevel.3
+		BuildDuration: 800
+		BuildPaletteOrder: 80
+		Prerequisites: ~vehicles.allies, tent, ~player.normal, ~techlevel.3
 		Description: Tough infantry transport.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 800
@@ -392,30 +470,40 @@ APC:
 		PipCount: 5
 		LoadingCondition: notmobile
 		EjectOnDeath: true
+	Selectable:
+		Class: APC
+	RenderSprites:
+		Image: APC
 
 MNLY.AP:
 	Inherits: ^Minelayer
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 90
-		Prerequisites: ~vehicles.soviet, fix, ~techlevel.2
+		BuildDuration: 800
+		BuildPaletteOrder: 110
+		Prerequisites: ~vehicles.soviet, fix, ~player.normal, ~techlevel.2
 		Description: Lays anti-personnel mines to destroy\nunwary enemy units.\n  Unarmed
 	Tooltip:
 		Name: Minelayer (Anti-Personnel)
 	Minelayer:
 		Mine: MINP
+	Selectable:
+		Class: MNLY.AP
 
 MNLY.AV:
 	Inherits: ^Minelayer
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 90
-		Prerequisites: ~vehicles.allies, fix, ~techlevel.2
+		BuildDuration: 800
+		BuildPaletteOrder: 120
+		Prerequisites: ~vehicles.allies, fix, ~player.normal, ~techlevel.2
 		Description: Lays anti-tank mines to destroy\nunwary enemy units.\n  Unarmed
 	Tooltip:
 		Name: Minelayer (Anti-Tank)
 	Minelayer:
 		Mine: MINV
+	Selectable:
+		Class: MNLY.AV
 
 TRUK:
 	Inherits: ^Vehicle
@@ -439,8 +527,9 @@ MGG:
 	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 120
-		Prerequisites: ~vehicles.allies, atek, ~techlevel.8
+		BuildDuration: 600
+		BuildPaletteOrder: 160
+		Prerequisites: ~vehicles.allies, atek, ~player.normal, ~techlevel.8
 		Description: Regenerates the shroud nearby, \nobscuring the area.\n  Unarmed
 	Valued:
 		Cost: 600
@@ -462,6 +551,10 @@ MGG:
 	RenderShroudCircle:
 	SpawnActorOnDeath:
 		Actor: MGG.Husk
+	Selectable:
+		Class: MGG
+	RenderSprites:
+		Image: MGG
 
 MRJ:
 	Inherits: ^Vehicle
@@ -473,8 +566,9 @@ MRJ:
 		Name: Mobile Radar Jammer
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 80
-		Prerequisites: ~vehicles.allies, dome, ~techlevel.9
+		BuildDuration: 600
+		BuildPaletteOrder: 90
+		Prerequisites: ~vehicles.allies, dome, ~player.normal, ~techlevel.9
 		Description: Jams nearby enemy radar domes.\n  Unarmed
 	Health:
 		HP: 110
@@ -495,16 +589,24 @@ MRJ:
 		Type: jammer
 		Range: 15c0
 		Color: 0000FF80
+	Selectable:
+		Class: MRJ
+	RenderSprites:
+		Image: MRJ
 
 TTNK:
 	Inherits: ^Tank
 	Inherits@TRACK: ^TrackedVehicle
 	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 114
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 70
-		Prerequisites: ~vehicles.soviet, tsla, ~global-aftermath, ~techlevel.5
+		BuildDuration: 1500
+		BuildPaletteOrder: 100
+		Prerequisites: ~vehicles.soviet, tsla, ~global-aftermath, ~player.normal, ~techlevel.5
 		Description: Tank with mounted tesla coil.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
 	Valued:
 		Cost: 1500
@@ -527,14 +629,18 @@ TTNK:
 		Sequence: spinner
 	SelectionDecorations:
 	Selectable:
+		Class: TTNK
 		DecorationBounds: 30,30
+	RenderSprites:
+		Image: TTNK
 
 DTRK:
 	Inherits: ^Vehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 160
-		Prerequisites: mslo, ~global-aftermath, ~techlevel.10
+		BuildDuration: 2400
+		BuildPaletteOrder: 190
+		Prerequisites: mslo, ~global-aftermath, ~player.normal, ~techlevel.10
 		Description: Demolition Truck, actively armed with\nnuclear explosives. Has very weak armor.
 	Valued:
 		Cost: 2400
@@ -557,16 +663,24 @@ DTRK:
 		RequiresCondition: invulnerability
 	Chronoshiftable:
 		ExplodeInstead: yes
+	Selectable:
+		Class: DTRK
+	RenderSprites:
+		Image: DTRK
 
 CTNK:
 	Inherits: ^Vehicle
 	Inherits@TRACK: ^TrackedVehicle
 	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 114
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 110
-		Prerequisites: ~vehicles.allies, atek, ~global-aftermath, ~techlevel.9
+		BuildDuration: 2400
+		BuildPaletteOrder: 150
+		Prerequisites: ~vehicles.allies, atek, ~global-aftermath, ~player.normal, ~techlevel.9
 		Description: Chrono Tank, teleports to areas within range.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft\n  Special ability: Can teleport
 	Valued:
 		Cost: 2400
@@ -593,7 +707,10 @@ CTNK:
 	PortableChrono:
 		ChargeDelay: 300
 	Selectable:
+		Class: CTNK
 		DecorationBounds: 30,30
+	RenderSprites:
+		Image: CTNK
 
 QTNK:
 	Inherits: ^Tank
@@ -601,8 +718,9 @@ QTNK:
 	Inherits@CRUSH: ^CrusherVehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 140
-		Prerequisites: ~vehicles.soviet, stek, ~global-aftermath, ~techlevel.7
+		BuildDuration: 2300
+		BuildPaletteOrder: 170
+		Prerequisites: ~vehicles.soviet, stek, ~global-aftermath, ~player.normal, ~techlevel.7
 		Description: Deals seismic damage to nearby vehicles\nand structures.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 2300
@@ -621,17 +739,24 @@ QTNK:
 	Targetable:
 		TargetTypes: Ground, MADTank, Repair, Vehicle
 	Selectable:
+		Class: QTNK
 		DecorationBounds: 44,38,0,-4
+	RenderSprites:
+		Image: QTNK
 
 STNK:
 	Inherits: ^Vehicle
 	Inherits@TRACK: ^TrackedVehicle
 	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 114
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 150
-		Prerequisites: ~vehicles.allies, atek, ~disabled
+		BuildDuration: 800
+		BuildPaletteOrder: 180
+		Prerequisites: ~vehicles.allies, atek, ~player.normal, ~disabled
 		Description: Lightly armored infantry transport\nwhich can cloak.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
 	Valued:
 		Cost: 800
@@ -680,3 +805,7 @@ STNK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
 	-MustBeDestroyed:
+	Selectable:
+		Class: STNK
+	RenderSprites:
+		Image: STNK
