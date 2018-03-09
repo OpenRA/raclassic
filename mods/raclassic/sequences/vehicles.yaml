@@ -16,6 +16,12 @@ truk:
 		UseClassicFacingFudge: True
 	icon: trukicon
 
+truk.destroyed:
+	idle: truk
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
 harv:
 	idle: harvempty
 		Facings: 32
@@ -174,6 +180,13 @@ v2rl:
 		Facings: 8
 	icon: v2rlicon
 
+v2rl.destroyed:
+	idle: v2rl
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
 arty:
 	idle:
 		Facings: 32
@@ -181,6 +194,12 @@ arty:
 	muzzle: gunfire2
 		Length: 5
 	icon: artyicon
+
+arty.destroyed:
+	idle: arty
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
 
 jeep:
 	idle:
@@ -194,6 +213,17 @@ jeep:
 		Length: 6
 		Facings: 8
 	icon: jeepicon
+
+jeep.destroyed:
+	idle: jeep
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret: jeep
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
 
 apc:
 	idle:
@@ -209,11 +239,23 @@ apc:
 		Start: 32
 	icon: apcicon
 
+apc.destroyed:
+	idle: apc
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
 mnly:
 	idle:
 		Facings: 32
 		UseClassicFacingFudge: True
 	icon: mnlyicon
+
+mnly.destroyed:
+	idle: mnly
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
 
 mrj:
 	idle:
@@ -223,6 +265,15 @@ mrj:
 		Start: 32
 		Length: 32
 	icon: mrjicon
+
+mrj.destroyed:
+	idle: mrj
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	spinner: mrj
+		Start: 32
+		Length: 1
 
 mgg:
 	idle:
@@ -257,11 +308,27 @@ ttnk:
 		Length: 32
 	icon: ttnkicon
 
+ttnk.destroyed:
+	idle: ttnk
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	spinner: ttnk
+		Start: 32
+		Length: 32
+		ZOffset: -512
+
 dtrk:
 	idle:
 		Facings: 32
 		UseClassicFacingFudge: True
 	icon: dtrkicon
+
+dtrk.destroyed:
+	idle: dtrk
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
 
 ctnk:
 	idle:
@@ -270,6 +337,12 @@ ctnk:
 	muzzle: gunfire2
 		Length: 5
 	icon: ctnkicon
+
+ctnk.destroyed:
+	idle: ctnk
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
 
 qtnk:
 	idle:
@@ -281,6 +354,17 @@ qtnk:
 		Length: 8
 	icon: qtnkicon
 
+qtnk.destroyed:
+	idle: qtnk
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	piston: qtnk
+		Start: 32
+		Facings: 8
+		Length: 1
+		ZOffset: -512
+
 stnk:
 	idle:
 		Facings: 32
@@ -289,3 +373,13 @@ stnk:
 		Start: 38
 		Facings: 32
 	icon: stnkicon
+
+stnk.destroyed:
+	idle: stnk
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret: stnk
+		Start: 38
+		Facings: 32
+		ZOffset: -512
