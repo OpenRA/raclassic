@@ -88,8 +88,9 @@ HOSP:
 	Selectable:
 		Priority: 0
 	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 400
 	Capturable:
@@ -99,7 +100,6 @@ HOSP:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
-		HasMinibib: Yes
 	ProvidesPrerequisite@buildingname:
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -383,8 +383,9 @@ BIO:
 	Inherits: ^TechBuilding
 	Inherits@shape: ^2x2Shape
 	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 600
 	Power:
@@ -395,6 +396,7 @@ BIO:
 	EngineerRepairable:
 	Tooltip:
 		Name: Bio-research laboratory
+	WithBuildingBib:
 	ProvidesPrerequisite@buildingname:
 	RequiresBuildableArea:
 		AreaTypes: building

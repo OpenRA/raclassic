@@ -18,6 +18,11 @@ hosp:
 		Length: 4
 	make: hospmake
 		Length: *
+	bib: bib3
+		Length: *
+		UseTilesetExtension: true
+		TilesetOverrides:
+			INTERIOR: TEMPERAT
 	icon: hospicon
 
 bio:
@@ -26,6 +31,11 @@ bio:
 		Start: 1
 	make: biomake
 		Length: *
+	bib: bib3
+		Length: *
+		UseTilesetExtension: true
+		TilesetOverrides:
+			INTERIOR: TEMPERAT
 
 oilb:
 	Defaults:
