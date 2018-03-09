@@ -133,7 +133,7 @@ YAK:
 		Prerequisites: ~afld, ~techlevel.3
 		Description: Anti-Tanks & Anti-Infantry Plane.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Valued:
-		Cost: 600
+		Cost: 800
 	Tooltip:
 		Name: Yak
 	Health:
