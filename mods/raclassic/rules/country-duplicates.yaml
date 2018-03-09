@@ -1,0 +1,1038 @@
+# BUILDINGS
+POWR.russia:
+	Inherits: POWR
+	Buildable:
+		Prerequisites: ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 270
+
+POWR.greece:
+	Inherits: POWR
+	Buildable:
+		Prerequisites: ~player.greece, ~techlevel.1
+	Power:
+		Amount: 110
+
+POWR.turkey:
+	Inherits: POWR
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~player.turkey, ~techlevel.1
+
+APWR.russia:
+	Inherits: APWR
+	Buildable:
+		Prerequisites: anypower, ~player.russia, ~techlevel.5
+	Valued:
+		Cost: 449
+
+APWR.greece:
+	Inherits: APWR
+	Buildable:
+		Prerequisites: anypower, ~player.greece, ~techlevel.5
+	Power:
+		Amount: 220
+
+APWR.turkey:
+	Inherits: APWR
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: anypower, ~player.turkey, ~techlevel.5
+
+TENT.russia:
+	Inherits: TENT
+	Buildable:
+		Prerequisites: anypower, ~structures.allies, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 270
+
+TENT.turkey:
+	Inherits: TENT
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: anypower, ~structures.allies, ~player.turkey, ~techlevel.1
+
+BARR.russia:
+	Inherits: BARR
+	Buildable:
+		Prerequisites: anypower, ~structures.soviet, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 270
+
+BARR.turkey:
+	Inherits: BARR
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: anypower, ~structures.soviet, ~player.turkey, ~techlevel.1
+
+KENN.russia:
+	Inherits: KENN
+	Buildable:
+		Prerequisites: barr, ~structures.soviet, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 180
+
+KENN.turkey:
+	Inherits: KENN
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: barr, ~structures.soviet, ~player.turkey, ~techlevel.2
+
+PROC.russia:
+	Inherits: PROC
+	Buildable:
+		Prerequisites: anypower, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 1797
+	FreeActor:
+		Actor: HARV.russia
+
+PROC.turkey:
+	Inherits: PROC
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: anypower, ~player.turkey, ~techlevel.1
+	FreeActor:
+		Actor: HARV.turkey
+
+SILO.russia:
+	Inherits: SILO
+	Buildable:
+		Prerequisites: proc, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 135
+
+SILO.turkey:
+	Inherits: SILO
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: proc, ~player.turkey, ~techlevel.1
+
+SYRD.russia:
+	Inherits: SYRD
+	Buildable:
+		Prerequisites: anypower, ~structures.allies, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 584
+
+SYRD.turkey:
+	Inherits: SYRD
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: anypower, ~structures.allies, ~player.turkey, ~techlevel.2
+
+SPEN.russia:
+	Inherits: SPEN
+	Buildable:
+		Prerequisites: anypower, ~structures.soviet, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 584
+
+SPEN.turkey:
+	Inherits: SPEN
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: anypower, ~structures.soviet, ~player.turkey, ~techlevel.2
+
+WEAP.russia:
+	Inherits: WEAP
+	Buildable:
+		Prerequisites: proc, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 1797
+
+WEAP.turkey:
+	Inherits: WEAP
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: proc, ~player.turkey, ~techlevel.2
+
+FIX.russia:
+	Inherits: FIX
+	Buildable:
+		Prerequisites: weap, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 1078
+
+FIX.turkey:
+	Inherits: FIX
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: weap, ~player.turkey, ~techlevel.2
+
+DOME.russia:
+	Inherits: DOME
+	Buildable:
+		Prerequisites: proc, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 898
+
+DOME.turkey:
+	Inherits: DOME
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: proc, ~player.turkey, ~techlevel.2
+
+HPAD.russia:
+	Inherits: HPAD
+	Buildable:
+		Prerequisites: dome, ~player.russia, ~techlevel.6
+	Valued:
+		Cost: 1348
+
+HPAD.turkey:
+	Inherits: HPAD
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: dome, ~player.turkey, ~techlevel.6
+
+AFLD.russia:
+	Inherits: AFLD
+	Buildable:
+		Prerequisites: dome, ~structures.soviet, ~player.russia, ~techlevel.3
+	Valued:
+		Cost: 539
+
+AFLD.turkey:
+	Inherits: AFLD
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: dome, ~structures.soviet, ~player.turkey, ~techlevel.3
+
+ATEK.russia:
+	Inherits: ATEK
+	Buildable:
+		Prerequisites: weap, dome, ~structures.allies, ~player.russia, ~techlevel.7
+	Valued:
+		Cost: 1348
+
+ATEK.turkey:
+	Inherits: ATEK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: weap, dome, ~structures.allies, ~player.turkey, ~techlevel.7
+
+STEK.russia:
+	Inherits: STEK
+	Buildable:
+		Prerequisites: weap, dome, ~structures.soviet, ~player.russia, ~techlevel.4
+	Valued:
+		Cost: 1348
+
+STEK.turkey:
+	Inherits: STEK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: weap, dome, ~structures.soviet, ~player.turkey, ~techlevel.4
+
+PDOX.russia:
+	Inherits: PDOX
+	Buildable:
+		Prerequisites: atek, ~structures.allies, ~player.russia, ~techlevel.9
+	Valued:
+		Cost: 2516
+
+PDOX.turkey:
+	Inherits: PDOX
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: atek, ~structures.allies, ~player.turkey, ~techlevel.9
+
+IRON.russia:
+	Inherits: IRON
+	Buildable:
+		Prerequisites: stek, ~structures.soviet, ~player.russia, ~techlevel.9
+	Valued:
+		Cost: 2516
+
+IRON.turkey:
+	Inherits: IRON
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: stek, ~structures.soviet, ~player.turkey, ~techlevel.9
+
+MSLO.russia:
+	Inherits: MSLO
+	Buildable:
+		Prerequisites: techcenter, ~player.russia, ~techlevel.10
+	Valued:
+		Cost: 2246
+
+MSLO.turkey:
+	Inherits: MSLO
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: techcenter, ~player.turkey, ~techlevel.10
+
+# DEFENSES
+SBAG.russia:
+	Inherits: SBAG
+	Buildable:
+		Prerequisites: fact, ~structures.allies, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 22
+
+SBAG.turkey:
+	Inherits: SBAG
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: fact, ~structures.allies, ~player.turkey, ~techlevel.1
+
+FENC.russia:
+	Inherits: FENC
+	Buildable:
+		Prerequisites: fact, ~structures.soviet, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 22
+
+FENC.turkey:
+	Inherits: FENC
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: fact, ~structures.soviet, ~player.turkey, ~techlevel.1
+
+BRIK.russia:
+	Inherits: BRIK
+	Buildable:
+		Prerequisites: fact, ~player.russia, ~techlevel.5
+	Valued:
+		Cost: 45
+
+BRIK.turkey:
+	Inherits: BRIK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: fact, ~player.turkey, ~techlevel.5
+
+PBOX.russia:
+	Inherits: PBOX
+	Buildable:
+		Prerequisites: tent, ~structures.allies, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 359
+
+PBOX.turkey:
+	Inherits: PBOX
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: tent, ~structures.allies, ~player.turkey, ~techlevel.1
+
+HBOX.russia:
+	Inherits: HBOX
+	Buildable:
+		Prerequisites: tent, ~structures.allies, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 539
+
+HBOX.turkey:
+	Inherits: HBOX
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: tent, ~structures.allies, ~player.turkey, ~techlevel.2
+
+FTUR.russia:
+	Inherits: FTUR
+	Buildable:
+		Prerequisites: barr, ~structures.soviet, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 539
+
+FTUR.turkey:
+	Inherits: FTUR
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: barr, ~structures.soviet, ~player.turkey, ~techlevel.1
+
+GUN.russia:
+	Inherits: GUN
+	Buildable:
+		Prerequisites: tent, ~structures.allies, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 719
+
+GUN.turkey:
+	Inherits: GUN
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: tent, ~structures.allies, ~player.turkey, ~techlevel.2
+
+TSLA.russia:
+	Inherits: TSLA
+	Buildable:
+		Prerequisites: weap, ~structures.soviet, ~player.russia, ~techlevel.5
+	Valued:
+		Cost: 1348
+
+TSLA.turkey:
+	Inherits: TSLA
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: weap, ~structures.soviet, ~player.turkey, ~techlevel.5
+
+AGUN.russia:
+	Inherits: AGUN
+	Buildable:
+		Prerequisites: dome, ~structures.allies, ~player.russia, ~techlevel.3
+	Valued:
+		Cost: 539
+
+AGUN.turkey:
+	Inherits: AGUN
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: dome, ~structures.allies, ~player.turkey, ~techlevel.3
+
+SAM.russia:
+	Inherits: SAM
+	Buildable:
+		Prerequisites: dome, ~structures.soviet, ~player.russia, ~techlevel.6
+	Valued:
+		Cost: 674
+
+SAM.turkey:
+	Inherits: SAM
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: dome, ~structures.soviet, ~player.turkey, ~techlevel.6
+
+GAP.russia:
+	Inherits: GAP
+	Buildable:
+		Prerequisites: atek, ~structures.allies, ~player.russia, ~techlevel.7
+	Valued:
+		Cost: 449
+
+GAP.turkey:
+	Inherits: GAP
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: atek, ~structures.allies, ~player.turkey, ~techlevel.7
+
+# FAKES
+SYRF.russia:
+	Inherits: SYRF
+	Buildable:
+		Prerequisites: anypower, ~structures.allies, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 45
+
+SYRF.turkey:
+	Inherits: SYRF
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: anypower, ~structures.allies, ~player.turkey, ~techlevel.2
+
+SPEF.russia:
+	Inherits: SPEF
+	Buildable:
+		Prerequisites: anypower, ~disabled, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 45
+
+SPEF.turkey:
+	Inherits: SPEF
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: anypower, ~disabled, ~player.turkey, ~techlevel.2
+
+WEAF.russia:
+	Inherits: WEAF
+	Buildable:
+		Prerequisites: proc, ~structures.allies, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 45
+
+WEAF.turkey:
+	Inherits: WEAF
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: proc, ~structures.allies, ~player.turkey, ~techlevel.2
+
+DOMF.russia:
+	Inherits: DOMF
+	Buildable:
+		Prerequisites: proc, ~structures.allies, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 45
+
+DOMF.turkey:
+	Inherits: DOMF
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: proc, ~structures.allies, ~player.turkey, ~techlevel.2
+
+FACF.russia:
+	Inherits: FACF
+	Buildable:
+		Prerequisites: ~structures.allies, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 45
+
+FACF.turkey:
+	Inherits: FACF
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~structures.allies, ~player.turkey, ~techlevel.1
+
+# INFANTRY
+DOG.russia:
+	Inherits: DOG
+	Buildable:
+		Prerequisites: ~kenn, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 180
+
+DOG.turkey:
+	Inherits: DOG
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~kenn, ~player.turkey, ~techlevel.2
+
+E1.russia:
+	Inherits: E1
+	Buildable:
+		Prerequisites: ~barracks, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 90
+
+E1.turkey:
+	Inherits: E1
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~barracks, ~player.turkey, ~techlevel.1
+
+E2.russia:
+	Inherits: E2
+	Buildable:
+		Prerequisites: ~barr, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 144
+
+E2.turkey:
+	Inherits: E2
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~barr, ~player.turkey, ~techlevel.1
+
+E3.russia:
+	Inherits: E3
+	Buildable:
+		Prerequisites: ~barracks, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 270
+
+E3.turkey:
+	Inherits: E3
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~barracks, ~player.turkey, ~techlevel.1
+
+E4.russia:
+	Inherits: E4
+	Buildable:
+		Prerequisites: ~barr, stek, ~player.russia, ~techlevel.4
+	Valued:
+		Cost: 270
+
+E4.turkey:
+	Inherits: E4
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~barr, stek, ~player.turkey, ~techlevel.4
+
+E4.russia:
+	Inherits: E4
+	Buildable:
+		Prerequisites: ~barr, stek, ~player.russia, ~techlevel.4
+	Valued:
+		Cost: 270
+
+E4.turkey:
+	Inherits: E4
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~barr, stek, ~player.turkey, ~techlevel.4
+
+E6.russia:
+	Inherits: E6
+	Buildable:
+		Prerequisites: ~barracks, ~player.russia, ~techlevel.3
+	Valued:
+		Cost: 449
+
+E6.turkey:
+	Inherits: E6
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~barracks, ~player.turkey, ~techlevel.3
+
+SPY.russia:
+	Inherits: SPY
+	Buildable:
+		Prerequisites: dome, ~tent, ~player.russia, ~techlevel.4
+	Valued:
+		Cost: 449
+
+SPY.turkey:
+	Inherits: SPY
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: dome, ~tent, ~player.turkey, ~techlevel.4
+
+E7.russia:
+	Inherits: E7
+	Buildable:
+		Prerequisites: ~barracks, techcenter, ~player.russia, ~techlevel.8
+	Valued:
+		Cost: 1078
+
+E7.turkey:
+	Inherits: E7
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~barracks, techcenter, ~player.turkey, ~techlevel.8
+
+MEDI.russia:
+	Inherits: MEDI
+	Buildable:
+		Prerequisites: ~tent, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 719
+
+MEDI.turkey:
+	Inherits: MEDI
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~tent, ~player.turkey, ~techlevel.1
+
+MECH.russia:
+	Inherits: MECH
+	Buildable:
+		Prerequisites: ~tent, fix, ~global-aftermath, ~player.russia, ~techlevel.5
+	Valued:
+		Cost: 854
+
+MECH.turkey:
+	Inherits: MECH
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~tent, fix, ~global-aftermath, ~player.turkey, ~techlevel.5
+
+THF.russia:
+	Inherits: THF
+	Buildable:
+		Prerequisites: ~tent, atek, ~player.russia, ~techlevel.8
+	Valued:
+		Cost: 499
+
+THF.turkey:
+	Inherits: THF
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~tent, atek, ~player.turkey, ~techlevel.8
+
+SHOK.russia:
+	Inherits: SHOK
+	Buildable:
+		Prerequisites: ~barr, tsla, ~global-aftermath, ~player.russia, ~techlevel.5
+	Valued:
+		Cost: 809
+
+SHOK.turkey:
+	Inherits: SHOK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~barr, tsla, ~global-aftermath, ~player.turkey, ~techlevel.5
+
+# VEHICLES
+V2RL.russia:
+	Inherits: V2RL
+	Buildable:
+		Prerequisites: dome, ~vehicles.soviet, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 629
+
+V2RL.turkey:
+	Inherits: V2RL
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: dome, ~vehicles.soviet, ~player.turkey, ~techlevel.2
+
+1TNK.russia:
+	Inherits: 1TNK
+	Buildable:
+		Prerequisites: ~vehicles.allies, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 629
+
+1TNK.turkey:
+	Inherits: 1TNK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.allies, ~player.turkey, ~techlevel.2
+
+2TNK.russia:
+	Inherits: 2TNK
+	Buildable:
+		Prerequisites: ~vehicles.allies, ~player.russia, ~techlevel.4
+	Valued:
+		Cost: 719
+
+2TNK.turkey:
+	Inherits: 2TNK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.allies, ~player.turkey, ~techlevel.4
+
+3TNK.russia:
+	Inherits: 3TNK
+	Buildable:
+		Prerequisites: ~vehicles.soviet, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 854
+
+3TNK.turkey:
+	Inherits: 3TNK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.soviet, ~player.turkey, ~techlevel.2
+
+4TNK.russia:
+	Inherits: 4TNK
+	Buildable:
+		Prerequisites: stek, ~vehicles.soviet, ~player.russia, ~techlevel.7
+	Valued:
+		Cost: 854
+
+4TNK.turkey:
+	Inherits: 4TNK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: stek, ~vehicles.soviet, ~player.turkey, ~techlevel.7
+
+ARTY.russia:
+	Inherits: ARTY
+	Buildable:
+		Prerequisites: ~vehicles.allies, ~player.russia, ~techlevel.5
+	Valued:
+		Cost: 539
+
+ARTY.turkey:
+	Inherits: ARTY
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.allies, ~player.turkey, ~techlevel.5
+
+HARV.russia:
+	Inherits: HARV
+	Buildable:
+		Prerequisites: proc, ~player.russia, ~techlevel.1
+	Valued:
+		Cost: 1258
+
+HARV.turkey:
+	Inherits: HARV
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: proc, ~player.turkey, ~techlevel.1
+
+MCV.russia:
+	Inherits: MCV
+	Buildable:
+		Prerequisites: fix, ~player.russia, ~techlevel.8
+	Valued:
+		Cost: 2246
+
+MCV.turkey:
+	Inherits: MCV
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: fix, ~player.turkey, ~techlevel.8
+
+JEEP.russia:
+	Inherits: JEEP
+	Buildable:
+		Prerequisites: ~vehicles.allies, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 539
+
+JEEP.turkey:
+	Inherits: JEEP
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.allies, ~player.turkey, ~techlevel.2
+
+APC.russia:
+	Inherits: APC
+	Buildable:
+		Prerequisites: ~vehicles.allies, tent, ~player.russia, ~techlevel.3
+	Valued:
+		Cost: 719
+
+APC.turkey:
+	Inherits: APC
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.allies, tent, ~player.turkey, ~techlevel.3
+
+MNLY.AP.russia:
+	Inherits: MNLY.AP
+	Buildable:
+		Prerequisites: ~vehicles.soviet, fix, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 719
+
+MNLY.AP.turkey:
+	Inherits: MNLY.AP
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.soviet, fix, ~player.turkey, ~techlevel.2
+
+MNLY.AV.russia:
+	Inherits: MNLY.AV
+	Buildable:
+		Prerequisites: ~vehicles.allies, fix, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 719
+
+MNLY.AV.turkey:
+	Inherits: MNLY.AV
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.allies, fix, ~player.turkey, ~techlevel.2
+
+MGG.russia:
+	Inherits: MGG
+	Buildable:
+		Prerequisites: ~vehicles.allies, atek, ~player.russia, ~techlevel.8
+	Valued:
+		Cost: 539
+
+MGG.turkey:
+	Inherits: MGG
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.allies, atek, ~player.turkey, ~techlevel.8
+
+MRJ.russia:
+	Inherits: MRJ
+	Buildable:
+		Prerequisites: ~vehicles.allies, dome, ~player.russia, ~techlevel.9
+	Valued:
+		Cost: 539
+
+MRJ.turkey:
+	Inherits: MRJ
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.allies, dome, ~player.turkey, ~techlevel.9
+
+TTNK.russia:
+	Inherits: TTNK
+	Buildable:
+		Prerequisites: ~vehicles.soviet, tsla, ~global-aftermath, ~player.russia, ~techlevel.5
+	Valued:
+		Cost: 1348
+
+TTNK.turkey:
+	Inherits: TTNK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.soviet, tsla, ~global-aftermath, ~player.turkey, ~techlevel.5
+
+DTRK.russia:
+	Inherits: DTRK
+	Buildable:
+		Prerequisites: mslo, ~global-aftermath, ~player.russia, ~techlevel.10
+	Valued:
+		Cost: 2156
+
+DTRK.turkey:
+	Inherits: DTRK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: mslo, ~global-aftermath, ~player.turkey, ~techlevel.10
+
+CTNK.russia:
+	Inherits: CTNK
+	Buildable:
+		Prerequisites: ~vehicles.allies, atek, ~global-aftermath, ~player.russia, ~techlevel.9
+	Valued:
+		Cost: 2156
+
+CTNK.turkey:
+	Inherits: CTNK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.allies, atek, ~global-aftermath, ~player.turkey, ~techlevel.9
+
+QTNK.russia:
+	Inherits: QTNK
+	Buildable:
+		Prerequisites: ~vehicles.soviet, stek, ~global-aftermath, ~player.russia, ~techlevel.7
+	Valued:
+		Cost: 2066
+
+QTNK.turkey:
+	Inherits: QTNK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.soviet, stek, ~global-aftermath, ~player.turkey, ~techlevel.7
+
+STNK.russia:
+	Inherits: STNK
+	Buildable:
+		Prerequisites: ~vehicles.allies, atek, ~player.russia, ~disabled
+	Valued:
+		Cost: 719
+
+STNK.turkey:
+	Inherits: STNK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~vehicles.allies, atek, ~player.turkey, ~disabled
+
+# SHIPS
+SS.russia:
+	Inherits: SS
+	Buildable:
+		Prerequisites: ~spen, ~player.russia, ~techlevel.3
+	Valued:
+		Cost: 854
+
+SS.turkey:
+	Inherits: SS
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~spen, ~player.turkey, ~techlevel.3
+
+MSUB.russia:
+	Inherits: MSUB
+	Buildable:
+		Prerequisites: ~spen, stek, ~global-aftermath, ~player.russia, ~techlevel.6
+	Valued:
+		Cost: 1428
+
+MSUB.turkey:
+	Inherits: MSUB
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~spen, stek, ~global-aftermath, ~player.turkey, ~techlevel.6
+
+DD.russia:
+	Inherits: DD
+	Buildable:
+		Prerequisites: ~syrd, dome, ~player.russia, ~techlevel.5
+	Valued:
+		Cost: 898
+
+DD.turkey:
+	Inherits: DD
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~syrd, dome, ~player.turkey, ~techlevel.5
+
+CA.russia:
+	Inherits: CA
+	Buildable:
+		Prerequisites: ~syrd, atek, ~player.russia, ~techlevel.7
+	Valued:
+		Cost: 1797
+
+CA.turkey:
+	Inherits: CA
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~syrd, atek, ~player.turkey, ~techlevel.7
+
+LST.russia:
+	Inherits: LST
+	Buildable:
+		Prerequisites: ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 629
+
+LST.turkey:
+	Inherits: LST
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~player.turkey, ~techlevel.2
+
+PT.russia:
+	Inherits: PT
+	Buildable:
+		Prerequisites: ~syrd, ~player.russia, ~techlevel.3
+	Valued:
+		Cost: 449
+
+PT.turkey:
+	Inherits: PT
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~syrd, ~player.turkey, ~techlevel.3
+
+# AIRCRAFT
+MIG.russia:
+	Inherits: MIG
+	Buildable:
+		Prerequisites: ~afld, ~player.russia, ~techlevel.7
+	Valued:
+		Cost: 1078
+
+MIG.turkey:
+	Inherits: MIG
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~afld, ~player.turkey, ~techlevel.7
+
+YAK.russia:
+	Inherits: YAK
+	Buildable:
+		Prerequisites: ~afld, ~player.russia, ~techlevel.3
+	Valued:
+		Cost: 719
+
+YAK.turkey:
+	Inherits: YAK
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~afld, ~player.turkey, ~techlevel.3
+
+TRAN.russia:
+	Inherits: TRAN
+	Buildable:
+		Prerequisites: ~hpad, ~player.russia, ~techlevel.8
+	Valued:
+		Cost: 1078
+
+TRAN.turkey:
+	Inherits: TRAN
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~hpad, ~player.turkey, ~techlevel.8
+
+HELI.russia:
+	Inherits: HELI
+	Buildable:
+		Prerequisites: ~hpad, ~heli.allies, ~player.russia, ~techlevel.6
+	Valued:
+		Cost: 1078
+
+HELI.turkey:
+	Inherits: HELI
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~hpad, ~heli.allies, ~player.turkey, ~techlevel.6
+
+HIND.russia:
+	Inherits: HIND
+	Buildable:
+		Prerequisites: ~hpad, ~heli.soviet, ~player.russia, ~techlevel.6
+	Valued:
+		Cost: 1078
+
+HIND.turkey:
+	Inherits: HIND
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~hpad, ~heli.soviet, ~player.turkey, ~techlevel.6

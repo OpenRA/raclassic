@@ -76,11 +76,15 @@ BADR.Bomber:
 MIG:
 	Inherits: ^Plane
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 117
 	Buildable:
 		Queue: Aircraft
 		BuildAtProductionType: Plane
+		BuildDuration: 1200
 		BuildPaletteOrder: 50
-		Prerequisites: ~afld, ~techlevel.7
+		Prerequisites: ~afld, ~player.normal, ~techlevel.7
 		Description: Fast Ground-Attack Plane.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry, Light armor, Aircraft
 	Valued:
 		Cost: 1200
@@ -114,6 +118,7 @@ MIG:
 		AmmoCondition: ammo
 	ReturnOnIdle:
 	Selectable:
+		Class: MIG
 		Bounds: 36,28,0,2
 		DecorationBounds: 40,29,0,1
 	SelectionDecorations:
@@ -122,15 +127,21 @@ MIG:
 	SmokeTrailWhenDamaged:
 		Offset: -853,0,171
 		Interval: 2
+	RenderSprites:
+		Image: MIG
 
 YAK:
 	Inherits: ^Plane
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 120
 	Buildable:
 		Queue: Aircraft
 		BuildAtProductionType: Plane
+		BuildDuration: 800
 		BuildPaletteOrder: 30
-		Prerequisites: ~afld, ~techlevel.3
+		Prerequisites: ~afld, ~player.normal, ~techlevel.3
 		Description: Anti-Tanks & Anti-Infantry Plane.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Valued:
 		Cost: 800
@@ -178,15 +189,19 @@ YAK:
 		Offset: -853,0,0
 		Interval: 2
 	Selectable:
+		Class: YAK
 		DecorationBounds: 30,28,0,2
+	RenderSprites:
+		Image: YAK
 
 TRAN:
 	Inherits: ^Helicopter
 	Buildable:
 		Queue: Aircraft
 		BuildAtProductionType: Helicopter
+		BuildDuration: 1200
 		BuildPaletteOrder: 10
-		Prerequisites: ~hpad, ~techlevel.8
+		Prerequisites: ~hpad, ~player.normal, ~techlevel.8
 		Description: Fast Infantry Transport Helicopter.\n  Unarmed
 	Valued:
 		Cost: 1200
@@ -230,16 +245,23 @@ TRAN:
 		Actor: TRAN.Husk
 	SelectionDecorations:
 	Selectable:
+		Class: TRAN
 		DecorationBounds: 40,36
+	RenderSprites:
+		Image: TRAN
 
 HELI:
 	Inherits: ^Helicopter
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 125
 	Buildable:
 		Queue: Aircraft
 		BuildAtProductionType: Helicopter
+		BuildDuration: 1200
 		BuildPaletteOrder: 40
-		Prerequisites: ~hpad, ~heli.allies, ~techlevel.6
+		Prerequisites: ~hpad, ~heli.allies, ~player.normal, ~techlevel.6
 		Description: Helicopter gunship armed\nwith multi-purpose missiles.\n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
 	Valued:
 		Cost: 1200
@@ -282,16 +304,23 @@ HELI:
 	SmokeTrailWhenDamaged:
 		Offset: -427,0,0
 	Selectable:
+		Class: HELI
 		DecorationBounds: 36,28
+	RenderSprites:
+		Image: HELI
 
 HIND:
 	Inherits: ^Helicopter
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 120
 	Buildable:
 		Queue: Aircraft
 		BuildAtProductionType: Helicopter
+		BuildDuration: 1200
 		BuildPaletteOrder: 20
-		Prerequisites: ~hpad, ~heli.soviet, ~techlevel.6
+		Prerequisites: ~hpad, ~heli.soviet, ~player.normal, ~techlevel.6
 		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor.\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 1200
@@ -341,7 +370,10 @@ HIND:
 	SmokeTrailWhenDamaged:
 		Offset: -427,0,0
 	Selectable:
+		Class: HIND
 		DecorationBounds: 38,32
+	RenderSprites:
+		Image: HIND
 
 U2:
 	Inherits: ^Plane

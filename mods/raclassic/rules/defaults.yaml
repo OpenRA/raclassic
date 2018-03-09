@@ -40,6 +40,38 @@
 			TopLeft: -1536, -1024
 			BottomRight: 1536, 1024
 
+^AffectedByCountryBonuses:
+	DamageMultiplier@England:
+		RequiresCondition: england
+		Modifier: 90
+	FirepowerMultiplier@Germany:
+		RequiresCondition: germany
+		Modifier: 110
+	ReloadDelayMultiplier@France:
+		RequiresCondition: france
+		Modifier: 90
+	SpeedMultiplier@Ukraine:
+		RequiresCondition: ukraine
+		Modifier: 110
+	GrantConditionOnPrerequisite@England:
+		Condition: england
+		Prerequisites: player.england
+	GrantConditionOnPrerequisite@Germany:
+		Condition: germany
+		Prerequisites: player.england
+	GrantConditionOnPrerequisite@France:
+		Condition: france
+		Prerequisites: player.france
+	GrantConditionOnPrerequisite@Spain:
+		Condition: spain
+		Prerequisites: player.spain
+	GrantConditionOnPrerequisite@Greece:
+		Condition: greece
+		Prerequisites: player.greece
+	GrantConditionOnPrerequisite@Ukraine:
+		Condition: ukraine
+		Prerequisites: player.ukraine
+
 ^IronCurtainable:
 	WithColoredOverlay@IRONCURTAIN:
 		RequiresCondition: invulnerability
@@ -103,6 +135,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^IronCurtainable
 	Inherits@3: ^SpriteActor
+	Inherits@4: ^AffectedByCountryBonuses
 	Huntable:
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
@@ -125,6 +158,7 @@
 		TargetTypes: Ground, Repair, Vehicle
 		RequiresCondition: !parachute
 	Repairable:
+		RepairBuildings: fix, fix.russia, fix.turkey
 	Chronoshiftable:
 	Sellable:
 		SellSounds: cashturn.aud
@@ -208,6 +242,7 @@
 ^Infantry:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	Inherits@3: ^AffectedByCountryBonuses
 	Huntable:
 	DrawLineToTarget:
 	Health:
@@ -330,6 +365,9 @@
 
 ^ArmedCivilian:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 157
 	Armament:
 		Weapon: Pistol
 	AttackFrontal:
@@ -340,6 +378,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^IronCurtainable
 	Inherits@3: ^SpriteActor
+	Inherits@4: ^AffectedByCountryBonuses
 	Huntable:
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
@@ -361,6 +400,7 @@
 		Types: Ship
 	Chronoshiftable:
 	RepairableNear:
+		Buildings: syrd, syrd.russia, syrd.turkey, spen, spen.russia, spen.turkey
 	WithDamageOverlay:
 	Explodes:
 		Weapon: UnitExplodeShip
@@ -380,8 +420,9 @@
 
 ^Plane:
 	Inherits@1: ^ExistsInWorld
-	Inherits@3: ^IronCurtainable
-	Inherits@4: ^SpriteActor
+	Inherits@2: ^IronCurtainable
+	Inherits@3: ^SpriteActor
+	Inherits@4: ^AffectedByCountryBonuses
 	Huntable:
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
@@ -392,8 +433,8 @@
 	Selectable:
 		Bounds: 24,24
 	Aircraft:
-		RepairBuildings: fix
-		RearmBuildings: afld
+		RepairBuildings: fix, fix.russia, fix.turkey
+		RearmBuildings: afld, afld.russia, afld.turkey
 		AirborneCondition: airborne
 	Targetable@GROUND:
 		TargetTypes: Ground, Repair, Vehicle
@@ -449,7 +490,7 @@
 	Tooltip:
 		GenericName: Helicopter
 	Aircraft:
-		RearmBuildings: hpad
+		RearmBuildings: hpad, hpad.russia, hpad.turkey
 		CanHover: True
 		CruisingCondition: cruising
 		WaitDistanceFromResupplyBase: 4c0
@@ -502,6 +543,7 @@
 
 ^Building:
 	Inherits: ^BasicBuilding
+	Inherits@1: ^AffectedByCountryBonuses
 	Huntable:
 	UpdatesPlayerStatistics:
 	GivesBuildableArea:
@@ -535,6 +577,7 @@
 ^Wall:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	Inherits@3: ^AffectedByCountryBonuses
 	Inherits@shape: ^1x1Shape
 	Interactable:
 	Building:

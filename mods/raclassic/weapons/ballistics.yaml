@@ -68,6 +68,10 @@
 	Warhead@1Dam: SpreadDamage
 		Damage: 40
 
+120mm.spain:
+	Inherits: 120mm
+	Range: 5c768
+
 TurretGun:
 	Inherits: ^Cannon
 	ReloadDelay: 35
@@ -137,6 +141,10 @@ TurretGun:
 	Warhead@1Dam: SpreadDamage
 		Damage: 25
 
+2Inch.spain:
+	Inherits: 2Inch
+	Range: 6c512
+
 Grenade:
 	Inherits: ^Artillery
 	ReloadDelay: 60
@@ -190,3 +198,7 @@ DepthCharge:
 		Explosions: small_explosion
 		ImpactSounds: kaboom15.aud
 		ValidTargets: Submarine
+
+DepthCharge.spain:
+	Inherits: DepthCharge
+	Range: 6c0

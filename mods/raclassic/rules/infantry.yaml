@@ -1,10 +1,14 @@
 DOG:
 	Inherits: ^Soldier
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 133
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Dog
-		BuildPaletteOrder: 50
-		Prerequisites: ~kenn, ~techlevel.2
+		BuildDuration: 200
+		BuildPaletteOrder: 60
+		Prerequisites: ~kenn, ~player.normal, ~techlevel.2
 		Description: Anti-infantry unit.\nCan detect spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Valued:
 		Cost: 200
@@ -12,6 +16,7 @@ DOG:
 		Name: Attack Dog
 		GenericName: Dog
 	Selectable:
+		Class: DOG
 		Bounds: 12,17,-1,-4
 		DecorationBounds: 12,17,-1,-4
 	SelectionDecorations:
@@ -43,15 +48,21 @@ DOG:
 	Voiced:
 		VoiceSet: DogVoice
 	-TakeCover:
+	RenderSprites:
+		Image: DOG
 
 E1:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 133
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
+		BuildDuration: 100
 		BuildPaletteOrder: 10
-		Prerequisites: ~barracks, ~techlevel.1
+		Prerequisites: ~barracks, ~player.normal, ~techlevel.1
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Selectable:
 		Class: E1
@@ -66,16 +77,24 @@ E1:
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
+	RenderSprites:
+		Image: E1
 
 E2:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 125
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
+		BuildDuration: 160
 		BuildPaletteOrder: 40
-		Prerequisites: ~barr, ~techlevel.1
+		Prerequisites: ~barr, ~player.normal, ~techlevel.1
 		Description: Infantry armed with grenades.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Class: E2
 	Valued:
 		Cost: 160
 	Tooltip:
@@ -96,6 +115,8 @@ E2:
 	Explodes:
 		Weapon: UnitExplodeSmall
 		Chance: 50
+	RenderSprites:
+		Image: E2
 
 E3:
 	Inherits: ^Soldier
@@ -103,8 +124,9 @@ E3:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
+		BuildDuration: 300
 		BuildPaletteOrder: 20
-		Prerequisites: ~barracks, ~techlevel.1
+		Prerequisites: ~barracks, ~player.normal, ~techlevel.1
 		Description: Anti-tank/Anti-aircraft infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Selectable:
 		Class: E3
@@ -117,25 +139,44 @@ E3:
 	Armament@PRIMARY:
 		Weapon: RedEye
 		LocalOffset: 0,0,555
+		RequiresCondition: !spain
 	Armament@SECONDARY:
 		Name: secondary
 		Weapon: Dragon
 		LocalOffset: 0,0,555
+		RequiresCondition: !spain
+	Armament@PRIMARY_SPAIN:
+		Weapon: RedEye
+		LocalOffset: 0,0,555
+		RequiresCondition: spain
+	Armament@SECONDARY_SPAIN:
+		Name: secondary
+		Weapon: Dragon
+		LocalOffset: 0,0,555
+		RequiresCondition: spain
 	TakeCover:
 		ProneOffset: 384,0,-395
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
+	RenderSprites:
+		Image: E3
 
 E4:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 129
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 100
-		Prerequisites: ~barr, stek, ~techlevel.4
+		BuildDuration: 300
+		BuildPaletteOrder: 110
+		Prerequisites: ~barr, stek, ~player.normal, ~techlevel.4
 		Description: Advanced anti-structure unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Class: E4
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -151,15 +192,20 @@ E4:
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
+	RenderSprites:
+		Image: E4
 
 E6:
 	Inherits: ^Soldier
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 40
-		Prerequisites: ~barracks, ~techlevel.3
+		BuildDuration: 500
+		BuildPaletteOrder: 50
+		Prerequisites: ~barracks, ~player.normal, ~techlevel.3
 		Description: Infiltrates and captures\nenemy structures.\n  Unarmed
+	Selectable:
+		Class: E6
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -176,15 +222,20 @@ E6:
 		VoiceSet: EngineerVoice
 	Selectable:
 		Priority: 5
+	RenderSprites:
+		Image: E6
 
 SPY:
 	Inherits: ^Soldier
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 70
-		Prerequisites: dome, ~tent, ~techlevel.4
+		BuildDuration: 500
+		BuildPaletteOrder: 80
+		Prerequisites: dome, ~tent, ~player.normal, ~techlevel.4
 		Description: Infiltrates enemy structures for intel.\nExact effect depends on the building infiltrated.
+	Selectable:
+		Class: SPY
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -202,16 +253,24 @@ SPY:
 		TargetTypes: Ground, Infantry, Spy
 	Voiced:
 		VoiceSet: SpyVoice
+	RenderSprites:
+		Image: SPY
 
 E7:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 117
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 110
-		Prerequisites: ~barracks, techcenter, ~techlevel.8
+		BuildDuration: 1200
+		BuildPaletteOrder: 120
+		Prerequisites: ~barracks, techcenter, ~player.normal, ~techlevel.8
 		Description: Elite commando infantry. Armed with\ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4
+	Selectable:
+		Class: E7
 	AutoTarget:
 		InitialStance: ReturnFire
 		InitialStanceAI: ReturnFire
@@ -246,15 +305,23 @@ E7:
 	AnnounceOnKill:
 	Voiced:
 		VoiceSet: TanyaVoice
+	RenderSprites:
+		Image: E7
 
 MEDI:
 	Inherits: ^Soldier
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 155
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
+		BuildDuration: 800
 		BuildPaletteOrder: 30
-		Prerequisites: ~tent, ~techlevel.1
+		Prerequisites: ~tent, ~player.normal, ~techlevel.1
 		Description: Heals nearby infantry.\n  Unarmed
+	Selectable:
+		Class: MEDI
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -280,15 +347,23 @@ MEDI:
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry
+	RenderSprites:
+		Image: MEDI
 
 MECH:
 	Inherits: ^Soldier
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 155
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 80
-		Prerequisites: ~tent, fix, ~global-aftermath, ~techlevel.5
+		BuildDuration: 950
+		BuildPaletteOrder: 100
+		Prerequisites: ~tent, fix, ~global-aftermath, ~player.normal, ~techlevel.5
 		Description: Repairs nearby vehicles.\n  Unarmed
+	Selectable:
+		Class: MECH
 	Valued:
 		Cost: 950
 	Tooltip:
@@ -318,6 +393,8 @@ MECH:
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Vehicle
+	RenderSprites:
+		Image: MECH
 
 EINSTEIN:
 	Inherits: ^CivInfantry
@@ -379,9 +456,12 @@ THF:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
+		BuildDuration: 500
 		BuildPaletteOrder: 90
-		Prerequisites: ~tent, atek, ~techlevel.8
+		Prerequisites: ~tent, atek, ~player.normal, ~techlevel.8
 		Description: Steals enemy credits.\n  Unarmed
+	Selectable:
+		Class: THF
 	RevealsShroud:
 		Range: 5c0
 	Passenger:
@@ -394,16 +474,24 @@ THF:
 	WithInfantryBody:
 		-IdleSequences:
 		StandSequences: stand
+	RenderSprites:
+		Image: THF
 
 SHOK:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 117
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 60
-		Prerequisites: ~barr, tsla, ~global-aftermath, ~techlevel.5
+		BuildDuration: 900
+		BuildPaletteOrder: 70
+		Prerequisites: ~barr, tsla, ~global-aftermath, ~player.normal, ~techlevel.5
 		Description: Elite infantry with portable tesla coils.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+	Selectable:
+		Class: SHOK
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -413,8 +501,6 @@ SHOK:
 	Mobile:
 		Voice: Move
 	-Crushable:
-	RevealsShroud:
-		Range: 4c0
 	Armament@PRIMARY:
 		Weapon: PortaTesla
 		LocalOffset: 427,0,341
@@ -432,6 +518,8 @@ SHOK:
 		DefaultAttackSequence: shoot
 	Voiced:
 		VoiceSet: ShokVoice
+	RenderSprites:
+		Image: SHOK
 
 ANT:
 	Inherits: ^Infantry

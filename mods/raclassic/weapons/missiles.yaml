@@ -66,6 +66,10 @@ Maverick:
 Dragon:
 	Inherits: ^AntiGroundMissile
 
+Dragon.spain:
+	Inherits: Dragon
+	Range: 6c0
+
 Hellfire:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 60
@@ -113,6 +117,10 @@ MammothTusk:
 		ImpactSounds: kaboom25.aud
 		ValidTargets: Air
 
+MammothTusk.spain:
+	Inherits: MammothTusk
+	Range: 6c0
+
 Nike:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 20
@@ -141,6 +149,10 @@ RedEye:
 	Inherits: Nike
 	ReloadDelay: 50
 
+RedEye.spain:
+	Inherits: RedEye
+	Range: 8c512
+
 Stinger:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 60
@@ -163,6 +175,10 @@ Stinger:
 			Light: 75
 			Concrete: 50
 
+Stinger.spain:
+	Inherits: Stinger
+	Range: 10c0
+
 StingerAA:
 	Inherits: Stinger
 	ValidTargets: Air
@@ -172,6 +188,10 @@ StingerAA:
 	Warhead@3Eff: CreateEffect
 		Explosions: med_explosion_air
 		ImpactSounds: kaboom25.aud
+
+StingerAA.spain:
+	Inherits: StingerAA
+	Range: 10c0
 
 APTusk:
 	Inherits: ^AntiGroundMissile

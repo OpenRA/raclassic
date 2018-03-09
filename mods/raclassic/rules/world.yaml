@@ -14,15 +14,72 @@
 		UseExtendedIndex: true
 	Faction@allies:
 		Name: Allies
+		Side: Allies
 		InternalName: allies
+		Description: Allies\nGeneric Allied faction doesn't have any bonuses.
+	Faction@england:
+		Name: England
+		Side: Allies
+		InternalName: england
+		Description: England\nEngland has 10% taken damage bonus on all units and structures.
+	Faction@germany:
+		Name: Germany
+		Side: Allies
+		InternalName: germany
+		Description: Germany\nGermany has 10% dealt damage bonus on on all combat units and defenses.
+	Faction@france:
+		Name: France
+		Side: Allies
+		InternalName: france
+		Description: France\nFrance has 10% rate of fire bonus on all combat units and defenses.
+	Faction@spain:
+		Name: Spain
+		Side: Allies
+		InternalName: spain
+		Description: Spain\nSpain has +1 range bonus on all combat units and defenses.
+	Faction@greece:
+		Name: Greece
+		Side: Allies
+		InternalName: greece
+		Description: Greece\nGreece has 10% power output bonus on all power plants.
+	Faction@turkey:
+		Name: Turkey
+		Side: Allies
+		InternalName: turkey
+		Description: Turkey\nTurkey has 10% build time bonus on all units and structures.
 	Faction@soviet:
 		Name: Soviet
+		Side: Soviet
 		InternalName: soviet
+		Description: Soviet\nGeneric Soviet faction doesn't have any bonuses.
+	Faction@russia:
+		Name: Russia
+		Side: Soviet
+		InternalName: russia
+		Description: Russia\nRussia has 10% cost bonus on all units and structures.
+	Faction@ukraine:
+		Name: Ukraine
+		Side: Soviet
+		InternalName: ukraine
+		Description: Ukraine\nUkraine has 10% speed bonus on all units.
 	Faction@random:
 		Name: Any
+		Side: Random
 		InternalName: Random
-		RandomFactionMembers: allies, soviet
-		Description: Random Faction\nA random faction will be chosen when the game starts.
+		RandomFactionMembers: england, germany, france, spain, greece, turkey, russia, ukraine
+		Description: Random Country\nA random country will be chosen when the game starts.
+	Faction@randomallies:
+		Name: Allies
+		InternalName: RandomAllies
+		RandomFactionMembers: england, germany, france, spain, greece, turkey
+		Side: Random
+		Description: Random Allied Country\nA random Allied country will be chosen when the game starts.
+	Faction@randomsoviet:
+		Name: Soviet
+		InternalName: RandomSoviet
+		RandomFactionMembers: russia, ukraine
+		Side: Random
+		Description: Random Soviet Country\nA random Soviet country will be chosen when the game starts.
 	ResourceType@ore:
 		Type: Ore
 		Name: Valuable Minerals
@@ -94,12 +151,12 @@ World:
 	MPStartUnits@0:
 		Class: none
 		ClassName: 0
-		Factions: allies, soviet
+		Factions: allies, england, germany, france, spain, greece, turkey, soviet, russia, ukraine
 		BaseActor: mcv
 	MPStartUnits@1:
 		Class: 1
 		ClassName: 1
-		Factions: allies, soviet
+		Factions: allies, england, germany, france, spain, greece, turkey, soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1
 		InnerSupportRadius: 2
@@ -107,7 +164,7 @@ World:
 	MPStartUnits@2_allies:
 		Class: 2
 		ClassName: 2
-		Factions: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk
 		InnerSupportRadius: 3
@@ -115,7 +172,7 @@ World:
 	MPStartUnits@2_soviet:
 		Class: 2
 		ClassName: 2
-		Factions: soviet
+		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk
 		InnerSupportRadius: 3
@@ -123,7 +180,7 @@ World:
 	MPStartUnits@3_allies:
 		Class: 3
 		ClassName: 3
-		Factions: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc
 		InnerSupportRadius: 3
@@ -131,7 +188,7 @@ World:
 	MPStartUnits@3_soviet:
 		Class: 3
 		ClassName: 3
-		Factions: soviet
+		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl
 		InnerSupportRadius: 3
@@ -139,7 +196,7 @@ World:
 	MPStartUnits@4_allies:
 		Class: 4
 		ClassName: 4
-		Factions: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3
 		InnerSupportRadius: 3
@@ -147,7 +204,7 @@ World:
 	MPStartUnits@4_soviet:
 		Class: 4
 		ClassName: 4
-		Factions: soviet
+		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2
 		InnerSupportRadius: 3
@@ -155,7 +212,7 @@ World:
 	MPStartUnits@5_allies:
 		Class: 5
 		ClassName: 5
-		Factions: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty
 		InnerSupportRadius: 3
@@ -163,7 +220,7 @@ World:
 	MPStartUnits@5_soviet:
 		Class: 5
 		ClassName: 5
-		Factions: soviet
+		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk
 		InnerSupportRadius: 3
@@ -171,7 +228,7 @@ World:
 	MPStartUnits@6_allies:
 		Class: 6
 		ClassName: 6
-		Factions: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk
 		InnerSupportRadius: 3
@@ -179,7 +236,7 @@ World:
 	MPStartUnits@6_soviet:
 		Class: 6
 		ClassName: 6
-		Factions: soviet
+		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk
 		InnerSupportRadius: 3
@@ -187,7 +244,7 @@ World:
 	MPStartUnits@7_allies:
 		Class: 7
 		ClassName: 7
-		Factions: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3
 		InnerSupportRadius: 3
@@ -195,7 +252,7 @@ World:
 	MPStartUnits@7_soviet:
 		Class: 7
 		ClassName: 7
-		Factions: soviet
+		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4
 		InnerSupportRadius: 3
@@ -203,7 +260,7 @@ World:
 	MPStartUnits@8_allies:
 		Class: 8
 		ClassName: 8
-		Factions: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk
 		InnerSupportRadius: 3
@@ -211,7 +268,7 @@ World:
 	MPStartUnits@8_soviet:
 		Class: 8
 		ClassName: 8
-		Factions: soviet
+		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk
 		InnerSupportRadius: 3
@@ -219,7 +276,7 @@ World:
 	MPStartUnits@9_allies:
 		Class: 9
 		ClassName: 9
-		Factions: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc
 		InnerSupportRadius: 3
@@ -227,7 +284,7 @@ World:
 	MPStartUnits@9_soviet:
 		Class: 9
 		ClassName: 9
-		Factions: soviet
+		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl
 		InnerSupportRadius: 3
@@ -235,7 +292,7 @@ World:
 	MPStartUnits@10_allies:
 		Class: 10
 		ClassName: 10
-		Factions: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc, e1
 		InnerSupportRadius: 3
@@ -243,7 +300,7 @@ World:
 	MPStartUnits@10_soviet:
 		Class: 10
 		ClassName: 10
-		Factions: soviet
+		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl, e1
 		InnerSupportRadius: 3
@@ -251,7 +308,7 @@ World:
 	MPStartUnits@11_allies:
 		Class: 11
 		ClassName: 11
-		Factions: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc, e1, jeep, arty
 		InnerSupportRadius: 3
@@ -259,7 +316,7 @@ World:
 	MPStartUnits@11_soviet:
 		Class: 11
 		ClassName: 11
-		Factions: soviet
+		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl, e1, 3tnk
 		InnerSupportRadius: 3
@@ -267,7 +324,7 @@ World:
 	MPStartUnits@12_allies:
 		Class: 12
 		ClassName: 12
-		Factions: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc, e1, jeep, arty, 2tnk, 2tnk
 		InnerSupportRadius: 3
@@ -275,7 +332,7 @@ World:
 	MPStartUnits@12_soviet:
 		Class: 12
 		ClassName: 12
-		Factions: soviet
+		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl, e1, 3tnk, 4tnk
 		InnerSupportRadius: 3
