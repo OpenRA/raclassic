@@ -469,7 +469,7 @@ TRUK:
 		Speed: 128
 	RevealsShroud:
 		Range: 4c0
-	SpawnActorOnDeath@1:
+	SpawnActorOnDeath:
 		Actor: TRUK.Husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
