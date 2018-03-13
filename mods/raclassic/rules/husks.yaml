@@ -148,6 +148,8 @@ MRJ.Husk
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Mobile Radar Jammer)
+	ThrowsParticle@spinner:
+		Anim: spinner
 	TransformOnCapture:
 		IntoActor: mrj
 	RenderSprites:
@@ -157,6 +159,8 @@ TTNK.Husk
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Tesla Tank)
+	WithIdleOverlay@spinner:
+		Sequence: spinner
 	TransformOnCapture:
 		IntoActor: ttnk
 	RenderSprites:
@@ -193,6 +197,8 @@ STNK.Husk
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Phase Transport)
+	ThrowsParticle@turret:
+		Anim: turret
 	TransformOnCapture:
 		IntoActor: stnk
 	RenderSprites:
