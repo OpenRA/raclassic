@@ -56,7 +56,7 @@ Player:
 		Prerequisites: global-factundeploy
 	LobbyPrerequisiteCheckbox@GLOBALHUSK:
 		ID: husks
-		Label: Unit husks
+		Label: Unit Husks
 		Description: Vehicles and aircraft leave behind husks when they die
 		Enabled: False
 		DisplayOrder: 8
