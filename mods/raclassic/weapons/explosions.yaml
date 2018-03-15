@@ -58,6 +58,14 @@ UnitExplode:
 	Warhead@1Dam: SpreadDamage
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 
+UnitExplodeAir:
+	Inherits: ^Explosion
+	-Warhead@Smu: LeaveSmudge
+	Warhead@2Eff: CreateEffect
+		Explosions: building
+		ImpactSounds: kaboom25.aud
+		ValidTargets: Air
+
 UnitExplodeShip:
 	Inherits: ^Explosion
 	-Warhead@Smu: LeaveSmudge

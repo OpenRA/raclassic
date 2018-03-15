@@ -1,3 +1,12 @@
+V2RL.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (V2 Rocket)
+	TransformOnCapture:
+		IntoActor: v2rl
+	RenderSprites:
+		Image: v2rl.destroyed
+
 1TNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
@@ -42,6 +51,15 @@
 	RenderSprites:
 		Image: 4tnk.destroyed
 
+ARTY.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Artillery)
+	TransformOnCapture:
+		IntoActor: arty
+	RenderSprites:
+		Image: arty.destroyed
+
 HARV.FullHusk:
 	Inherits: ^Husk
 	Tooltip:
@@ -69,6 +87,51 @@ MCV.Husk:
 	RenderSprites:
 		Image: mcvhusk
 
+JEEP.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Ranger)
+	TransformOnCapture:
+		IntoActor: jeep
+	RenderSprites:
+		Image: jeep.destroyed
+
+APC.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Armored Personnel Carrier)
+	TransformOnCapture:
+		IntoActor: apc
+	RenderSprites:
+		Image: apc.destroyed
+
+MNLY.AP.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Minelayer)
+	TransformOnCapture:
+		IntoActor: mnly.ap
+	RenderSprites:
+		Image: mnly.destroyed
+
+MNLY.AV.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Minelayer)
+	TransformOnCapture:
+		IntoActor: mnly.av
+	RenderSprites:
+		Image: mnly.destroyed
+
+TRUK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Supply Truck)
+	TransformOnCapture:
+		IntoActor: truk
+	RenderSprites:
+		Image: truk.destroyed
+
 MGG.Husk:
 	Inherits: ^Husk
 	Tooltip:
@@ -80,6 +143,66 @@ MGG.Husk:
 		IntoActor: mgg
 	RenderSprites:
 		Image: mgg.destroyed
+
+MRJ.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Mobile Radar Jammer)
+	ThrowsParticle@spinner:
+		Anim: spinner
+	TransformOnCapture:
+		IntoActor: mrj
+	RenderSprites:
+		Image: mrj.destroyed
+
+TTNK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Tesla Tank)
+	WithIdleOverlay@spinner:
+		Sequence: spinner
+	TransformOnCapture:
+		IntoActor: ttnk
+	RenderSprites:
+		Image: ttnk.destroyed
+
+DTRK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Demolition Truck)
+	TransformOnCapture:
+		IntoActor: dtrk
+	RenderSprites:
+		Image: dtrk.destroyed
+
+CTNK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Chrono Tank)
+	TransformOnCapture:
+		IntoActor: ctnk
+	RenderSprites:
+		Image: ctnk.destroyed
+
+QTNK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (M.A.D. Tank)
+	TransformOnCapture:
+		IntoActor: qtnk
+	RenderSprites:
+		Image: qtnk.destroyed
+
+STNK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Phase Transport)
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: stnk
+	RenderSprites:
+		Image: stnk.destroyed
 
 TRAN.Husk:
 	Inherits: ^HelicopterHusk
