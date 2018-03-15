@@ -1,4 +1,4 @@
-V2RL.Husk
+V2RL.Husk:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (V2 Rocket)
@@ -51,7 +51,7 @@ V2RL.Husk
 	RenderSprites:
 		Image: 4tnk.destroyed
 
-ARTY.Husk
+ARTY.Husk:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Artillery)
@@ -87,7 +87,7 @@ MCV.Husk:
 	RenderSprites:
 		Image: mcvhusk
 
-JEEP.Husk
+JEEP.Husk:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Ranger)
@@ -96,7 +96,7 @@ JEEP.Husk
 	RenderSprites:
 		Image: jeep.destroyed
 
-APC.Husk
+APC.Husk:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Armored Personnel Carrier)
@@ -105,25 +105,25 @@ APC.Husk
 	RenderSprites:
 		Image: apc.destroyed
 
-MNLYAP.Husk
+MNLY.AP.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Mine Layer)
+		Name: Husk (Minelayer)
 	TransformOnCapture:
 		IntoActor: mnly.ap
 	RenderSprites:
 		Image: mnly.destroyed
 
-MNLYAV.Husk
+MNLY.AV.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Mine Layer)
+		Name: Husk (Minelayer)
 	TransformOnCapture:
 		IntoActor: mnly.av
 	RenderSprites:
 		Image: mnly.destroyed
 
-TRUK.Husk
+TRUK.Husk:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Supply Truck)
@@ -144,7 +144,7 @@ MGG.Husk:
 	RenderSprites:
 		Image: mgg.destroyed
 
-MRJ.Husk
+MRJ.Husk:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Mobile Radar Jammer)
@@ -155,7 +155,7 @@ MRJ.Husk
 	RenderSprites:
 		Image: mrj.destroyed
 
-TTNK.Husk
+TTNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Tesla Tank)
@@ -166,7 +166,7 @@ TTNK.Husk
 	RenderSprites:
 		Image: ttnk.destroyed
 
-DTRK.Husk
+DTRK.Husk:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Demolition Truck)
@@ -175,7 +175,7 @@ DTRK.Husk
 	RenderSprites:
 		Image: dtrk.destroyed
 
-CTNK.Husk
+CTNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Chrono Tank)
@@ -184,7 +184,7 @@ CTNK.Husk
 	RenderSprites:
 		Image: ctnk.destroyed
 
-QTNK.Husk
+QTNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (M.A.D. Tank)
@@ -193,7 +193,7 @@ QTNK.Husk
 	RenderSprites:
 		Image: qtnk.destroyed
 
-STNK.Husk
+STNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Phase Transport)
