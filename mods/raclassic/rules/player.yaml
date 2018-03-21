@@ -43,17 +43,24 @@ Player:
 	LobbyPrerequisiteCheckbox@GLOBALAFTERMATH:
 		ID: aftermath
 		Label: Aftermath Units
-		Description: Enables the units that came with Aftermath expansion.
+		Description: Enables the units that came with Aftermath expansion
 		Enabled: false
 		DisplayOrder: 6
 		Prerequisites: global-aftermath
 	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
 		ID: factundeploy
 		Label: Redeployable MCVs
-		Description: Allow undeploying Construction Yard.
+		Description: Allow undeploying Construction Yard
 		Enabled: false
 		DisplayOrder: 7
 		Prerequisites: global-factundeploy
+	LobbyPrerequisiteCheckbox@GLOBALHUSK:
+		ID: husks
+		Label: Unit Husks
+		Description: Vehicles and aircraft leave behind husks when they die
+		Enabled: False
+		DisplayOrder: 8
+		Prerequisites: global-husks
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:

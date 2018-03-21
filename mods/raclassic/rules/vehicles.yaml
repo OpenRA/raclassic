@@ -40,6 +40,10 @@ V2RL:
 	WithFacingSpriteBody@EMPTY:
 		RequiresCondition: !ammo
 		Sequence: empty-idle
+	SpawnActorOnDeath:
+		Actor: V2RL.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	SelectionDecorations:
 	Explodes:
 		Weapon: V2Explode
@@ -88,6 +92,8 @@ V2RL:
 	WithSpriteTurret:
 	SpawnActorOnDeath:
 		Actor: 1TNK.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	Selectable:
 		Class: 1TNK
 	RenderSprites:
@@ -132,6 +138,8 @@ V2RL:
 	WithSpriteTurret:
 	SpawnActorOnDeath:
 		Actor: 2TNK.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	SelectionDecorations:
 	Selectable:
 		Class: 2TNK
@@ -178,6 +186,8 @@ V2RL:
 	WithSpriteTurret:
 	SpawnActorOnDeath:
 		Actor: 3TNK.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	SelectionDecorations:
 	Selectable:
 		Class: 3TNK
@@ -245,6 +255,8 @@ V2RL:
 	WithSpriteTurret:
 	SpawnActorOnDeath:
 		Actor: 4TNK.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	SelfHealing:
 		Step: 1
 		Delay: 3
@@ -289,6 +301,10 @@ ARTY:
 		MuzzleSequence: muzzle
 	AttackFrontal:
 	WithMuzzleOverlay:
+	SpawnActorOnDeath:
+		Actor: ARTY.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	Explodes:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: UnitExplodeSmall
@@ -337,6 +353,8 @@ HARV:
 	WithDockingAnimation:
 	SpawnActorOnDeath:
 		Actor: HARV.EmptyHusk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	HarvesterHuskModifier:
 		FullActor: HARV.FullHusk
 		FullnessThreshold: 50
@@ -385,6 +403,8 @@ MCV:
 	BaseBuilding:
 	SpawnActorOnDeath:
 		Actor: MCV.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	RenderSprites:
 		Image: MCV
 
@@ -420,6 +440,10 @@ JEEP:
 		Weapon: M60mg
 		MuzzleSequence: muzzle
 		LocalOffset: 128,0,43
+	SpawnActorOnDeath:
+		Actor: JEEP.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -470,6 +494,10 @@ APC:
 		PipCount: 5
 		LoadingCondition: notmobile
 		EjectOnDeath: true
+	SpawnActorOnDeath:
+		Actor: APC.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	Selectable:
 		Class: APC
 	RenderSprites:
@@ -489,6 +517,10 @@ MNLY.AP:
 		Mine: MINP
 	Selectable:
 		Class: MNLY.AP
+	SpawnActorOnDeath:
+		Actor: MNLY.AP.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 
 MNLY.AV:
 	Inherits: ^Minelayer
@@ -504,6 +536,10 @@ MNLY.AV:
 		Mine: MINV
 	Selectable:
 		Class: MNLY.AV
+	SpawnActorOnDeath:
+		Actor: MNLY.AV.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 
 TRUK:
 	Inherits: ^Vehicle
@@ -521,6 +557,10 @@ TRUK:
 		Speed: 128
 	RevealsShroud:
 		Range: 4c0
+	SpawnActorOnDeath:
+		Actor: TRUK.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 
 MGG:
 	Inherits: ^Vehicle
@@ -551,6 +591,8 @@ MGG:
 	RenderShroudCircle:
 	SpawnActorOnDeath:
 		Actor: MGG.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	Selectable:
 		Class: MGG
 	RenderSprites:
@@ -593,6 +635,10 @@ MRJ:
 		Class: MRJ
 	RenderSprites:
 		Image: MRJ
+	SpawnActorOnDeath:
+		Actor: MRJ.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 
 TTNK:
 	Inherits: ^Tank
@@ -627,6 +673,10 @@ TTNK:
 	Turreted:
 	WithIdleOverlay@SPINNER:
 		Sequence: spinner
+	SpawnActorOnDeath:
+		Actor: TTNK.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	SelectionDecorations:
 	Selectable:
 		Class: TTNK
@@ -667,6 +717,10 @@ DTRK:
 		Class: DTRK
 	RenderSprites:
 		Image: DTRK
+	SpawnActorOnDeath:
+		Actor: DTRK.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 
 CTNK:
 	Inherits: ^Vehicle
@@ -706,6 +760,10 @@ CTNK:
 	AttackFrontal:
 	PortableChrono:
 		ChargeDelay: 300
+	SpawnActorOnDeath:
+		Actor: CTNK.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	Selectable:
 		Class: CTNK
 		DecorationBounds: 30,30
@@ -738,6 +796,10 @@ QTNK:
 	MadTank:
 	Targetable:
 		TargetTypes: Ground, MADTank, Repair, Vehicle
+	SpawnActorOnDeath:
+		Actor: QTNK.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
 	Selectable:
 		Class: QTNK
 		DecorationBounds: 44,38,0,-4
@@ -809,3 +871,7 @@ STNK:
 		Class: STNK
 	RenderSprites:
 		Image: STNK
+	SpawnActorOnDeath:
+		Actor: STNK.Husk
+		OwnerType: InternalName
+		EffectiveOwnerFromOwner: true
