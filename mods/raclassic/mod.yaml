@@ -1,6 +1,6 @@
 Metadata:
 	Title: Red Alert Classic
-	Version: release-20180218
+	Version: release-20180307
 
 PackageFormats: Mix
 
@@ -35,7 +35,7 @@ Packages:
 
 MapFolders:
 	raclassic|maps: System
-	~^maps/raclassic/release-20180218: User
+	~^maps/raclassic/release-20180307: User
 
 Rules:
 	raclassic|rules/misc.yaml
