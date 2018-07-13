@@ -68,6 +68,8 @@ Dragon:
 
 Dragon.spain:
 	Inherits: Dragon
+	Projectile: Missile
+		RangeLimit: 7c0
 	Range: 6c0
 
 Hellfire:
@@ -87,6 +89,12 @@ Hellfire:
 			Wood: 75
 			Light: 75
 			Concrete: 50
+
+Hellfire.spain:
+	Inherits: Hellfire
+	Projectile: Missile
+		RangeLimit: 6c512
+	Range: 5c0
 
 MammothTusk:
 	Inherits: ^AntiGroundMissile
@@ -119,6 +127,8 @@ MammothTusk:
 
 MammothTusk.spain:
 	Inherits: MammothTusk
+	Projectile: Missile
+		RangeLimit: 10c614
 	Range: 6c0
 
 Nike:
@@ -145,13 +155,19 @@ Nike:
 		Explosions: med_explosion_air
 		ImpactSounds: kaboom25.aud
 
+Nike.spain:
+	Inherits: Nike
+	Projectile: Missile
+		RangeLimit: 10c0
+	Range: 8c512
+
 RedEye:
 	Inherits: Nike
 	ReloadDelay: 50
 
 RedEye.spain:
-	Inherits: RedEye
-	Range: 8c512
+	Inherits: Nike.spain
+	ReloadDelay: 50
 
 Stinger:
 	Inherits: ^AntiGroundMissile
@@ -177,6 +193,8 @@ Stinger:
 
 Stinger.spain:
 	Inherits: Stinger
+	Projectile: Missile
+		RangeLimit: 10c512
 	Range: 10c0
 
 StingerAA:
@@ -191,6 +209,8 @@ StingerAA:
 
 StingerAA.spain:
 	Inherits: StingerAA
+	Projectile: Missile
+		RangeLimit: 10c512
 	Range: 10c0
 
 APTusk:
@@ -210,6 +230,12 @@ APTusk:
 			Concrete: 50
 	Warhead@3Eff: CreateEffect
 		Explosions: building
+
+APTusk.spain:
+	Inherits: APTusk
+	Projectile: Missile
+		RangeLimit: 8c204
+	Range: 6c0
 
 TorpTube:
 	ReloadDelay: 60
@@ -247,6 +273,12 @@ TorpTube:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure, Underwater, Bridge
 
+TorpTube.spain:
+	Inherits: TorpTube
+	Projectile: Missile
+		RangeLimit: 11c819
+	Range: 10c0
+
 SubSCUD:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 120
@@ -278,6 +310,12 @@ SubSCUD:
 	Warhead@4EffWater: CreateEffect
 		Explosions: large_splash
 		ImpactSounds: splash9.aud
+
+SubSCUD.spain:
+	Inherits: SubSCUD
+	Projectile: Missile
+		RangeLimit: 16c0
+	Range: 15c0
 
 SCUD:
 	Inherits: ^AntiGroundMissile

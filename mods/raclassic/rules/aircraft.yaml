@@ -253,9 +253,6 @@ TRAN:
 HELI:
 	Inherits: ^Helicopter
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	RangeMultiplier@Spain:
-		RequiresCondition: spain
-		Modifier: 125
 	Buildable:
 		Queue: Aircraft
 		BuildAtProductionType: Helicopter
@@ -275,6 +272,12 @@ HELI:
 		Weapon: Hellfire
 		LocalOffset: 0,-213,-85, 0,213,-85
 		PauseOnCondition: !ammo
+		RequiresCondition: !spain
+	Armament@SPAIN:
+		Weapon: Hellfire.spain
+		LocalOffset: 0,-213,-85, 0,213,-85
+		PauseOnCondition: !ammo
+		RequiresCondition: spain
 	AttackHeli:
 		FacingTolerance: 20
 	Aircraft:

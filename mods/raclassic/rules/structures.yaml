@@ -703,9 +703,6 @@ SAM:
 		Type: Rectangle
 			TopLeft: -768,-512
 			BottomRight: 768,512
-	RangeMultiplier@Spain:
-		RequiresCondition: spain
-		Modifier: 113
 	Buildable:
 		Queue: Building
 		BuildDuration: 750
@@ -734,6 +731,12 @@ SAM:
 		Weapon: Nike
 		LocalOffset: 0,0,320
 		MuzzleSequence: muzzle
+		RequiresCondition: !spain
+	Armament@SPAIN:
+		Weapon: Nike.spain
+		LocalOffset: 0,0,320
+		MuzzleSequence: muzzle
+		RequiresCondition: spain
 	AttackTurreted:
 	WithMuzzleOverlay:
 	RenderRangeCircle:

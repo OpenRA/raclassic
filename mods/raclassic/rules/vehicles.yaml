@@ -727,9 +727,6 @@ CTNK:
 	Inherits@TRACK: ^TrackedVehicle
 	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	RangeMultiplier@Spain:
-		RequiresCondition: spain
-		Modifier: 114
 	Buildable:
 		Queue: Vehicle
 		BuildDuration: 2400
@@ -753,10 +750,22 @@ CTNK:
 		Weapon: APTusk
 		LocalOffset: -160,-276,232
 		LocalYaw: 60
+		RequiresCondition: !spain
 	Armament@SECONDARY:
 		Weapon: APTusk
 		LocalOffset: -160,276,232
 		LocalYaw: -60
+		RequiresCondition: !spain
+	Armament@PRIMARY_SPAIN:
+		Weapon: APTusk.spain
+		LocalOffset: -160,-276,232
+		LocalYaw: 60
+		RequiresCondition: spain
+	Armament@SECONDARY_SPAIN:
+		Weapon: APTusk.spain
+		LocalOffset: -160,276,232
+		LocalYaw: -60
+		RequiresCondition: spain
 	AttackFrontal:
 	PortableChrono:
 		ChargeDelay: 300
@@ -811,9 +820,6 @@ STNK:
 	Inherits@TRACK: ^TrackedVehicle
 	Inherits@CRUSH: ^CrusherVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	RangeMultiplier@Spain:
-		RequiresCondition: spain
-		Modifier: 114
 	Buildable:
 		Queue: Vehicle
 		BuildDuration: 800
@@ -844,6 +850,11 @@ STNK:
 	Armament:
 		Weapon: APTusk
 		LocalOffset: 192,0,176
+		RequiresCondition: !spain
+	Armament@SPAIN:
+		Weapon: APTusk.spain
+		LocalOffset: 192,0,176
+		RequiresCondition: spain
 	Turreted:
 		TurnSpeed: 5
 	AttackTurreted:
