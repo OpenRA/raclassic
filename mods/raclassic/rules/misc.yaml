@@ -414,29 +414,29 @@ powerproxy.sonarpulse.crate:
 		EffectImage: moveflsh
 		EffectPalette: moveflash
 
-powerproxy.abomb:
-	AlwaysVisible:
-	NukePower:
-		Cursor: nuke
-		Icon: abomb
-		ChargeInterval: 19500
-		Description: Atom Bomb
-		LongDesc: Launches a devastating atomic bomb\nat a target location.
-		OneShot: true
-		AllowMultiple: true
-		SelectTargetSpeechNotification: SelectTarget
-		IncomingSpeechNotification: AbombLaunchDetected
-		SkipAscent: true
-		MissileWeapon: atomic
-		DisplayBeacon: True
-		DisplayRadarPing: True
-		BeaconPoster: atomicon
-		FlashType: Nuke
-		CameraRange: 10c0
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-	WithNukeLaunchAnimation:
+# powerproxy.abomb:
+#	AlwaysVisible:
+#	NukePower:
+#		Cursor: nuke
+#		Icon: abomb
+#		ChargeInterval: 19500
+#		Description: Atom Bomb
+#		LongDesc: Launches a devastating atomic bomb\nat a target location.
+#		OneShot: true
+#		AllowMultiple: true
+#		SelectTargetSpeechNotification: SelectTarget
+#		IncomingSpeechNotification: AbombLaunchDetected
+#		SkipAscent: true
+#		MissileWeapon: atomic
+#		DisplayBeacon: True
+#		DisplayRadarPing: True
+#		BeaconPoster: atomicon
+#		FlashType: Nuke
+#		CameraRange: 10c0
+#		ArrowSequence: arrow
+#		ClockSequence: clock
+#		CircleSequence: circles
+#	WithNukeLaunchAnimation:
 
 powerproxy.paratroopers:
 	AlwaysVisible:

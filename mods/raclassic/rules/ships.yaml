@@ -71,9 +71,6 @@ SS:
 MSUB:
 	Inherits: ^Ship
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	RangeMultiplier@Spain:
-		RequiresCondition: spain
-		Modifier: 107
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Submarine
@@ -115,6 +112,12 @@ MSUB:
 		Weapon: SubSCUD
 		LocalOffset: 0,-171,0, 0,171,0
 		FireDelay: 2
+		RequiresCondition: !spain
+	Armament@SPAIN:
+		Weapon: SubSCUD.spain
+		LocalOffset: 0,-171,0, 0,171,0
+		FireDelay: 2
+		RequiresCondition: spain
 	AttackFrontal:
 	SelectionDecorations:
 	AutoTarget:

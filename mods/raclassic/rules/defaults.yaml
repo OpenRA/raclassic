@@ -53,6 +53,9 @@
 	SpeedMultiplier@Ukraine:
 		RequiresCondition: ukraine
 		Modifier: 110
+	RangeMultiplier@Spain:
+		RequiresCondition: spain
+		Modifier: 100
 	GrantConditionOnPrerequisite@England:
 		Condition: england
 		Prerequisites: player.england
@@ -65,9 +68,6 @@
 	GrantConditionOnPrerequisite@Spain:
 		Condition: spain
 		Prerequisites: player.spain
-	GrantConditionOnPrerequisite@Greece:
-		Condition: greece
-		Prerequisites: player.greece
 	GrantConditionOnPrerequisite@Ukraine:
 		Condition: ukraine
 		Prerequisites: player.ukraine
