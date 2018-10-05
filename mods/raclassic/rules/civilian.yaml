@@ -441,6 +441,9 @@ BR1:
 	FreeActor:
 		Actor: bridgehut
 		SpawnOffset: 2,0
+	ShakeOnDeath:
+		Duration: 15
+		Intensity: 6
 
 BR2:
 	Inherits: ^Bridge
@@ -452,6 +455,9 @@ BR2:
 	FreeActor:
 		Actor: bridgehut
 		SpawnOffset: 1,1
+	ShakeOnDeath:
+		Duration: 15
+		Intensity: 6
 
 BR3:
 	Inherits: ^Bridge
@@ -466,6 +472,9 @@ BR3:
 		DestroyedPlusBothTemplate: 246
 		NorthOffset: 2,0
 		SouthOffset: 0,1
+	ShakeOnDeath:
+		Duration: 15
+		Intensity: 6
 
 BRIDGE1:
 	Inherits: ^Bridge
@@ -486,6 +495,9 @@ BRIDGE1:
 		AreaTypes: building
 	Interactable:
 		Bounds: 120,72
+	ShakeOnDeath:
+		Duration: 15
+		Intensity: 6
 
 BRIDGE2:
 	Inherits: ^Bridge
@@ -506,6 +518,9 @@ BRIDGE2:
 		AreaTypes: building
 	Interactable:
 		Bounds: 120,48
+	ShakeOnDeath:
+		Duration: 15
+		Intensity: 6
 
 SBRIDGE1:
 	Inherits: ^Bridge
@@ -526,6 +541,9 @@ SBRIDGE1:
 		AreaTypes: building
 	Interactable:
 		Bounds: 72,48
+	ShakeOnDeath:
+		Duration: 15
+		Intensity: 6
 
 SBRIDGE2:
 	Inherits: ^Bridge
@@ -546,6 +564,9 @@ SBRIDGE2:
 		AreaTypes: building
 	Interactable:
 		Bounds: 48,72
+	ShakeOnDeath:
+		Duration: 15
+		Intensity: 6
 
 SBRIDGE3:
 	Inherits: ^Bridge
@@ -559,6 +580,9 @@ SBRIDGE3:
 	FreeActor@south:
 		Actor: bridgehut
 		SpawnOffset: 0,1
+	ShakeOnDeath:
+		Duration: 15
+		Intensity: 6
 
 SBRIDGE4:
 	Inherits: ^Bridge
@@ -572,6 +596,9 @@ SBRIDGE4:
 	FreeActor@south:
 		Actor: bridgehut
 		SpawnOffset: 2,1
+	ShakeOnDeath:
+		Duration: 15
+		Intensity: 6
 
 BRIDGEHUT:
 	AlwaysVisible:

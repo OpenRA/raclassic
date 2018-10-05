@@ -544,7 +544,7 @@ ANT:
 	Mobile:
 		Speed: 99
 		TurnSpeed: 12
-		SharesCell: no
+		Locomotor: wheeled-non-crusher
 	-Crushable:
 	AutoTarget:
 		ScanRadius: 5

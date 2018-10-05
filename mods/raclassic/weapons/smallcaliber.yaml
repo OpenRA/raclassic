@@ -89,7 +89,7 @@ Colt45:
 	Range: 5c768
 	Report: gun5.aud
 	ValidTargets: Ground, Infantry
-	InvalidTargets: Vehicle, Tank, Water, Structure, Wall, Husk
+	InvalidTargets: Vehicle, Water, Structure, Wall, Husk
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 42

@@ -88,11 +88,11 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Defense
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Defense
 		InvalidTargets: NoAutoTarget, WaterStructure, Spy
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Structure, Defense
 		InvalidTargets: NoAutoTarget, Spy
 
 ^AutoTargetGroundAssaultMove:
@@ -115,11 +115,11 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Air, Defense
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Air, Defense
 		InvalidTargets: NoAutoTarget, WaterStructure, Spy
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Air, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Air, Structure, Defense
 		InvalidTargets: NoAutoTarget, Spy
 
 ^AutoTargetAllAssaultMove:
@@ -145,19 +145,13 @@
 	Inherits@4: ^AffectedByCountryBonuses
 	Inherits@husks: ^GlobalHusks
 	Huntable:
+	OwnerLostAction:
+		Action: Kill
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
 	Mobile:
-		Crushes: mine, mine_ap, mine_av, crate
-		TerrainSpeeds:
-			Clear: 60
-			Rough: 40
-			Road: 100
-			Bridge: 100
-			Ore: 50
-			Gems: 50
-			Beach: 40
 		TurnSpeed: 5
+		Locomotor: wheeled-non-crusher
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -223,35 +217,25 @@
 	EditorTilesetFilter:
 		Categories: Vehicle
 
-^Tank:
-	Inherits: ^Vehicle
-	Targetable:
-		TargetTypes: Ground, C4, Repair, Tank
-	ProximityCaptor:
-		Types: Tank
-	Tooltip:
-		GenericName: Tank
-
-^TrackedVehicle:
+^CrusherWheeled:
 	Mobile:
-		TerrainSpeeds:
-			Clear: 80
-			Rough: 70
-			Road: 100
-			Bridge: 100
-			Ore: 70
-			Gems: 70
-			Beach: 70
+		Locomotor: wheeled-crusher
 
-^CrusherVehicle:
+^CrusherTracked:
 	Mobile:
-		Crushes: wall, mine, mine_ap, mine_av, crate, infantry
+		Locomotor: tracked-crusher
+
+^NonCrusherTracked:
+	Mobile:
+		Locomotor: tracked-non-crusher
 
 ^Infantry:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^AffectedByCountryBonuses
 	Huntable:
+	OwnerLostAction:
+		Action: Kill
 	DrawLineToTarget:
 	Health:
 		HP: 25
@@ -261,16 +245,7 @@
 		Range: 4c0
 	Mobile:
 		Speed: 56
-		Crushes: mine, mine_ap, crate
-		SharesCell: true
-		TerrainSpeeds:
-			Clear: 90
-			Rough: 80
-			Road: 100
-			Bridge: 100
-			Ore: 90
-			Gems: 90
-			Beach: 80
+		Locomotor: foot
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -314,6 +289,7 @@
 		FallRate: 26
 		KilledOnImpassableTerrain: true
 		GroundImpactSound: squishy2.aud
+		GroundCorpseSequence: corpse
 		WaterImpactSound: splash9.aud
 		WaterCorpseSequence: small_splash
 		ParachutingCondition: parachute
@@ -388,12 +364,13 @@
 	Inherits@3: ^SpriteActor
 	Inherits@4: ^AffectedByCountryBonuses
 	Huntable:
+	OwnerLostAction:
+		Action: Kill
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
 	Mobile:
 		Crushes: crate
-		TerrainSpeeds:
-			Water: 100
+		Locomotor: naval
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -433,6 +410,8 @@
 	Inherits@4: ^AffectedByCountryBonuses
 	Inherits@husks: ^GlobalHusks
 	Huntable:
+	OwnerLostAction:
+		Action: Kill
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
 	AppearsOnRadar:
@@ -470,12 +449,12 @@
 		Notification: AirUnitLost
 	ProximityCaptor:
 		Types: Plane
-	#EjectOnDeath:
-		#PilotActor: E1
-		#SuccessRate: 50
-		#EjectOnGround: false
-		#EjectInAir: true
-		#AllowUnsuitableCell: true
+	# EjectOnDeath:
+	#	PilotActor: E1
+	#	SuccessRate: 50
+	#	EjectOnGround: false
+	#	EjectInAir: true
+	#	AllowUnsuitableCell: true
 	Tooltip:
 		GenericName: Plane
 	WithShadow:
@@ -528,6 +507,8 @@
 		Dimensions: 1,1
 		Footprint: x
 		TerrainTypes: Clear,Road
+		BuildSounds: placbldg.aud, build5.aud
+		UndeploySounds: cashturn.aud
 	SoundOnDamageTransition:
 		DamagedSounds: kaboom1.aud
 		DestroyedSounds: kaboom22.aud
@@ -557,6 +538,8 @@
 	Inherits: ^BasicBuilding
 	Inherits@1: ^AffectedByCountryBonuses
 	Huntable:
+	OwnerLostAction:
+		Action: Kill
 	UpdatesPlayerStatistics:
 	GivesBuildableArea:
 		AreaTypes: building
@@ -566,13 +549,19 @@
 	WithMakeAnimation:
 	Capturable:
 		CaptureThreshold: 66
-	EmitInfantryOnSell:
+	SpawnActorsOnSell:
 		ActorTypes: e1,e1,e1,e1,e1,tecn,tecn_yellow
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	Sellable:
 		SellSounds: cashturn.aud
 		ShowTicks: false
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 
 ^Defense:
 	Inherits: ^Building
@@ -592,11 +581,15 @@
 	Inherits@3: ^AffectedByCountryBonuses
 	Inherits@shape: ^1x1Shape
 	Interactable:
+		Bounds: 24,24
+	OwnerLostAction:
+		Action: ChangeOwner
 	Building:
 		Dimensions: 1,1
 		Footprint: x
 		BuildSounds: placbldg.aud
 		TerrainTypes: Clear,Road
+		UndeploySounds: cashturn.aud
 	SoundOnDamageTransition:
 		DamagedSounds: sandbag2.aud
 		DestroyedSounds: sandbag2.aud
@@ -683,7 +676,8 @@
 		Sequence: tag-fake
 		ReferencePoint: Top
 		ZOffset: 256
-	-EmitInfantryOnSell:
+	-SpawnActorsOnSell:
+		ActorTypes: e1
 	-MustBeDestroyed:
 	Power:
 		Amount: -2
@@ -975,9 +969,8 @@
 		Categories: System
 
 ^Minelayer:
-	Inherits: ^Tank
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits: ^Vehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -988,7 +981,6 @@
 		Type: Heavy
 	Mobile:
 		Speed: 128
-		Crushes: wall, mine, mine_ap, mine_av, crate, infantry
 	RevealsShroud:
 		Range: 5c0
 	AmmoPool:

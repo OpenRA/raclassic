@@ -146,7 +146,8 @@ SPEN:
 		Produces: Ship, Submarine
 	PrimaryBuilding:
 		PrimaryCondition: primary
-	-EmitInfantryOnSell:
+	-SpawnActorsOnSell:
+		ActorTypes: e1
 	RepairsUnits:
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
@@ -234,7 +235,8 @@ SYRD:
 		Produces: Ship, Boat
 	PrimaryBuilding:
 		PrimaryCondition: primary
-	-EmitInfantryOnSell:
+	-SpawnActorsOnSell:
+		ActorTypes: e1
 	RepairsUnits:
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
@@ -894,7 +896,7 @@ FACT:
 		Cost: 2500
 	Tooltip:
 		Name: Construction Yard
-	EmitInfantryOnSell:
+	SpawnActorsOnSell:
 		ActorTypes: e1,e1,e1,e1,e6,tecn,tecn_yellow
 	BaseBuilding:
 	Transforms:
@@ -1019,7 +1021,8 @@ SILO:
 		Percentage: 50
 		ShowTicks: false
 		Notification: CreditsStolen
-	-EmitInfantryOnSell:
+	-SpawnActorsOnSell:
+		ActorTypes: e1
 	Power:
 		Amount: -10
 	Selectable:
@@ -1414,7 +1417,8 @@ KENN:
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	ProductionBar:
-	-EmitInfantryOnSell:
+	-SpawnActorsOnSell:
+		ActorTypes: e1
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
