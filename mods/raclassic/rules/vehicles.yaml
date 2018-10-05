@@ -1,7 +1,6 @@
 V2RL:
 	Inherits: ^Vehicle
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	RangeMultiplier@Spain:
 		RequiresCondition: spain
@@ -54,9 +53,8 @@ V2RL:
 		Image: V2RL
 
 1TNK:
-	Inherits: ^Tank
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits: ^Vehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	RangeMultiplier@Spain:
 		RequiresCondition: spain
@@ -100,9 +98,8 @@ V2RL:
 		Image: 1TNK
 
 2TNK:
-	Inherits: ^Tank
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits: ^Vehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	RangeMultiplier@Spain:
 		RequiresCondition: spain
@@ -148,9 +145,8 @@ V2RL:
 		Image: 2TNK
 
 3TNK:
-	Inherits: ^Tank
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits: ^Vehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	RangeMultiplier@Spain:
 		RequiresCondition: spain
@@ -196,9 +192,8 @@ V2RL:
 		Image: 3TNK
 
 4TNK:
-	Inherits: ^Tank
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits: ^Vehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -270,8 +265,8 @@ V2RL:
 		Image: 4TNK
 
 ARTY:
-	Inherits: ^Tank
-	Inherits@TRACK: ^TrackedVehicle
+	Inherits: ^Vehicle
+	Inherits@TRACK-CRUSH: ^NonCrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	RangeMultiplier@Spain:
 		RequiresCondition: spain
@@ -316,8 +311,7 @@ ARTY:
 
 HARV:
 	Inherits: ^Vehicle
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Buildable:
 		Queue: Vehicle
 		BuildDuration: 1400
@@ -368,7 +362,7 @@ HARV:
 
 MCV:
 	Inherits: ^Vehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits@TRACK-CRUSH: ^CrusherWheeled
 	Buildable:
 		Queue: Vehicle
 		BuildDuration: 2500
@@ -453,9 +447,8 @@ JEEP:
 		Image: JEEP
 
 APC:
-	Inherits: ^Tank
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits: ^Vehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	RangeMultiplier@Spain:
 		RequiresCondition: spain
@@ -564,7 +557,7 @@ TRUK:
 
 MGG:
 	Inherits: ^Vehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits@TRACK-CRUSH: ^CrusherWheeled
 	Buildable:
 		Queue: Vehicle
 		BuildDuration: 600
@@ -600,8 +593,7 @@ MGG:
 
 MRJ:
 	Inherits: ^Vehicle
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -641,9 +633,8 @@ MRJ:
 		EffectiveOwnerFromOwner: true
 
 TTNK:
-	Inherits: ^Tank
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits: ^Vehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	RangeMultiplier@Spain:
 		RequiresCondition: spain
@@ -724,8 +715,7 @@ DTRK:
 
 CTNK:
 	Inherits: ^Vehicle
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
@@ -780,9 +770,8 @@ CTNK:
 		Image: CTNK
 
 QTNK:
-	Inherits: ^Tank
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits: ^Vehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Buildable:
 		Queue: Vehicle
 		BuildDuration: 2300
@@ -817,8 +806,7 @@ QTNK:
 
 STNK:
 	Inherits: ^Vehicle
-	Inherits@TRACK: ^TrackedVehicle
-	Inherits@CRUSH: ^CrusherVehicle
+	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle

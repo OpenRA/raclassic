@@ -222,6 +222,7 @@ TRAN.Husk:
 
 TRAN.Husk1:
 	Inherits: ^Husk
+	-TransformOnCapture:
 	Tooltip:
 		Name: Husk (Transport Helicopter)
 	RenderSprites:
@@ -229,6 +230,7 @@ TRAN.Husk1:
 
 TRAN.Husk2:
 	Inherits: ^Husk
+	-TransformOnCapture:
 	Tooltip:
 		Name: Husk (Transport Helicopter)
 	RenderSprites:

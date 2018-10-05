@@ -1,6 +1,8 @@
 Metadata:
 	Title: Red Alert Classic
-	Version: release-20180307
+	Version: release-20180923
+	Website: https://www.openra.net
+	WebIcon32: https://www.openra.net/images/icons/ra_32x32.png
 
 PackageFormats: Mix
 
@@ -35,7 +37,7 @@ Packages:
 
 MapFolders:
 	raclassic|maps: System
-	~^maps/raclassic/release-20180307: User
+	~^maps/raclassic/release-20180923: User
 
 Rules:
 	raclassic|rules/misc.yaml
@@ -122,6 +124,7 @@ ChromeLayout:
 	common|chrome/missionbrowser.yaml
 	common|chrome/confirmation-dialogs.yaml
 	common|chrome/editor.yaml
+	common|chrome/playerprofile.yaml
 
 Weapons:
 	raclassic|weapons/explosions.yaml

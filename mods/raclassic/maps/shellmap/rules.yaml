@@ -18,22 +18,15 @@ World:
 
 ^AutoTargetGround:
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Structure, Defense
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetAll:
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Structure, Defense
 		InvalidTargets: NoAutoTarget
 
 ^Vehicle:
-	DamageMultiplier@UNKILLABLE:
-		RequiresCondition: unkillable
-		Modifier: 0
-	ExternalCondition@UNKILLABLE:
-		Condition: unkillable
-
-^Tank:
 	DamageMultiplier@UNKILLABLE:
 		RequiresCondition: unkillable
 		Modifier: 0

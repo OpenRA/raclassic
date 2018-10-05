@@ -8,6 +8,70 @@
 		DefeatMusic: map
 	TerrainGeometryOverlay:
 	DebugVisualizations:
+	Locomotor@FOOT:
+		Name: foot
+		Crushes: mine, mine_ap, crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 90
+			Rough: 80
+			Road: 100
+			Bridge: 100
+			Ore: 80
+			Gems: 80
+			Beach: 80
+	Locomotor@WHEELED-NON-CRUSHER:
+		Name: wheeled-non-crusher
+		Crushes: mine, mine_ap, crate
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 40
+			Road: 100
+			Bridge: 100
+			Ore: 70
+			Gems: 70
+			Beach: 40
+	Locomotor@WHEELED-CRUSHER:
+		Name: wheeled-crusher
+		Crushes: wall, mine, mine_ap, mine_av, crate, infantry
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 40
+			Road: 100
+			Bridge: 100
+			Ore: 70
+			Gems: 70
+			Beach: 40
+	Locomotor@TRACKED-NON-CRUSHER:
+		Name: tracked-non-crusher
+		Crushes: wall, mine, mine_ap, mine_av, crate
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 70
+			Road: 100
+			Bridge: 100
+			Ore: 70
+			Gems: 70
+			Beach: 70
+	Locomotor@TRACKED-CRUSHER:
+		Name: tracked-crusher
+		Crushes: wall, mine, mine_ap, mine_av, crate, infantry
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 70
+			Road: 100
+			Bridge: 100
+			Ore: 70
+			Gems: 70
+			Beach: 70
+	Locomotor@NAVAL:
+		Name: naval
+		Crushes: crate
+		TerrainSpeeds:
+			Water: 100
+	Locomotor@IMMOBILE:
+		Name: immobile
+		TerrainSpeeds:
 	ShroudRenderer:
 		FogVariants: shroud
 		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255

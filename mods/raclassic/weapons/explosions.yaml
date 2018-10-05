@@ -150,11 +150,11 @@ AVMine:
 	Warhead@2Eff: CreateEffect
 		Explosions: building
 		ImpactSounds: mine1.aud
-		InvalidTargets: Vehicle, Tank
+		InvalidTargets: Vehicle
 	Warhead@3Eff: CreateEffect
 		Explosions: artillery_explosion
 		ImpactSounds: mineblo1.aud
-		ValidTargets: Vehicle, Tank
+		ValidTargets: Vehicle
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Structure, Wall, Trees
@@ -184,7 +184,7 @@ CrateNuke:
 	Warhead@3Eff_impact: CreateEffect
 		Explosions: nuke
 		ImpactSounds: kaboom1.aud
-		VictimScanRadius: 0
+		ImpactActors: false
 	Warhead@4Dam_areanuke1: SpreadDamage
 		Spread: 1c0
 		Damage: 60
@@ -201,10 +201,10 @@ CrateNuke:
 	Warhead@6Eff_areanuke1: CreateEffect
 		ImpactSounds: kaboom22.aud
 		Delay: 5
-		VictimScanRadius: 0
+		ImpactActors: false
 	Warhead@6Smu_areanuke1: LeaveSmudge
 		SmudgeType: Scorch
-		InvalidTargets: Vehicle, Tank, Structure, Wall, Trees
+		InvalidTargets: Vehicle, Structure, Wall, Trees
 		Size: 4
 		Delay: 5
 	Warhead@TREEKILL: SpreadDamage
@@ -232,7 +232,7 @@ MiniNuke:
 	Warhead@3Eff_impact: CreateEffect
 		Explosions: nuke
 		ImpactSounds: kaboom1.aud
-		VictimScanRadius: 0
+		ImpactActors: false
 	Warhead@4Dam_areanuke1: SpreadDamage
 		Spread: 2c0
 		Damage: 60
@@ -250,7 +250,7 @@ MiniNuke:
 	Warhead@6Eff_areanuke1: CreateEffect
 		ImpactSounds: kaboom22.aud
 		Delay: 5
-		VictimScanRadius: 0
+		ImpactActors: false
 	Warhead@7Dam_areanuke2: SpreadDamage
 		Spread: 3c0
 		Damage: 60
@@ -294,6 +294,6 @@ MiniNuke:
 		Delay: 15
 	Warhead@13Smu_areanuke3: LeaveSmudge
 		SmudgeType: Scorch
-		InvalidTargets: Vehicle, Tank, Structure, Wall, Trees
+		InvalidTargets: Vehicle, Structure, Wall, Trees
 		Size: 4
 		Delay: 15
