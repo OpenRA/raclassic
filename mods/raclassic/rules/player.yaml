@@ -35,7 +35,7 @@ Player:
 		DefaultCash: 10000
 		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
-		CheckboxDisplayOrder: 8
+		CheckboxDisplayOrder: 9
 	GpsWatcher:
 	Shroud:
 		FogCheckboxEnabled: false
