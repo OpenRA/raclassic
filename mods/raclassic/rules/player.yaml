@@ -1,4 +1,12 @@
+^BasePlayer:
+	AlwaysVisible:
+	Shroud:
+
+EditorPlayer:
+	Inherits: ^BasePlayer
+
 Player:
+	Inherits: ^BasePlayer
 	AlwaysVisible:
 	TechTree:
 	ClassicProductionQueue@Building:
