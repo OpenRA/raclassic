@@ -238,6 +238,7 @@ GameSpeeds:
 		OrderLatency: 6
 
 ColorValidator:
+	TeamColorPresets: c4b060, 4494e4, ec0000, 00c400, fc8800, 707070, 44907c, 702c24, 625830, 224A72, 760000, 006200, 7e4400, 383838, 22483e, 381612
 
 ModContent:
 	InstallPromptMessage: Red Alert requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the 2008 Red Alert freeware release.\n\nAdvanced Install includes options for downloading the music and for\ncopying the videos and other content from an original game disc.
