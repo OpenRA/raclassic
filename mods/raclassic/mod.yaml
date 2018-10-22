@@ -12,7 +12,6 @@ Packages:
 	~^Content/ra/v2/cnc
 	~^Content/ra/v2/movies
 	.
-	$ra: ra
 	$raclassic: raclassic
 	./mods/common: common
 	~main.mix
@@ -277,12 +276,12 @@ ModContent:
 			TestFiles: ^Content/ra/v2/expand/await.aud, ^Content/ra/v2/expand/bog.aud, ^Content/ra/v2/expand/float_v2.aud, ^Content/ra/v2/expand/gloom.aud, ^Content/ra/v2/expand/grndwire.aud, ^Content/ra/v2/expand/rpt.aud, ^Content/ra/v2/expand/search.aud, ^Content/ra/v2/expand/traction.aud, ^Content/ra/v2/expand/wastelnd.aud
 			Sources: aftermath, aftermath-linux, ra-origin
 	Downloads:
-		ra|installer/downloads.yaml
+		raclassic|installer/downloads.yaml
 	Sources:
-		ra|installer/aftermath.yaml
-		ra|installer/allies95.yaml
-		ra|installer/cnc95.yaml
-		ra|installer/counterstrike.yaml
-		ra|installer/firstdecade.yaml
-		ra|installer/origin.yaml
-		ra|installer/soviet95.yaml
+		raclassic|installer/aftermath.yaml
+		raclassic|installer/allies95.yaml
+		raclassic|installer/cnc95.yaml
+		raclassic|installer/counterstrike.yaml
+		raclassic|installer/firstdecade.yaml
+		raclassic|installer/origin.yaml
+		raclassic|installer/soviet95.yaml
