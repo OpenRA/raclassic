@@ -115,6 +115,7 @@ MIG:
 	AmmoPool:
 		Ammo: 3
 		PipCount: 5
+		ReloadDelay: 60
 		AmmoCondition: ammo
 	ReturnOnIdle:
 	Selectable:
@@ -178,7 +179,7 @@ YAK:
 	AmmoPool:
 		Ammo: 15
 		PipCount: 5
-		ReloadDelay: 11
+		ReloadDelay: 60
 		AmmoCondition: ammo
 	ReturnOnIdle:
 	SelectionDecorations:
@@ -300,6 +301,7 @@ HELI:
 	AmmoPool:
 		Ammo: 6
 		PipCount: 5
+		ReloadDelay: 60
 		AmmoCondition: ammo
 	SelectionDecorations:
 	SpawnActorOnDeath:
@@ -364,7 +366,7 @@ HIND:
 	AmmoPool:
 		Ammo: 12
 		PipCount: 5
-		ReloadDelay: 8
+		ReloadDelay: 60
 		AmmoCondition: ammo
 	SelectionDecorations:
 	WithMuzzleOverlay:
