@@ -21,7 +21,7 @@ SS:
 		Type: Light
 	Mobile:
 		TurnSpeed: 7
-		Speed: 71
+		Speed: 60
 	RevealsShroud:
 		Range: 6c0
 	Targetable:
@@ -88,7 +88,7 @@ MSUB:
 		Type: Light
 	Mobile:
 		TurnSpeed: 7
-		Speed: 42
+		Speed: 50
 	RevealsShroud:
 		Range: 6c0
 	Targetable:
@@ -157,7 +157,7 @@ DD:
 		Type: Heavy
 	Mobile:
 		TurnSpeed: 7
-		Speed: 85
+		Speed: 60
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
@@ -228,8 +228,7 @@ CA:
 	Armor:
 		Type: Heavy
 	Mobile:
-		TurnSpeed: 5
-		Speed: 42
+		Speed: 40
 	RevealsShroud:
 		Range: 7c0
 	Turreted@PRIMARY:
@@ -288,7 +287,7 @@ LST:
 		Type: Heavy
 	Mobile:
 		TurnSpeed: 10
-		Speed: 113
+		Speed: 140
 		RequiresCondition: !notmobile
 	RevealsShroud:
 		Range: 6c0
@@ -328,7 +327,7 @@ PT:
 		Type: Heavy
 	Mobile:
 		TurnSpeed: 7
-		Speed: 128
+		Speed: 90
 	RevealsShroud:
 		Range: 7c0
 	Turreted:
