@@ -9,7 +9,7 @@ BADR:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 5
-		Speed: 149
+		Speed: 160
 		Repulsable: False
 		MaximumPitch: 56
 	Cargo:
@@ -105,7 +105,7 @@ MIG:
 		CruiseAltitude: 2560
 		InitialFacing: 192
 		TurnSpeed: 5
-		Speed: 223
+		Speed: 200
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		MoveIntoShroud: false
@@ -169,7 +169,7 @@ YAK:
 		CruiseAltitude: 2560
 		InitialFacing: 192
 		TurnSpeed: 5
-		Speed: 178
+		Speed: 160
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		MoveIntoShroud: false
@@ -215,7 +215,7 @@ TRAN:
 	Aircraft:
 		InitialFacing: 224
 		TurnSpeed: 5
-		Speed: 128
+		Speed: 120
 		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach,Gems
 		AltitudeVelocity: 0c58
 		MoveIntoShroud: false
@@ -285,7 +285,7 @@ HELI:
 		LandWhenIdle: false
 		InitialFacing: 224
 		TurnSpeed: 4
-		Speed: 149
+		Speed: 160
 		MoveIntoShroud: false
 	AutoTarget:
 		InitialStance: HoldFire
@@ -352,7 +352,7 @@ HIND:
 		LandWhenIdle: false
 		InitialFacing: 224
 		TurnSpeed: 4
-		Speed: 112
+		Speed: 120
 		MoveIntoShroud: false
 	AutoTarget:
 		InitialStance: HoldFire
@@ -391,7 +391,7 @@ U2:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 7
-		Speed: 373
+		Speed: 400
 		Repulsable: False
 		MaximumPitch: 56
 	AttackBomber:

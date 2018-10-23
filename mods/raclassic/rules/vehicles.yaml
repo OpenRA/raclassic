@@ -20,7 +20,7 @@ V2RL:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 85
+		Speed: 70
 	RevealsShroud:
 		Range: 5c0
 	Armament:
@@ -74,7 +74,7 @@ V2RL:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 128
+		Speed: 90
 	RevealsShroud:
 		Range: 4c0
 	Turreted:
@@ -119,7 +119,7 @@ V2RL:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 85
+		Speed: 80
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
@@ -166,7 +166,7 @@ V2RL:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 71
+		Speed: 70
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
@@ -210,7 +210,7 @@ V2RL:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 50
+		Speed: 40
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
@@ -287,7 +287,7 @@ ARTY:
 		Type: Light
 	Mobile:
 		TurnSpeed: 2
-		Speed: 85
+		Speed: 60
 	RevealsShroud:
 		Range: 5c0
 	Armament:
@@ -339,7 +339,7 @@ HARV:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 85
+		Speed: 60
 	RevealsShroud:
 		Range: 4c0
 	WithHarvestAnimation:
@@ -383,7 +383,7 @@ MCV:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 71
+		Speed: 60
 	RevealsShroud:
 		Range: 4c0
 	Transforms:
@@ -424,7 +424,7 @@ JEEP:
 		Type: Light
 	Mobile:
 		TurnSpeed: 10
-		Speed: 170
+		Speed: 100
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
@@ -468,7 +468,7 @@ APC:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 142
+		Speed: 100
 		RequiresCondition: !notmobile
 	RevealsShroud:
 		Range: 5c0
@@ -547,7 +547,7 @@ TRUK:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 128
+		Speed: 100
 	RevealsShroud:
 		Range: 4c0
 	SpawnActorOnDeath:
@@ -573,7 +573,7 @@ MGG:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 99
+		Speed: 90
 	WithIdleOverlay@SPINNER:
 		Offset: -299,0,171
 		Sequence: spinner
@@ -609,7 +609,7 @@ MRJ:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 99
+		Speed: 90
 	RevealsShroud:
 		Range: 7c0
 	WithIdleOverlay@SPINNER:
@@ -654,7 +654,7 @@ TTNK:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 113
+		Speed: 80
 	RevealsShroud:
 		Range: 7c0
 	Armament:
@@ -692,7 +692,7 @@ DTRK:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 85
+		Speed: 80
 	RevealsShroud:
 		Range: 3c0
 	Explodes:
@@ -733,7 +733,7 @@ CTNK:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 113
+		Speed: 50
 	RevealsShroud:
 		Range: 5c0
 	Armament@PRIMARY:
@@ -787,7 +787,7 @@ QTNK:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 56
+		Speed: 30
 	RevealsShroud:
 		Range: 6c0
 	SelectionDecorations:
@@ -828,7 +828,7 @@ STNK:
 		TargetTypes: Ground, Vehicle
 		RequiresCondition: !parachute && cloaked
 	Mobile:
-		Speed: 142
+		Speed: 100
 		RequiresCondition: !notmobile
 	RevealsShroud:
 		Range: 5c0

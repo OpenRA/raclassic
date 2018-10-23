@@ -23,7 +23,7 @@ DOG:
 	Health:
 		HP: 12
 	Mobile:
-		Speed: 99
+		Speed: 40
 		Voice: Move
 	Guard:
 		Voice: Move
@@ -102,7 +102,7 @@ E2:
 	Health:
 		HP: 50
 	Mobile:
-		Speed: 71
+		Speed: 50
 	Armament@PRIMARY:
 		Weapon: Grenade
 		LocalOffset: 0,0,555
@@ -136,6 +136,8 @@ E3:
 		Name: Rocket Soldier
 	Health:
 		HP: 45
+	Mobile:
+		Speed: 30
 	Armament@PRIMARY:
 		Weapon: RedEye
 		LocalOffset: 0,0,555
@@ -183,6 +185,8 @@ E4:
 		Name: Flamethrower
 	Health:
 		HP: 40
+	Mobile:
+		Speed: 30
 	Armament@PRIMARY:
 		Weapon: Flamer
 		LocalOffset: 700,0,400
@@ -281,7 +285,7 @@ E7:
 	Health:
 		HP: 100
 	Mobile:
-		Speed: 71
+		Speed: 50
 		Voice: Move
 	Guard:
 		Voice: Move
@@ -401,8 +405,6 @@ EINSTEIN:
 	-Wanders:
 	Tooltip:
 		Name: Prof. Einstein
-	Mobile:
-		Speed: 71
 	Voiced:
 		VoiceSet: EinsteinVoice
 
@@ -411,8 +413,6 @@ DELPHI:
 	-Wanders:
 	Tooltip:
 		Name: Agent Delphi
-	Mobile:
-		Speed: 71
 
 CHAN:
 	Inherits: ^CivInfantry
@@ -499,6 +499,7 @@ SHOK:
 	Health:
 		HP: 80
 	Mobile:
+		Speed: 30
 		Voice: Move
 	-Crushable:
 	Armament@PRIMARY:
