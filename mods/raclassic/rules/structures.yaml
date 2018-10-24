@@ -1062,13 +1062,30 @@ HPAD:
 		ExitCell: 0,0
 		MoveIntoWorld: false
 		Facing: 224
-	RallyPoint:
 	Production:
 		Produces: Aircraft, Helicopter
+		RequiresCondition: !unit.docked
+	ProductionFromMapEdge:
+		Produces: Aircraft, Helicopter
+		RequiresCondition: !availablehpads
 	Reservable:
 	ProductionBar:
+		ProductionType: Aircraft
+	GrantConditionOnPrerequisite@PFME:
+		Condition: availablehpads
+		Prerequisites: availablehpads
+	ProvidesPrerequisite@PFME:
+		Prerequisite: availablehpads
+		RequiresCondition: !unit.docked
 	PrimaryBuilding:
 		PrimaryCondition: primary
+	ProximityExternalCondition:
+		Condition: unit.sellable
+		Range: 1c0
+	Sellable:
+		RequiresCondition: !unit.docked
+	ExternalCondition@Docked:
+		Condition: unit.docked
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@allies:
@@ -1131,7 +1148,6 @@ AFLD:
 		ExitCell: 1,1
 		Facing: 192
 		MoveIntoWorld: false
-	RallyPoint:
 	Production:
 		Produces: Aircraft, Plane
 	Reservable:
@@ -1180,6 +1196,13 @@ AFLD:
 	SupportPowerChargeBar:
 	PrimaryBuilding:
 		PrimaryCondition: primary
+	ProximityExternalCondition:
+		Condition: unit.sellable
+		Range: 1c0
+	Sellable:
+		RequiresCondition: !unit.docked
+	ExternalCondition@Docked:
+		Condition: unit.docked
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:

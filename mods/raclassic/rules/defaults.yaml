@@ -433,6 +433,7 @@
 	Aircraft:
 		RepairBuildings: fix, fix.russia, fix.turkey
 		RearmBuildings: afld, afld.russia, afld.turkey
+		TakeOffOnCreation: false
 		AirborneCondition: airborne
 	Targetable@GROUND:
 		TargetTypes: Ground, Repair, Vehicle
@@ -450,6 +451,7 @@
 	ProximityExternalCondition:
 		Condition: unit.docked
 		Range: 1c0
+		RequiresCondition: !airborne
 	ExternalCondition@Sellable:
 		Condition: unit.sellable
 	AttackMove:
@@ -495,7 +497,8 @@
 		CanHover: True
 		CruisingCondition: cruising
 		WaitDistanceFromResupplyBase: 4c0
-		TakeOffOnResupply: true
+		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach,Gems
+		AltitudeVelocity: 0c58
 		VTOL: true
 	Hovers@CRUISING:
 		RequiresCondition: cruising
