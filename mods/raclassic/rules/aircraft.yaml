@@ -216,8 +216,6 @@ TRAN:
 		InitialFacing: 224
 		TurnSpeed: 5
 		Speed: 120
-		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach,Gems
-		AltitudeVelocity: 0c58
 		MoveIntoShroud: false
 	WithIdleOverlay@ROTOR1AIR:
 		Offset: 597,0,213
@@ -282,7 +280,6 @@ HELI:
 	AttackHeli:
 		FacingTolerance: 20
 	Aircraft:
-		LandWhenIdle: false
 		InitialFacing: 224
 		TurnSpeed: 4
 		Speed: 160
@@ -349,7 +346,6 @@ HIND:
 	AttackHeli:
 		FacingTolerance: 20
 	Aircraft:
-		LandWhenIdle: false
 		InitialFacing: 224
 		TurnSpeed: 4
 		Speed: 120
