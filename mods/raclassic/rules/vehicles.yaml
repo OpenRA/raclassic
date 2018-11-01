@@ -759,6 +759,7 @@ CTNK:
 	AttackFrontal:
 	PortableChrono:
 		ChargeDelay: 300
+		HasDistanceLimit: false
 	SpawnActorOnDeath:
 		Actor: CTNK.Husk
 		OwnerType: InternalName
