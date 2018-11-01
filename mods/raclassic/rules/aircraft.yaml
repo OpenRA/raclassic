@@ -153,15 +153,16 @@ YAK:
 	Armor:
 		Type: Light
 	Armament@PRIMARY:
-		Weapon: ChainGun.Yak
+		Weapon: ChainGun.Yak.Left
 		LocalOffset: 256,-213,0
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
 	Armament@SECONDARY:
 		Name: secondary
-		Weapon: ChainGun.Yak
+		Weapon: ChainGun.Yak.Right
 		LocalOffset: 256,213,0
 		MuzzleSequence: muzzle
+		FireDelay: 1
 		PauseOnCondition: !ammo
 	AttackPlane:
 		FacingTolerance: 20
