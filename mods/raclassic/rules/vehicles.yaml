@@ -758,7 +758,7 @@ CTNK:
 		RequiresCondition: spain
 	AttackFrontal:
 	PortableChrono:
-		ChargeDelay: 300
+		ChargeDelay: 3000
 		HasDistanceLimit: false
 	SpawnActorOnDeath:
 		Actor: CTNK.Husk
