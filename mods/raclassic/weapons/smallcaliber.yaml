@@ -55,9 +55,18 @@ ChainGun:
 	Projectile: InstantHit
 		Blockable: false
 
-ChainGun.Yak:
+ChainGun.Yak.Right:
 	Inherits: ChainGun
 	MinRange: 3c0
+	ReloadDelay: 30
+	Burst: 4
+	BurstDelays: 1
+	FirstBurstTargetOffset: -768,64,0
+	FollowingBurstTargetOffset: 512,0,0
+
+ChainGun.Yak.Left:
+	Inherits: ChainGun.Yak.Right
+	FirstBurstTargetOffset: -768,-64,0
 
 Pistol:
 	Inherits: ^MachineGun
