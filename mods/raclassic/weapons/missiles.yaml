@@ -290,7 +290,6 @@ SubSCUD:
 		Inaccuracy: 0c614
 		HorizontalRateOfTurn: 5
 		RangeLimit: 15c0
-		LaunchAngle: 120
 		Image: MISSILE
 		TrailImage: smokey
 		TrailInterval: 1

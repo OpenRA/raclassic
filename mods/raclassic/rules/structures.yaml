@@ -147,7 +147,6 @@ SPEN:
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	-SpawnActorsOnSell:
-		ActorTypes: e1
 	RepairsUnits:
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
@@ -236,7 +235,6 @@ SYRD:
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	-SpawnActorsOnSell:
-		ActorTypes: e1
 	RepairsUnits:
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
@@ -1022,7 +1020,6 @@ SILO:
 		ShowTicks: false
 		Notification: CreditsStolen
 	-SpawnActorsOnSell:
-		ActorTypes: e1
 	Power:
 		Amount: -10
 	Selectable:
@@ -1455,7 +1452,6 @@ KENN:
 		PrimaryCondition: primary
 	ProductionBar:
 	-SpawnActorsOnSell:
-		ActorTypes: e1
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:

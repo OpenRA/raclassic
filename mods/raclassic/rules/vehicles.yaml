@@ -35,8 +35,10 @@ V2RL:
 		Count: 1
 	AttackFrontal:
 	WithFacingSpriteBody:
+		Name: full
 		RequiresCondition: ammo
 	WithFacingSpriteBody@EMPTY:
+		Name: empty
 		RequiresCondition: !ammo
 		Sequence: empty-idle
 	SpawnActorOnDeath:
@@ -350,7 +352,7 @@ HARV:
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
 	HarvesterHuskModifier:
-		FullActor: HARV.FullHusk
+		FullHuskActor: HARV.FullHusk
 		FullnessThreshold: 50
 	SelfHealing:
 		Step: 1
