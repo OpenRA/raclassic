@@ -1,9 +1,9 @@
 ^FireWeapon:
 	ValidTargets: Ground, Water, Trees
 	ReloadDelay: 50
-	Range: 5c0
+	Range: 4c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 213
+		Spread: 341
 		Damage: 125
 		ValidTargets: Ground, Water, Trees
 		Versus:
