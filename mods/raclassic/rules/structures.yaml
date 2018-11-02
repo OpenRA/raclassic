@@ -1253,8 +1253,15 @@ POWR:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
-	Power:
+	Power@1:
 		Amount: 100
+		RequiresCondition: !greece
+	Power@2:
+		Amount: 125
+		RequiresCondition: greece
+	GrantConditionOnPrerequisite@Greece:
+		Condition: greece
+		Prerequisites: player.greece
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
@@ -1295,8 +1302,15 @@ APWR:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
-	Power:
+	Power@1:
 		Amount: 200
+		RequiresCondition: !greece
+	Power@2:
+		Amount: 250
+		RequiresCondition: greece
+	GrantConditionOnPrerequisite@Greece:
+		Condition: greece
+		Prerequisites: player.greece
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:

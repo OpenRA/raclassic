@@ -105,7 +105,7 @@
 		Name: Greece
 		Side: Allies
 		InternalName: greece
-		Description: Greece\nGreece has 10% power output bonus on all power plants.
+		Description: Greece\nGreece has 25% power output bonus on all power plants.
 	Faction@turkey:
 		Name: Turkey
 		Side: Allies

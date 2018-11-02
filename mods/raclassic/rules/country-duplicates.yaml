@@ -10,8 +10,14 @@ POWR.greece:
 	Inherits: POWR
 	Buildable:
 		Prerequisites: ~player.greece, ~techlevel.1
-	Power:
-		Amount: 110
+	Power@1:
+		RequiresCondition: notgreece
+	Power@2:
+		RequiresCondition: !notgreece
+	-GrantConditionOnPrerequisite@Greece:
+	GrantConditionOnPrerequisite@NotGreece:
+		Condition: notgreece
+		Prerequisites: player.not_greece
 
 POWR.turkey:
 	Inherits: POWR
@@ -30,8 +36,14 @@ APWR.greece:
 	Inherits: APWR
 	Buildable:
 		Prerequisites: anypower, ~player.greece, ~techlevel.5
-	Power:
-		Amount: 220
+	Power@1:
+		RequiresCondition: notgreece
+	Power@2:
+		RequiresCondition: !notgreece
+	-GrantConditionOnPrerequisite@Greece:
+	GrantConditionOnPrerequisite@NotGreece:
+		Condition: notgreece
+		Prerequisites: player.not_greece
 
 APWR.turkey:
 	Inherits: APWR

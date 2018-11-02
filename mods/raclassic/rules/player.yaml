@@ -129,6 +129,9 @@ Player:
 	ProvidesPrerequisite@Normal_power:
 		Factions: allies, england, germany, france, spain, soviet, ukraine
 		Prerequisite: player.normal_power
+	ProvidesPrerequisite@NotGreece:
+		Factions: allies, england, germany, france, spain, turkey, soviet, russia, ukraine
+		Prerequisite: player.not_greece
 	ProvidesPrerequisite@England:
 		Factions: england
 		Prerequisite: player.england
