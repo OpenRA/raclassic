@@ -102,6 +102,7 @@ GAP:
 SPEN:
 	Inherits: ^Building
 	InfiltrateForSupportPower:
+		Types: SpyInfiltrate
 		Proxy: powerproxy.sonarpulse
 	Valued:
 		Cost: 650
@@ -190,6 +191,7 @@ SPEN:
 SYRD:
 	Inherits: ^Building
 	InfiltrateForSupportPower:
+		Types: SpyInfiltrate
 		Proxy: powerproxy.sonarpulse
 	Buildable:
 		Queue: Building
@@ -506,6 +508,7 @@ DOME:
 	ProvidesRadar:
 		RequiresCondition: !jammed && !disabled
 	InfiltrateForExploration:
+		Types: SpyInfiltrate
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
@@ -849,8 +852,6 @@ WEAP:
 		Prerequisite: weap
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-	InfiltrateForSupportPower:
-		Proxy: vehicles.upgraded
 	WithDecoration@primary:
 		RequiresSelection: true
 		Image: pips
@@ -944,7 +945,7 @@ PROC:
 		DecorationBounds: 72,70,0,-2
 	SelectionDecorations:
 	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, Cash
+		TargetTypes: Ground, Structure, C4, DetonateAttack, ThiefInfiltrate
 	Health:
 		HP: 900
 	Armor:
@@ -965,6 +966,7 @@ PROC:
 		SpawnOffset: 1,2
 		Facing: 64
 	InfiltrateForCash:
+		Types: ThiefInfiltrate
 		Percentage: 50
 		ShowTicks: false
 		Notification: CreditsStolen
@@ -1004,7 +1006,7 @@ SILO:
 	Tooltip:
 		Name: Silo
 	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, Cash
+		TargetTypes: Ground, Structure, C4, DetonateAttack, ThiefInfiltrate
 	Health:
 		HP: 300
 	Armor:
@@ -1016,6 +1018,7 @@ SILO:
 		PipCount: 5
 		Capacity: 1500
 	InfiltrateForCash:
+		Types: ThiefInfiltrate
 		Percentage: 50
 		ShowTicks: false
 		Notification: CreditsStolen
@@ -1099,10 +1102,6 @@ HPAD:
 		Prerequisite: heli.soviet
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: hpad
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-	InfiltrateForSupportPower:
-		Proxy: aircraft.upgraded
 	WithDecoration@primary:
 		RequiresSelection: true
 		Image: pips
@@ -1204,10 +1203,6 @@ AFLD:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: afld
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-	InfiltrateForSupportPower:
-		Proxy: aircraft.upgraded
 	WithDecoration@primary:
 		RequiresSelection: true
 		Image: pips
@@ -1404,10 +1399,6 @@ BARR:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: barr
-	InfiltrateForSupportPower:
-		Proxy: barracks.upgraded
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 	WithDecoration@primary:
 		RequiresSelection: true
 		Image: pips
@@ -1519,10 +1510,6 @@ TENT:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: tent
-	InfiltrateForSupportPower:
-		Proxy: barracks.upgraded
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 	WithDecoration@primary:
 		RequiresSelection: true
 		Image: pips

@@ -467,7 +467,7 @@ THF:
 	Passenger:
 		PipType: Yellow
 	Infiltrates:
-		Types: Cash
+		Types: ThiefInfiltrate
 		PlayerExperience: 50
 	Voiced:
 		VoiceSet: ThiefVoice
