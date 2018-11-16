@@ -1,9 +1,9 @@
 ^FireWeapon:
 	ValidTargets: Ground, Water, Trees
 	ReloadDelay: 50
-	Range: 4c0
+	Range: 5c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 341
+		Spread: 213
 		Damage: 125
 		ValidTargets: Ground, Water, Trees
 		Versus:
@@ -24,7 +24,7 @@
 FireballLauncher:
 	Inherits: ^FireWeapon
 	Projectile: Bullet
-		Speed: 250
+		Speed: 188
 		TrailImage: fb2
 		TrailInterval: 1
 		Image: FB1
@@ -33,7 +33,7 @@ Flamer:
 	Inherits: ^FireWeapon
 	Range: 3c512
 	Projectile: Bullet
-		Speed: 250
+		Speed: 188
 		TrailImage: fb2
 		TrailInterval: 1
 		Image: FB1

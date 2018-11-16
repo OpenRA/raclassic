@@ -4,7 +4,7 @@
 	MinRange: 0c512
 	Report: missile6.aud
 	Projectile: Missile
-		Speed: 213
+		Speed: 375
 		Arm: 2
 		Blockable: false
 		Inaccuracy: 128
@@ -51,7 +51,7 @@ Maverick:
 	Report: missile7.aud
 	Burst: 2
 	Projectile: Missile
-		Speed: 256
+		Speed: 375
 		Inaccuracy: 512
 		CruiseAltitude: 2c0
 		RangeLimit: 9c410
@@ -79,7 +79,7 @@ Hellfire:
 	MinRange: 1c256
 	Burst: 2
 	Projectile: Missile
-		Speed: 256
+		Speed: 450
 		HorizontalRateOfTurn: 10
 		RangeLimit: 5c512
 	Warhead@1Dam: SpreadDamage
@@ -103,7 +103,7 @@ MammothTusk:
 	Burst: 2
 	ValidTargets: Air, Infantry
 	Projectile: Missile
-		Speed: 341
+		Speed: 450
 		HorizontalRateOfTurn: 15
 		RangeLimit: 9c614
 	Warhead@1Dam: SpreadDamage
@@ -142,7 +142,7 @@ Nike:
 		Image: MISSILE
 		HorizontalRateOfTurn: 25
 		RangeLimit: 9c0
-		Speed: 341
+		Speed: 750
 	Warhead@1Dam: SpreadDamage
 		Damage: 50
 		ValidTargets: Air
@@ -181,7 +181,7 @@ Stinger:
 		Inaccuracy: 0
 		HorizontalRateOfTurn: 20
 		RangeLimit: 9c512
-		Speed: 170
+		Speed: 300
 		CloseEnough: 149
 	Warhead@1Dam: SpreadDamage
 		Damage: 30
@@ -201,7 +201,6 @@ StingerAA:
 	Inherits: Stinger
 	ValidTargets: Air
 	Projectile: Missile
-		Speed: 255
 		CloseEnough: 298
 	Warhead@3Eff: CreateEffect
 		Explosions: med_explosion_air
@@ -218,7 +217,7 @@ APTusk:
 	ReloadDelay: 80
 	Range: 5c0
 	Projectile: Missile
-		Speed: 298
+		Speed: 450
 		HorizontalRateOfTurn: 10
 		RangeLimit: 7c204
 	Warhead@1Dam: SpreadDamage
@@ -245,7 +244,7 @@ TorpTube:
 	Projectile: Missile
 		Image: torpedo
 		Arm: 3
-		Speed: 85
+		Speed: 225
 		TrailImage: bubbles
 		HorizontalRateOfTurn: 1
 		RangeLimit: 10c819
@@ -286,7 +285,7 @@ SubSCUD:
 	TargetActorCenter: true
 	Burst: 2
 	Projectile: Missile
-		Speed: 234
+		Speed: 300
 		Inaccuracy: 0c614
 		HorizontalRateOfTurn: 5
 		RangeLimit: 15c0
@@ -323,7 +322,7 @@ SCUD:
 	Report: missile1.aud
 	-Projectile:
 	Projectile: Bullet
-		Speed: 170
+		Speed: 375
 		Blockable: false
 		TrailImage: smokey
 		TrailDelay: 5

@@ -3,7 +3,7 @@
 	Range: 4c768
 	Report: cannon1.aud
 	Projectile: Bullet
-		Speed: 682
+		Speed: 600
 		Image: 120MM
 		Shadow: True
 	Warhead@1Dam: SpreadDamage
@@ -35,7 +35,6 @@
 	Range: 4c0
 	Report: cannon2.aud
 	Projectile: Bullet
-		Speed: 682
 		Image: 50CAL
 	Warhead@1Dam: SpreadDamage
 		Damage: 25
@@ -65,6 +64,8 @@
 	ReloadDelay: 80
 	Burst: 2
 	InvalidTargets: Air, Infantry
+	Projectile: Bullet
+		Speed: 450
 	Warhead@1Dam: SpreadDamage
 		Damage: 40
 
@@ -85,7 +86,7 @@ TurretGun:
 	ReloadDelay: 65
 	Range: 6c0
 	Projectile: Bullet
-		Speed: 204
+		Speed: 188
 		Blockable: false
 		LaunchAngle: 62
 	Warhead@1Dam: SpreadDamage
@@ -116,6 +117,7 @@ TurretGun:
 	Report: turret1.aud
 	TargetActorCenter: true
 	Projectile: Bullet
+		Speed: 93
 		Inaccuracy: 2c938
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
@@ -137,7 +139,7 @@ TurretGun:
 	Report: cannon2.aud
 	InvalidTargets: Underwater
 	Projectile: Bullet
-		Speed: 426
+		Speed: 375
 	Warhead@1Dam: SpreadDamage
 		Damage: 25
 
@@ -151,7 +153,7 @@ Grenade:
 	Range: 4c0
 	Report: grenade1.aud
 	Projectile: Bullet
-		Speed: 136
+		Speed: 75
 		Inaccuracy: 554
 		Image: BOMB
 	Warhead@1Dam: SpreadDamage
@@ -176,7 +178,7 @@ DepthCharge:
 	Range: 5c0
 	ValidTargets: Underwater
 	Projectile: Bullet
-		Speed: 85
+		Speed: 75
 		Image: BOMB
 		Inaccuracy: 128
 	Warhead@1Dam: SpreadDamage
