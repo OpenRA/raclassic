@@ -934,7 +934,7 @@ MSUB.turkey:
 DD.russia:
 	Inherits: DD
 	Buildable:
-		Prerequisites: ~syrd, dome, ~player.russia, ~techlevel.5
+		Prerequisites: ~syrd, ~player.russia, ~techlevel.5
 	Valued:
 		Cost: 898
 
@@ -942,7 +942,7 @@ DD.turkey:
 	Inherits: DD
 	Buildable:
 		BuildDurationModifier: 54
-		Prerequisites: ~syrd, dome, ~player.turkey, ~techlevel.5
+		Prerequisites: ~syrd, ~player.turkey, ~techlevel.5
 
 CA.russia:
 	Inherits: CA

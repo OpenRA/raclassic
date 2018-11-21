@@ -145,7 +145,7 @@ DD:
 		BuildAtProductionType: Boat
 		BuildDuration: 1000
 		BuildPaletteOrder: 40
-		Prerequisites: ~syrd, dome, ~player.normal, ~techlevel.5
+		Prerequisites: ~syrd, ~player.normal, ~techlevel.5
 		Description: Fast multi-role ship.\nCan detect submarines.\n  Strong vs Naval units, Light armor, Aircraft\n  Weak vs Infantry, Tanks
 	Valued:
 		Cost: 1000
