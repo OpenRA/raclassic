@@ -534,6 +534,7 @@
 		Dimensions: 1,1
 		Footprint: x
 		TerrainTypes: Clear,Road
+		RequiresBaseProvider: True
 		BuildSounds: placbldg.aud, build5.aud
 		UndeploySounds: cashturn.aud
 	SoundOnDamageTransition:
