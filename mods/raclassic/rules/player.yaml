@@ -43,7 +43,7 @@ Player:
 		DefaultCash: 10000
 		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
-		CheckboxDisplayOrder: 9
+		CheckboxDisplayOrder: 10
 	GpsWatcher:
 	Shroud:
 		FogCheckboxEnabled: false
@@ -69,6 +69,13 @@ Player:
 		Enabled: False
 		DisplayOrder: 8
 		Prerequisites: global-husks
+	LobbyPrerequisiteCheckbox@GLOBALLPDAMAGE:
+		ID: lpdamage
+		Label: Low Power Damage
+		Description: Buildings get damaged while low on power
+		Enabled: True
+		DisplayOrder: 9
+		Prerequisites: global-lpdamage
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:
