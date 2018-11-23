@@ -138,6 +138,21 @@
 	SpawnActorOnDeath:
 		RequiresCondition: global-husks
 
+^DamagedOnLowPower:
+	GrantConditionOnPrerequisite@GLOBALLPDAMAGE:
+		Condition: global-lpdamage
+		Prerequisites: global-lpdamage
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
+	SelfHealing@LOWPOWER:
+		Step: 0
+		PercentageStep: -1
+		Delay: 1500
+		HealIfBelow: 101
+		DamageCooldown: 0
+		RequiresCondition: lowpower && global-lpdamage
+
 ^GenericSpeedModifier:
 	SpeedMultiplier@Generic:
 		Modifier: 125
@@ -549,6 +564,7 @@
 ^Building:
 	Inherits: ^BasicBuilding
 	Inherits@1: ^AffectedByCountryBonuses
+	Inherits@2: ^DamagedOnLowPower
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
