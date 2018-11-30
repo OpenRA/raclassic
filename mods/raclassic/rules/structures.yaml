@@ -27,6 +27,8 @@ MSLO:
 		Cursor: nuke
 		Icon: abomb
 		ChargeInterval: 19500
+		FlightDelay: 100
+		FlightVelocity: 1c0
 		Description: Atom Bomb
 		LongDesc: Launches a devastating atomic bomb\nat a target location.
 		BeginChargeSpeechNotification: AbombPrepping

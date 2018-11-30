@@ -32,12 +32,12 @@ ParaBomb:
 		InvalidTargets: Ship, Structure
 
 Atomic:
-	ValidTargets: Ground, Trees, Water, Underwater, Air
+	ValidTargets: Ground, Trees, Water, Underwater
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c0
-		Damage: 150
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground, Trees, Water, Underwater, Air
+		Spread: 2c512
+		Damage: 1000
+		Falloff: 100, 100, 0
+		ValidTargets: Ground, Trees, Water, Underwater
 		Versus:
 			None: 90
 			Light: 60
@@ -45,91 +45,13 @@ Atomic:
 			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
 	Warhead@2Res_impact: DestroyResource
-		Size: 1
+		Size: 4
 	Warhead@3Smu_impact: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
-		Size: 0
+		Size: 4
 	Warhead@4Eff_impact: CreateEffect
 		Explosions: nuke
 		ImpactSounds: kaboom1.aud
 		ValidTargets: Ground, Water, Air
 		ImpactActors: false
-	Warhead@5Dam_areanuke1: SpreadDamage
-		Spread: 2c0
-		Damage: 60
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 5
-		ValidTargets: Ground, Trees, Water, Underwater, Air
-		Versus:
-			None: 90
-			Light: 60
-			Heavy: 25
-			Concrete: 50
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
-	Warhead@6Res_areanuke1: DestroyResource
-		Size: 2, 2
-		Delay: 5
-	Warhead@7Smu_areanuke1: LeaveSmudge
-		SmudgeType: Scorch
-		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees
-		Size: 2, 2
-		Delay: 5
-	Warhead@8Eff_areanuke1: CreateEffect
-		ImpactSounds: kaboom22.aud
-		Delay: 5
-		ImpactActors: false
-	Warhead@9Dam_areanuke2: SpreadDamage
-		Spread: 3c0
-		Damage: 60
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 10
-		ValidTargets: Ground, Water, Underwater, Air
-		Versus:
-			None: 90
-			Light: 60
-			Heavy: 25
-			Concrete: 50
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
-	Warhead@10Dam_areanuke2: SpreadDamage
-		Spread: 3c0
-		Damage: 120
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 15
-		ValidTargets: Trees
-		DamageTypes: Incendiary
-	Warhead@11Res_areanuke2: DestroyResource
-		Size: 3, 3
-		Delay: 10
-	Warhead@12Smu_areanuke2: LeaveSmudge
-		SmudgeType: Scorch
-		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees
-		Size: 3, 3
-		Delay: 10
-	Warhead@13Dam_areanuke3: SpreadDamage
-		Spread: 4c0
-		Damage: 60
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 15
-		ValidTargets: Ground, Water, Underwater, Air
-		Versus:
-			None: 90
-			Light: 60
-			Heavy: 25
-			Concrete: 50
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
-	Warhead@14Dam_areanuke3: SpreadDamage
-		Spread: 4c0
-		Damage: 120
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 15
-		ValidTargets: Trees
-		DamageTypes: Incendiary
-	Warhead@15Res_areanuke3: DestroyResource
-		Size: 4, 4
-		Delay: 15
-	Warhead@16Smu_areanuke3: LeaveSmudge
-		SmudgeType: Scorch
-		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees
-		Size: 4, 4
-		Delay: 15
