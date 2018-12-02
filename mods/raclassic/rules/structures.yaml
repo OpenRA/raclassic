@@ -959,6 +959,7 @@ PROC:
 		DockAngle: 64
 		DockOffset: 1,2
 		ShowTicks: false
+		DiscardExcessResources: true
 	StoresResources:
 		PipCount: 17
 		Capacity: 2000
