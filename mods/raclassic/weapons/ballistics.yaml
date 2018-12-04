@@ -116,6 +116,7 @@ TurretGun:
 	Range: 22c0
 	Report: turret1.aud
 	TargetActorCenter: true
+	InvalidTargets: Ship
 	Projectile: Bullet
 		Speed: 93
 		Inaccuracy: 2c938
