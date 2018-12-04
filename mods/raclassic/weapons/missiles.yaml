@@ -240,7 +240,7 @@ TorpTube:
 	ReloadDelay: 60
 	Range: 9c0
 	Report: torpedo1.aud
-	ValidTargets: Water, Underwater, Bridge
+	ValidTargets: Ship, WaterStructure, Underwater, Bridge
 	Projectile: Missile
 		Image: torpedo
 		Arm: 3
@@ -255,7 +255,7 @@ TorpTube:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
 		Damage: 90
-		ValidTargets: Water, Underwater, Bridge
+		ValidTargets: Ship, WaterStructure, Underwater, Bridge
 		Versus:
 			None: 30
 			Wood: 75
@@ -284,6 +284,7 @@ SubSCUD:
 	Range: 14c0
 	TargetActorCenter: true
 	Burst: 2
+	InvalidTargets: Ship
 	Projectile: Missile
 		Speed: 300
 		Inaccuracy: 0c614
