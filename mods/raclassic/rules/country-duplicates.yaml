@@ -240,7 +240,7 @@ STEK.turkey:
 PDOX.russia:
 	Inherits: PDOX
 	Buildable:
-		Prerequisites: atek, ~structures.allies, ~player.russia, ~techlevel.9
+		Prerequisites: atek, !enoughpdox, ~structures.allies, ~player.russia, ~techlevel.9
 	Valued:
 		Cost: 2516
 
@@ -248,12 +248,12 @@ PDOX.turkey:
 	Inherits: PDOX
 	Buildable:
 		BuildDurationModifier: 54
-		Prerequisites: atek, ~structures.allies, ~player.turkey, ~techlevel.9
+		Prerequisites: atek, !enoughpdox, ~structures.allies, ~player.turkey, ~techlevel.9
 
 IRON.russia:
 	Inherits: IRON
 	Buildable:
-		Prerequisites: stek, ~structures.soviet, ~player.russia, ~techlevel.9
+		Prerequisites: stek, !enoughiron, ~structures.soviet, ~player.russia, ~techlevel.9
 	Valued:
 		Cost: 2516
 
@@ -261,12 +261,12 @@ IRON.turkey:
 	Inherits: IRON
 	Buildable:
 		BuildDurationModifier: 54
-		Prerequisites: stek, ~structures.soviet, ~player.turkey, ~techlevel.9
+		Prerequisites: stek, !enoughiron, ~structures.soviet, ~player.turkey, ~techlevel.9
 
 MSLO.russia:
 	Inherits: MSLO
 	Buildable:
-		Prerequisites: techcenter, ~player.russia, ~techlevel.10
+		Prerequisites: techcenter, !enoughmslo, ~player.russia, ~techlevel.10
 	Valued:
 		Cost: 2246
 
@@ -274,7 +274,7 @@ MSLO.turkey:
 	Inherits: MSLO
 	Buildable:
 		BuildDurationModifier: 54
-		Prerequisites: techcenter, ~player.turkey, ~techlevel.10
+		Prerequisites: techcenter, !enoughmslo, ~player.turkey, ~techlevel.10
 
 # DEFENSES
 SBAG.russia:

@@ -10,9 +10,8 @@ MSLO:
 		Queue: Building
 		BuildDuration: 2500
 		BuildPaletteOrder: 300
-		Prerequisites: techcenter, ~player.normal, ~techlevel.10
-		BuildLimit: 1
-		Description: Provides an atomic bomb.\nRequires power to operate.\n  Special Ability: Atom Bomb\nMaximum 1 can be built.
+		Prerequisites: techcenter, !enoughmslo, ~player.normal, ~techlevel.10
+		Description: Provides an atomic bomb.\nRequires power to operate.\n  Special Ability: Atom Bomb
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -26,6 +25,7 @@ MSLO:
 		PauseOnCondition: disabled
 		Cursor: nuke
 		Icon: abomb
+		AllowMultiple: true
 		ChargeInterval: 19500
 		FlightDelay: 100
 		FlightVelocity: 1c0
@@ -50,6 +50,9 @@ MSLO:
 	SupportPowerChargeBar:
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: mslo
+	ProvidesPrerequisite@enoughmslo:
+		Prerequisite: enoughmslo
+		RequiresPrerequisites: global-swlimit
 	Power:
 		Amount: -100
 	MustBeDestroyed:
@@ -288,9 +291,8 @@ IRON:
 		Queue: Building
 		BuildDuration: 2800
 		BuildPaletteOrder: 290
-		Prerequisites: stek, ~structures.soviet, ~player.normal, ~techlevel.9
-		BuildLimit: 1
-		Description: Makes a unit invulnerable\nfor a while.\nRequires power to operate.\n  Special Ability: Invulnerability\nMaximum 1 can be built.
+		Prerequisites: stek, !enoughiron, ~structures.soviet, ~player.normal, ~techlevel.9
+		Description: Makes a unit invulnerable\nfor a while.\nRequires power to operate.\n  Special Ability: Invulnerability
 	Valued:
 		Cost: 2800
 	Tooltip:
@@ -312,6 +314,7 @@ IRON:
 		PauseOnCondition: disabled
 		Icon: invuln
 		ChargeInterval: 7500
+		AllowMultiple: true
 		Description: Invulnerability
 		LongDesc: Makes a unit invulnerable\nfor 45 seconds.
 		Range: 0
@@ -324,6 +327,9 @@ IRON:
 		Condition: invulnerability
 		OnFireSound: ironcur9.aud
 	SupportPowerChargeBar:
+	ProvidesPrerequisite@enoughiron:
+		Prerequisite: enoughiron
+		RequiresPrerequisites: global-swlimit
 	Power:
 		Amount: -200
 	MustBeDestroyed:
@@ -341,9 +347,8 @@ PDOX:
 		Queue: Building
 		BuildDuration: 2800
 		BuildPaletteOrder: 280
-		Prerequisites: atek, ~structures.allies, ~player.normal, ~techlevel.9
-		BuildLimit: 1
-		Description: Teleports a unit across the\nmap for a short time.\nRequires power to operate.\n  Special Ability: Chronoshift\nMaximum 1 can be built.
+		Prerequisites: atek, !enoughpdox, ~structures.allies, ~player.normal, ~techlevel.9
+		Description: Teleports a unit across the\nmap for a short time.\nRequires power to operate.\n  Special Ability: Chronoshift
 	Valued:
 		Cost: 2800
 	Tooltip:
@@ -361,6 +366,7 @@ PDOX:
 		OrderName: Chronoshift
 		PauseOnCondition: disabled
 		Icon: chrono
+		AllowMultiple: true
 		ChargeInterval: 10500
 		Description: Chronoshift
 		LongDesc: Teleports a unit across\nthe map for 3 minutes.
@@ -373,6 +379,9 @@ PDOX:
 		KillCargo: yes
 		DisplayRadarPing: True
 	SupportPowerChargeBar:
+	ProvidesPrerequisite@enoughpdox:
+		Prerequisite: enoughpdox
+		RequiresPrerequisites: global-swlimit
 	Power:
 		Amount: -200
 	MustBeDestroyed:
