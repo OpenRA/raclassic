@@ -10,7 +10,7 @@ MSLO:
 		Queue: Building
 		BuildDuration: 2500
 		BuildPaletteOrder: 300
-		Prerequisites: techcenter, !enoughmslo, ~player.normal, ~techlevel.10
+		Prerequisites: building-tech, !enoughmslo, ~player.normal, ~techlevel.10
 		Description: Provides an atomic bomb.\nRequires power to operate.\n  Special Ability: Atom Bomb
 	Building:
 		Footprint: xx
@@ -53,6 +53,14 @@ MSLO:
 	ProvidesPrerequisite@enoughmslo:
 		Prerequisite: enoughmslo
 		RequiresPrerequisites: global-swlimit
+	ProvidesPrerequisite@STICKY-VEHICLE:
+		Prerequisite: vehicle-mslo
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: vehicle-mslo
+		RequiresCondition: stickytech
 	Power:
 		Amount: -100
 	MustBeDestroyed:
@@ -74,7 +82,7 @@ GAP:
 		Queue: Building
 		BuildDuration: 500
 		BuildPaletteOrder: 240
-		Prerequisites: atek, ~structures.allies, ~player.normal, ~techlevel.7
+		Prerequisites: building-atek, ~structures.allies, ~player.normal, ~techlevel.7
 		Description: Obscures the enemy's view with shroud.\nRequires power to operate.
 	Selectable:
 		Class: GAP
@@ -117,7 +125,7 @@ SPEN:
 		Queue: Building
 		BuildDuration: 650
 		BuildPaletteOrder: 100
-		Prerequisites: anypower, ~structures.soviet, ~player.normal, ~techlevel.2
+		Prerequisites: building-power, ~structures.soviet, ~player.normal, ~techlevel.2
 		Description: Produces and repairs\nsubmarines and transports.
 	Targetable:
 		TargetTypes: Ground, Water, Structure, WaterStructure, C4, DetonateAttack, SpyInfiltrate
@@ -202,7 +210,7 @@ SYRD:
 		Queue: Building
 		BuildDuration: 650
 		BuildPaletteOrder: 90
-		Prerequisites: anypower, ~structures.allies, ~player.normal, ~techlevel.2
+		Prerequisites: building-power, ~structures.allies, ~player.normal, ~techlevel.2
 		Description: Produces and repairs ships\nand transports.
 	Valued:
 		Cost: 650
@@ -291,7 +299,7 @@ IRON:
 		Queue: Building
 		BuildDuration: 2800
 		BuildPaletteOrder: 290
-		Prerequisites: stek, !enoughiron, ~structures.soviet, ~player.normal, ~techlevel.9
+		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~player.normal, ~techlevel.9
 		Description: Makes a unit invulnerable\nfor a while.\nRequires power to operate.\n  Special Ability: Invulnerability
 	Valued:
 		Cost: 2800
@@ -347,7 +355,7 @@ PDOX:
 		Queue: Building
 		BuildDuration: 2800
 		BuildPaletteOrder: 280
-		Prerequisites: atek, !enoughpdox, ~structures.allies, ~player.normal, ~techlevel.9
+		Prerequisites: building-atek, !enoughpdox, ~structures.allies, ~player.normal, ~techlevel.9
 		Description: Teleports a unit across the\nmap for a short time.\nRequires power to operate.\n  Special Ability: Chronoshift
 	Valued:
 		Cost: 2800
@@ -402,7 +410,7 @@ TSLA:
 		Queue: Building
 		BuildDuration: 1500
 		BuildPaletteOrder: 210
-		Prerequisites: weap, ~structures.soviet, ~player.normal, ~techlevel.5
+		Prerequisites: building-weap, ~structures.soviet, ~player.normal, ~techlevel.5
 		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
 	Valued:
 		Cost: 1500
@@ -434,6 +442,19 @@ TSLA:
 		Range: 6c0
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: tsla
+	ProvidesPrerequisite@STICKY-INFANTRY:
+		Prerequisite: infantry-tsla
+	ProvidesPrerequisite@STICKY-VEHICLE:
+		Prerequisite: vehicle-tsla
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: infantry-tsla
+		RequiresCondition: stickytech
+	FreeActor@2:
+		Actor: vehicle-tsla
+		RequiresCondition: stickytech
 	RenderSprites:
 		Image: TSLA
 
@@ -448,7 +469,7 @@ AGUN:
 		Queue: Building
 		BuildDuration: 600
 		BuildPaletteOrder: 260
-		Prerequisites: dome, ~structures.allies, ~player.normal, ~techlevel.3
+		Prerequisites: building-dome, ~structures.allies, ~player.normal, ~techlevel.3
 		Description: Anti-Air base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
 		Cost: 600
@@ -497,7 +518,7 @@ DOME:
 		Queue: Building
 		BuildDuration: 1000
 		BuildPaletteOrder: 150
-		Prerequisites: proc, ~player.normal, ~techlevel.2
+		Prerequisites: building-proc, ~player.normal, ~techlevel.2
 		Description: Provides an overview\nof the battlefield.\nCan detect cloaked units.\n  Requires power to operate.
 	Valued:
 		Cost: 1000
@@ -524,6 +545,24 @@ DOME:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: dome
+	ProvidesPrerequisite@STICKY-BUILDING:
+		Prerequisite: building-dome
+	ProvidesPrerequisite@STICKY-INFANTRY:
+		Prerequisite: infantry-dome
+	ProvidesPrerequisite@STICKY-VEHICLE:
+		Prerequisite: vehicle-dome
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: building-dome
+		RequiresCondition: stickytech
+	FreeActor@2:
+		Actor: infantry-dome
+		RequiresCondition: stickytech
+	FreeActor@3:
+		Actor: vehicle-dome
+		RequiresCondition: stickytech
 	ExternalCondition@JAMMED:
 		Condition: jammed
 	Selectable:
@@ -544,7 +583,7 @@ PBOX:
 		Queue: Building
 		BuildDuration: 400
 		BuildPaletteOrder: 120
-		Prerequisites: tent, ~structures.allies, ~player.normal, ~techlevel.1
+		Prerequisites: building-tent, ~structures.allies, ~player.normal, ~techlevel.1
 		Description: Static defense with a heavy machine gun.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 400
@@ -589,7 +628,7 @@ HBOX:
 		Queue: Building
 		BuildDuration: 600
 		BuildPaletteOrder: 160
-		Prerequisites: tent, ~structures.allies, ~player.normal, ~techlevel.2
+		Prerequisites: building-tent, ~structures.allies, ~player.normal, ~techlevel.2
 		Description: Camouflaged static defense with a heavy machine gun.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 600
@@ -632,7 +671,7 @@ GUN:
 		Queue: Building
 		BuildDuration: 800
 		BuildPaletteOrder: 200
-		Prerequisites: tent, ~structures.allies, ~player.normal, ~techlevel.2
+		Prerequisites: building-tent, ~structures.allies, ~player.normal, ~techlevel.2
 		Description: Anti-Armor base defense.\nCan detect cloaked units.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 800
@@ -677,7 +716,7 @@ FTUR:
 		Queue: Building
 		BuildDuration: 600
 		BuildPaletteOrder: 130
-		Prerequisites: barr, ~structures.soviet, ~player.normal, ~techlevel.1
+		Prerequisites: building-barr, ~structures.soviet, ~player.normal, ~techlevel.1
 		Description: Anti-Infantry base defense.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 600
@@ -721,7 +760,7 @@ SAM:
 		Queue: Building
 		BuildDuration: 750
 		BuildPaletteOrder: 270
-		Prerequisites: dome, ~structures.soviet, ~player.normal, ~techlevel.6
+		Prerequisites: building-dome, ~structures.soviet, ~player.normal, ~techlevel.6
 		Description: Anti-Air base defense.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
 		Cost: 750
@@ -772,7 +811,7 @@ ATEK:
 		Queue: Building
 		BuildDuration: 1500
 		BuildPaletteOrder: 220
-		Prerequisites: weap, dome, ~structures.allies, ~player.normal, ~techlevel.7
+		Prerequisites: building-weap, building-dome, ~structures.allies, ~player.normal, ~techlevel.7
 		Description: Provides Allied advanced technologies.\n  Special Ability: GPS Satellite
 	Valued:
 		Cost: 1500
@@ -780,6 +819,10 @@ ATEK:
 		Name: Allied Tech Center
 	ProvidesPrerequisite:
 		Prerequisite: techcenter
+	ProvidesPrerequisite@STICKY:
+		Prerequisite: building-tech
+	ProvidesPrerequisite@STICKY2:
+		Prerequisite: infantry-tech
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -806,6 +849,35 @@ ATEK:
 		Amount: -200
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: atek
+	ProvidesPrerequisite@STICKY-BUILDING:
+		Prerequisite: building-atek
+	ProvidesPrerequisite@STICKY-INFANTRY:
+		Prerequisite: infantry-atek
+	ProvidesPrerequisite@STICKY-VEHICLE:
+		Prerequisite: vehicle-atek
+	ProvidesPrerequisite@STICKY-NAVAL:
+		Prerequisite: naval-atek
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: building-atek
+		RequiresCondition: stickytech
+	FreeActor@2:
+		Actor: infantry-atek
+		RequiresCondition: stickytech
+	FreeActor@3:
+		Actor: vehicle-atek
+		RequiresCondition: stickytech
+	FreeActor@3:
+		Actor: naval-atek
+		RequiresCondition: stickytech
+	FreeActor@4:
+		Actor: building-tech
+		RequiresCondition: stickytech
+	FreeActor@5:
+		Actor: infantry-tech
+		RequiresCondition: stickytech
 	Selectable:
 		Class: ATEK
 	RenderSprites:
@@ -818,7 +890,7 @@ WEAP:
 		Queue: Building
 		BuildDuration: 2000
 		BuildPaletteOrder: 140
-		Prerequisites: proc, ~player.normal, ~techlevel.2
+		Prerequisites: building-proc, ~player.normal, ~techlevel.2
 		Description: Produces vehicles.
 	Valued:
 		Cost: 2000
@@ -861,6 +933,14 @@ WEAP:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: weap
+	ProvidesPrerequisite@STICKY-BUILDING:
+		Prerequisite: building-weap
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: building-weap
+		RequiresCondition: stickytech
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 	WithDecoration@primary:
@@ -942,7 +1022,7 @@ PROC:
 		Queue: Building
 		BuildDuration: 2000
 		BuildPaletteOrder: 70
-		Prerequisites: anypower, ~player.normal, ~techlevel.1
+		Prerequisites: building-power, ~player.normal, ~techlevel.1
 		Description: Refines Ore and Gems\ninto credits.
 	Valued:
 		Cost: 2000
@@ -990,6 +1070,19 @@ PROC:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: proc
+	ProvidesPrerequisite@STICKY-BUILDING:
+		Prerequisite: building-proc
+	ProvidesPrerequisite@STICKY-VEHICLE:
+		Prerequisite: vehicle-proc
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: building-proc
+		RequiresCondition: stickytech
+	FreeActor@2:
+		Actor: vehicle-proc
+		RequiresCondition: stickytech
 	HitShape:
 		Type: Rectangle
 			TopLeft: -1536, -512
@@ -1013,7 +1106,7 @@ SILO:
 		Queue: Building
 		BuildDuration: 150
 		BuildPaletteOrder: 110
-		Prerequisites: proc, ~player.normal, ~techlevel.1
+		Prerequisites: building-proc, ~player.normal, ~techlevel.1
 		Description: Stores excess refined\nOre and Gems.
 	Valued:
 		Cost: 150
@@ -1054,7 +1147,7 @@ HPAD:
 		Queue: Building
 		BuildDuration: 1500
 		BuildPaletteOrder: 190
-		Prerequisites: dome, ~player.normal, ~techlevel.6
+		Prerequisites: building-dome, ~player.normal, ~techlevel.6
 		Description: Produces and reloads\nhelicopters.
 	Valued:
 		Cost: 1500
@@ -1139,7 +1232,7 @@ AFLD:
 		Queue: Building
 		BuildDuration: 600
 		BuildPaletteOrder: 250
-		Prerequisites: dome, ~structures.soviet, ~player.normal, ~techlevel.3
+		Prerequisites: building-dome, ~structures.soviet, ~player.normal, ~techlevel.3
 		Description: Produces and reloads aircraft.\n  Special Ability: Paratroopers\n  Special Ability: Spy Plane
 	Valued:
 		Cost: 600
@@ -1248,6 +1341,8 @@ POWR:
 		Name: Power Plant
 	ProvidesPrerequisite:
 		Prerequisite: anypower
+	ProvidesPrerequisite@STICKY:
+		Prerequisite: building-power
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1268,6 +1363,12 @@ POWR:
 	GrantConditionOnPrerequisite@Greece:
 		Condition: greece
 		Prerequisites: player.greece
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: building-power
+		RequiresCondition: stickytech
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
@@ -1285,7 +1386,7 @@ APWR:
 		Queue: Building
 		BuildDuration: 500
 		BuildPaletteOrder: 20
-		Prerequisites: anypower, ~player.normal_power, ~techlevel.5
+		Prerequisites: building-power, ~player.normal_power, ~techlevel.5
 		Description: Provides double the power of a\nstandard Power Plant.
 	Valued:
 		Cost: 500
@@ -1293,6 +1394,8 @@ APWR:
 		Name: Advanced Power Plant
 	ProvidesPrerequisite:
 		Prerequisite: anypower
+	ProvidesPrerequisite@STICKY:
+		Prerequisite: building-power
 	Building:
 		Footprint: xxx Xxx ===
 		Dimensions: 3,3
@@ -1317,6 +1420,12 @@ APWR:
 	GrantConditionOnPrerequisite@Greece:
 		Condition: greece
 		Prerequisites: player.greece
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: building-power
+		RequiresCondition: stickytech
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
@@ -1334,7 +1443,7 @@ STEK:
 		Queue: Building
 		BuildDuration: 1500
 		BuildPaletteOrder: 230
-		Prerequisites: weap, dome, ~structures.soviet, ~player.normal, ~techlevel.4
+		Prerequisites: building-weap, building-dome, ~structures.soviet, ~player.normal, ~techlevel.4
 		Description: Provides Soviet advanced technologies.
 	Valued:
 		Cost: 1500
@@ -1342,6 +1451,10 @@ STEK:
 		Name: Soviet Tech Center
 	ProvidesPrerequisite:
 		Prerequisite: techcenter
+	ProvidesPrerequisite@STICKY:
+		Prerequisite: building-tech
+	ProvidesPrerequisite@STICKY2:
+		Prerequisite: infantry-tech
 	Building:
 		Footprint: XxX XxX ===
 		Dimensions: 3,3
@@ -1357,6 +1470,35 @@ STEK:
 		Amount: -100
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: stek
+	ProvidesPrerequisite@STICKY-BUILDING:
+		Prerequisite: building-stek
+	ProvidesPrerequisite@STICKY-INFANTRY:
+		Prerequisite: infantry-stek
+	ProvidesPrerequisite@STICKY-VEHICLE:
+		Prerequisite: vehicle-stek
+	ProvidesPrerequisite@STICKY-NAVAL:
+		Prerequisite: naval-stek
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: building-stek
+		RequiresCondition: stickytech
+	FreeActor@2:
+		Actor: infantry-stek
+		RequiresCondition: stickytech
+	FreeActor@3:
+		Actor: vehicle-stek
+		RequiresCondition: stickytech
+	FreeActor@3:
+		Actor: naval-stek
+		RequiresCondition: stickytech
+	FreeActor@4:
+		Actor: building-tech
+		RequiresCondition: stickytech
+	FreeActor@5:
+		Actor: infantry-tech
+		RequiresCondition: stickytech
 	Selectable:
 		Class: STEK
 	RenderSprites:
@@ -1372,7 +1514,7 @@ BARR:
 		Queue: Building
 		BuildDuration: 300
 		BuildPaletteOrder: 60
-		Prerequisites: anypower, ~structures.soviet, ~player.normal, ~techlevel.1
+		Prerequisites: building-power, ~structures.soviet, ~player.normal, ~techlevel.1
 		Description: Trains infantry.
 	Valued:
 		Cost: 300
@@ -1413,6 +1555,14 @@ BARR:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: barr
+	ProvidesPrerequisite@STICKY-BUILDING:
+		Prerequisite: building-barr
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: building-barr
+		RequiresCondition: stickytech
 	WithDecoration@primary:
 		RequiresSelection: true
 		Image: pips
@@ -1431,7 +1581,7 @@ KENN:
 		Queue: Building
 		BuildDuration: 200
 		BuildPaletteOrder: 170
-		Prerequisites: barr, ~structures.soviet, ~player.normal, ~techlevel.2
+		Prerequisites: building-barr, ~structures.soviet, ~player.normal, ~techlevel.2
 		Description: Trains Attack Dogs.
 	Valued:
 		Cost: 200
@@ -1483,7 +1633,7 @@ TENT:
 		Queue: Building
 		BuildDuration: 300
 		BuildPaletteOrder: 50
-		Prerequisites: anypower, ~structures.allies, ~player.normal, ~techlevel.1
+		Prerequisites: building-power, ~structures.allies, ~player.normal, ~techlevel.1
 		Description: Trains infantry.
 	Valued:
 		Cost: 300
@@ -1524,6 +1674,19 @@ TENT:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: tent
+	ProvidesPrerequisite@STICKY-BUILDING:
+		Prerequisite: building-tent
+	ProvidesPrerequisite@STICKY-VEHICLE:
+		Prerequisite: vehicle-tent
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: building-tent
+		RequiresCondition: stickytech
+	FreeActor@2:
+		Actor: vehicle-tent
+		RequiresCondition: stickytech
 	WithDecoration@primary:
 		RequiresSelection: true
 		Image: pips
@@ -1542,7 +1705,7 @@ FIX:
 		Queue: Building
 		BuildDuration: 1200
 		BuildPaletteOrder: 180
-		Prerequisites: weap, ~player.normal, ~techlevel.2
+		Prerequisites: building-weap, ~player.normal, ~techlevel.2
 		Description: Repairs vehicles for credits.
 	Valued:
 		Cost: 1200
@@ -1581,6 +1744,19 @@ FIX:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: fix
+	ProvidesPrerequisite@STICKY-INFANTRY:
+		Prerequisite: infantry-fix
+	ProvidesPrerequisite@STICKY-VEHICLE:
+		Prerequisite: vehicle-fix
+	GrantConditionOnPrerequisite@STICKY:
+		Condition: stickytech
+		Prerequisites: global-stickytech
+	FreeActor@1:
+		Actor: infantry-fix
+		RequiresCondition: stickytech
+	FreeActor@2:
+		Actor: vehicle-fix
+		RequiresCondition: stickytech
 	HitShape:
 		Type: Rectangle
 			TopLeft: -1536, -683
@@ -1599,7 +1775,7 @@ SBAG:
 		Queue: Building
 		BuildDuration: 25
 		BuildPaletteOrder: 30
-		Prerequisites: fact, ~structures.allies, ~player.normal, ~techlevel.1
+		Prerequisites: ~structures.allies, ~player.normal, ~techlevel.1
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
 		Cost: 25
@@ -1627,7 +1803,7 @@ FENC:
 		Queue: Building
 		BuildDuration: 25
 		BuildPaletteOrder: 40
-		Prerequisites: fact, ~structures.soviet, ~player.normal, ~techlevel.1
+		Prerequisites: ~structures.soviet, ~player.normal, ~techlevel.1
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
 		Cost: 25
@@ -1655,7 +1831,7 @@ BRIK:
 		Queue: Building
 		BuildDuration: 50
 		BuildPaletteOrder: 80
-		Prerequisites: fact, ~player.normal, ~techlevel.5
+		Prerequisites: ~player.normal, ~techlevel.5
 		Description: Stop units and blocks enemy fire.
 	Valued:
 		Cost: 50
