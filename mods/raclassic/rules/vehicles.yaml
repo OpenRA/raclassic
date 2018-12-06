@@ -9,7 +9,7 @@ V2RL:
 		Queue: Vehicle
 		BuildDuration: 700
 		BuildPaletteOrder: 70
-		Prerequisites: dome, ~vehicles.soviet, ~player.normal, ~techlevel.2
+		Prerequisites: vehicle-dome, ~vehicles.soviet, ~player.normal, ~techlevel.2
 		Description: Long-range rocket artillery.\n  Strong vs Infantry, Light armor, Buildings\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 700
@@ -201,7 +201,7 @@ V2RL:
 		Queue: Vehicle
 		BuildDuration: 1700
 		BuildPaletteOrder: 140
-		Prerequisites: stek, ~vehicles.soviet, ~player.normal, ~techlevel.7
+		Prerequisites: vehicle-stek, ~vehicles.soviet, ~player.normal, ~techlevel.7
 		Description: Big and slow tank, with anti-air capability.\n  Strong vs Vehicles, Infantry, Aircraft\n  Weak vs Nothing
 	Valued:
 		Cost: 1700
@@ -318,7 +318,7 @@ HARV:
 		Queue: Vehicle
 		BuildDuration: 1400
 		BuildPaletteOrder: 10
-		Prerequisites: proc, ~player.normal, ~techlevel.1
+		Prerequisites: vehicle-proc, ~player.normal, ~techlevel.1
 		Description: Collects Ore and Gems for processing.\n  Unarmed
 	Valued:
 		Cost: 1400
@@ -369,7 +369,7 @@ MCV:
 		Queue: Vehicle
 		BuildDuration: 2500
 		BuildPaletteOrder: 130
-		Prerequisites: fix, ~player.normal, ~techlevel.8
+		Prerequisites: vehicle-fix, ~player.normal, ~techlevel.8
 		Description: Deploys into another Construction Yard.\n  Unarmed
 	Valued:
 		Cost: 2500
@@ -459,7 +459,7 @@ APC:
 		Queue: Vehicle
 		BuildDuration: 800
 		BuildPaletteOrder: 80
-		Prerequisites: ~vehicles.allies, tent, ~player.normal, ~techlevel.3
+		Prerequisites: ~vehicles.allies, vehicle-tent, ~player.normal, ~techlevel.3
 		Description: Tough infantry transport.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 800
@@ -504,7 +504,7 @@ MNLY.AP:
 		Queue: Vehicle
 		BuildDuration: 800
 		BuildPaletteOrder: 110
-		Prerequisites: ~vehicles.soviet, fix, ~player.normal, ~techlevel.2
+		Prerequisites: ~vehicles.soviet, vehicle-fix, ~player.normal, ~techlevel.2
 		Description: Lays anti-personnel mines to destroy\nunwary enemy units.\n  Unarmed
 	Tooltip:
 		Name: Minelayer (Anti-Personnel)
@@ -523,7 +523,7 @@ MNLY.AV:
 		Queue: Vehicle
 		BuildDuration: 800
 		BuildPaletteOrder: 120
-		Prerequisites: ~vehicles.allies, fix, ~player.normal, ~techlevel.2
+		Prerequisites: ~vehicles.allies, vehicle-fix, ~player.normal, ~techlevel.2
 		Description: Lays anti-tank mines to destroy\nunwary enemy units.\n  Unarmed
 	Tooltip:
 		Name: Minelayer (Anti-Tank)
@@ -564,7 +564,7 @@ MGG:
 		Queue: Vehicle
 		BuildDuration: 600
 		BuildPaletteOrder: 160
-		Prerequisites: ~vehicles.allies, atek, ~player.normal, ~techlevel.8
+		Prerequisites: ~vehicles.allies, vehicle-atek, ~player.normal, ~techlevel.8
 		Description: Regenerates the shroud nearby, \nobscuring the area.\n  Unarmed
 	Valued:
 		Cost: 600
@@ -604,7 +604,7 @@ MRJ:
 		Queue: Vehicle
 		BuildDuration: 600
 		BuildPaletteOrder: 90
-		Prerequisites: ~vehicles.allies, dome, ~player.normal, ~techlevel.9
+		Prerequisites: ~vehicles.allies, vehicle-dome, ~player.normal, ~techlevel.9
 		Description: Jams nearby enemy radar domes.\n  Unarmed
 	Health:
 		HP: 110
@@ -645,7 +645,7 @@ TTNK:
 		Queue: Vehicle
 		BuildDuration: 1500
 		BuildPaletteOrder: 100
-		Prerequisites: ~vehicles.soviet, tsla, ~global-aftermath, ~player.normal, ~techlevel.5
+		Prerequisites: ~vehicles.soviet, vehicle-tsla, ~global-aftermath, ~player.normal, ~techlevel.5
 		Description: Tank with mounted tesla coil.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
 	Valued:
 		Cost: 1500
@@ -682,7 +682,7 @@ DTRK:
 		Queue: Vehicle
 		BuildDuration: 2400
 		BuildPaletteOrder: 190
-		Prerequisites: mslo, ~global-aftermath, ~player.normal, ~techlevel.10
+		Prerequisites: vehicle-mslo, ~global-aftermath, ~player.normal, ~techlevel.10
 		Description: Demolition Truck, actively armed with\nnuclear explosives. Has very weak armor.
 	Valued:
 		Cost: 2400
@@ -722,7 +722,7 @@ CTNK:
 		Queue: Vehicle
 		BuildDuration: 2400
 		BuildPaletteOrder: 150
-		Prerequisites: ~vehicles.allies, atek, ~global-aftermath, ~player.normal, ~techlevel.9
+		Prerequisites: ~vehicles.allies, vehicle-atek, ~global-aftermath, ~player.normal, ~techlevel.9
 		Description: Chrono Tank, teleports to areas within range.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft\n  Special ability: Can teleport
 	Valued:
 		Cost: 2400
@@ -778,7 +778,7 @@ QTNK:
 		Queue: Vehicle
 		BuildDuration: 2300
 		BuildPaletteOrder: 170
-		Prerequisites: ~vehicles.soviet, stek, ~global-aftermath, ~player.normal, ~techlevel.7
+		Prerequisites: ~vehicles.soviet, vehicle-stek, ~global-aftermath, ~player.normal, ~techlevel.7
 		Description: Deals seismic damage to nearby vehicles\nand structures.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 2300
@@ -814,7 +814,7 @@ STNK:
 		Queue: Vehicle
 		BuildDuration: 800
 		BuildPaletteOrder: 180
-		Prerequisites: ~vehicles.allies, atek, ~player.normal, ~disabled
+		Prerequisites: ~vehicles.allies, vehicle-atek, ~player.normal, ~disabled
 		Description: Lightly armored infantry transport\nwhich can cloak.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
 	Valued:
 		Cost: 800

@@ -175,7 +175,7 @@ E4:
 		BuildAtProductionType: Soldier
 		BuildDuration: 300
 		BuildPaletteOrder: 110
-		Prerequisites: ~barr, stek, ~player.normal, ~techlevel.4
+		Prerequisites: ~barr, infantry-stek, ~player.normal, ~techlevel.4
 		Description: Advanced anti-structure unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
 	Selectable:
 		Class: E4
@@ -236,7 +236,7 @@ SPY:
 		BuildAtProductionType: Soldier
 		BuildDuration: 500
 		BuildPaletteOrder: 80
-		Prerequisites: dome, ~tent, ~player.normal, ~techlevel.4
+		Prerequisites: infantry-dome, ~tent, ~player.normal, ~techlevel.4
 		Description: Infiltrates enemy structures for intel.\nExact effect depends on the building infiltrated.
 	Selectable:
 		Class: SPY
@@ -271,7 +271,7 @@ E7:
 		BuildAtProductionType: Soldier
 		BuildDuration: 1200
 		BuildPaletteOrder: 120
-		Prerequisites: ~barracks, techcenter, ~player.normal, ~techlevel.8
+		Prerequisites: ~barracks, infantry-tech, ~player.normal, ~techlevel.8
 		Description: Elite commando infantry. Armed with\ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4
 	Selectable:
 		Class: E7
@@ -364,7 +364,7 @@ MECH:
 		BuildAtProductionType: Soldier
 		BuildDuration: 950
 		BuildPaletteOrder: 100
-		Prerequisites: ~tent, fix, ~global-aftermath, ~player.normal, ~techlevel.5
+		Prerequisites: ~tent, infantry-fix, ~global-aftermath, ~player.normal, ~techlevel.5
 		Description: Repairs nearby vehicles.\n  Unarmed
 	Selectable:
 		Class: MECH
@@ -458,7 +458,7 @@ THF:
 		BuildAtProductionType: Soldier
 		BuildDuration: 500
 		BuildPaletteOrder: 90
-		Prerequisites: ~tent, atek, ~player.normal, ~techlevel.8
+		Prerequisites: ~tent, infantry-atek, ~player.normal, ~techlevel.8
 		Description: Steals enemy credits.\n  Unarmed
 	Selectable:
 		Class: THF
@@ -488,7 +488,7 @@ SHOK:
 		BuildAtProductionType: Soldier
 		BuildDuration: 900
 		BuildPaletteOrder: 70
-		Prerequisites: ~barr, tsla, ~global-aftermath, ~player.normal, ~techlevel.5
+		Prerequisites: ~barr, infantry-tsla, ~global-aftermath, ~player.normal, ~techlevel.5
 		Description: Elite infantry with portable tesla coils.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Selectable:
 		Class: SHOK

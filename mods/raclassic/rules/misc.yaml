@@ -523,3 +523,191 @@ CTFLAG:
 	RequiresBuildableArea:
 		AreaTypes: building
 	Interactable:
+
+^Sticky:
+	Interactable:
+	AlwaysVisible:
+	Aircraft:
+	ConditionManager:
+	KillsSelf:
+		Delay: 1
+		RemoveInstead: true
+		RequiresCondition: !hasprereq
+	GrantConditionOnPrerequisite:
+		Condition: hasprereq
+	ProvidesPrerequisite:
+
+building-power:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Power Plant
+	GrantConditionOnPrerequisite:
+		Prerequisites: fact
+
+building-proc:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Refinery
+	GrantConditionOnPrerequisite:
+		Prerequisites: fact
+
+building-tent:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Allied Barracks
+	GrantConditionOnPrerequisite:
+		Prerequisites: fact
+
+building-barr:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Soviet Barracks
+	GrantConditionOnPrerequisite:
+		Prerequisites: fact
+
+building-weap:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: War Factory
+	GrantConditionOnPrerequisite:
+		Prerequisites: fact
+
+building-dome:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Radar Dome
+	GrantConditionOnPrerequisite:
+		Prerequisites: fact
+
+building-tech:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: fact
+
+building-atek:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Allied Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: fact
+
+building-stek:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Soviet Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: fact
+
+infantry-dome:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Radar Dome
+	GrantConditionOnPrerequisite:
+		Prerequisites: barracks
+
+infantry-fix:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Service Depot
+	GrantConditionOnPrerequisite:
+		Prerequisites: tent
+
+infantry-tsla:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Tesla Coil
+	GrantConditionOnPrerequisite:
+		Prerequisites: barr
+
+infantry-tech:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: tent
+
+infantry-atek:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Allied Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: tent
+
+infantry-stek:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Soviet Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: barr
+
+vehicle-tent:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Allied Barracks
+	GrantConditionOnPrerequisite:
+		Prerequisites: weap
+
+vehicle-proc:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Refinery
+	GrantConditionOnPrerequisite:
+		Prerequisites: weap
+
+vehicle-dome:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Radar Dome
+	GrantConditionOnPrerequisite:
+		Prerequisites: weap
+
+vehicle-fix:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Service Depot
+	GrantConditionOnPrerequisite:
+		Prerequisites: weap
+
+vehicle-tsla:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Tesla Coil
+	GrantConditionOnPrerequisite:
+		Prerequisites: weap
+
+vehicle-atek:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Allied Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: weap
+
+vehicle-stek:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Soviet Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: weap
+
+vehicle-mslo:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Missile Silo
+	GrantConditionOnPrerequisite:
+		Prerequisites: weap
+
+naval-atek:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Allied Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: syrd
+
+naval-stek:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Soviet Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: spen

@@ -43,7 +43,7 @@ Player:
 		DefaultCash: 10000
 		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
-		CheckboxDisplayOrder: 11
+		CheckboxDisplayOrder: 13
 	GpsWatcher:
 	Shroud:
 		FogCheckboxEnabled: false
@@ -76,12 +76,19 @@ Player:
 		Enabled: False
 		DisplayOrder: 10
 		Prerequisites: global-husks
+	LobbyPrerequisiteCheckbox@GLOBALSTICKYTECH:
+		ID: stickytech
+		Label: Sticky Tech
+		Description: Losing the tech structure don't remove the prerequisites
+		Enabled: False
+		DisplayOrder: 11
+		Prerequisites: global-stickytech
 	LobbyPrerequisiteCheckbox@GLOBALSWLIMIT:
 		ID: swlimit
 		Label: Limit Super Weapons
 		Description: Only 1 of each super weapon can be built by a player
 		Enabled: True
-		DisplayOrder: 11
+		DisplayOrder: 12
 		Prerequisites: global-swlimit
 	FrozenActorLayer:
 	BaseAttackNotifier:
