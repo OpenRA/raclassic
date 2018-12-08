@@ -15,22 +15,27 @@ Player:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Vehicle:
 		Type: Vehicle
 		LowPowerSlowdown: 3
 		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Infantry:
 		Type: Infantry
 		LowPowerSlowdown: 3
 		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Ship:
 		Type: Ship
 		LowPowerSlowdown: 3
 		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Aircraft:
 		Type: Aircraft
 		LowPowerSlowdown: 3
 		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	PlaceBuilding:
 	SupportPowerManager:
 	ScriptTriggers:
