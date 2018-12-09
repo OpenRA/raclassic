@@ -701,7 +701,7 @@ V2RL.turkey:
 	Buildable:
 		Prerequisites: vehicle-stek, ~vehicles.soviet, ~player.russia, ~techlevel.7
 	Valued:
-		Cost: 854
+		Cost: 1527
 
 4TNK.turkey:
 	Inherits: 4TNK
