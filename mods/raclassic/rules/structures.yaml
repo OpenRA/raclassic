@@ -309,6 +309,7 @@ IRON:
 		Footprint: xx
 		Dimensions: 2,1
 	Selectable:
+		Class: IRON
 		Bounds: 48,28,0,2
 		DecorationBounds: 50,50,0,-12
 	SelectionDecorations:
@@ -342,8 +343,6 @@ IRON:
 		Amount: -200
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	Selectable:
-		Class: IRON
 	RenderSprites:
 		Image: IRON
 
@@ -869,13 +868,13 @@ ATEK:
 	FreeActor@3:
 		Actor: vehicle-atek
 		RequiresCondition: stickytech
-	FreeActor@3:
+	FreeActor@4:
 		Actor: naval-atek
 		RequiresCondition: stickytech
-	FreeActor@4:
+	FreeActor@5:
 		Actor: building-tech
 		RequiresCondition: stickytech
-	FreeActor@5:
+	FreeActor@6:
 		Actor: infantry-tech
 		RequiresCondition: stickytech
 	Selectable:
@@ -1401,6 +1400,7 @@ APWR:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
+		Class: APWR
 		Bounds: 72,48
 		DecorationBounds: 72,68,0,-10
 	SelectionDecorations:
@@ -1429,8 +1429,6 @@ APWR:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
-	Selectable:
-		Class: APWR
 	RenderSprites:
 		Image: APWR
 
@@ -1490,13 +1488,13 @@ STEK:
 	FreeActor@3:
 		Actor: vehicle-stek
 		RequiresCondition: stickytech
-	FreeActor@3:
+	FreeActor@4:
 		Actor: naval-stek
 		RequiresCondition: stickytech
-	FreeActor@4:
+	FreeActor@5:
 		Actor: building-tech
 		RequiresCondition: stickytech
-	FreeActor@5:
+	FreeActor@6:
 		Actor: infantry-tech
 		RequiresCondition: stickytech
 	Selectable:
