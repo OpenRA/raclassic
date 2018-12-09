@@ -209,6 +209,7 @@ E6:
 		Prerequisites: ~barracks, ~player.normal, ~techlevel.3
 		Description: Infiltrates and captures\nenemy structures.\n  Unarmed
 	Selectable:
+		Priority: 5
 		Class: E6
 	Valued:
 		Cost: 500
@@ -224,8 +225,6 @@ E6:
 		PlayerExperience: 25
 	Voiced:
 		VoiceSet: EngineerVoice
-	Selectable:
-		Priority: 5
 	RenderSprites:
 		Image: E6
 
