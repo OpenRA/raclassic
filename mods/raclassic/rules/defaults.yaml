@@ -291,9 +291,17 @@
 		CargoType: Infantry
 	HiddenUnderFog:
 	ActorLostNotification:
-	Crushable:
+	Crushable@NOWARN:
 		CrushSound: squishy2.aud
 		WarnProbability: 0
+		RequiresCondition: !autoscatter
+	Crushable@WARN:
+		CrushSound: squishy2.aud
+		WarnProbability: 75
+		RequiresCondition: autoscatter
+	GrantConditionOnPrerequisite@AUTOSCATTER:
+		Prerequisites: global-autoscatter
+		Condition: autoscatter
 	Guard:
 	Guardable:
 	Tooltip:

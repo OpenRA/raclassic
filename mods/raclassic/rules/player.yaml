@@ -48,7 +48,7 @@ Player:
 		DefaultCash: 10000
 		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
-		CheckboxDisplayOrder: 13
+		CheckboxDisplayOrder: 14
 	GpsWatcher:
 	Shroud:
 		FogCheckboxEnabled: false
@@ -95,6 +95,13 @@ Player:
 		Enabled: True
 		DisplayOrder: 12
 		Prerequisites: global-swlimit
+	LobbyPrerequisiteCheckbox@GLOBALAUTOSCATTER:
+		ID: autoscatter
+		Label: Auto Scatter
+		Description: Infantry automatically try to avoid vehicles trying to crush them
+		Enabled: False
+		DisplayOrder: 13
+		Prerequisites: global-autoscatter
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:
