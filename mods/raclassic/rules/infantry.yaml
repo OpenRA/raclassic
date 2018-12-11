@@ -500,7 +500,9 @@ SHOK:
 	Mobile:
 		Speed: 30
 		Voice: Move
-	-Crushable:
+	-Crushable@NOWARN:
+	-Crushable@WARN:
+	-GrantConditionOnPrerequisite@AUTOSCATTER:
 	Armament@PRIMARY:
 		Weapon: PortaTesla
 		LocalOffset: 427,0,341
@@ -545,7 +547,9 @@ ANT:
 		Speed: 99
 		TurnSpeed: 12
 		Locomotor: wheeled-non-crusher
-	-Crushable:
+	-Crushable@NOWARN:
+	-Crushable@WARN:
+	-GrantConditionOnPrerequisite@AUTOSCATTER:
 	AutoTarget:
 		ScanRadius: 5
 	AttackFrontal:
