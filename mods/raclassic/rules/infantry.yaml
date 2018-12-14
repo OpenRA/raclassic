@@ -362,7 +362,7 @@ MECH:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildDuration: 950
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 90
 		Prerequisites: ~tent, infantry-fix, ~global-aftermath, ~player.normal, ~techlevel.5
 		Description: Repairs nearby vehicles.\n  Unarmed
 	Selectable:
@@ -456,7 +456,7 @@ THF:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildDuration: 500
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 100
 		Prerequisites: ~tent, infantry-atek, ~player.normal, ~techlevel.8
 		Description: Steals enemy credits.\n  Unarmed
 	Selectable:
