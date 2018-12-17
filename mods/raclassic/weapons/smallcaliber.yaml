@@ -25,7 +25,6 @@ ZSU-23:
 	Range: 5c0
 	Report: gun13.aud
 	Projectile: InstantHit
-		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 40
@@ -48,12 +47,15 @@ Vulcan:
 	Inherits: ^MachineGun
 	ReloadDelay: 40
 
+Vulcan.blockable:
+	Inherits: Vulcan
+	Projectile: InstantHit
+		Blockable: true
+
 ChainGun:
 	Inherits: ^MachineGun
 	ReloadDelay: 3
 	MinRange: 0c768
-	Projectile: InstantHit
-		Blockable: false
 
 ChainGun.Yak.Right:
 	Inherits: ChainGun
@@ -80,6 +82,11 @@ Pistol:
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 
+Pistol.blockable:
+	Inherits: Pistol
+	Projectile: InstantHit
+		Blockable: true
+
 M1Carbine:
 	Inherits: ^MachineGun
 	ReloadDelay: 20
@@ -88,10 +95,20 @@ M1Carbine:
 	Warhead@1Dam: SpreadDamage
 		Damage: 15
 
+M1Carbine.blockable:
+	Inherits: M1Carbine
+	Projectile: InstantHit
+		Blockable: true
+
 M60mg:
 	Inherits: M1Carbine
 	Range: 4c0
 	Report: pillbox1.aud
+
+M60mg.blockable:
+	Inherits: M60mg
+	Projectile: InstantHit
+		Blockable: true
 
 Colt45:
 	ReloadDelay: 5
@@ -117,3 +134,8 @@ Colt45:
 		Explosions: water_piff
 		ValidTargets: Water, Underwater
 		InvalidTargets: Ship, Structure, Bridge
+
+Colt45.blockable:
+	Inherits: Colt45
+	Projectile: InstantHit
+		Blockable: true

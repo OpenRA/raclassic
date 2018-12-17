@@ -385,6 +385,13 @@
 		Modifier: 157
 	Armament:
 		Weapon: Pistol
+		RequiresCondition: !blockablebullets
+	Armament@Blockable:
+		Weapon: Pistol.blockable
+		RequiresCondition: blockablebullets
+	GrantConditionOnPrerequisite@BLOCKABLEBULLETS:
+		Condition: blockablebullets
+		Prerequisites: global-blockablebullets
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot

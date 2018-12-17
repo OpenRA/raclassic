@@ -74,6 +74,13 @@ E1:
 		HP: 50
 	Armament@PRIMARY:
 		Weapon: M1Carbine
+		RequiresCondition: !blockablebullets
+	Armament@Blockable:
+		Weapon: M1Carbine.blockable
+		RequiresCondition: blockablebullets
+	GrantConditionOnPrerequisite@BLOCKABLEBULLETS:
+		Condition: blockablebullets
+		Prerequisites: global-blockablebullets
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
@@ -298,8 +305,19 @@ E7:
 		Voice: Move
 	Armament@PRIMARY:
 		Weapon: Colt45
+		RequiresCondition: !blockablebullets
 	Armament@SECONDARY:
 		Weapon: Colt45
+		RequiresCondition: !blockablebullets
+	Armament@PRIMARY_Blockable:
+		Weapon: Colt45.blockable
+		RequiresCondition: blockablebullets
+	Armament@SECONDARY_Blockable:
+		Weapon: Colt45.blockable
+		RequiresCondition: blockablebullets
+	GrantConditionOnPrerequisite@BLOCKABLEBULLETS:
+		Condition: blockablebullets
+		Prerequisites: global-blockablebullets
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
