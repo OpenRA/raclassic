@@ -436,6 +436,15 @@ JEEP:
 		Weapon: M60mg
 		MuzzleSequence: muzzle
 		LocalOffset: 128,0,43
+		RequiresCondition: !blockablebullets
+	Armament@Blockable:
+		Weapon: M60mg.blockable
+		MuzzleSequence: muzzle
+		LocalOffset: 128,0,43
+		RequiresCondition: blockablebullets
+	GrantConditionOnPrerequisite@BLOCKABLEBULLETS:
+		Condition: blockablebullets
+		Prerequisites: global-blockablebullets
 	SpawnActorOnDeath:
 		Actor: JEEP.Husk
 		OwnerType: InternalName
@@ -478,6 +487,15 @@ APC:
 		Weapon: M60mg
 		LocalOffset: 85,0,171
 		MuzzleSequence: muzzle
+		RequiresCondition: !blockablebullets
+	Armament@Blockable:
+		Weapon: M60mg.blockable
+		LocalOffset: 85,0,171
+		MuzzleSequence: muzzle
+		RequiresCondition: blockablebullets
+	GrantConditionOnPrerequisite@BLOCKABLEBULLETS:
+		Condition: blockablebullets
+		Prerequisites: global-blockablebullets
 	AttackFrontal:
 	WithMuzzleOverlay:
 	Sellable:

@@ -599,6 +599,15 @@ PBOX:
 		Weapon: Vulcan
 		MuzzleSequence: muzzle
 		LocalOffset: 448,0,0
+		RequiresCondition: !blockablebullets
+	Armament@Blockable:
+		Weapon: Vulcan.blockable
+		MuzzleSequence: muzzle
+		LocalOffset: 448,0,0
+		RequiresCondition: blockablebullets
+	GrantConditionOnPrerequisite@BLOCKABLEBULLETS:
+		Condition: blockablebullets
+		Prerequisites: global-blockablebullets
 	AttackTurreted:
 	-QuantizeFacingsFromSequence:
 	BodyOrientation:
@@ -644,6 +653,15 @@ HBOX:
 		Weapon: Vulcan
 		MuzzleSequence: muzzle
 		LocalOffset: 448,0,0
+		RequiresCondition: !blockablebullets
+	Armament@Blockable:
+		Weapon: Vulcan.blockable
+		MuzzleSequence: muzzle
+		LocalOffset: 448,0,0
+		RequiresCondition: blockablebullets
+	GrantConditionOnPrerequisite@BLOCKABLEBULLETS:
+		Condition: blockablebullets
+		Prerequisites: global-blockablebullets
 	AttackTurreted:
 	-QuantizeFacingsFromSequence:
 	BodyOrientation:

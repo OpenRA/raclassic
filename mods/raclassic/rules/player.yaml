@@ -102,6 +102,13 @@ Player:
 		Enabled: False
 		DisplayOrder: 13
 		Prerequisites: global-autoscatter
+	LobbyPrerequisiteCheckbox@GLOBALBLOCKABLEBULLETS:
+		ID: blockablebullets
+		Label: Blockable Bullets
+		Description: Bullet weapons (light infantry, ranger, apc etc.) can be blocked by concrete walls
+		Enabled: True
+		DisplayOrder: 15
+		Prerequisites: global-blockablebullets
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:
