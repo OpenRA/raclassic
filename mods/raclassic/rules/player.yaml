@@ -109,6 +109,13 @@ Player:
 		Enabled: True
 		DisplayOrder: 15
 		Prerequisites: global-blockablebullets
+	LobbyPrerequisiteCheckbox@GLOBALMISSIONRULES:
+		ID: missionrules
+		Label: Mission Ruleset
+		Description: Reverts effects of mplayer.ini from original game
+		Enabled: False
+		DisplayOrder: 16
+		Prerequisites: global-missionrules
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:

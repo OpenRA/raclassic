@@ -81,6 +81,14 @@ TurretGun:
 	Warhead@1Dam: SpreadDamage
 		Damage: 60
 
+TurretGun.mission:
+	Inherits: TurretGun
+	ReloadDelay: 50
+	Projectile: Bullet
+		Speed: 600
+	Warhead@1Dam: SpreadDamage
+		Damage: 40
+
 ^Artillery:
 	Inherits: ^Cannon
 	ReloadDelay: 65
