@@ -253,7 +253,7 @@ PDOX.turkey:
 IRON.russia:
 	Inherits: IRON
 	Buildable:
-		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~player.russia, ~techlevel.9
+		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~!global-missionrules, ~player.russia, ~techlevel.9
 	Valued:
 		Cost: 2516
 
@@ -261,7 +261,20 @@ IRON.turkey:
 	Inherits: IRON
 	Buildable:
 		BuildDurationModifier: 54
-		Prerequisites: stek, !enoughiron, ~structures.soviet, ~player.turkey, ~techlevel.9
+		Prerequisites: stek, !enoughiron, ~structures.soviet, ~!global-missionrules, ~player.turkey, ~techlevel.9
+
+IRON.mission.russia:
+	Inherits: IRON.mission
+	Buildable:
+		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~global-missionrules, ~player.russia, ~techlevel.9
+	Valued:
+		Cost: 2516
+
+IRON.mission.turkey:
+	Inherits: IRON.mission
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: stek, !enoughiron, ~structures.soviet, ~global-missionrules, ~player.turkey, ~techlevel.9
 
 MSLO.russia:
 	Inherits: MSLO
@@ -306,7 +319,7 @@ FENC.turkey:
 BRIK.russia:
 	Inherits: BRIK
 	Buildable:
-		Prerequisites: ~player.russia, ~techlevel.5
+		Prerequisites: ~!global-missionrules, ~player.russia, ~techlevel.5
 	Valued:
 		Cost: 45
 
@@ -314,7 +327,20 @@ BRIK.turkey:
 	Inherits: BRIK
 	Buildable:
 		BuildDurationModifier: 54
-		Prerequisites: ~player.turkey, ~techlevel.5
+		Prerequisites: ~!global-missionrules, ~player.turkey, ~techlevel.5
+
+BRIK.mission.russia:
+	Inherits: BRIK.mission
+	Buildable:
+		Prerequisites: ~global-missionrules, ~player.russia, ~techlevel.5
+	Valued:
+		Cost: 90
+
+BRIK.mission.turkey:
+	Inherits: BRIK.mission
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~global-missionrules, ~player.turkey, ~techlevel.5
 
 PBOX.russia:
 	Inherits: PBOX
@@ -358,7 +384,7 @@ FTUR.turkey:
 GUN.russia:
 	Inherits: GUN
 	Buildable:
-		Prerequisites: building-tent, ~structures.allies, ~player.russia, ~techlevel.2
+		Prerequisites: building-tent, ~structures.allies, ~!global-missionrules, ~player.russia, ~techlevel.2
 	Valued:
 		Cost: 719
 
@@ -366,12 +392,25 @@ GUN.turkey:
 	Inherits: GUN
 	Buildable:
 		BuildDurationModifier: 54
-		Prerequisites: building-tent, ~structures.allies, ~player.turkey, ~techlevel.2
+		Prerequisites: building-tent, ~structures.allies, ~!global-missionrules, ~player.turkey, ~techlevel.2
+
+GUN.mission.russia:
+	Inherits: GUN.mission
+	Buildable:
+		Prerequisites: building-tent, ~structures.allies, ~global-missionrules, ~player.russia, ~techlevel.2
+	Valued:
+		Cost: 539
+
+GUN.mission.turkey:
+	Inherits: GUN.mission
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: building-tent, ~structures.allies, ~global-missionrules, ~player.turkey, ~techlevel.2
 
 TSLA.russia:
 	Inherits: TSLA
 	Buildable:
-		Prerequisites: building-weap, ~structures.soviet, ~player.russia, ~techlevel.5
+		Prerequisites: building-weap, ~structures.soviet, ~!global-missionrules, ~player.russia, ~techlevel.5
 	Valued:
 		Cost: 1348
 
@@ -379,7 +418,20 @@ TSLA.turkey:
 	Inherits: TSLA
 	Buildable:
 		BuildDurationModifier: 54
-		Prerequisites: building-weap, ~structures.soviet, ~player.turkey, ~techlevel.5
+		Prerequisites: building-weap, ~structures.soviet, ~!global-missionrules, ~player.turkey, ~techlevel.5
+
+TSLA.mission.russia:
+	Inherits: TSLA.mission
+	Buildable:
+		Prerequisites: building-weap, ~structures.soviet, ~global-missionrules, ~player.russia, ~techlevel.5
+	Valued:
+		Cost: 1348
+
+TSLA.mission.turkey:
+	Inherits: TSLA.mission
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: building-weap, ~structures.soviet, ~global-missionrules, ~player.turkey, ~techlevel.5
 
 AGUN.russia:
 	Inherits: AGUN
@@ -410,7 +462,7 @@ SAM.turkey:
 GAP.russia:
 	Inherits: GAP
 	Buildable:
-		Prerequisites: building-atek, ~structures.allies, ~player.russia, ~techlevel.7
+		Prerequisites: building-atek, ~structures.allies, ~!global-missionrules, ~player.russia, ~techlevel.7
 	Valued:
 		Cost: 449
 
@@ -418,7 +470,20 @@ GAP.turkey:
 	Inherits: GAP
 	Buildable:
 		BuildDurationModifier: 54
-		Prerequisites: building-atek, ~structures.allies, ~player.turkey, ~techlevel.7
+		Prerequisites: building-atek, ~structures.allies, ~!global-missionrules, ~player.turkey, ~techlevel.7
+
+GAP.mission.russia:
+	Inherits: GAP.mission
+	Buildable:
+		Prerequisites: building-atek, ~structures.allies, ~global-missionrules, ~player.russia, ~techlevel.7
+	Valued:
+		Cost: 449
+
+GAP.mission.turkey:
+	Inherits: GAP.mission
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: building-atek, ~structures.allies, ~global-missionrules, ~player.turkey, ~techlevel.7
 
 # FAKES
 SYRF.russia:

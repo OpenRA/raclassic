@@ -82,7 +82,7 @@ GAP:
 		Queue: Building
 		BuildDuration: 500
 		BuildPaletteOrder: 240
-		Prerequisites: building-atek, ~structures.allies, ~player.normal, ~techlevel.7
+		Prerequisites: building-atek, ~structures.allies, ~!global-missionrules, ~player.normal, ~techlevel.7
 		Description: Obscures the enemy's view with shroud.\nRequires power to operate.
 	Selectable:
 		Class: GAP
@@ -111,6 +111,15 @@ GAP:
 			BottomRight: 512, 512
 	RenderSprites:
 		Image: GAP
+
+GAP.mission:
+	Inherits: GAP
+	Buildable:
+		Prerequisites: building-atek, ~structures.allies, ~global-missionrules, ~player.normal, ~techlevel.7
+	Health:
+		HP: 1000
+	Power:
+		Amount: -60
 
 SPEN:
 	Inherits: ^Building
@@ -299,7 +308,7 @@ IRON:
 		Queue: Building
 		BuildDuration: 2800
 		BuildPaletteOrder: 290
-		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~player.normal, ~techlevel.9
+		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~!global-missionrules, ~player.normal, ~techlevel.9
 		Description: Makes a unit invulnerable\nfor a while.\nRequires power to operate.\n  Special Ability: Invulnerability
 	Valued:
 		Cost: 2800
@@ -345,6 +354,13 @@ IRON:
 		RequiredForShortGame: false
 	RenderSprites:
 		Image: IRON
+
+IRON.mission:
+	Inherits: IRON
+	Buildable:
+		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~global-missionrules, ~player.normal, ~techlevel.9
+	GrantExternalConditionPower@IRONCURTAIN:
+		ChargeInterval: 16500
 
 PDOX:
 	Inherits: ^Building
@@ -409,7 +425,7 @@ TSLA:
 		Queue: Building
 		BuildDuration: 1500
 		BuildPaletteOrder: 210
-		Prerequisites: building-weap, ~structures.soviet, ~player.normal, ~techlevel.5
+		Prerequisites: building-weap, ~structures.soviet, ~!global-missionrules, ~player.normal, ~techlevel.5
 		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
 	Valued:
 		Cost: 1500
@@ -456,6 +472,13 @@ TSLA:
 		RequiresCondition: stickytech
 	RenderSprites:
 		Image: TSLA
+
+TSLA.mission:
+	Inherits: TSLA
+	Buildable:
+		Prerequisites: building-weap, ~structures.soviet, ~global-missionrules, ~player.normal, ~techlevel.5
+	Health:
+		HP: 400
 
 AGUN:
 	Inherits: ^Defense
@@ -688,7 +711,7 @@ GUN:
 		Queue: Building
 		BuildDuration: 800
 		BuildPaletteOrder: 200
-		Prerequisites: building-tent, ~structures.allies, ~player.normal, ~techlevel.2
+		Prerequisites: building-tent, ~structures.allies, ~!global-missionrules, ~player.normal, ~techlevel.2
 		Description: Anti-Armor base defense.\nCan detect cloaked units.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 800
@@ -722,6 +745,17 @@ GUN:
 		Class: GUN
 	RenderSprites:
 		Image: GUN
+
+GUN.mission:
+	Inherits: GUN
+	Buildable:
+		Prerequisites: building-tent, ~structures.allies, ~global-missionrules, ~player.normal, ~techlevel.2
+	Valued:
+		Cost: 600
+	Armament:
+		Weapon: TurretGun.mission
+	Power:
+		Amount: -40
 
 FTUR:
 	Inherits: ^Defense
@@ -1847,7 +1881,7 @@ BRIK:
 		Queue: Building
 		BuildDuration: 50
 		BuildPaletteOrder: 80
-		Prerequisites: ~player.normal, ~techlevel.5
+		Prerequisites: ~!global-missionrules, ~player.normal, ~techlevel.5
 		Description: Stop units and blocks enemy fire.
 	Valued:
 		Cost: 50
@@ -1874,6 +1908,13 @@ BRIK:
 		Type: concrete
 	RenderSprites:
 		Image: BRIK
+
+BRIK.mission:
+	Inherits: BRIK
+	Buildable:
+		Prerequisites: ~global-missionrules, ~player.normal, ~techlevel.5
+	Valued:
+		Cost: 100
 
 VGATE:
 	Inherits: ^Gate
