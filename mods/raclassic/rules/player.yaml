@@ -84,7 +84,7 @@ Player:
 		CashTickDownNotification: CashTickDown
 		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
-		CheckboxDisplayOrder: 14
+		CheckboxDisplayOrder: 17
 	GpsWatcher:
 	Shroud:
 		FogCheckboxEnabled: false
@@ -138,6 +138,13 @@ Player:
 		Enabled: False
 		DisplayOrder: 13
 		Prerequisites: global-autoscatter
+	LobbyPrerequisiteCheckbox@GLOBALMULTIENGINEER:
+		ID: multiengineer
+		Label: Multi Engineer
+		Description: Multiple Engineers are required to capture a building.
+		Enabled: True
+		DisplayOrder: 14
+		Prerequisites: global-multiengineer
 	LobbyPrerequisiteCheckbox@GLOBALBLOCKABLEBULLETS:
 		ID: blockablebullets
 		Label: Blockable Bullets

@@ -252,11 +252,19 @@ E6:
 		PipType: Yellow
 	EngineerRepair:
 	RepairsBridges:
-	Captures:
+	Captures@Single:
+		CaptureTypes: building
+		PlayerExperience: 25
+		RequiresCondition: !multiengineer
+	Captures@Multi:
 		CaptureTypes: building
 		SabotageHPRemoval: 33
 		SabotageThreshold: 66
 		PlayerExperience: 25
+		RequiresCondition: multiengineer
+	GrantConditionOnPrerequisite@MULTIENGINEER:
+		Condition: multiengineer
+		Prerequisites: global-multiengineer
 	Voiced:
 		VoiceSet: EngineerVoice
 	RenderSprites:
