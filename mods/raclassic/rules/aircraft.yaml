@@ -90,6 +90,8 @@ MIG:
 		Cost: 1200
 	Tooltip:
 		Name: MiG
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 50
 	Armor:
@@ -148,6 +150,8 @@ YAK:
 		Cost: 800
 	Tooltip:
 		Name: Yak
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 60
 	Armor:
@@ -264,6 +268,8 @@ HELI:
 		Cost: 1200
 	Tooltip:
 		Name: Longbow
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 225
 	Armor:
@@ -329,6 +335,8 @@ HIND:
 		Cost: 1200
 	Tooltip:
 		Name: Hind
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 225
 	Armor:

@@ -15,6 +15,8 @@ V2RL:
 		Cost: 700
 	Tooltip:
 		Name: V2 Rocket
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 150
 	Armor:
@@ -71,6 +73,8 @@ V2RL:
 		Cost: 700
 	Tooltip:
 		Name: Light Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 300
 	Armor:
@@ -116,6 +120,8 @@ V2RL:
 		Cost: 800
 	Tooltip:
 		Name: Medium Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 400
 	Armor:
@@ -163,6 +169,8 @@ V2RL:
 		Cost: 950
 	Tooltip:
 		Name: Heavy Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 400
 	Armor:
@@ -207,6 +215,8 @@ V2RL:
 		Cost: 1700
 	Tooltip:
 		Name: Mammoth Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 600
 	Armor:
@@ -283,6 +293,8 @@ ARTY:
 		Cost: 600
 	Tooltip:
 		Name: Artillery
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 75
 	Armor:
@@ -420,6 +432,8 @@ JEEP:
 		Cost: 600
 	Tooltip:
 		Name: Ranger
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 150
 	Armor:
@@ -474,6 +488,8 @@ APC:
 		Cost: 800
 	Tooltip:
 		Name: Armored Personnel Carrier
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 200
 	Armor:
@@ -673,6 +689,8 @@ TTNK:
 		Cost: 1500
 	Tooltip:
 		Name: Tesla Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 110
 	Armor:
@@ -710,6 +728,8 @@ DTRK:
 		Cost: 2400
 	Tooltip:
 		Name: Demolition Truck
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 110
 	Armor:
@@ -750,6 +770,8 @@ CTNK:
 		Cost: 2400
 	Tooltip:
 		Name: Chrono Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	SelectionDecorations:
 	Health:
 		HP: 350
@@ -806,6 +828,8 @@ QTNK:
 		Cost: 2300
 	Tooltip:
 		Name: MAD Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 300
 	Armor:
@@ -842,6 +866,8 @@ STNK:
 		Cost: 800
 	Tooltip:
 		Name: Phase Transport
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 200
 	Armor:
