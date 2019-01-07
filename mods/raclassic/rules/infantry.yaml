@@ -25,6 +25,7 @@ DOG:
 	Mobile:
 		Speed: 40
 		Voice: Move
+		RequiresCondition: !attack-cooldown && !eating
 	Guard:
 		Voice: Move
 	Passenger:
@@ -33,18 +34,33 @@ DOG:
 		Range: 5c0
 	Armament:
 		Weapon: DogJaw
+		ReloadingCondition: attack-cooldown
 	AttackLeap:
 		Voice: Attack
+		PauseOnCondition: attacking || attack-cooldown
 	AttackMove:
 		Voice: Move
+	GrantConditionOnAttack:
+		Condition: eating
+		RevokeDelay: 45
+	GrantConditionWhileAiming:
+		Condition: run
 	AutoTarget:
 		InitialStance: AttackAnything
 		ScanRadius: 7
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry, Spy
 	WithInfantryBody:
-		DefaultAttackSequence: shoot
+		MoveSequence: walk
 		StandSequences: stand
+		DefaultAttackSequence: eat
+		RequiresCondition: !run
+	WithInfantryBody@RUN:
+		MoveSequence: run
+		RequiresCondition: run
+	SpeedMultiplier:
+		Modifier: 150
+		RequiresCondition: run
 	Voiced:
 		VoiceSet: DogVoice
 	-TakeCover:
@@ -229,11 +245,13 @@ E6:
 	Captures:
 		CaptureTypes: building
 		SabotageHPRemoval: 33
+		SabotageThreshold: 66
 		PlayerExperience: 25
 	Voiced:
 		VoiceSet: EngineerVoice
 	RenderSprites:
 		Image: E6
+	CaptureManager:
 
 SPY:
 	Inherits: ^Soldier
@@ -258,6 +276,7 @@ SPY:
 	Infiltrates:
 		Types: SpyInfiltrate
 		PlayerExperience: 50
+		Notification: BuildingInfiltrated
 	WithInfantryBody:
 	Targetable:
 		TargetTypes: Ground, Infantry, Spy
@@ -322,7 +341,8 @@ E7:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		StandSequences: stand
-	AnnounceOnBuild:
+	VoiceAnnouncement:
+		Voice: Build
 	AnnounceOnKill:
 	Voiced:
 		VoiceSet: TanyaVoice
@@ -486,6 +506,7 @@ THF:
 	Infiltrates:
 		Types: ThiefInfiltrate
 		PlayerExperience: 50
+		Notification: BuildingInfiltrated
 	Voiced:
 		VoiceSet: ThiefVoice
 	WithInfantryBody:

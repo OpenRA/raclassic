@@ -99,7 +99,7 @@ MIG:
 		LocalOffset: 0,-640,0, 0,640,0
 		LocalYaw: -40, 24
 		PauseOnCondition: !ammo
-	AttackPlane:
+	AttackAircraft:
 		FacingTolerance: 20
 	Aircraft:
 		CruiseAltitude: 2560
@@ -164,7 +164,7 @@ YAK:
 		MuzzleSequence: muzzle
 		FireDelay: 1
 		PauseOnCondition: !ammo
-	AttackPlane:
+	AttackAircraft:
 		FacingTolerance: 20
 	Aircraft:
 		CruiseAltitude: 2560
@@ -278,7 +278,7 @@ HELI:
 		LocalOffset: 0,-213,-85, 0,213,-85
 		PauseOnCondition: !ammo
 		RequiresCondition: spain
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 	Aircraft:
 		InitialFacing: 224
@@ -344,7 +344,7 @@ HIND:
 		LocalOffset: 85,213,-85
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 	Aircraft:
 		InitialFacing: 224

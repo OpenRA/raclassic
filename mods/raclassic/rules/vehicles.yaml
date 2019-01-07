@@ -534,6 +534,8 @@ MNLY.AP:
 		Actor: MNLY.AP.Husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
+	Rearmable:
+		RearmActors: fix
 
 MNLY.AV:
 	Inherits: ^Minelayer
@@ -553,6 +555,8 @@ MNLY.AV:
 		Actor: MNLY.AV.Husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
+	Rearmable:
+		RearmActors: fix
 
 TRUK:
 	Inherits: ^Vehicle
@@ -881,7 +885,7 @@ STNK:
 		CloakSound: appear1.aud
 		UncloakSound: appear1.aud
 		CloakedCondition: cloaked
-		RequiresCondition: !cloak-force-disabled
+		PauseOnCondition: cloak-force-disabled
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical

@@ -11,41 +11,77 @@ Player:
 	TechTree:
 	ClassicProductionQueue@Building:
 		Type: Building
-		LowPowerSlowdown: 3
-		QueuedAudio: Building
+		LowPowerModifier: 300
 		ReadyAudio: ConstructionComplete
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 		SpeedUp: True
 		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Vehicle:
 		Type: Vehicle
-		LowPowerSlowdown: 3
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 		SpeedUp: True
 		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Infantry:
 		Type: Infantry
-		LowPowerSlowdown: 3
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 		SpeedUp: True
 		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Ship:
 		Type: Ship
-		LowPowerSlowdown: 3
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 		SpeedUp: True
 		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Aircraft:
 		Type: Aircraft
-		LowPowerSlowdown: 3
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 		SpeedUp: True
 		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	PlaceBuilding:
+		NewOptionsNotification: NewOptions
+		CannotPlaceNotification: BuildingCannotPlaceAudio
 	SupportPowerManager:
 	ScriptTriggers:
 	MissionObjectives:
+		WinNotification: Win
+		LoseNotification: Lose
+		LeaveNotification: Leave
 	ConquestVictoryConditions:
 	PowerManager:
+		SpeechNotification: LowPower
 	AllyRepair:
 	PlayerResources:
 		SelectableCash: 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000
 		DefaultCash: 10000
+		CashTickUpNotification: CashTickUp
+		CashTickDownNotification: CashTickDown
 		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
 		CheckboxDisplayOrder: 14
@@ -160,6 +196,7 @@ Player:
 		Name: 10
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7, techlevel.8, techlevel.9, techlevel.10
 		Id: 10
+	ConditionManager:
 	GrantConditionOnPrerequisiteManager:
 	EnemyWatcher:
 	ResourceStorageWarning:
