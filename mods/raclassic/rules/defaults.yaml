@@ -914,8 +914,7 @@
 		Spins: False
 		Moves: True
 		Velocity: 86
-	MapEditorData:
-		Categories: Husk
+	-MapEditorData:
 	RevealOnDeath:
 		Duration: 60
 		Radius: 4c0
@@ -934,6 +933,7 @@
 	FallsToEarth:
 	BodyOrientation:
 		UseClassicFacingFudge: True
+	-MapEditorData:
 	RevealOnDeath:
 		Duration: 60
 		Radius: 4c0
