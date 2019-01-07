@@ -15,6 +15,8 @@ DOG:
 	Tooltip:
 		Name: Attack Dog
 		GenericName: Dog
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Selectable:
 		Class: DOG
 		Bounds: 12,17,-1,-4
@@ -86,6 +88,8 @@ E1:
 		Cost: 100
 	Tooltip:
 		Name: Rifle Infantry
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 50
 	Armament@PRIMARY:
@@ -122,6 +126,8 @@ E2:
 		Cost: 160
 	Tooltip:
 		Name: Grenadier
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 50
 	Mobile:
@@ -157,6 +163,8 @@ E3:
 		Cost: 300
 	Tooltip:
 		Name: Rocket Soldier
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 45
 	Mobile:
@@ -206,6 +214,8 @@ E4:
 		Cost: 300
 	Tooltip:
 		Name: Flamethrower
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 40
 	Mobile:
@@ -307,6 +317,8 @@ E7:
 		Cost: 1200
 	Tooltip:
 		Name: Tanya
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 100
 	Mobile:
@@ -534,6 +546,8 @@ SHOK:
 		Cost: 900
 	Tooltip:
 		Name: Shock Trooper
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Health:
 		HP: 80
 	Mobile:
