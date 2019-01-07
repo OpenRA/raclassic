@@ -67,6 +67,7 @@ BADR.Bomber:
 		Offset: -432,-560,0
 		Interval: 2
 	RejectsOrders:
+	-MapEditorData:
 	RenderSprites:
 		Image: badr
 	GivesExperience:
@@ -416,3 +417,4 @@ U2:
 		Interval: 2
 	RejectsOrders:
 	Interactable:
+	-MapEditorData:
