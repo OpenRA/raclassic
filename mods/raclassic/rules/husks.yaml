@@ -337,7 +337,7 @@ T01.Husk:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -347,7 +347,7 @@ T02.Husk:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -357,7 +357,7 @@ T03.Husk:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -367,7 +367,7 @@ T04.Husk:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: TEMPERAT, SNOW, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -377,7 +377,7 @@ T05.Husk:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -387,7 +387,7 @@ T06.Husk:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -397,7 +397,7 @@ T07.Husk:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -412,7 +412,7 @@ T08.Husk:
 
 T09.Husk:
 	Inherits: ^TreeHusk
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: TEMPERAT, SNOW, INTERIOR
 
 T10.Husk:
@@ -420,7 +420,7 @@ T10.Husk:
 	Building:
 		Footprint: __ xx
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -430,7 +430,7 @@ T11.Husk:
 	Building:
 		Footprint: __ xx
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -440,7 +440,7 @@ T12.Husk:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -450,7 +450,7 @@ T13.Husk:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -460,7 +460,7 @@ T14.Husk:
 	Building:
 		Footprint: ___ xx_
 		Dimensions: 3,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -470,7 +470,7 @@ T15.Husk:
 	Building:
 		Footprint: ___ xx_
 		Dimensions: 3,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -480,7 +480,7 @@ T16.Husk:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -490,7 +490,7 @@ T17.Husk:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -500,7 +500,7 @@ TC01.Husk:
 	Building:
 		Footprint: ___ xx_
 		Dimensions: 3,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -510,7 +510,7 @@ TC02.Husk:
 	Building:
 		Footprint: _x_ xx_
 		Dimensions: 3,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -520,7 +520,7 @@ TC03.Husk:
 	Building:
 		Footprint: xx_ xx_
 		Dimensions: 3,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -530,7 +530,7 @@ TC04.Husk:
 	Building:
 		Footprint: ____ xxx_ x___
 		Dimensions: 4,3
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -540,7 +540,7 @@ TC05.Husk:
 	Building:
 		Footprint: __x_ xxx_ _xx_
 		Dimensions: 4,3
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building

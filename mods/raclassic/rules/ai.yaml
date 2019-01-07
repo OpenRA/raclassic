@@ -1,693 +1,22 @@
 Player:
-	HackyAI@RushAI:
+	ModularBot@RushAI:
 		Name: Rush AI
 		Type: rush
-		MinimumExcessPower: 40
-		BuildingCommonNames:
-			ConstructionYard: fact
-			Refinery: proc, proc.russia, proc.turkey
-			Power: powr, powr.russia, powr.greece, powr.turkey, apwr, apwr.russia, apwr.greece, apwr.turkey
-			Barracks: barr, barr.russia, barr.turkey, tent.russia, tent.turkey
-			VehiclesFactory: weap, weap.russia, weap.turkey
-			Production: barr, barr.russia, barr.turkey, tent.russia, tent.turkey, weap, weap.russia, weap.turkey
-			Silo: silo, silo.russia, silo.turkey
-		UnitsCommonNames:
-			Mcv: mcv, mcv.russia, mcv.turkey
-			NavalUnits: ss, ss.russia, ss.turkey, msub, msub.russia, msub.turkey, dd, dd.russia, dd.turkey, ca.russia, ca.turkey, lst.russia, lst.turkey, pt.russia, pt.turkey
-			ExcludeFromSquads: harv, harv.russia, harv.turkey
-		BuildingLimits:
-			proc: 4
-			barr: 1
-			tent: 1
-			kenn: 1
-			dome: 1
-			weap: 1
-			atek: 1
-			stek: 1
-			fix: 1
-			proc.russia: 4
-			barr.russia: 1
-			tent.russia: 1
-			kenn.russia: 1
-			dome.russia: 1
-			weap.russia: 1
-			atek.russia: 1
-			stek.russia: 1
-			fix.russia: 1
-			proc.turkey: 4
-			barr.turkey: 1
-			tent.turkey: 1
-			kenn.turkey: 1
-			dome.turkey: 1
-			weap.turkey: 1
-			atek.turkey: 1
-			stek.turkey: 1
-			fix.turkey: 1
-		BuildingFractions:
-			proc: 30%
-			powr: 15%
-			apwr: 20%
-			barr: 1%
-			kenn: 0.5%
-			tent: 1%
-			weap: 1%
-			pbox: 7%
-			gun: 7%
-			tsla: 5%
-			gap: 2%
-			ftur: 10%
-			agun: 5%
-			sam: 5%
-			atek: 1%
-			stek: 1%
-			fix: 0.1%
-			dome: 10%
-			proc.russia: 30%
-			powr.russia: 15%
-			apwr.russia: 20%
-			barr.russia: 1%
-			kenn.russia: 0.5%
-			tent.russia: 1%
-			weap.russia: 1%
-			pbox.russia: 7%
-			gun.russia: 7%
-			tsla.russia: 5%
-			gap.russia: 2%
-			ftur.russia: 10%
-			agun.russia: 5%
-			sam.russia: 5%
-			atek.russia: 1%
-			stek.russia: 1%
-			fix.russia: 0.1%
-			dome.russia: 10%
-			powr.greece: 15%
-			apwr.greece: 20%
-			proc.turkey: 30%
-			powr.turkey: 15%
-			apwr.turkey: 20%
-			barr.turkey: 1%
-			kenn.turkey: 0.5%
-			tent.turkey: 1%
-			weap.turkey: 1%
-			pbox.turkey: 7%
-			gun.turkey: 7%
-			tsla.turkey: 5%
-			gap.turkey: 2%
-			ftur.turkey: 10%
-			agun.turkey: 5%
-			sam.turkey: 5%
-			atek.turkey: 1%
-			stek.turkey: 1%
-			fix.turkey: 0.1%
-			dome.turkey: 10%
-		UnitsToBuild:
-			e1: 65%
-			e2: 25%
-			e3: 40%
-			e4: 15%
-			dog: 15%
-			shok: 15%
-			harv: 10%
-			apc: 30%
-			jeep: 40%
-			arty: 15%
-			v2rl: 40%
-			1tnk: 70%
-			2tnk: 25%
-			3tnk: 50%
-			4tnk: 10%
-			ttnk: 10%
-			stnk: 5%
-			e1.russia: 65%
-			e2.russia: 25%
-			e3.russia: 40%
-			e4.russia: 15%
-			dog.russia: 15%
-			shok.russia: 15%
-			harv.russia: 10%
-			apc.russia: 30%
-			jeep.russia: 40%
-			arty.russia: 15%
-			v2rl.russia: 40%
-			1tnk.russia: 70%
-			2tnk.russia: 25%
-			3tnk.russia: 50%
-			4tnk.russia: 10%
-			ttnk.russia: 10%
-			stnk.russia: 5%
-			e1.turkey: 65%
-			e2.turkey: 25%
-			e3.turkey: 40%
-			e4.turkey: 15%
-			dog.turkey: 15%
-			shok.turkey: 15%
-			harv.turkey: 10%
-			apc.turkey: 30%
-			jeep.turkey: 40%
-			arty.turkey: 15%
-			v2rl.turkey: 40%
-			1tnk.turkey: 70%
-			2tnk.turkey: 25%
-			3tnk.turkey: 50%
-			4tnk.turkey: 10%
-			ttnk.turkey: 10%
-			stnk.turkey: 5%
-		UnitLimits:
-			dog: 4
-			harv: 8
-			dog.russia: 4
-			harv.russia: 8
-			dog.turkey: 4
-			harv.turkey: 8
-		SquadSize: 20
-		SupportPowerDecisions:
-			spyplane:
-				OrderName: SovietSpyPlane
-				MinimumAttractiveness: 1
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 5c0
-			paratroopers:
-				OrderName: SovietParatroopers
-				MinimumAttractiveness: 5
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 8c0
-				Consideration@2:
-					Against: Enemy
-					Types: Water
-					Attractiveness: -5
-					TargetMetric: None
-					CheckRadius: 8c0
-			parabombs:
-				OrderName: UkraineParabombs
-				MinimumAttractiveness: 1
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 5c0
-			nukepower:
-				OrderName: NukePowerInfoOrder
-				MinimumAttractiveness: 3000
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 7c0
-	HackyAI@NormalAI:
+	ModularBot@NormalAI:
 		Name: Normal AI
 		Type: normal
-		MinimumExcessPower: 60
-		BuildingCommonNames:
-			ConstructionYard: fact
-			Refinery: proc, proc.russia, proc.turkey
-			Power: powr, powr.russia, powr.greece, powr.turkey, apwr, apwr.russia, apwr.greece, apwr.turkey
-			Barracks: barr, barr.russia, barr.turkey, tent.russia, tent.turkey
-			VehiclesFactory: weap, weap.russia, weap.turkey
-			Production: barr, barr.russia, barr.turkey, tent.russia, tent.turkey, weap, weap.russia, weap.turkey, afld, afld.russia, afld.turkey, hpad, hpad.russia, hpad.turkey
-			NavalProduction: spen, spen.russia, spen.turkey, syrd, syrd.russia, syrd.turkey
-			Silo: silo, silo.russia, silo.turkey
-		UnitsCommonNames:
-			Mcv: mcv, mcv.russia, mcv.turkey
-			NavalUnits: ss, ss.russia, ss.turkey, msub, msub.russia, msub.turkey, dd, dd.russia, dd.turkey, ca.russia, ca.turkey, lst.russia, lst.turkey, pt.russia, pt.turkey
-			ExcludeFromSquads: harv, harv.russia, harv.turkey
-		BuildingLimits:
-			proc: 4
-			barr: 1
-			tent: 1
-			kenn: 1
-			dome: 1
-			weap: 1
-			spen: 1
-			syrd: 1
-			hpad: 4
-			afld: 4
-			atek: 1
-			stek: 1
-			fix: 1
-			proc.russia: 4
-			barr.russia: 1
-			tent.russia: 1
-			kenn.russia: 1
-			dome.russia: 1
-			weap.russia: 1
-			spen.russia: 1
-			syrd.russia: 1
-			hpad.russia: 4
-			afld.russia: 4
-			atek.russia: 1
-			stek.russia: 1
-			fix.russia: 1
-			proc.turkey: 4
-			barr.turkey: 1
-			tent.turkey: 1
-			kenn.turkey: 1
-			dome.turkey: 1
-			weap.turkey: 1
-			spen.turkey: 1
-			syrd.turkey: 1
-			hpad.turkey: 4
-			afld.turkey: 4
-			atek.turkey: 1
-			stek.turkey: 1
-			fix.turkey: 1
-		BuildingFractions:
-			proc: 10%
-			powr: 1%
-			apwr: 30%
-			tent: 1%
-			barr: 1%
-			kenn: 0.5%
-			dome: 1%
-			weap: 6%
-			hpad: 4%
-			spen: 1%
-			syrd: 1%
-			afld: 4%
-			pbox: 7%
-			gun: 7%
-			ftur: 10%
-			tsla: 5%
-			gap: 2%
-			fix: 1%
-			agun: 5%
-			sam: 1%
-			atek: 1%
-			stek: 1%
-			mslo: 1%
-			proc.russia: 10%
-			powr.russia: 1%
-			apwr.russia: 30%
-			tent.russia: 1%
-			barr.russia: 1%
-			kenn.russia: 0.5%
-			dome.russia: 1%
-			weap.russia: 6%
-			hpad.russia: 4%
-			spen.russia: 1%
-			syrd.russia: 1%
-			afld.russia: 4%
-			pbox.russia: 7%
-			gun.russia: 7%
-			ftur.russia: 10%
-			tsla.russia: 5%
-			gap.russia: 2%
-			fix.russia: 1%
-			agun.russia: 5%
-			sam.russia: 1%
-			atek.russia: 1%
-			stek.russia: 1%
-			mslo.russia: 1%
-			powr.greece: 1%
-			apwr.greece: 30%
-			proc.turkey: 10%
-			powr.turkey: 1%
-			apwr.turkey: 30%
-			tent.turkey: 1%
-			barr.turkey: 1%
-			kenn.turkey: 0.5%
-			dome.turkey: 1%
-			weap.turkey: 6%
-			hpad.turkey: 4%
-			spen.turkey: 1%
-			syrd.turkey: 1%
-			afld.turkey: 4%
-			pbox.turkey: 7%
-			gun.turkey: 7%
-			ftur.turkey: 10%
-			tsla.turkey: 5%
-			gap.turkey: 2%
-			fix.turkey: 1%
-			agun.turkey: 5%
-			sam.turkey: 1%
-			atek.turkey: 1%
-			stek.turkey: 1%
-			mslo.turkey: 1%
-		UnitsToBuild:
-			e1: 65%
-			e2: 25%
-			e3: 40%
-			e4: 15%
-			dog: 15%
-			shok: 15%
-			harv: 10%
-			apc: 30%
-			jeep: 40%
-			arty: 15%
-			v2rl: 40%
-			1tnk: 70%
-			2tnk: 25%
-			3tnk: 50%
-			4tnk: 15%
-			ttnk: 15%
-			stnk: 10%
-			heli: 30%
-			hind: 30%
-			mig: 30%
-			yak: 30%
-			ss: 10%
-			msub: 10%
-			dd: 10%
-			ca: 10%
-			pt: 10%
-			e1.russia: 65%
-			e2.russia: 25%
-			e3.russia: 40%
-			e4.russia: 15%
-			dog.russia: 15%
-			shok.russia: 15%
-			harv.russia: 10%
-			apc.russia: 30%
-			jeep.russia: 40%
-			arty.russia: 15%
-			v2rl.russia: 40%
-			1tnk.russia: 70%
-			2tnk.russia: 25%
-			3tnk.russia: 50%
-			4tnk.russia: 15%
-			ttnk.russia: 15%
-			stnk.russia: 10%
-			heli.russia: 30%
-			hind.russia: 30%
-			mig.russia: 30%
-			yak.russia: 30%
-			ss.russia: 10%
-			msub.russia: 10%
-			dd.russia: 10%
-			ca.russia: 10%
-			pt.russia: 10%
-			e1.turkey: 65%
-			e2.turkey: 25%
-			e3.turkey: 40%
-			e4.turkey: 15%
-			dog.turkey: 15%
-			shok.turkey: 15%
-			harv.turkey: 10%
-			apc.turkey: 30%
-			jeep.turkey: 40%
-			arty.turkey: 15%
-			v2rl.turkey: 40%
-			1tnk.turkey: 70%
-			2tnk.turkey: 25%
-			3tnk.turkey: 50%
-			4tnk.turkey: 15%
-			ttnk.turkey: 15%
-			stnk.turkey: 10%
-			heli.turkey: 30%
-			hind.turkey: 30%
-			mig.turkey: 30%
-			yak.turkey: 30%
-			ss.turkey: 10%
-			msub.turkey: 10%
-			dd.turkey: 10%
-			ca.turkey: 10%
-			pt.turkey: 10%
-		UnitLimits:
-			dog: 4
-			harv: 8
-			dog.russia: 4
-			harv.russia: 8
-			dog.turkey: 4
-			harv.turkey: 8
-		SquadSize: 40
-		SupportPowerDecisions:
-			spyplane:
-				OrderName: SovietSpyPlane
-				MinimumAttractiveness: 1
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 5c0
-			paratroopers:
-				OrderName: SovietParatroopers
-				MinimumAttractiveness: 5
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 8c0
-				Consideration@2:
-					Against: Enemy
-					Types: Water
-					Attractiveness: -5
-					TargetMetric: None
-					CheckRadius: 8c0
-			parabombs:
-				OrderName: UkraineParabombs
-				MinimumAttractiveness: 1
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 5c0
-			nukepower:
-				OrderName: NukePowerInfoOrder
-				MinimumAttractiveness: 3000
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 7c0
-	HackyAI@TurtleAI:
+	ModularBot@TurtleAI:
 		Name: Turtle AI
 		Type: turtle
-		MinimumExcessPower: 100
-		BuildingCommonNames:
-			ConstructionYard: fact
-			Refinery: proc, proc.russia, proc.turkey
-			Power: powr, powr.russia, powr.greece, powr.turkey, apwr, apwr.russia, apwr.greece, apwr.turkey
-			Barracks: barr, barr.russia, barr.turkey, tent.russia, tent.turkey
-			VehiclesFactory: weap, weap.russia, weap.turkey
-			Production: barr, barr.russia, barr.turkey, tent.russia, tent.turkey, weap, weap.russia, weap.turkey, afld, afld.russia, afld.turkey, hpad, hpad.russia, hpad.turkey
-			NavalProduction: spen, spen.russia, spen.turkey, syrd, syrd.russia, syrd.turkey
-			Silo: silo, silo.russia, silo.turkey
-		UnitsCommonNames:
-			Mcv: mcv, mcv.russia, mcv.turkey
-			NavalUnits: ss, ss.russia, ss.turkey, msub, msub.russia, msub.turkey, dd, dd.russia, dd.turkey, ca.russia, ca.turkey, lst.russia, lst.turkey, pt.russia, pt.turkey
-			ExcludeFromSquads: harv, harv.russia, harv.turkey
-		BuildingLimits:
-			proc: 4
-			barr: 1
-			tent: 1
-			kenn: 1
-			dome: 1
-			weap: 1
-			spen: 1
-			syrd: 1
-			hpad: 4
-			afld: 4
-			atek: 1
-			stek: 1
-			fix: 1
-			proc.russia: 4
-			barr.russia: 1
-			tent.russia: 1
-			kenn.russia: 1
-			dome.russia: 1
-			weap.russia: 1
-			spen.russia: 1
-			syrd.russia: 1
-			hpad.russia: 4
-			afld.russia: 4
-			atek.russia: 1
-			stek.russia: 1
-			fix.russia: 1
-			proc.turkey: 4
-			barr.turkey: 1
-			tent.turkey: 1
-			kenn.turkey: 1
-			dome.turkey: 1
-			weap.turkey: 1
-			spen.turkey: 1
-			syrd.turkey: 1
-			hpad.turkey: 4
-			afld.turkey: 4
-			atek.turkey: 1
-			stek.turkey: 1
-			fix.turkey: 1
-		BuildingFractions:
-			proc: 30%
-			powr: 1%
-			apwr: 20%
-			tent: 1%
-			barr: 1%
-			kenn: 0.5%
-			weap: 3%
-			hpad: 2%
-			spen: 1%
-			syrd: 1%
-			pbox: 10%
-			gun: 10%
-			ftur: 10%
-			tsla: 7%
-			gap: 3%
-			fix: 0.1%
-			dome: 10%
-			agun: 5%
-			sam: 5%
-			atek: 1%
-			stek: 1%
-			mslo: 1%
-			proc.russia: 30%
-			powr.russia: 1%
-			apwr.russia: 20%
-			tent.russia: 1%
-			barr.russia: 1%
-			kenn.russia: 0.5%
-			weap.russia: 3%
-			hpad.russia: 2%
-			spen.russia: 1%
-			syrd.russia: 1%
-			pbox.russia: 10%
-			gun.russia: 10%
-			ftur.russia: 10%
-			tsla.russia: 7%
-			gap.russia: 3%
-			fix.russia: 0.1%
-			dome.russia: 10%
-			agun.russia: 5%
-			sam.russia: 5%
-			atek.russia: 1%
-			stek.russia: 1%
-			mslo.russia: 1%
-			powr.greece: 1%
-			apwr.greece: 20%
-			proc.turkey: 30%
-			powr.turkey: 1%
-			apwr.turkey: 20%
-			tent.turkey: 1%
-			barr.turkey: 1%
-			kenn.turkey: 0.5%
-			weap.turkey: 3%
-			hpad.turkey: 2%
-			spen.turkey: 1%
-			syrd.turkey: 1%
-			pbox.turkey: 10%
-			gun.turkey: 10%
-			ftur.turkey: 10%
-			tsla.turkey: 7%
-			gap.turkey: 3%
-			fix.turkey: 0.1%
-			dome.turkey: 10%
-			agun.turkey: 5%
-			sam.turkey: 5%
-			atek.turkey: 1%
-			stek.turkey: 1%
-			mslo.turkey: 1%
-		UnitsToBuild:
-			e1: 65%
-			e2: 25%
-			e3: 40%
-			e4: 15%
-			dog: 15%
-			shok: 15%
-			harv: 10%
-			apc: 30%
-			jeep: 40%
-			arty: 15%
-			v2rl: 40%
-			1tnk: 70%
-			2tnk: 25%
-			3tnk: 50%
-			4tnk: 20%
-			ttnk: 20%
-			stnk: 15%
-			heli: 30%
-			hind: 30%
-			mig: 30%
-			yak: 30%
-			ss: 10%
-			msub: 10%
-			dd: 10%
-			ca: 10%
-			pt: 10%
-			e1.russia: 65%
-			e2.russia: 25%
-			e3.russia: 40%
-			e4.russia: 15%
-			dog.russia: 15%
-			shok.russia: 15%
-			harv.russia: 10%
-			apc.russia: 30%
-			jeep.russia: 40%
-			arty.russia: 15%
-			v2rl.russia: 40%
-			1tnk.russia: 70%
-			2tnk.russia: 25%
-			3tnk.russia: 50%
-			4tnk.russia: 20%
-			ttnk.russia: 20%
-			stnk.russia: 15%
-			heli.russia: 30%
-			hind.russia: 30%
-			mig.russia: 30%
-			yak.russia: 30%
-			ss.russia: 10%
-			msub.russia: 10%
-			dd.russia: 10%
-			ca.russia: 10%
-			pt.russia: 10%
-			e1.turkey: 65%
-			e2.turkey: 25%
-			e3.turkey: 40%
-			e4.turkey: 15%
-			dog.turkey: 15%
-			shok.turkey: 15%
-			harv.turkey: 10%
-			apc.turkey: 30%
-			jeep.turkey: 40%
-			arty.turkey: 15%
-			v2rl.turkey: 40%
-			1tnk.turkey: 70%
-			2tnk.turkey: 25%
-			3tnk.turkey: 50%
-			4tnk.turkey: 20%
-			ttnk.turkey: 20%
-			stnk.turkey: 15%
-			heli.turkey: 30%
-			hind.turkey: 30%
-			mig.turkey: 30%
-			yak.turkey: 30%
-			ss.turkey: 10%
-			msub.turkey: 10%
-			dd.turkey: 10%
-			ca.turkey: 10%
-			pt.turkey: 10%
-		UnitLimits:
-			dog: 4
-			harv: 8
-			dog.russia: 4
-			harv.russia: 8
-			dog.turkey: 4
-			harv.turkey: 8
-		SquadSize: 10
-		SupportPowerDecisions:
+	ModularBot@NavalAI:
+		Name: Naval AI
+		Type: naval
+	GrantConditionOnBotOwner@rush:
+		Condition: enable-rush-ai
+		Bots: rush
+	SupportPowerBotModule@rush:
+		RequiresCondition: enable-rush-ai
+		Decisions:
 			spyplane:
 				OrderName: SovietSpyPlane
 				MinimumAttractiveness: 1
@@ -736,22 +65,788 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
-	HackyAI@NavalAI:
-		Name: Naval AI
-		Type: naval
-		BuildingCommonNames:
-			ConstructionYard: fact
-			Refinery: proc, proc.russia, proc.turkey
-			Power: powr, powr.russia, powr.greece, powr.turkey, apwr, apwr.russia, apwr.greece, apwr.turkey
-			Barracks: barr, barr.russia, barr.turkey, tent.russia, tent.turkey
-			VehiclesFactory: weap, weap.russia, weap.turkey
-			Production: barr, barr.russia, barr.turkey, tent.russia, tent.turkey, weap, weap.russia, weap.turkey, afld, afld.russia, afld.turkey, hpad, hpad.russia, hpad.turkey
-			NavalProduction: spen, spen.russia, spen.turkey, syrd, syrd.russia, syrd.turkey
-			Silo: silo, silo.russia, silo.turkey
-		UnitsCommonNames:
-			Mcv: mcv, mcv.russia, mcv.turkey
-			NavalUnits: ss, ss.russia, ss.turkey, msub, msub.russia, msub.turkey, dd, dd.russia, dd.turkey, ca.russia, ca.turkey, lst.russia, lst.turkey, pt.russia, pt.turkey
-			ExcludeFromSquads: harv, harv.russia, harv.turkey
+	BaseBuilderBotModule@rush:
+		RequiresCondition: enable-rush-ai
+		MinimumExcessPower: 40
+		ConstructionYardTypes: fact
+		RefineryTypes: proc, proc.russia, proc.turkey
+		PowerTypes: powr, powr.russia, powr.greece, powr.turkey, apwr, apwr.russia, apwr.greece, apwr.turkey
+		BarracksTypes: barr, barr.russia, barr.turkey, tent.russia, tent.turkey
+		VehiclesFactoryTypes: weap, weap.russia, weap.turkey
+		ProductionTypes: barr, barr.russia, barr.turkey, tent.russia, tent.turkey, weap, weap.russia, weap.turkey
+		SiloTypes: silo, silo.russia, silo.turkey
+		BuildingLimits:
+			proc: 4
+			barr: 1
+			tent: 1
+			kenn: 1
+			dome: 1
+			weap: 1
+			atek: 1
+			stek: 1
+			fix: 1
+			proc.russia: 4
+			barr.russia: 1
+			tent.russia: 1
+			kenn.russia: 1
+			dome.russia: 1
+			weap.russia: 1
+			atek.russia: 1
+			stek.russia: 1
+			fix.russia: 1
+			proc.turkey: 4
+			barr.turkey: 1
+			tent.turkey: 1
+			kenn.turkey: 1
+			dome.turkey: 1
+			weap.turkey: 1
+			atek.turkey: 1
+			stek.turkey: 1
+			fix.turkey: 1
+		BuildingFractions:
+			proc: 30
+			powr: 15
+			apwr: 20
+			barr: 1
+			kenn: 1
+			tent: 1
+			weap: 1
+			pbox: 7
+			gun: 7
+			tsla: 5
+			gap: 2
+			ftur: 10
+			agun: 5
+			sam: 5
+			atek: 1
+			stek: 1
+			fix: 1
+			dome: 10
+			proc.russia: 30
+			powr.russia: 15
+			apwr.russia: 20
+			barr.russia: 1
+			kenn.russia: 1
+			tent.russia: 1
+			weap.russia: 1
+			pbox.russia: 7
+			gun.russia: 7
+			tsla.russia: 5
+			gap.russia: 2
+			ftur.russia: 10
+			agun.russia: 5
+			sam.russia: 5
+			atek.russia: 1
+			stek.russia: 1
+			fix.russia: 1
+			dome.russia: 10
+			powr.greece: 15
+			apwr.greece: 20
+			proc.turkey: 30
+			powr.turkey: 15
+			apwr.turkey: 20
+			barr.turkey: 1
+			kenn.turkey: 1
+			tent.turkey: 1
+			weap.turkey: 1
+			pbox.turkey: 7
+			gun.turkey: 7
+			tsla.turkey: 5
+			gap.turkey: 2
+			ftur.turkey: 10
+			agun.turkey: 5
+			sam.turkey: 5
+			atek.turkey: 1
+			stek.turkey: 1
+			fix.turkey: 1
+			dome.turkey: 10
+	SquadManagerBotModule@rush:
+		RequiresCondition: enable-rush-ai
+		SquadSize: 20
+		ExcludeFromSquadsTypes: harv, harv.russia, harv.turkey, mcv, mcv.russia, mcv.turkey
+		NavalUnitsTypes: ss, ss.russia, ss.turkey, msub, msub.russia, msub.turkey, dd, dd.russia, dd.turkey, ca.russia, ca.turkey, lst.russia, lst.turkey, pt.russia, pt.turkey
+		ConstructionYardTypes: fact
+	UnitBuilderBotModule@rush:
+		RequiresCondition: enable-rush-ai
+		UnitsToBuild:
+			e1: 65
+			e2: 25
+			e3: 40
+			e4: 15
+			dog: 15
+			shok: 15
+			harv: 10
+			apc: 30
+			jeep: 40
+			arty: 15
+			v2rl: 40
+			1tnk: 70
+			2tnk: 25
+			3tnk: 50
+			4tnk: 10
+			ttnk: 10
+			stnk: 5
+			e1.russia: 65
+			e2.russia: 25
+			e3.russia: 40
+			e4.russia: 15
+			dog.russia: 15
+			shok.russia: 15
+			harv.russia: 10
+			apc.russia: 30
+			jeep.russia: 40
+			arty.russia: 15
+			v2rl.russia: 40
+			1tnk.russia: 70
+			2tnk.russia: 25
+			3tnk.russia: 50
+			4tnk.russia: 10
+			ttnk.russia: 10
+			stnk.russia: 5
+			e1.turkey: 65
+			e2.turkey: 25
+			e3.turkey: 40
+			e4.turkey: 15
+			dog.turkey: 15
+			shok.turkey: 15
+			harv.turkey: 10
+			apc.turkey: 30
+			jeep.turkey: 40
+			arty.turkey: 15
+			v2rl.turkey: 40
+			1tnk.turkey: 70
+			2tnk.turkey: 25
+			3tnk.turkey: 50
+			4tnk.turkey: 10
+			ttnk.turkey: 10
+			stnk.turkey: 5
+		UnitLimits:
+			dog: 4
+			harv: 8
+			dog.russia: 4
+			harv.russia: 8
+			dog.turkey: 4
+			harv.turkey: 8
+	McvManagerBotModule@rush:
+		RequiresCondition: enable-rush-ai
+		McvTypes: mcv, mcv.russia, mcv.turkey
+		ConstructionYardTypes: fact
+		McvFactoryTypes: weap, weap.russia, weap.turkey
+	GrantConditionOnBotOwner@normal:
+		Condition: enable-normal-ai
+		Bots: normal
+	SupportPowerBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		Decisions:
+			spyplane:
+				OrderName: SovietSpyPlane
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			paratroopers:
+				OrderName: SovietParatroopers
+				MinimumAttractiveness: 5
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 8c0
+				Consideration@2:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -5
+					TargetMetric: None
+					CheckRadius: 8c0
+			parabombs:
+				OrderName: UkraineParabombs
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			nukepower:
+				OrderName: NukePowerInfoOrder
+				MinimumAttractiveness: 3000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
+	BaseBuilderBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		MinimumExcessPower: 60
+		ConstructionYardTypes: fact
+		RefineryTypes: proc, proc.russia, proc.turkey
+		PowerTypes: powr, powr.russia, powr.greece, powr.turkey, apwr, apwr.russia, apwr.greece, apwr.turkey
+		BarracksTypes: barr, barr.russia, barr.turkey, tent.russia, tent.turkey
+		VehiclesFactoryTypes: weap, weap.russia, weap.turkey
+		ProductionTypes: barr, barr.russia, barr.turkey, tent.russia, tent.turkey, weap, weap.russia, weap.turkey, afld, afld.russia, afld.turkey, hpad, hpad.russia, hpad.turkey
+		NavalProductionTypes: spen, spen.russia, spen.turkey, syrd, syrd.russia, syrd.turkey
+		SiloTypes: silo, silo.russia, silo.turkey
+		BuildingLimits:
+			proc: 4
+			barr: 1
+			tent: 1
+			kenn: 1
+			dome: 1
+			weap: 1
+			spen: 1
+			syrd: 1
+			hpad: 4
+			afld: 4
+			atek: 1
+			stek: 1
+			fix: 1
+			proc.russia: 4
+			barr.russia: 1
+			tent.russia: 1
+			kenn.russia: 1
+			dome.russia: 1
+			weap.russia: 1
+			spen.russia: 1
+			syrd.russia: 1
+			hpad.russia: 4
+			afld.russia: 4
+			atek.russia: 1
+			stek.russia: 1
+			fix.russia: 1
+			proc.turkey: 4
+			barr.turkey: 1
+			tent.turkey: 1
+			kenn.turkey: 1
+			dome.turkey: 1
+			weap.turkey: 1
+			spen.turkey: 1
+			syrd.turkey: 1
+			hpad.turkey: 4
+			afld.turkey: 4
+			atek.turkey: 1
+			stek.turkey: 1
+			fix.turkey: 1
+		BuildingFractions:
+			proc: 10
+			powr: 1
+			apwr: 30
+			tent: 1
+			barr: 1
+			kenn: 1
+			dome: 1
+			weap: 6
+			hpad: 4
+			spen: 1
+			syrd: 1
+			afld: 4
+			pbox: 7
+			gun: 7
+			ftur: 10
+			tsla: 5
+			gap: 2
+			fix: 1
+			agun: 5
+			sam: 1
+			atek: 1
+			stek: 1
+			mslo: 1
+			proc.russia: 10
+			powr.russia: 1
+			apwr.russia: 30
+			tent.russia: 1
+			barr.russia: 1
+			kenn.russia: 1
+			dome.russia: 1
+			weap.russia: 6
+			hpad.russia: 4
+			spen.russia: 1
+			syrd.russia: 1
+			afld.russia: 4
+			pbox.russia: 7
+			gun.russia: 7
+			ftur.russia: 10
+			tsla.russia: 5
+			gap.russia: 2
+			fix.russia: 1
+			agun.russia: 5
+			sam.russia: 1
+			atek.russia: 1
+			stek.russia: 1
+			mslo.russia: 1
+			powr.greece: 1
+			apwr.greece: 30
+			proc.turkey: 10
+			powr.turkey: 1
+			apwr.turkey: 30
+			tent.turkey: 1
+			barr.turkey: 1
+			kenn.turkey: 1
+			dome.turkey: 1
+			weap.turkey: 6
+			hpad.turkey: 4
+			spen.turkey: 1
+			syrd.turkey: 1
+			afld.turkey: 4
+			pbox.turkey: 7
+			gun.turkey: 7
+			ftur.turkey: 10
+			tsla.turkey: 5
+			gap.turkey: 2
+			fix.turkey: 1
+			agun.turkey: 5
+			sam.turkey: 1
+			atek.turkey: 1
+			stek.turkey: 1
+			mslo.turkey: 1
+	SquadManagerBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		SquadSize: 40
+		ExcludeFromSquadsTypes: harv, harv.russia, harv.turkey, mcv, mcv.russia, mcv.turkey
+		NavalUnitsTypes: ss, ss.russia, ss.turkey, msub, msub.russia, msub.turkey, dd, dd.russia, dd.turkey, ca.russia, ca.turkey, lst.russia, lst.turkey, pt.russia, pt.turkey
+		ConstructionYardTypes: fact
+		NavalProductionTypes: spen, spen.russia, spen.turkey, syrd, syrd.russia, syrd.turkey
+	UnitBuilderBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		UnitsToBuild:
+			e1: 65
+			e2: 25
+			e3: 40
+			e4: 15
+			dog: 15
+			shok: 15
+			harv: 10
+			apc: 30
+			jeep: 40
+			arty: 15
+			v2rl: 40
+			1tnk: 70
+			2tnk: 25
+			3tnk: 50
+			4tnk: 15
+			ttnk: 15
+			stnk: 10
+			heli: 30
+			hind: 30
+			mig: 30
+			yak: 30
+			ss: 10
+			msub: 10
+			dd: 10
+			ca: 10
+			pt: 10
+			e1.russia: 65
+			e2.russia: 25
+			e3.russia: 40
+			e4.russia: 15
+			dog.russia: 15
+			shok.russia: 15
+			harv.russia: 10
+			apc.russia: 30
+			jeep.russia: 40
+			arty.russia: 15
+			v2rl.russia: 40
+			1tnk.russia: 70
+			2tnk.russia: 25
+			3tnk.russia: 50
+			4tnk.russia: 15
+			ttnk.russia: 15
+			stnk.russia: 10
+			heli.russia: 30
+			hind.russia: 30
+			mig.russia: 30
+			yak.russia: 30
+			ss.russia: 10
+			msub.russia: 10
+			dd.russia: 10
+			ca.russia: 10
+			pt.russia: 10
+			e1.turkey: 65
+			e2.turkey: 25
+			e3.turkey: 40
+			e4.turkey: 15
+			dog.turkey: 15
+			shok.turkey: 15
+			harv.turkey: 10
+			apc.turkey: 30
+			jeep.turkey: 40
+			arty.turkey: 15
+			v2rl.turkey: 40
+			1tnk.turkey: 70
+			2tnk.turkey: 25
+			3tnk.turkey: 50
+			4tnk.turkey: 15
+			ttnk.turkey: 15
+			stnk.turkey: 10
+			heli.turkey: 30
+			hind.turkey: 30
+			mig.turkey: 30
+			yak.turkey: 30
+			ss.turkey: 10
+			msub.turkey: 10
+			dd.turkey: 10
+			ca.turkey: 10
+			pt.turkey: 10
+		UnitLimits:
+			dog: 4
+			harv: 8
+			dog.russia: 4
+			harv.russia: 8
+			dog.turkey: 4
+			harv.turkey: 8
+	McvManagerBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		McvTypes: mcv, mcv.russia, mcv.turkey
+		ConstructionYardTypes: fact
+		McvFactoryTypes: weap, weap.russia, weap.turkey
+	GrantConditionOnBotOwner@turtle:
+		Condition: enable-turtle-ai
+		Bots: turtle
+	SupportPowerBotModule@turtle:
+		RequiresCondition: enable-turtle-ai
+		Decisions:
+			spyplane:
+				OrderName: SovietSpyPlane
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			paratroopers:
+				OrderName: SovietParatroopers
+				MinimumAttractiveness: 5
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 8c0
+				Consideration@2:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -5
+					TargetMetric: None
+					CheckRadius: 8c0
+			parabombs:
+				OrderName: UkraineParabombs
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			nukepower:
+				OrderName: NukePowerInfoOrder
+				MinimumAttractiveness: 3000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
+	BaseBuilderBotModule@turtle:
+		RequiresCondition: enable-turtle-ai
+		MinimumExcessPower: 100
+		ConstructionYardTypes: fact
+		RefineryTypes: proc, proc.russia, proc.turkey
+		PowerTypes: powr, powr.russia, powr.greece, powr.turkey, apwr, apwr.russia, apwr.greece, apwr.turkey
+		BarracksTypes: barr, barr.russia, barr.turkey, tent.russia, tent.turkey
+		VehiclesFactoryTypes: weap, weap.russia, weap.turkey
+		ProductionTypes: barr, barr.russia, barr.turkey, tent.russia, tent.turkey, weap, weap.russia, weap.turkey, afld, afld.russia, afld.turkey, hpad, hpad.russia, hpad.turkey
+		NavalProductionTypes: spen, spen.russia, spen.turkey, syrd, syrd.russia, syrd.turkey
+		SiloTypes: silo, silo.russia, silo.turkey
+		BuildingLimits:
+			proc: 4
+			barr: 1
+			tent: 1
+			kenn: 1
+			dome: 1
+			weap: 1
+			spen: 1
+			syrd: 1
+			hpad: 4
+			afld: 4
+			atek: 1
+			stek: 1
+			fix: 1
+			proc.russia: 4
+			barr.russia: 1
+			tent.russia: 1
+			kenn.russia: 1
+			dome.russia: 1
+			weap.russia: 1
+			spen.russia: 1
+			syrd.russia: 1
+			hpad.russia: 4
+			afld.russia: 4
+			atek.russia: 1
+			stek.russia: 1
+			fix.russia: 1
+			proc.turkey: 4
+			barr.turkey: 1
+			tent.turkey: 1
+			kenn.turkey: 1
+			dome.turkey: 1
+			weap.turkey: 1
+			spen.turkey: 1
+			syrd.turkey: 1
+			hpad.turkey: 4
+			afld.turkey: 4
+			atek.turkey: 1
+			stek.turkey: 1
+			fix.turkey: 1
+		BuildingFractions:
+			proc: 30
+			powr: 1
+			apwr: 20
+			tent: 1
+			barr: 1
+			kenn: 1
+			weap: 3
+			hpad: 2
+			spen: 1
+			syrd: 1
+			pbox: 10
+			gun: 10
+			ftur: 10
+			tsla: 7
+			gap: 3
+			fix: 1
+			dome: 10
+			agun: 5
+			sam: 5
+			atek: 1
+			stek: 1
+			mslo: 1
+			proc.russia: 30
+			powr.russia: 1
+			apwr.russia: 20
+			tent.russia: 1
+			barr.russia: 1
+			kenn.russia: 1
+			weap.russia: 3
+			hpad.russia: 2
+			spen.russia: 1
+			syrd.russia: 1
+			pbox.russia: 10
+			gun.russia: 10
+			ftur.russia: 10
+			tsla.russia: 7
+			gap.russia: 3
+			fix.russia: 1
+			dome.russia: 10
+			agun.russia: 5
+			sam.russia: 5
+			atek.russia: 1
+			stek.russia: 1
+			mslo.russia: 1
+			powr.greece: 1
+			apwr.greece: 20
+			proc.turkey: 30
+			powr.turkey: 1
+			apwr.turkey: 20
+			tent.turkey: 1
+			barr.turkey: 1
+			kenn.turkey: 1
+			weap.turkey: 3
+			hpad.turkey: 2
+			spen.turkey: 1
+			syrd.turkey: 1
+			pbox.turkey: 10
+			gun.turkey: 10
+			ftur.turkey: 10
+			tsla.turkey: 7
+			gap.turkey: 3
+			fix.turkey: 1
+			dome.turkey: 10
+			agun.turkey: 5
+			sam.turkey: 5
+			atek.turkey: 1
+			stek.turkey: 1
+			mslo.turkey: 1
+	SquadManagerBotModule@turtle:
+		RequiresCondition: enable-turtle-ai
+		SquadSize: 10
+		ExcludeFromSquadsTypes: harv, harv.russia, harv.turkey, mcv, mcv.russia, mcv.turkey
+		NavalUnitsTypes: ss, ss.russia, ss.turkey, msub, msub.russia, msub.turkey, dd, dd.russia, dd.turkey, ca.russia, ca.turkey, lst.russia, lst.turkey, pt.russia, pt.turkey
+		ConstructionYardTypes: fact
+		NavalProductionTypes: spen, spen.russia, spen.turkey, syrd, syrd.russia, syrd.turkey
+	UnitBuilderBotModule@turtle:
+		RequiresCondition: enable-turtle-ai
+		UnitsToBuild:
+			e1: 65
+			e2: 25
+			e3: 40
+			e4: 15
+			dog: 15
+			shok: 15
+			harv: 10
+			apc: 30
+			jeep: 40
+			arty: 15
+			v2rl: 40
+			1tnk: 70
+			2tnk: 25
+			3tnk: 50
+			4tnk: 20
+			ttnk: 20
+			stnk: 15
+			heli: 30
+			hind: 30
+			mig: 30
+			yak: 30
+			ss: 10
+			msub: 10
+			dd: 10
+			ca: 10
+			pt: 10
+			e1.russia: 65
+			e2.russia: 25
+			e3.russia: 40
+			e4.russia: 15
+			dog.russia: 15
+			shok.russia: 15
+			harv.russia: 10
+			apc.russia: 30
+			jeep.russia: 40
+			arty.russia: 15
+			v2rl.russia: 40
+			1tnk.russia: 70
+			2tnk.russia: 25
+			3tnk.russia: 50
+			4tnk.russia: 20
+			ttnk.russia: 20
+			stnk.russia: 15
+			heli.russia: 30
+			hind.russia: 30
+			mig.russia: 30
+			yak.russia: 30
+			ss.russia: 10
+			msub.russia: 10
+			dd.russia: 10
+			ca.russia: 10
+			pt.russia: 10
+			e1.turkey: 65
+			e2.turkey: 25
+			e3.turkey: 40
+			e4.turkey: 15
+			dog.turkey: 15
+			shok.turkey: 15
+			harv.turkey: 10
+			apc.turkey: 30
+			jeep.turkey: 40
+			arty.turkey: 15
+			v2rl.turkey: 40
+			1tnk.turkey: 70
+			2tnk.turkey: 25
+			3tnk.turkey: 50
+			4tnk.turkey: 20
+			ttnk.turkey: 20
+			stnk.turkey: 15
+			heli.turkey: 30
+			hind.turkey: 30
+			mig.turkey: 30
+			yak.turkey: 30
+			ss.turkey: 10
+			msub.turkey: 10
+			dd.turkey: 10
+			ca.turkey: 10
+			pt.turkey: 10
+		UnitLimits:
+			dog: 4
+			harv: 8
+			dog.russia: 4
+			harv.russia: 8
+			dog.turkey: 4
+			harv.turkey: 8
+	McvManagerBotModule@turtle:
+		RequiresCondition: enable-turtle-ai
+		McvTypes: mcv, mcv.russia, mcv.turkey
+		ConstructionYardTypes: fact
+		McvFactoryTypes: weap, weap.russia, weap.turkey
+	GrantConditionOnBotOwner@naval:
+		Condition: enable-naval-ai
+		Bots: naval
+	SupportPowerBotModule@naval:
+		RequiresCondition: enable-naval-ai
+		Decisions:
+			spyplane:
+				OrderName: SovietSpyPlane
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			paratroopers:
+				OrderName: SovietParatroopers
+				MinimumAttractiveness: 5
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 8c0
+				Consideration@2:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -5
+					TargetMetric: None
+					CheckRadius: 8c0
+			parabombs:
+				OrderName: UkraineParabombs
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			nukepower:
+				OrderName: NukePowerInfoOrder
+				MinimumAttractiveness: 3000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
+	BaseBuilderBotModule@naval:
+		RequiresCondition: enable-naval-ai
+		ConstructionYardTypes: fact
+		RefineryTypes: proc, proc.russia, proc.turkey
+		PowerTypes: powr, powr.russia, powr.greece, powr.turkey, apwr, apwr.russia, apwr.greece, apwr.turkey
+		BarracksTypes: barr, barr.russia, barr.turkey, tent.russia, tent.turkey
+		VehiclesFactoryTypes: weap, weap.russia, weap.turkey
+		ProductionTypes: barr, barr.russia, barr.turkey, tent.russia, tent.turkey, weap, weap.russia, weap.turkey, afld, afld.russia, afld.turkey, hpad, hpad.russia, hpad.turkey
+		NavalProductionTypes: spen, spen.russia, spen.turkey, syrd, syrd.russia, syrd.turkey
+		SiloTypes: silo, silo.russia, silo.turkey
 		BuildingLimits:
 			proc: 4
 			dome: 1
@@ -790,147 +885,115 @@ Player:
 			stek.turkey: 1
 			fix.turkey: 1
 		BuildingFractions:
-			proc: 29%
-			powr: 1%
-			apwr: 24%
-			dome: 1%
-			weap: 1%
-			hpad: 20%
-			afld: 20%
-			atek: 1%
-			stek: 1%
-			spen: 1%
-			syrd: 1%
-			fix: 0.1%
-			pbox: 12%
-			gun: 12%
-			ftur: 12%
-			tsla: 12%
-			agun: 5%
-			sam: 5%
-			mslo: 1%
-			proc.russia: 29%
-			powr.russia: 1%
-			apwr.russia: 24%
-			dome.russia: 1%
-			weap.russia: 1%
-			hpad.russia: 20%
-			afld.russia: 20%
-			atek.russia: 1%
-			stek.russia: 1%
-			spen.russia: 1%
-			syrd.russia: 1%
-			fix.russia: 0.1%
-			pbox.russia: 12%
-			gun.russia: 12%
-			ftur.russia: 12%
-			tsla.russia: 12%
-			agun.russia: 5%
-			sam.russia: 5%
-			mslo.russia: 1%
-			powr.greece: 1%
-			apwr.greece: 24%
-			proc.turkey: 29%
-			powr.turkey: 1%
-			apwr.turkey: 24%
-			dome.turkey: 1%
-			weap.turkey: 1%
-			hpad.turkey: 20%
-			afld.turkey: 20%
-			atek.turkey: 1%
-			stek.turkey: 1%
-			spen.turkey: 1%
-			syrd.turkey: 1%
-			fix.turkey: 0.1%
-			pbox.turkey: 12%
-			gun.turkey: 12%
-			ftur.turkey: 12%
-			tsla.turkey: 12%
-			agun.turkey: 5%
-			sam.turkey: 5%
-			mslo.turkey: 1%
+			proc: 29
+			powr: 1
+			apwr: 24
+			dome: 1
+			weap: 1
+			hpad: 20
+			afld: 20
+			atek: 1
+			stek: 1
+			spen: 1
+			syrd: 1
+			fix: 1
+			pbox: 12
+			gun: 12
+			ftur: 12
+			tsla: 12
+			agun: 5
+			sam: 5
+			mslo: 1
+			proc.russia: 29
+			powr.russia: 1
+			apwr.russia: 24
+			dome.russia: 1
+			weap.russia: 1
+			hpad.russia: 20
+			afld.russia: 20
+			atek.russia: 1
+			stek.russia: 1
+			spen.russia: 1
+			syrd.russia: 1
+			fix.russia: 1
+			pbox.russia: 12
+			gun.russia: 12
+			ftur.russia: 12
+			tsla.russia: 12
+			agun.russia: 5
+			sam.russia: 5
+			mslo.russia: 1
+			powr.greece: 1
+			apwr.greece: 24
+			proc.turkey: 29
+			powr.turkey: 1
+			apwr.turkey: 24
+			dome.turkey: 1
+			weap.turkey: 1
+			hpad.turkey: 20
+			afld.turkey: 20
+			atek.turkey: 1
+			stek.turkey: 1
+			spen.turkey: 1
+			syrd.turkey: 1
+			fix.turkey: 1
+			pbox.turkey: 12
+			gun.turkey: 12
+			ftur.turkey: 12
+			tsla.turkey: 12
+			agun.turkey: 5
+			sam.turkey: 5
+			mslo.turkey: 1
+	SquadManagerBotModule@naval:
+		RequiresCondition: enable-naval-ai
+		SquadSize: 1
+		ExcludeFromSquadsTypes: harv, harv.russia, harv.turkey, mcv, mcv.russia, mcv.turkey
+		NavalUnitsTypes: ss, ss.russia, ss.turkey, msub, msub.russia, msub.turkey, dd, dd.russia, dd.turkey, ca.russia, ca.turkey, lst.russia, lst.turkey, pt.russia, pt.turkey
+		ConstructionYardTypes: fact
+		NavalProductionTypes: spen, spen.russia, spen.turkey, syrd, syrd.russia, syrd.turkey
+	UnitBuilderBotModule@naval:
+		RequiresCondition: enable-naval-ai
 		UnitsToBuild:
-			harv: 1%
-			heli: 30%
-			hind: 30%
-			mig: 30%
-			yak: 30%
-			ss: 10%
-			msub: 30%
-			dd: 30%
-			ca: 20%
-			pt: 10%
-			harv.russia: 1%
-			heli.russia: 30%
-			hind.russia: 30%
-			mig.russia: 30%
-			yak.russia: 30%
-			ss.russia: 10%
-			msub.russia: 30%
-			dd.russia: 30%
-			ca.russia: 20%
-			pt.russia: 10%
-			harv.turkey: 1%
-			heli.turkey: 30%
-			hind.turkey: 30%
-			mig.turkey: 30%
-			yak.turkey: 30%
-			ss.turkey: 10%
-			msub.turkey: 30%
-			dd.turkey: 30%
-			ca.turkey: 20%
-			pt.turkey: 10%
+			harv: 1
+			heli: 30
+			hind: 30
+			mig: 30
+			yak: 30
+			ss: 10
+			msub: 30
+			dd: 30
+			ca: 20
+			pt: 10
+			harv.russia: 1
+			heli.russia: 30
+			hind.russia: 30
+			mig.russia: 30
+			yak.russia: 30
+			ss.russia: 10
+			msub.russia: 30
+			dd.russia: 30
+			ca.russia: 20
+			pt.russia: 10
+			harv.turkey: 1
+			heli.turkey: 30
+			hind.turkey: 30
+			mig.turkey: 30
+			yak.turkey: 30
+			ss.turkey: 10
+			msub.turkey: 30
+			dd.turkey: 30
+			ca.turkey: 20
+			pt.turkey: 10
 		UnitLimits:
 			harv: 8
 			harv.russia: 8
 			harv.turkey: 8
-		SquadSize: 1
-		SupportPowerDecisions:
-			spyplane:
-				OrderName: SovietSpyPlane
-				MinimumAttractiveness: 1
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 5c0
-			paratroopers:
-				OrderName: SovietParatroopers
-				MinimumAttractiveness: 5
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 8c0
-				Consideration@2:
-					Against: Enemy
-					Types: Water
-					Attractiveness: -5
-					TargetMetric: None
-					CheckRadius: 8c0
-			parabombs:
-				OrderName: UkraineParabombs
-				MinimumAttractiveness: 1
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 5c0
-			nukepower:
-				OrderName: NukePowerInfoOrder
-				MinimumAttractiveness: 3000
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 7c0
+	McvManagerBotModule@naval:
+		RequiresCondition: enable-naval-ai
+		McvTypes: mcv, mcv.russia, mcv.turkey
+		ConstructionYardTypes: fact
+		McvFactoryTypes: weap, weap.russia, weap.turkey
+	HarvesterBotModule:
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai || enable-naval-ai
+	BuildingRepairBotModule:
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai || enable-naval-ai

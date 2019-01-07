@@ -75,12 +75,14 @@ FCOM:
 		Range: 10c0
 	WithBuildingBib:
 	Capturable:
+		Types: building
 	EngineerRepairable:
 	Power:
 		Amount: -200
 	ProvidesPrerequisite@buildingname:
 	RequiresBuildableArea:
 		AreaTypes: building
+	CaptureManager:
 
 HOSP:
 	Inherits: ^TechBuilding
@@ -94,6 +96,7 @@ HOSP:
 	Health:
 		HP: 400
 	Capturable:
+		Types: building
 	EngineerRepairable:
 	Tooltip:
 		Name: Hospital
@@ -103,6 +106,7 @@ HOSP:
 	ProvidesPrerequisite@buildingname:
 	RequiresBuildableArea:
 		AreaTypes: building
+	CaptureManager:
 
 V01:
 	Inherits: ^CivBuilding
@@ -113,7 +117,7 @@ V01:
 		Name: Church
 	RevealsShroud:
 		Range: 10c0
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	HitShape:
 		UseTargetableCellsOffsets: false
@@ -129,7 +133,7 @@ V02:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	HitShape:
 		UseTargetableCellsOffsets: false
@@ -145,7 +149,7 @@ V03:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	HitShape:
 		UseTargetableCellsOffsets: false
@@ -161,7 +165,7 @@ V04:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	HitShape:
 		UseTargetableCellsOffsets: false
@@ -178,7 +182,7 @@ V05:
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -189,7 +193,7 @@ V06:
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -200,69 +204,69 @@ V07:
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 	RequiresBuildableArea:
 		AreaTypes: building
 
 V08:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V09:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V10:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V11:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V12:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V13:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V14:
 	Inherits: ^CivField
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V15:
 	Inherits: ^CivField
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V16:
 	Inherits: ^CivField
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V17:
 	Inherits: ^CivField
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V18:
 	Inherits: ^CivField
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 
 V19:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
 		Name: Oil Pump
@@ -276,7 +280,7 @@ V19:
 
 V19.Husk:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
 		Name: Husk (Oil Pump)
@@ -314,7 +318,7 @@ BARL:
 	-ShakeOnDeath:
 	-SoundOnDamageTransition:
 	-Demolishable:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Decoration
 	Interactable:
 		Bounds: 24,24
@@ -338,7 +342,7 @@ BRL3:
 	-ShakeOnDeath:
 	-SoundOnDamageTransition:
 	-Demolishable:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Decoration
 	Interactable:
 		Bounds: 24,24
@@ -374,10 +378,12 @@ MISS:
 		Name: Technology center
 	WithBuildingBib:
 	Capturable:
+		Types: building
 	EngineerRepairable:
 	ProvidesPrerequisite@buildingname:
 	RequiresBuildableArea:
 		AreaTypes: building
+	CaptureManager:
 
 BIO:
 	Inherits: ^TechBuilding
@@ -393,6 +399,7 @@ BIO:
 	RevealsShroud:
 		Range: 4c0
 	Capturable:
+		Types: building
 	EngineerRepairable:
 	Tooltip:
 		Name: Bio-research laboratory
@@ -400,6 +407,7 @@ BIO:
 	ProvidesPrerequisite@buildingname:
 	RequiresBuildableArea:
 		AreaTypes: building
+	CaptureManager:
 
 OILB:
 	Inherits: ^TechBuilding
@@ -416,8 +424,9 @@ OILB:
 		HP: 800
 	RevealsShroud:
 		Range: 4c0
-	ExternalCapturable:
-	ExternalCapturableBar:
+	Capturable:
+		Types: building
+	CapturableProgressBar:
 	EngineerRepairable:
 	CashTrickler:
 		Interval: 375
@@ -430,6 +439,8 @@ OILB:
 		Amount: 100
 	RequiresBuildableArea:
 		AreaTypes: building
+	CapturableProgressBlink:
+	CaptureManager:
 
 BR1:
 	Inherits: ^Bridge
@@ -784,12 +795,12 @@ V37:
 
 RICE:
 	Inherits: ^CivField
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 
 RUSHOUSE:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 	Building:
 		Footprint: x x
@@ -801,12 +812,12 @@ RUSHOUSE:
 
 ASIANHUT:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 
 SNOWHUT:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: SNOW
 	Building:
 		Footprint: x x
@@ -820,7 +831,7 @@ SNOWHUT:
 
 LHUS:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 	Selectable:
 		Bounds: 24,48,0,-16
@@ -834,7 +845,7 @@ LHUS:
 
 WINDMILL:
 	Inherits: ^CivBuilding
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 	Selectable:
 		Bounds: 24,24,0,-14

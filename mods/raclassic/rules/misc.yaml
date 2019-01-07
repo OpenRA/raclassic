@@ -17,7 +17,7 @@ CRATE:
 	GiveCashCrateAction:
 		Amount: 2000
 		SelectionShares: 50
-		Effect: dollar
+		Sequence: dollar
 	ExplodeCrateAction@fire:
 		Weapon: CrateNapalm
 		SelectionShares: 5
@@ -27,25 +27,25 @@ CRATE:
 	ExplodeCrateAction@timequake:
 		Weapon: TimeQuake
 		SelectionShares: 3
-		Effect: timequake
+		Sequence: timequake
 	HealUnitsCrateAction:
-		Notification: heal2.aud
+		Sound: heal2.aud
 		SelectionShares: 1
-		Effect: heal
+		Sequence: heal
 	HideMapCrateAction:
 		SelectionShares: 1
-		Effect: hide-map
+		Sequence: hide-map
 	RevealMapCrateAction:
 		SelectionShares: 1
-		Effect: reveal-map
+		Sequence: reveal-map
 	SupportPowerCrateAction@parabombs:
 		SelectionShares: 3
 		Proxy: powerproxy.parabombs
-		Effect: parabombs
+		Sequence: parabombs
 	SupportPowerCrateAction@sonar:
 		SelectionShares: 3
 		Proxy: powerproxy.sonarpulse.crate
-		Effect: sonar
+		Sequence: sonar
 	GiveMcvCrateAction:
 		SelectionShares: 0
 		NoBaseSelectionShares: 100
@@ -147,23 +147,23 @@ CRATE:
 	GrantExternalConditionCrateAction@armor:
 		SelectionShares: 10
 		Range: 3c0
-		Effect: armor
+		Sequence: armor
 		Condition: crate.armor
 	GrantExternalConditionCrateAction@speed:
 		SelectionShares: 10
 		Range: 3c0
-		Effect: fpower
+		Sequence: fpower
 		Condition: crate.fire_power
 	GrantExternalConditionCrateAction@firepower:
 		SelectionShares: 10
 		Range: 3c0
-		Effect: speed
+		Sequence: speed
 		Condition: crate.speed
 	GrantExternalConditionCrateAction@invuln:
 		SelectionShares: 3
 		Range: 3c0
-		Effect: invuln
-		Notification: ironcur9.aud
+		Sequence: invuln
+		Sound: ironcur9.aud
 		Condition: invulnerability
 		Duration: 1500
 
@@ -174,16 +174,16 @@ MONEYCRATE:
 	GiveCashCrateAction:
 		Amount: 500
 		SelectionShares: 1
-		Effect: dollar
+		Sequence: dollar
 
 HEALCRATE:
 	Inherits: ^Crate
 	Tooltip:
 		Name: Heal Crate
 	HealUnitsCrateAction:
-		Notification: heal2.aud
+		Sound: heal2.aud
 		SelectionShares: 1
-		Effect: heal
+		Sequence: heal
 
 WCRATE:
 	Inherits: ^Crate
@@ -212,7 +212,7 @@ CAMERA:
 	WithSpriteBody:
 	RenderSpritesEditorOnly:
 		Image: camera
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: System
 
 camera.paradrop:
@@ -256,7 +256,7 @@ FLARE:
 	Tooltip:
 		Name: Flare
 		ShowOwnerRow: false
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Decoration
 	Interactable:
 
@@ -276,7 +276,7 @@ MINE:
 	RadarColorFromTerrain:
 		Terrain: Ore
 	SeedsResource:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Resource spawn
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -298,7 +298,7 @@ GMINE:
 		Terrain: Gems
 	SeedsResource:
 		ResourceType: Gems
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Resource spawn
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -315,7 +315,7 @@ RAILMINE:
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: INTERIOR
 		Categories: Civilian building
 	RequiresBuildableArea:
@@ -333,7 +333,7 @@ QUEE:
 		Dimensions: 2,1
 	WithSpriteBody:
 	AppearsOnRadar:
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: INTERIOR
 		Categories: Critter
 	RequiresBuildableArea:
@@ -353,7 +353,7 @@ LAR1:
 		Palette: terrain
 	WithSpriteBody:
 	AppearsOnRadar:
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: INTERIOR
 		Categories: Critter
 	RequiresBuildableArea:
@@ -478,7 +478,7 @@ mpspawn:
 	RenderSpritesEditorOnly:
 	BodyOrientation:
 		QuantizedFacings: 1
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: System
 
 waypoint:
@@ -492,13 +492,13 @@ waypoint:
 	RenderSpritesEditorOnly:
 	BodyOrientation:
 		QuantizedFacings: 1
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: System
 
 fact.colorpicker:
 	Inherits: FACT
 	-Buildable:
-	-EditorTilesetFilter:
+	-MapEditorData:
 	RenderSprites:
 		Image: fact
 		Palette: colorpicker
@@ -518,7 +518,7 @@ CTFLAG:
 	-Selectable:
 	-SelectionDecorations:
 	-Targetable:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Decoration
 	RequiresBuildableArea:
 		AreaTypes: building

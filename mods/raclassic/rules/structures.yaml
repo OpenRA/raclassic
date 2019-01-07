@@ -66,6 +66,7 @@ MSLO:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	WithNukeLaunchAnimation:
+		RequiresCondition: !build-incomplete
 	Selectable:
 		Class: MSLO
 	RenderSprites:
@@ -169,12 +170,15 @@ SPEN:
 		Produces: Ship, Submarine
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	-SpawnActorsOnSell:
 	RepairsUnits:
+		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
 	RallyPoint:
 	ProductionBar:
+		ProductionType: Ship
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@soviet:
@@ -185,7 +189,7 @@ SPEN:
 		Prerequisite: ships.soviet
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: spen
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: INTERIOR
 	WithDecoration@primary:
 		RequiresSelection: true
@@ -258,12 +262,15 @@ SYRD:
 		Produces: Ship, Boat
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	-SpawnActorsOnSell:
 	RepairsUnits:
+		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
 	RallyPoint:
 	ProductionBar:
+		ProductionType: Ship
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@allies:
@@ -274,7 +281,7 @@ SYRD:
 		Prerequisite: ships.allies
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: syrd
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: INTERIOR
 	WithDecoration@primary:
 		RequiresSelection: true
@@ -447,10 +454,11 @@ TSLA:
 		Weapon: TeslaZap
 		LocalOffset: 0,0,896
 	AttackTesla:
-		PauseOnCondition: disabled
 		ChargeAudio: tslachg2.aud
 		MaxCharges: 3
 		ReloadDelay: 120
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete
 	Power:
 		Amount: -150
 	DetectCloaked:
@@ -519,6 +527,7 @@ AGUN:
 		MuzzleSequence: muzzle
 	AttackTurreted:
 		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete
 	WithMuzzleOverlay:
 	RenderRangeCircle:
 		RangeCircleType: aa
@@ -632,6 +641,7 @@ PBOX:
 		Condition: blockablebullets
 		Prerequisites: global-blockablebullets
 	AttackTurreted:
+		RequiresCondition: !build-incomplete
 	-QuantizeFacingsFromSequence:
 	BodyOrientation:
 		QuantizedFacings: 8
@@ -686,6 +696,7 @@ HBOX:
 		Condition: blockablebullets
 		Prerequisites: global-blockablebullets
 	AttackTurreted:
+		RequiresCondition: !build-incomplete
 	-QuantizeFacingsFromSequence:
 	BodyOrientation:
 		QuantizedFacings: 8
@@ -734,6 +745,7 @@ GUN:
 		LocalOffset: 512,0,112
 		MuzzleSequence: muzzle
 	AttackTurreted:
+		RequiresCondition: !build-incomplete
 	WithMuzzleOverlay:
 	Power:
 		Amount: -55
@@ -787,6 +799,7 @@ FTUR:
 		Weapon: FireballLauncher
 		LocalOffset: 512,0,0
 	AttackTurreted:
+		RequiresCondition: !build-incomplete
 	-QuantizeFacingsFromSequence:
 	BodyOrientation:
 		QuantizedFacings: 8
@@ -842,6 +855,7 @@ SAM:
 		MuzzleSequence: muzzle
 		RequiresCondition: spain
 	AttackTurreted:
+		RequiresCondition: !build-incomplete
 	WithMuzzleOverlay:
 	RenderRangeCircle:
 		RangeCircleType: aa
@@ -960,6 +974,7 @@ WEAP:
 	WithBuildingBib:
 	WithProductionDoorOverlay:
 		Sequence: build-top
+		RequiresCondition: !build-incomplete
 	RallyPoint:
 	Exit@1:
 		ExitCell: 1,2
@@ -979,7 +994,9 @@ WEAP:
 		Prerequisite: vehicles.soviet
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
+		ProductionType: Vehicle
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
@@ -1044,15 +1061,18 @@ FACT:
 		IntoActor: mcv
 		Offset: 1,1
 		Facing: 96
-		RequiresCondition: factundeploy
+		RequiresCondition: factundeploy && !build-incomplete
+		PauseOnCondition: being-demolished
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
 		Condition: factundeploy
 		Prerequisites: global-factundeploy
 	ProductionBar@Building:
 		ProductionType: Building
 	WithBuildingPlacedAnimation:
+		RequiresCondition: !build-incomplete
 	BaseProvider:
 		Range: 16c0
+		PauseOnCondition: build-incomplete
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
@@ -1117,6 +1137,7 @@ PROC:
 		Notification: CreditsStolen
 	WithIdleOverlay@TOP:
 		Sequence: idle-top
+		RequiresCondition: !build-incomplete
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
@@ -1171,7 +1192,9 @@ SILO:
 		Type: Wood
 	RevealsShroud:
 		Range: 4c0
-	WithSiloAnimation:
+	-WithSpriteBody:
+	WithResourceLevelSpriteBody:
+		Sequence: stages
 	StoresResources:
 		PipCount: 5
 		Capacity: 1500
@@ -1237,11 +1260,12 @@ HPAD:
 		RequiresCondition: !unit.docked
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	ProximityExternalCondition:
 		Condition: unit.sellable
 		Range: 1c0
 	Sellable:
-		RequiresCondition: !unit.docked
+		RequiresCondition: !unit.docked && !build-incomplete && !being-demolished
 	ExternalCondition@Docked:
 		Condition: unit.docked
 	Power:
@@ -1267,7 +1291,8 @@ HPAD:
 		ReferencePoint: Top
 		ZOffset: 256
 		RequiresCondition: primary
-	WithRearmAnimation:
+	WithResupplyAnimation:
+		RequiresCondition: !build-incomplete
 	Selectable:
 		Class: HPAD
 	RenderSprites:
@@ -1347,14 +1372,16 @@ AFLD:
 		ClockSequence: clock
 		CircleSequence: circles
 	ProductionBar:
+		ProductionType: Aircraft
 	SupportPowerChargeBar:
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	ProximityExternalCondition:
 		Condition: unit.sellable
 		Range: 1c0
 	Sellable:
-		RequiresCondition: !unit.docked
+		RequiresCondition: !unit.docked && !build-incomplete && !being-demolished
 	ExternalCondition@Docked:
 		Condition: unit.docked
 	Power:
@@ -1368,7 +1395,8 @@ AFLD:
 		ReferencePoint: Top
 		ZOffset: 256
 		RequiresCondition: primary
-	WithRearmAnimation:
+	WithResupplyAnimation:
+		RequiresCondition: !build-incomplete
 	Selectable:
 		Class: AFLD
 	RenderSprites:
@@ -1592,7 +1620,9 @@ BARR:
 		Produces: Infantry, Soldier
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
+		ProductionType: Infantry
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	ProvidesPrerequisite@soviet:
@@ -1655,7 +1685,9 @@ KENN:
 		Produces: Infantry, Dog
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
+		ProductionType: Infantry
 	-SpawnActorsOnSell:
 	Power:
 		Amount: -10
@@ -1711,7 +1743,9 @@ TENT:
 		Produces: Infantry, Soldier
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
+		ProductionType: Infantry
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
 	ProvidesPrerequisite@allies:
@@ -1779,17 +1813,18 @@ FIX:
 	RallyPoint:
 	RepairsUnits:
 		Interval: 7
+		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
 	ProximityExternalCondition:
 		Condition: unit.sellable
 		Range: 1c0
 	Sellable:
-		RequiresCondition: !unit.docked
+		RequiresCondition: !unit.docked && !build-incomplete && !being-demolished
 	ExternalCondition@Docked:
 		Condition: unit.docked
-	WithRepairAnimation:
-	WithRearmAnimation:
+	WithResupplyAnimation:
+		RequiresCondition: !build-incomplete
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
@@ -1915,52 +1950,6 @@ BRIK.mission:
 		Prerequisites: ~global-missionrules, ~player.normal, ~techlevel.5
 	Valued:
 		Cost: 100
-
-VGATE:
-	Inherits: ^Gate
-	HitShape:
-		UseTargetableCellsOffsets: true
-		Type: Rectangle
-			TopLeft: -512, -1536
-			BottomRight: 512, 1536
-	Building:
-		Footprint: x x x
-		Dimensions: 1,3
-	WithGateSpriteBody:
-		WallConnections: 0,-1, 0,3
-	LineBuildNode:
-		Connections: 0,-1, 0,1
-	Tooltip:
-		Name: Vertical Gate
-	Gate:
-
-HGATE:
-	Inherits: ^Gate
-	HitShape:
-		UseTargetableCellsOffsets: true
-		Type: Rectangle
-			TopLeft: -1536, -512
-			BottomRight: 1536, 512
-	Building:
-		Footprint: xxx
-		Dimensions: 3,1
-	WithGateSpriteBody:
-		WallConnections: -1,0, 3,0
-	LineBuildNode:
-		Connections: -1,0, 1,0
-	Tooltip:
-		Name: Horizontal Gate
-	RenderSprites:
-		Image: agate
-		FactionImages:
-			allies: agate
-			england: agate
-			france: agate
-			germany: agate
-			soviet: sgate
-			russia: sgate
-			ukraine: sgate
-	Gate:
 
 CYCL:
 	Inherits: ^Wall

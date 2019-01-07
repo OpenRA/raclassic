@@ -23,7 +23,7 @@ SYRF:
 		Class: SYRF
 	RenderSprites:
 		Image: SYRD
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: INTERIOR
 	HitShape:
 		TargetableOffsets: 768,0,0, 768,-1024,0, 768,1024,0
@@ -63,7 +63,7 @@ SPEF:
 		Class: SPEF
 	RenderSprites:
 		Image: SPEN
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: INTERIOR
 	HitShape:
 		Type: Rectangle
