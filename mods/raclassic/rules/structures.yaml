@@ -1946,6 +1946,7 @@ BRIK:
 
 BRIK.mission:
 	Inherits: BRIK
+	-MapEditorData:
 	Buildable:
 		Prerequisites: ~global-missionrules, ~player.normal, ~techlevel.5
 	Valued:
