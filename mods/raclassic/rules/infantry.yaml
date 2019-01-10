@@ -314,7 +314,7 @@ E7:
 		BuildAtProductionType: Soldier
 		BuildDuration: 1200
 		BuildPaletteOrder: 120
-		Prerequisites: ~barracks, infantry-tech, ~player.normal, ~techlevel.8
+		Prerequisites: ~barracks-tanya, infantry-tanya, !enoughtanya, ~player.normal, ~techlevel.8
 		Description: Elite commando infantry. Armed with\ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4
 	Selectable:
 		Class: E7
@@ -357,6 +357,9 @@ E7:
 	GrantConditionOnPrerequisite@BLOCKABLEBULLETS:
 		Condition: blockablebullets
 		Prerequisites: global-blockablebullets
+	ProvidesPrerequisite@enough:
+		Prerequisite: enoughtanya
+		RequiresPrerequisites: global-herolimit
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
@@ -368,6 +371,31 @@ E7:
 		VoiceSet: TanyaVoice
 	RenderSprites:
 		Image: E7
+
+VLKV:
+	Inherits: E7
+	Buildable:
+		BuildPaletteOrder: 130
+		Prerequisites: ~barr, infantry-volkov, !enoughvolkov, ~global-volkov, ~player.normal, ~techlevel.8
+	Tooltip:
+		Name: Volkov
+	Selectable:
+		Class: VLKV
+	Mobile:
+		Voice: Action
+	Guard:
+		Voice: Action
+	Passenger:
+		Voice: Action
+	Demolition:
+		Voice: Action
+	Voiced:
+		VoiceSet: VolkovVoice
+	-AnnounceOnKill:
+	ProvidesPrerequisite@enough:
+		Prerequisite: enoughvolkov
+	RenderSprites:
+		Image: GNRL
 
 MEDI:
 	Inherits: ^Soldier

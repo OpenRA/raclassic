@@ -741,7 +741,7 @@ E7.russia:
 	Inherits: E7
 	-MapEditorData:
 	Buildable:
-		Prerequisites: ~barracks, infantry-tech, ~player.russia, ~techlevel.8
+		Prerequisites: ~barracks-tanya, infantry-tanya, !enoughtanya, ~player.russia, ~techlevel.8
 	Valued:
 		Cost: 1078
 
@@ -750,7 +750,22 @@ E7.turkey:
 	-MapEditorData:
 	Buildable:
 		BuildDurationModifier: 54
-		Prerequisites: ~barracks, infantry-tech, ~player.turkey, ~techlevel.8
+		Prerequisites: ~barracks-tanya, infantry-tanya, !enoughtanya, ~player.turkey, ~techlevel.8
+
+VLKV.russia:
+	Inherits: VLKV
+	-MapEditorData:
+	Buildable:
+		Prerequisites: ~barr, infantry-volkov, !enoughvolkov, ~global-volkov, ~player.russia, ~techlevel.8
+	Valued:
+		Cost: 1078
+
+VLKV.turkey:
+	Inherits: VLKV
+	-MapEditorData:
+	Buildable:
+		BuildDurationModifier: 54
+		Prerequisites: ~barr, infantry-volkov, !enoughvolkov, ~global-volkov, ~player.turkey, ~techlevel.8
 
 MEDI.russia:
 	Inherits: MEDI

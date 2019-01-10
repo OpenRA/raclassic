@@ -626,7 +626,7 @@ infantry-tech:
 	Tooltip:
 		Name: Tech Center
 	GrantConditionOnPrerequisite:
-		Prerequisites: tent
+		Prerequisites: barracks
 
 infantry-atek:
 	Inherits: ^Sticky
@@ -641,6 +641,20 @@ infantry-stek:
 		Name: Soviet Tech Center
 	GrantConditionOnPrerequisite:
 		Prerequisites: barr
+
+infantry-tanya:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: barracks
+
+infantry-volkov:
+	Inherits: ^Sticky
+	Tooltip:
+		Name: Tech Center
+	GrantConditionOnPrerequisite:
+		Prerequisites: barracks
 
 vehicle-tent:
 	Inherits: ^Sticky

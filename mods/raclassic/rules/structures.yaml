@@ -888,6 +888,10 @@ ATEK:
 		Prerequisite: building-tech
 	ProvidesPrerequisite@STICKY2:
 		Prerequisite: infantry-tech
+	ProvidesPrerequisite@STICKY3:
+		Prerequisite: infantry-atek
+	ProvidesPrerequisite@STICKY4:
+		Prerequisite: infantry-tanya
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -942,6 +946,12 @@ ATEK:
 		RequiresCondition: stickytech
 	FreeActor@6:
 		Actor: infantry-tech
+		RequiresCondition: stickytech
+	FreeActor@7:
+		Actor: infantry-atek
+		RequiresCondition: stickytech
+	FreeActor@8:
+		Actor: infantry-tanya
 		RequiresCondition: stickytech
 	Selectable:
 		Class: ATEK
@@ -1533,6 +1543,14 @@ STEK:
 		Prerequisite: building-tech
 	ProvidesPrerequisite@STICKY2:
 		Prerequisite: infantry-tech
+	ProvidesPrerequisite@STICKY3:
+		Prerequisite: infantry-stek
+	ProvidesPrerequisite@STICKY4:
+		Prerequisite: infantry-tanya
+		RequiresCondition: !volkov
+	ProvidesPrerequisite@STICKY5:
+		Prerequisite: infantry-volkov
+		RequiresCondition: volkov
 	Building:
 		Footprint: XxX XxX ===
 		Dimensions: 3,3
@@ -1559,6 +1577,9 @@ STEK:
 	GrantConditionOnPrerequisite@STICKY:
 		Condition: stickytech
 		Prerequisites: global-stickytech
+	GrantConditionOnPrerequisite@VOLKOV:
+		Condition: volkov
+		Prerequisites: global-volkov
 	FreeActor@1:
 		Actor: building-stek
 		RequiresCondition: stickytech
@@ -1577,6 +1598,15 @@ STEK:
 	FreeActor@6:
 		Actor: infantry-tech
 		RequiresCondition: stickytech
+	FreeActor@7:
+		Actor: infantry-stek
+		RequiresCondition: stickytech
+	FreeActor@8:
+		Actor: infantry-tanya
+		RequiresCondition: stickytech && !volkov
+	FreeActor@9:
+		Actor: infantry-volkov
+		RequiresCondition: stickytech && volkov
 	Selectable:
 		Class: STEK
 	RenderSprites:
@@ -1625,12 +1655,9 @@ BARR:
 		ProductionType: Infantry
 	ProvidesPrerequisite:
 		Prerequisite: barracks
-	ProvidesPrerequisite@soviet:
-		Factions: soviet, russia, ukraine
-		Prerequisite: infantry.soviet
-	ProvidesPrerequisite@sovietstructure:
-		RequiresPrerequisites: structures.soviet
-		Prerequisite: infantry.soviet
+	ProvidesPrerequisite@tanya:
+		RequiresPrerequisites: !global-volkov
+		Prerequisite: barracks-tanya
 	Power:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:
@@ -1748,12 +1775,9 @@ TENT:
 		ProductionType: Infantry
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
-	ProvidesPrerequisite@allies:
+	ProvidesPrerequisite@tanya:
 		Factions: allies, england, germany, france, spain, greece, turkey
-		Prerequisite: infantry.allies
-	ProvidesPrerequisite@alliedstructure:
-		RequiresPrerequisites: structures.allies
-		Prerequisite: infantry.allies
+		Prerequisite: barracks-tanya
 	Power:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:

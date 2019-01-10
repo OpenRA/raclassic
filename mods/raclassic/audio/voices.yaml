@@ -18,6 +18,12 @@ GenericVoice:
 		Zapped: dedman6
 	DisableVariants: Die, Burned, Zapped
 
+VolkovVoice:
+	Inherits: GenericVoice
+	Voices:
+		Build: laugh2
+	DisableVariants: Die, Burned, Zapped, Build
+
 VehicleVoice:
 	Variants:
 		allies: .v00,.v02
