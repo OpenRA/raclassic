@@ -124,13 +124,13 @@ Player:
 		Enabled: False
 		DisplayOrder: 11
 		Prerequisites: global-stickytech
-	LobbyPrerequisiteCheckbox@GLOBALSWLIMIT:
-		ID: swlimit
-		Label: Limit Super Weapons
-		Description: Only 1 of each super weapon can be built by a player
+	LobbyPrerequisiteCheckbox@GLOBALBLOCKABLEBULLETS:
+		ID: blockablebullets
+		Label: Blockable Bullets
+		Description: Bullet weapons (light infantry, ranger, apc etc.) can be blocked by concrete walls
 		Enabled: True
 		DisplayOrder: 12
-		Prerequisites: global-swlimit
+		Prerequisites: global-blockablebullets
 	LobbyPrerequisiteCheckbox@GLOBALAUTOSCATTER:
 		ID: autoscatter
 		Label: Auto Scatter
@@ -145,13 +145,13 @@ Player:
 		Enabled: True
 		DisplayOrder: 14
 		Prerequisites: global-multiengineer
-	LobbyPrerequisiteCheckbox@GLOBALBLOCKABLEBULLETS:
-		ID: blockablebullets
-		Label: Blockable Bullets
-		Description: Bullet weapons (light infantry, ranger, apc etc.) can be blocked by concrete walls
+	LobbyPrerequisiteCheckbox@GLOBALSWLIMIT:
+		ID: swlimit
+		Label: Limit Super Weapons
+		Description: Only 1 of each super weapon can be built by a player
 		Enabled: True
 		DisplayOrder: 15
-		Prerequisites: global-blockablebullets
+		Prerequisites: global-swlimit
 	LobbyPrerequisiteCheckbox@GLOBALMISSIONRULES:
 		ID: missionrules
 		Label: Mission Ruleset
@@ -159,6 +159,20 @@ Player:
 		Enabled: False
 		DisplayOrder: 16
 		Prerequisites: global-missionrules
+	LobbyPrerequisiteCheckbox@GLOBALLIMITHEROS:
+		ID: herolimit
+		Label: Limit Heroes
+		Description: Only 1 Tanya or Volkov can be built by a player
+		Enabled: False
+		DisplayOrder: 18
+		Prerequisites: global-herolimit
+	LobbyPrerequisiteCheckbox@GLOBALVOLKOV:
+		ID: volkov
+		Label: Enable Volkov
+		Description: Replaces Tanya with Volkov for Soviets, Visual Only
+		Enabled: True
+		DisplayOrder: 19
+		Prerequisites: global-volkov
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:
