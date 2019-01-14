@@ -237,16 +237,17 @@ CA:
 		Type: Heavy
 	Mobile:
 		Speed: 40
+		TurnSpeed: 5
 	RevealsShroud:
 		Range: 7c0
 	Turreted@PRIMARY:
 		Turret: primary
 		Offset: -864,0,128
-		TurnSpeed: 3
+		TurnSpeed: 5
 	Turreted@SECONDARY:
 		Turret: secondary
 		Offset: 768,0,128
-		TurnSpeed: 3
+		TurnSpeed: 5
 	Armament@PRIMARY:
 		Turret: primary
 		Weapon: 8Inch
