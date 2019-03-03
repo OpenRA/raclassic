@@ -178,7 +178,7 @@
 		Bounds: 24, 24
 	Targetable:
 		RequiresCondition: !parachute
-		TargetTypes: Ground, Vehicle
+		TargetTypes: Ground, Vehicle, DetonateAttack
 	Targetable@REPAIR:
 		RequiresCondition: !parachute && damaged
 		TargetTypes: Repair
@@ -278,7 +278,7 @@
 	Selectable:
 		Bounds: 12,18,0,-8
 	Targetable:
-		TargetTypes: Ground, Infantry
+		TargetTypes: Ground, Infantry, DetonateAttack
 		RequiresCondition: !parachute
 	Targetable@HEAL:
 		TargetTypes: Heal
@@ -427,7 +427,7 @@
 	Selectable:
 		Bounds: 24,24
 	Targetable:
-		TargetTypes: Ground, Water, Ship
+		TargetTypes: Ground, Water, Ship, DetonateAttack
 	Targetable@REPAIR:
 		TargetTypes: Repair
 		RequiresCondition: damaged
@@ -482,7 +482,7 @@
 		TakeOffOnCreation: false
 		AirborneCondition: airborne
 	Targetable@GROUND:
-		TargetTypes: Ground, Vehicle
+		TargetTypes: Ground, Vehicle, DetonateAttack
 		RequiresCondition: !airborne
 	Targetable@AIRBORNE:
 		TargetTypes: Air
