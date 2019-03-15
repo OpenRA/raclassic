@@ -1,6 +1,6 @@
 Metadata:
 	Title: Red Alert Classic
-	Version: playtest-20190302
+	Version: release-20190314
 	Website: https://www.openra.net
 	WebIcon32: https://raw.githubusercontent.com/OpenRA/ra-classic/mods/raclassic/icon.png
 
@@ -36,7 +36,7 @@ Packages:
 
 MapFolders:
 	raclassic|maps: System
-	~^maps/raclassic/playtest-20190302: User
+	~^maps/raclassic/release-20190314: User
 
 Rules:
 	raclassic|rules/misc.yaml
