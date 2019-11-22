@@ -366,7 +366,9 @@ LAR2:
 
 powerproxy.parabombs:
 	AlwaysVisible:
+	ConditionManager:
 	AirstrikePower:
+		OrderName: Parabombs
 		Icon: parabombs
 		Description: Parabombs
 		ChargeInterval: 21000
@@ -382,6 +384,30 @@ powerproxy.parabombs:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
+		RequiresCondition: !directional-abilities
+	AirstrikePower@directional:
+		OrderName: Parabombs
+		Icon: parabombs
+		Description: Parabombs
+		ChargeInterval: 21000
+		LongDesc: A Badger drops a load of parachuted\nbombs on your target.
+		OneShot: true
+		AllowMultiple: true
+		UnitType: badr.bomber
+		SelectTargetSpeechNotification: SelectTarget
+		QuantizedFacings: 8
+		DisplayBeacon: True
+		BeaconPoster: pbmbicon
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		RequiresCondition: directional-abilities
+	GrantConditionOnPrerequisite@GLOBALDIRECTIONALABILITY:
+		Condition: directional-abilities
+		Prerequisites: global-directional-abilities
 
 powerproxy.sonarpulse:
 	AlwaysVisible:
