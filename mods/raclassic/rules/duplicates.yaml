@@ -1,0 +1,71 @@
+# BUILDINGS
+POWR.greece:
+	Inherits: POWR
+	-MapEditorData:
+	Buildable:
+		Prerequisites: ~player.greece, ~techlevel.1
+	Power@1:
+		RequiresCondition: notgreece
+	Power@2:
+		RequiresCondition: !notgreece
+	-GrantConditionOnPrerequisite@Greece:
+	GrantConditionOnPrerequisite@NotGreece:
+		Condition: notgreece
+		Prerequisites: player.not_greece
+
+APWR.greece:
+	Inherits: APWR
+	-MapEditorData:
+	Buildable:
+		Prerequisites: building-power, ~player.greece, ~techlevel.5
+	Power@1:
+		RequiresCondition: notgreece
+	Power@2:
+		RequiresCondition: !notgreece
+	-GrantConditionOnPrerequisite@Greece:
+	GrantConditionOnPrerequisite@NotGreece:
+		Condition: notgreece
+		Prerequisites: player.not_greece
+
+IRON.mission:
+	Inherits: IRON
+	Buildable:
+		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~global-missionrules, ~techlevel.9
+	GrantExternalConditionPower@IRONCURTAIN:
+		ChargeInterval: 16500
+
+# DEFENCES
+BRIK.mission:
+	Inherits: BRIK
+	-MapEditorData:
+	Buildable:
+		Prerequisites: ~global-missionrules, ~techlevel.5
+	Valued:
+		Cost: 100
+
+GUN.mission:
+	Inherits: GUN
+	Buildable:
+		Prerequisites: building-tent, ~structures.allies, ~global-missionrules, ~techlevel.2
+	Valued:
+		Cost: 600
+	Armament:
+		Weapon: TurretGun.mission
+	Power:
+		Amount: -40
+
+TSLA.mission:
+	Inherits: TSLA
+	Buildable:
+		Prerequisites: building-weap, ~structures.soviet, ~global-missionrules, ~techlevel.5
+	Health:
+		HP: 400
+
+GAP.mission:
+	Inherits: GAP
+	Buildable:
+		Prerequisites: building-atek, ~structures.allies, ~global-missionrules, ~techlevel.7
+	Health:
+		HP: 1000
+	Power:
+		Amount: -60

@@ -10,7 +10,7 @@ MSLO:
 		Queue: Building
 		BuildDuration: 2500
 		BuildPaletteOrder: 300
-		Prerequisites: building-tech, !enoughmslo, ~player.normal, ~techlevel.10
+		Prerequisites: building-tech, !enoughmslo, ~techlevel.10
 		Description: Provides an atomic bomb.\nRequires power to operate.\n  Special Ability: Atom Bomb
 	Building:
 		Footprint: xx
@@ -83,7 +83,7 @@ GAP:
 		Queue: Building
 		BuildDuration: 500
 		BuildPaletteOrder: 240
-		Prerequisites: building-atek, ~structures.allies, ~!global-missionrules, ~player.normal, ~techlevel.7
+		Prerequisites: building-atek, ~structures.allies, ~!global-missionrules, ~techlevel.7
 		Description: Obscures the enemy's view with shroud.\nRequires power to operate.
 	Selectable:
 		Class: GAP
@@ -113,15 +113,6 @@ GAP:
 	RenderSprites:
 		Image: GAP
 
-GAP.mission:
-	Inherits: GAP
-	Buildable:
-		Prerequisites: building-atek, ~structures.allies, ~global-missionrules, ~player.normal, ~techlevel.7
-	Health:
-		HP: 1000
-	Power:
-		Amount: -60
-
 SPEN:
 	Inherits: ^Building
 	InfiltrateForSupportPower:
@@ -135,7 +126,7 @@ SPEN:
 		Queue: Building
 		BuildDuration: 650
 		BuildPaletteOrder: 100
-		Prerequisites: building-power, ~structures.soviet, ~player.normal, ~techlevel.2
+		Prerequisites: building-power, ~structures.soviet, ~techlevel.2
 		Description: Produces and repairs\nsubmarines and transports.
 	Targetable:
 		TargetTypes: Ground, Water, Structure, WaterStructure, C4, DetonateAttack, SpyInfiltrate
@@ -223,7 +214,7 @@ SYRD:
 		Queue: Building
 		BuildDuration: 650
 		BuildPaletteOrder: 90
-		Prerequisites: building-power, ~structures.allies, ~player.normal, ~techlevel.2
+		Prerequisites: building-power, ~structures.allies, ~techlevel.2
 		Description: Produces and repairs ships\nand transports.
 	Valued:
 		Cost: 650
@@ -315,7 +306,7 @@ IRON:
 		Queue: Building
 		BuildDuration: 2800
 		BuildPaletteOrder: 290
-		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~!global-missionrules, ~player.normal, ~techlevel.9
+		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~!global-missionrules, ~techlevel.9
 		Description: Makes a unit invulnerable\nfor a while.\nRequires power to operate.\n  Special Ability: Invulnerability
 	Valued:
 		Cost: 2800
@@ -362,13 +353,6 @@ IRON:
 	RenderSprites:
 		Image: IRON
 
-IRON.mission:
-	Inherits: IRON
-	Buildable:
-		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~global-missionrules, ~player.normal, ~techlevel.9
-	GrantExternalConditionPower@IRONCURTAIN:
-		ChargeInterval: 16500
-
 PDOX:
 	Inherits: ^Building
 	Inherits@IDISABLE: ^DisableOnLowPower
@@ -377,7 +361,7 @@ PDOX:
 		Queue: Building
 		BuildDuration: 2800
 		BuildPaletteOrder: 280
-		Prerequisites: building-atek, !enoughpdox, ~structures.allies, ~player.normal, ~techlevel.9
+		Prerequisites: building-atek, !enoughpdox, ~structures.allies, ~techlevel.9
 		Description: Teleports a unit across the\nmap for a short time.\nRequires power to operate.\n  Special Ability: Chronoshift
 	Valued:
 		Cost: 2800
@@ -432,7 +416,7 @@ TSLA:
 		Queue: Building
 		BuildDuration: 1500
 		BuildPaletteOrder: 210
-		Prerequisites: building-weap, ~structures.soviet, ~!global-missionrules, ~player.normal, ~techlevel.5
+		Prerequisites: building-weap, ~structures.soviet, ~!global-missionrules, ~techlevel.5
 		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
 	Valued:
 		Cost: 1500
@@ -481,13 +465,6 @@ TSLA:
 	RenderSprites:
 		Image: TSLA
 
-TSLA.mission:
-	Inherits: TSLA
-	Buildable:
-		Prerequisites: building-weap, ~structures.soviet, ~global-missionrules, ~player.normal, ~techlevel.5
-	Health:
-		HP: 400
-
 AGUN:
 	Inherits: ^Defense
 	Inherits@IDISABLE: ^DisableOnLowPower
@@ -499,7 +476,7 @@ AGUN:
 		Queue: Building
 		BuildDuration: 600
 		BuildPaletteOrder: 260
-		Prerequisites: building-dome, ~structures.allies, ~player.normal, ~techlevel.3
+		Prerequisites: building-dome, ~structures.allies, ~techlevel.3
 		Description: Anti-Air base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
 		Cost: 600
@@ -549,7 +526,7 @@ DOME:
 		Queue: Building
 		BuildDuration: 1000
 		BuildPaletteOrder: 150
-		Prerequisites: building-proc, ~player.normal, ~techlevel.2
+		Prerequisites: building-proc, ~techlevel.2
 		Description: Provides an overview\nof the battlefield.\nCan detect cloaked units.\n  Requires power to operate.
 	Valued:
 		Cost: 1000
@@ -614,7 +591,7 @@ PBOX:
 		Queue: Building
 		BuildDuration: 400
 		BuildPaletteOrder: 120
-		Prerequisites: building-tent, ~structures.allies, ~player.normal, ~techlevel.1
+		Prerequisites: building-tent, ~structures.allies, ~techlevel.1
 		Description: Static defense with a heavy machine gun.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 400
@@ -669,7 +646,7 @@ HBOX:
 		Queue: Building
 		BuildDuration: 600
 		BuildPaletteOrder: 160
-		Prerequisites: building-tent, ~structures.allies, ~player.normal, ~techlevel.2
+		Prerequisites: building-tent, ~structures.allies, ~techlevel.2
 		Description: Camouflaged static defense with a heavy machine gun.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 600
@@ -722,7 +699,7 @@ GUN:
 		Queue: Building
 		BuildDuration: 800
 		BuildPaletteOrder: 200
-		Prerequisites: building-tent, ~structures.allies, ~!global-missionrules, ~player.normal, ~techlevel.2
+		Prerequisites: building-tent, ~structures.allies, ~!global-missionrules, ~techlevel.2
 		Description: Anti-Armor base defense.\nCan detect cloaked units.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Valued:
 		Cost: 800
@@ -758,17 +735,6 @@ GUN:
 	RenderSprites:
 		Image: GUN
 
-GUN.mission:
-	Inherits: GUN
-	Buildable:
-		Prerequisites: building-tent, ~structures.allies, ~global-missionrules, ~player.normal, ~techlevel.2
-	Valued:
-		Cost: 600
-	Armament:
-		Weapon: TurretGun.mission
-	Power:
-		Amount: -40
-
 FTUR:
 	Inherits: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -779,7 +745,7 @@ FTUR:
 		Queue: Building
 		BuildDuration: 600
 		BuildPaletteOrder: 130
-		Prerequisites: building-barr, ~structures.soviet, ~player.normal, ~techlevel.1
+		Prerequisites: building-barr, ~structures.soviet, ~techlevel.1
 		Description: Anti-Infantry base defense.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 600
@@ -824,7 +790,7 @@ SAM:
 		Queue: Building
 		BuildDuration: 750
 		BuildPaletteOrder: 270
-		Prerequisites: building-dome, ~structures.soviet, ~player.normal, ~techlevel.6
+		Prerequisites: building-dome, ~structures.soviet, ~techlevel.6
 		Description: Anti-Air base defense.\nCan detect cloaked units.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Valued:
 		Cost: 750
@@ -876,7 +842,7 @@ ATEK:
 		Queue: Building
 		BuildDuration: 1500
 		BuildPaletteOrder: 220
-		Prerequisites: building-weap, building-dome, ~structures.allies, ~player.normal, ~techlevel.7
+		Prerequisites: building-weap, building-dome, ~structures.allies, ~techlevel.7
 		Description: Provides Allied advanced technologies.\n  Special Ability: GPS Satellite
 	Valued:
 		Cost: 1500
@@ -965,7 +931,7 @@ WEAP:
 		Queue: Building
 		BuildDuration: 2000
 		BuildPaletteOrder: 140
-		Prerequisites: building-proc, ~player.normal, ~techlevel.2
+		Prerequisites: building-proc, ~techlevel.2
 		Description: Produces vehicles.
 	Valued:
 		Cost: 2000
@@ -1103,7 +1069,7 @@ PROC:
 		Queue: Building
 		BuildDuration: 2000
 		BuildPaletteOrder: 70
-		Prerequisites: building-power, ~player.normal, ~techlevel.1
+		Prerequisites: building-power, ~techlevel.1
 		Description: Refines Ore and Gems\ninto credits.
 	Valued:
 		Cost: 2000
@@ -1188,7 +1154,7 @@ SILO:
 		Queue: Building
 		BuildDuration: 150
 		BuildPaletteOrder: 110
-		Prerequisites: building-proc, ~player.normal, ~techlevel.1
+		Prerequisites: building-proc, ~techlevel.1
 		Description: Stores excess refined\nOre and Gems.
 	Valued:
 		Cost: 150
@@ -1231,7 +1197,7 @@ HPAD:
 		Queue: Building
 		BuildDuration: 1500
 		BuildPaletteOrder: 190
-		Prerequisites: building-dome, ~player.normal, ~techlevel.6
+		Prerequisites: building-dome, ~techlevel.6
 		Description: Produces and reloads\nhelicopters.
 	Valued:
 		Cost: 1500
@@ -1317,7 +1283,7 @@ AFLD:
 		Queue: Building
 		BuildDuration: 600
 		BuildPaletteOrder: 250
-		Prerequisites: building-dome, ~structures.soviet, ~player.normal, ~techlevel.3
+		Prerequisites: building-dome, ~structures.soviet, ~techlevel.3
 		Description: Produces and reloads aircraft.\n  Special Ability: Paratroopers\n  Special Ability: Spy Plane
 	Valued:
 		Cost: 600
@@ -1466,7 +1432,7 @@ POWR:
 		Queue: Building
 		BuildDuration: 300
 		BuildPaletteOrder: 10
-		Prerequisites: ~player.normal_power, ~techlevel.1
+		Prerequisites: ~player.not_greece, ~techlevel.1
 		Description: Provides power for other structures.
 	Valued:
 		Cost: 300
@@ -1519,7 +1485,7 @@ APWR:
 		Queue: Building
 		BuildDuration: 500
 		BuildPaletteOrder: 20
-		Prerequisites: building-power, ~player.normal_power, ~techlevel.5
+		Prerequisites: building-power, ~player.not_greece, ~techlevel.5
 		Description: Provides double the power of a\nstandard Power Plant.
 	Valued:
 		Cost: 500
@@ -1575,7 +1541,7 @@ STEK:
 		Queue: Building
 		BuildDuration: 1500
 		BuildPaletteOrder: 230
-		Prerequisites: building-weap, building-dome, ~structures.soviet, ~player.normal, ~techlevel.4
+		Prerequisites: building-weap, building-dome, ~structures.soviet, ~techlevel.4
 		Description: Provides Soviet advanced technologies.
 	Valued:
 		Cost: 1500
@@ -1666,7 +1632,7 @@ BARR:
 		Queue: Building
 		BuildDuration: 300
 		BuildPaletteOrder: 60
-		Prerequisites: building-power, ~structures.soviet, ~player.normal, ~techlevel.1
+		Prerequisites: building-power, ~structures.soviet, ~techlevel.1
 		Description: Trains infantry.
 	Valued:
 		Cost: 300
@@ -1732,7 +1698,7 @@ KENN:
 		Queue: Building
 		BuildDuration: 200
 		BuildPaletteOrder: 170
-		Prerequisites: building-barr, ~structures.soviet, ~player.normal, ~techlevel.2
+		Prerequisites: building-barr, ~structures.soviet, ~techlevel.2
 		Description: Trains Attack Dogs.
 	Valued:
 		Cost: 200
@@ -1786,7 +1752,7 @@ TENT:
 		Queue: Building
 		BuildDuration: 300
 		BuildPaletteOrder: 50
-		Prerequisites: building-power, ~structures.allies, ~player.normal, ~techlevel.1
+		Prerequisites: building-power, ~structures.allies, ~techlevel.1
 		Description: Trains infantry.
 	Valued:
 		Cost: 300
@@ -1857,7 +1823,7 @@ FIX:
 		Queue: Building
 		BuildDuration: 1200
 		BuildPaletteOrder: 180
-		Prerequisites: building-weap, ~player.normal, ~techlevel.2
+		Prerequisites: building-weap, ~techlevel.2
 		Description: Repairs vehicles for credits.
 	Valued:
 		Cost: 1200
@@ -1928,7 +1894,7 @@ SBAG:
 		Queue: Building
 		BuildDuration: 25
 		BuildPaletteOrder: 30
-		Prerequisites: ~structures.allies, ~player.normal, ~techlevel.1
+		Prerequisites: ~structures.allies, ~techlevel.1
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
 		Cost: 25
@@ -1956,7 +1922,7 @@ FENC:
 		Queue: Building
 		BuildDuration: 25
 		BuildPaletteOrder: 40
-		Prerequisites: ~structures.soviet, ~player.normal, ~techlevel.1
+		Prerequisites: ~structures.soviet, ~techlevel.1
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
 		Cost: 25
@@ -1984,7 +1950,7 @@ BRIK:
 		Queue: Building
 		BuildDuration: 50
 		BuildPaletteOrder: 80
-		Prerequisites: ~!global-missionrules, ~player.normal, ~techlevel.5
+		Prerequisites: ~!global-missionrules, ~techlevel.5
 		Description: Stop units and blocks enemy fire.
 	Valued:
 		Cost: 50
@@ -2011,14 +1977,6 @@ BRIK:
 		Type: concrete
 	RenderSprites:
 		Image: BRIK
-
-BRIK.mission:
-	Inherits: BRIK
-	-MapEditorData:
-	Buildable:
-		Prerequisites: ~global-missionrules, ~player.normal, ~techlevel.5
-	Valued:
-		Cost: 100
 
 CYCL:
 	Inherits: ^Wall

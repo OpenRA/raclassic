@@ -5,7 +5,7 @@ SYRF:
 		Queue: Building
 		BuildDuration: 50
 		BuildPaletteOrder: 860
-		Prerequisites: building-power, ~structures.allies, ~player.normal, ~techlevel.2
+		Prerequisites: building-power, ~structures.allies, ~techlevel.2
 		Description: Looks like a Naval Yard.
 		Icon: fake-icon
 	Tooltip:
@@ -47,7 +47,7 @@ SPEF:
 		Queue: Building
 		BuildDuration: 50
 		BuildPaletteOrder: 870
-		Prerequisites: building-power, ~disabled, ~player.normal, ~techlevel.2
+		Prerequisites: building-power, ~disabled, ~techlevel.2
 		Description: Looks like a Sub Pen.
 		Icon: fake-icon
 	Tooltip:
@@ -85,7 +85,7 @@ WEAF:
 		Queue: Building
 		BuildDuration: 50
 		BuildPaletteOrder: 880
-		Prerequisites: building-proc, ~structures.allies, ~player.normal, ~techlevel.2
+		Prerequisites: building-proc, ~structures.allies, ~techlevel.2
 		Description: Looks like a War Factory.
 		Icon: fake-icon
 	Tooltip:
@@ -121,7 +121,7 @@ DOMF:
 		Queue: Building
 		BuildDuration: 50
 		BuildPaletteOrder: 890
-		Prerequisites: building-proc, ~structures.allies, ~player.normal, ~techlevel.2
+		Prerequisites: building-proc, ~structures.allies, ~techlevel.2
 		Description: Looks like a Radar Dome.
 		Icon: fake-icon
 	Building:
@@ -140,7 +140,7 @@ FACF:
 		Queue: Building
 		BuildDuration: 50
 		BuildPaletteOrder: 900
-		Prerequisites: ~structures.allies, ~player.normal, ~techlevel.1
+		Prerequisites: ~structures.allies, ~techlevel.1
 		Description: Looks like a Construction Yard.
 		Icon: fake-icon
 	Tooltip:
