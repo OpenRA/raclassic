@@ -1251,7 +1251,6 @@ HPAD:
 	Exit@1:
 		SpawnOffset: 0,-256,0
 		ExitCell: 0,0
-		MoveIntoWorld: false
 		Facing: 224
 	Production:
 		Produces: Aircraft, Helicopter
@@ -1336,7 +1335,6 @@ AFLD:
 	Exit@1:
 		ExitCell: 1,1
 		Facing: 192
-		MoveIntoWorld: false
 	Production:
 		Produces: Aircraft, Plane
 	Reservable:

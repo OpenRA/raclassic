@@ -27,7 +27,7 @@ DOG:
 	Mobile:
 		Speed: 40
 		Voice: Move
-		RequiresCondition: !attack-cooldown && !eating
+		PauseOnCondition: attacking || attack-cooldown
 	Guard:
 		Voice: Move
 	Passenger:
