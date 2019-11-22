@@ -35,6 +35,15 @@ Player:
 					Attractiveness: 1
 					TargetMetric: None
 					CheckRadius: 5c0
+			spyplane-directional:
+				OrderName: SovietSpyPlaneDirectional
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
 			paratroopers:
 				OrderName: SovietParatroopers
 				MinimumAttractiveness: 5
@@ -50,8 +59,32 @@ Player:
 					Attractiveness: -5
 					TargetMetric: None
 					CheckRadius: 8c0
+			paratroopers-directional:
+				OrderName: SovietParatroopersDirectional
+				MinimumAttractiveness: 5
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 8c0
+				Consideration@2:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -5
+					TargetMetric: None
+					CheckRadius: 8c0
 			parabombs:
-				OrderName: UkraineParabombs
+				OrderName: Parabombs
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			parabombs-directional:
+				OrderName: ParabombsDirectional
 				MinimumAttractiveness: 1
 				Consideration@1:
 					Against: Enemy

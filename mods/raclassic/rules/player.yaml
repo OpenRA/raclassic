@@ -84,7 +84,7 @@ Player:
 		CashTickDownNotification: CashTickDown
 		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
-		CheckboxDisplayOrder: 17
+		CheckboxDisplayOrder: 20
 	GpsWatcher:
 	Shroud:
 		FogCheckboxEnabled: false
@@ -141,7 +141,7 @@ Player:
 	LobbyPrerequisiteCheckbox@GLOBALMULTIENGINEER:
 		ID: multiengineer
 		Label: Multi Engineer
-		Description: Multiple Engineers are required to capture a building.
+		Description: Multiple Engineers are required to capture a building
 		Enabled: True
 		DisplayOrder: 14
 		Prerequisites: global-multiengineer
@@ -159,6 +159,13 @@ Player:
 		Enabled: False
 		DisplayOrder: 16
 		Prerequisites: global-missionrules
+	LobbyPrerequisiteCheckbox@GLOBALDIRECTIONALABILITY:
+		ID: directional-abilities
+		Label: Directional Abilities
+		Description: Allows selection of which direction ability planes come from
+		Enabled: False
+		DisplayOrder: 17
+		Prerequisites: global-directional-abilities
 	LobbyPrerequisiteCheckbox@GLOBALLIMITHEROS:
 		ID: herolimit
 		Label: Limit Heroes

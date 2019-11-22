@@ -1362,6 +1362,7 @@ AFLD:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
+		RequiresCondition: !directional-abilities
 	ParatroopersPower@paratroopers:
 		OrderName: SovietParatroopers
 		Prerequisites: aircraft.soviet, ~techlevel.3
@@ -1379,6 +1380,51 @@ AFLD:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
+		RequiresCondition: !directional-abilities
+	AirstrikePower@spyplane-directional:
+		OrderName: SovietSpyPlaneDirectional
+		Prerequisites: aircraft.soviet, ~techlevel.3
+		Icon: spyplane
+		ChargeInterval: 3750
+		Description: Spy Plane
+		LongDesc: Reveals an area of the map\nand cloaked enemy units.
+		SelectTargetSpeechNotification: SelectTarget
+		EndChargeSpeechNotification: SpyPlaneReady
+		CameraActor: camera.spyplane
+		CameraRemoveDelay: 150
+		UnitType: u2
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: camicon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		RequiresCondition: directional-abilities
+	ParatroopersPower@paratroopers-directional:
+		OrderName: SovietParatroopersDirectional
+		Prerequisites: aircraft.soviet, ~techlevel.3
+		Icon: paratroopers
+		ChargeInterval: 7500
+		Description: Paratroopers
+		LongDesc: A Badger drops a squad of infantry\nanywhere on the map.
+		DropItems: E1,E1,E1,E1,E1
+		SelectTargetSpeechNotification: SelectTarget
+		AllowImpassableCells: false
+		QuantizedFacings: 8
+		CameraActor: camera.paradrop
+		DisplayBeacon: true
+		BeaconPoster: pinficon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		RequiresCondition: directional-abilities
+	GrantConditionOnPrerequisite@GLOBALDIRECTIONALABILITY:
+		Condition: directional-abilities
+		Prerequisites: global-directional-abilities
 	ProductionBar:
 		ProductionType: Aircraft
 	SupportPowerChargeBar:
