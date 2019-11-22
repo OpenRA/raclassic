@@ -50,12 +50,18 @@
 	ReloadDelayMultiplier@France:
 		RequiresCondition: france
 		Modifier: 90
+	ProductionCostMultiplier@Russia:
+		Multiplier: 90
+		Prerequisites: player.russia
 	SpeedMultiplier@Ukraine:
 		RequiresCondition: ukraine
 		Modifier: 110
 	RangeMultiplier@Spain:
 		RequiresCondition: spain
 		Modifier: 100
+	ProductionTimeMultiplier@Turkey:
+		Multiplier: 90
+		Prerequisites: player.turkey
 	GrantConditionOnPrerequisite@England:
 		Condition: england
 		Prerequisites: player.england
@@ -186,7 +192,7 @@
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
 	Repairable:
-		RepairActors: fix, fix.russia, fix.turkey
+		RepairActors: fix
 	Chronoshiftable:
 	Sellable:
 		SellSounds: cashturn.aud
@@ -442,7 +448,7 @@
 		Types: Ship
 	Chronoshiftable:
 	RepairableNear:
-		RepairActors: syrd, syrd.russia, syrd.turkey, spen, spen.russia, spen.turkey
+		RepairActors: syrd, spen
 	WithDamageOverlay:
 	Explodes:
 		Weapon: UnitExplodeShip
@@ -540,9 +546,9 @@
 		Weapon: UnitExplodeAir
 		RequiresCondition: airborne && !global-husks
 	Repairable:
-		RepairActors: fix, fix.russia, fix.turkey
+		RepairActors: fix
 	Rearmable:
-		RearmActors: afld, afld.russia, afld.turkey
+		RearmActors: afld
 
 ^Helicopter:
 	Inherits: ^Plane
@@ -561,7 +567,7 @@
 	BodyOrientation:
 		UseClassicFacingFudge: True
 	Rearmable:
-		RearmActors: hpad, hpad.russia, hpad.turkey
+		RearmActors: hpad
 
 ^BasicBuilding:
 	Inherits@1: ^ExistsInWorld

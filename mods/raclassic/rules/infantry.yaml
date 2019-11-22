@@ -8,7 +8,7 @@ DOG:
 		BuildAtProductionType: Dog
 		BuildDuration: 200
 		BuildPaletteOrder: 60
-		Prerequisites: ~kenn, ~player.normal, ~techlevel.2
+		Prerequisites: ~kenn, ~techlevel.2
 		Description: Anti-infantry unit.\nCan detect spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Valued:
 		Cost: 200
@@ -80,7 +80,7 @@ E1:
 		BuildAtProductionType: Soldier
 		BuildDuration: 100
 		BuildPaletteOrder: 10
-		Prerequisites: ~barracks, ~player.normal, ~techlevel.1
+		Prerequisites: ~barracks, ~techlevel.1
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Selectable:
 		Class: E1
@@ -118,7 +118,7 @@ E2:
 		BuildAtProductionType: Soldier
 		BuildDuration: 160
 		BuildPaletteOrder: 40
-		Prerequisites: ~barr, ~player.normal, ~techlevel.1
+		Prerequisites: ~barr, ~techlevel.1
 		Description: Infantry armed with grenades.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
 	Selectable:
 		Class: E2
@@ -155,7 +155,7 @@ E3:
 		BuildAtProductionType: Soldier
 		BuildDuration: 300
 		BuildPaletteOrder: 20
-		Prerequisites: ~barracks, ~player.normal, ~techlevel.1
+		Prerequisites: ~barracks, ~techlevel.1
 		Description: Anti-tank/Anti-aircraft infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Selectable:
 		Class: E3
@@ -206,7 +206,7 @@ E4:
 		BuildAtProductionType: Soldier
 		BuildDuration: 300
 		BuildPaletteOrder: 110
-		Prerequisites: ~barr, infantry-stek, ~player.normal, ~techlevel.4
+		Prerequisites: ~barr, infantry-stek, ~techlevel.4
 		Description: Advanced anti-structure unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
 	Selectable:
 		Class: E4
@@ -239,7 +239,7 @@ E6:
 		BuildAtProductionType: Soldier
 		BuildDuration: 500
 		BuildPaletteOrder: 50
-		Prerequisites: ~barracks, ~player.normal, ~techlevel.3
+		Prerequisites: ~barracks, ~techlevel.3
 		Description: Infiltrates and captures\nenemy structures.\n  Unarmed
 	Selectable:
 		Priority: 5
@@ -278,7 +278,7 @@ SPY:
 		BuildAtProductionType: Soldier
 		BuildDuration: 500
 		BuildPaletteOrder: 80
-		Prerequisites: infantry-dome, ~tent, ~player.normal, ~techlevel.4
+		Prerequisites: infantry-dome, ~tent, ~techlevel.4
 		Description: Infiltrates enemy structures for intel.\nExact effect depends on the building infiltrated.
 	Selectable:
 		Class: SPY
@@ -314,7 +314,7 @@ E7:
 		BuildAtProductionType: Soldier
 		BuildDuration: 1200
 		BuildPaletteOrder: 120
-		Prerequisites: ~barracks-tanya, infantry-tanya, !enoughtanya, ~player.normal, ~techlevel.8
+		Prerequisites: ~barracks-tanya, infantry-tanya, !enoughtanya, ~techlevel.8
 		Description: Elite commando infantry. Armed with\ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4
 	Selectable:
 		Class: E7
@@ -376,7 +376,7 @@ VLKV:
 	Inherits: E7
 	Buildable:
 		BuildPaletteOrder: 130
-		Prerequisites: ~barr, infantry-volkov, !enoughvolkov, ~global-volkov, ~player.normal, ~techlevel.8
+		Prerequisites: ~barr, infantry-volkov, !enoughvolkov, ~global-volkov, ~techlevel.8
 	Tooltip:
 		Name: Volkov
 	Selectable:
@@ -407,7 +407,7 @@ MEDI:
 		BuildAtProductionType: Soldier
 		BuildDuration: 800
 		BuildPaletteOrder: 30
-		Prerequisites: ~tent, ~player.normal, ~techlevel.1
+		Prerequisites: ~tent, ~techlevel.1
 		Description: Heals nearby infantry.\n  Unarmed
 	Selectable:
 		Class: MEDI
@@ -449,7 +449,7 @@ MECH:
 		BuildAtProductionType: Soldier
 		BuildDuration: 950
 		BuildPaletteOrder: 90
-		Prerequisites: ~tent, infantry-fix, ~global-aftermath, ~player.normal, ~techlevel.5
+		Prerequisites: ~tent, infantry-fix, ~global-aftermath, ~techlevel.5
 		Description: Repairs nearby vehicles.\n  Unarmed
 	Selectable:
 		Class: MECH
@@ -543,7 +543,7 @@ THF:
 		BuildAtProductionType: Soldier
 		BuildDuration: 500
 		BuildPaletteOrder: 100
-		Prerequisites: ~tent, infantry-atek, ~player.normal, ~techlevel.8
+		Prerequisites: ~tent, infantry-atek, ~techlevel.8
 		Description: Steals enemy credits.\n  Unarmed
 	Selectable:
 		Class: THF
@@ -574,7 +574,7 @@ SHOK:
 		BuildAtProductionType: Soldier
 		BuildDuration: 900
 		BuildPaletteOrder: 70
-		Prerequisites: ~barr, infantry-tsla, ~global-aftermath, ~player.normal, ~techlevel.5
+		Prerequisites: ~barr, infantry-tsla, ~global-aftermath, ~techlevel.5
 		Description: Elite infantry with portable tesla coils.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Selectable:
 		Class: SHOK

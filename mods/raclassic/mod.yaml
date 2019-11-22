@@ -54,7 +54,7 @@ Rules:
 	raclassic|rules/aircraft.yaml
 	raclassic|rules/ships.yaml
 	raclassic|rules/fakes.yaml
-	raclassic|rules/country-duplicates.yaml
+	raclassic|rules/duplicates.yaml
 
 Sequences:
 	raclassic|sequences/ships.yaml

@@ -85,7 +85,7 @@ MIG:
 		BuildAtProductionType: Plane
 		BuildDuration: 1200
 		BuildPaletteOrder: 50
-		Prerequisites: ~afld, ~player.normal, ~techlevel.7
+		Prerequisites: ~afld, ~techlevel.7
 		Description: Fast Ground-Attack Plane.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry, Light armor, Aircraft
 	Valued:
 		Cost: 1200
@@ -145,7 +145,7 @@ YAK:
 		BuildAtProductionType: Plane
 		BuildDuration: 800
 		BuildPaletteOrder: 30
-		Prerequisites: ~afld, ~player.normal, ~techlevel.3
+		Prerequisites: ~afld, ~techlevel.3
 		Description: Anti-Tanks & Anti-Infantry Plane.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Valued:
 		Cost: 800
@@ -208,7 +208,7 @@ TRAN:
 		BuildAtProductionType: Helicopter
 		BuildDuration: 1200
 		BuildPaletteOrder: 10
-		Prerequisites: ~hpad, ~player.normal, ~techlevel.8
+		Prerequisites: ~hpad, ~techlevel.8
 		Description: Fast Infantry Transport Helicopter.\n  Unarmed
 	Valued:
 		Cost: 1200
@@ -263,7 +263,7 @@ HELI:
 		BuildAtProductionType: Helicopter
 		BuildDuration: 1200
 		BuildPaletteOrder: 40
-		Prerequisites: ~hpad, ~heli.allies, ~player.normal, ~techlevel.6
+		Prerequisites: ~hpad, ~heli.allies, ~techlevel.6
 		Description: Helicopter gunship armed\nwith multi-purpose missiles.\n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
 	Valued:
 		Cost: 1200
@@ -331,7 +331,7 @@ HIND:
 		BuildAtProductionType: Helicopter
 		BuildDuration: 1200
 		BuildPaletteOrder: 20
-		Prerequisites: ~hpad, ~heli.soviet, ~player.normal, ~techlevel.6
+		Prerequisites: ~hpad, ~heli.soviet, ~techlevel.6
 		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor.\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 1200

@@ -235,12 +235,6 @@ Player:
 	ProvidesPrerequisite@Turkey:
 		Factions: turkey
 		Prerequisite: player.turkey
-	ProvidesPrerequisite@Normal:
-		Factions: allies, england, germany, france, spain, greece, soviet, ukraine
-		Prerequisite: player.normal
-	ProvidesPrerequisite@Normal_power:
-		Factions: allies, england, germany, france, spain, soviet, ukraine
-		Prerequisite: player.normal_power
 	ProvidesPrerequisite@NotGreece:
 		Factions: allies, england, germany, france, spain, turkey, soviet, russia, ukraine
 		Prerequisite: player.not_greece
