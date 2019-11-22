@@ -102,7 +102,7 @@
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything || assault-move
 	AttackMove:
-		AssaultMoveScanCondition: assault-move
+		AssaultMoveCondition: assault-move
 
 ^AutoTargetAir:
 	AutoTarget:
@@ -129,7 +129,7 @@
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything || assault-move
 	AttackMove:
-		AssaultMoveScanCondition: assault-move
+		AssaultMoveCondition: assault-move
 
 ^GlobalHusks:
 	GrantConditionOnPrerequisite@GLOBALHUSKS:
@@ -186,7 +186,7 @@
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
 	Repairable:
-		RepairBuildings: fix, fix.russia, fix.turkey
+		RepairActors: fix, fix.russia, fix.turkey
 	Chronoshiftable:
 	Sellable:
 		SellSounds: cashturn.aud
@@ -442,7 +442,7 @@
 		Types: Ship
 	Chronoshiftable:
 	RepairableNear:
-		Buildings: syrd, syrd.russia, syrd.turkey, spen, spen.russia, spen.turkey
+		RepairActors: syrd, syrd.russia, syrd.turkey, spen, spen.russia, spen.turkey
 	WithDamageOverlay:
 	Explodes:
 		Weapon: UnitExplodeShip
@@ -540,7 +540,7 @@
 		Weapon: UnitExplodeAir
 		RequiresCondition: airborne && !global-husks
 	Repairable:
-		RepairBuildings: fix, fix.russia, fix.turkey
+		RepairActors: fix, fix.russia, fix.turkey
 	Rearmable:
 		RearmActors: afld, afld.russia, afld.turkey
 
@@ -555,6 +555,7 @@
 		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach,Gems
 		AltitudeVelocity: 0c58
 		VTOL: true
+		CanSlide: True
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	BodyOrientation:
@@ -580,6 +581,9 @@
 		RequiresBaseProvider: True
 		BuildSounds: placbldg.aud, build5.aud
 		UndeploySounds: cashturn.aud
+	FootprintPlaceBuildingPreview:
+	RequiresBuildableArea:
+		AreaTypes: building
 	SoundOnDamageTransition:
 		DamagedSounds: kaboom1.aud
 		DestroyedSounds: kaboom22.aud
@@ -602,8 +606,6 @@
 	MapEditorData:
 		Categories: Building
 	CommandBarBlacklist:
-	RequiresBuildableArea:
-		AreaTypes: building
 
 ^Building:
 	Inherits: ^BasicBuilding
@@ -668,6 +670,11 @@
 		BuildSounds: placbldg.aud
 		TerrainTypes: Clear,Road
 		UndeploySounds: cashturn.aud
+	FootprintPlaceBuildingPreview:
+		LineBuildSegmentPalette: placelinesegment
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 7
 	SoundOnDamageTransition:
 		DamagedSounds: sandbag2.aud
 		DestroyedSounds: sandbag2.aud
@@ -693,9 +700,6 @@
 		HP: 100
 	MapEditorData:
 		Categories: Wall
-	RequiresBuildableArea:
-		AreaTypes: building
-		Adjacent: 7
 
 ^TechBuilding:
 	Inherits: ^BasicBuilding
@@ -930,6 +934,7 @@
 		CanHover: True
 		TakeOffOnResupply: true
 		VTOL: true
+		CanSlide: True
 	FallsToEarth:
 	BodyOrientation:
 		UseClassicFacingFudge: True

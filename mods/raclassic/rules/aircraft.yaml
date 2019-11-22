@@ -112,6 +112,7 @@ MIG:
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		MoveIntoShroud: false
+		IdleBehavior: ReturnToBase
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
@@ -120,7 +121,6 @@ MIG:
 		PipCount: 5
 		ReloadDelay: 60
 		AmmoCondition: ammo
-	ReturnOnIdle:
 	Selectable:
 		Class: MIG
 		Bounds: 36,28,0,2
@@ -179,6 +179,7 @@ YAK:
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		MoveIntoShroud: false
+		IdleBehavior: ReturnToBase
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
@@ -187,7 +188,6 @@ YAK:
 		PipCount: 5
 		ReloadDelay: 60
 		AmmoCondition: ammo
-	ReturnOnIdle:
 	SelectionDecorations:
 	WithMuzzleOverlay:
 	SpawnActorOnDeath:
@@ -286,6 +286,7 @@ HELI:
 		PauseOnCondition: !ammo
 		RequiresCondition: spain
 	AttackAircraft:
+		AttackType: Hover
 		FacingTolerance: 20
 	Aircraft:
 		InitialFacing: 224
@@ -354,6 +355,7 @@ HIND:
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
 	AttackAircraft:
+		AttackType: Hover
 		FacingTolerance: 20
 	Aircraft:
 		InitialFacing: 224

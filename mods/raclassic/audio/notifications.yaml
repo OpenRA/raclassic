@@ -39,6 +39,8 @@ Speech:
 		ExplosiveChargePlaced: xploplc1
 		FirstObjectiveMet: 1objmet1
 		FourtyMinutesRemaining: 40minr
+		GameLoaded: load1
+		GameSaved: save1
 		HarvesterAttack:
 		InsufficientFunds: nofunds1
 		InsufficientPower: nopowr1

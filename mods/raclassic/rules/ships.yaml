@@ -297,7 +297,7 @@ LST:
 	Mobile:
 		TurnSpeed: 10
 		Speed: 140
-		RequiresCondition: !notmobile
+		PauseOnCondition: notmobile
 	RevealsShroud:
 		Range: 6c0
 	SelectionDecorations:
