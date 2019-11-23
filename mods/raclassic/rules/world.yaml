@@ -416,6 +416,7 @@ World:
 	ObjectivesPanel:
 		PanelName: SKIRMISH_STATS
 	LoadWidgetAtGameStart:
+	TimeLimitManager:
 
 EditorWorld:
 	Inherits: ^BaseWorld
