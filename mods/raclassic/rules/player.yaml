@@ -229,6 +229,7 @@ Player:
 	EnemyWatcher:
 	ResourceStorageWarning:
 	PlayerExperience:
+	PlayerRadarTerrain:
 	ProvidesPrerequisite@Russia:
 		Factions: russia
 		Prerequisite: player.russia
