@@ -46,6 +46,10 @@ CRATE:
 		SelectionShares: 3
 		Proxy: powerproxy.sonarpulse.crate
 		Sequence: sonar
+	SupportPowerCrateAction@abomb:
+		SelectionShares: 1
+		Proxy: powerproxy.abomb
+		Sequence: nuke
 	GiveMcvCrateAction:
 		SelectionShares: 0
 		NoBaseSelectionShares: 100
@@ -440,29 +444,33 @@ powerproxy.sonarpulse.crate:
 		EffectImage: moveflsh
 		EffectPalette: moveflash
 
-# powerproxy.abomb:
-#	AlwaysVisible:
-#	NukePower:
-#		Cursor: nuke
-#		Icon: abomb
-#		ChargeInterval: 19500
-#		Description: Atom Bomb
-#		LongDesc: Launches a devastating atomic bomb\nat a target location.
-#		OneShot: true
-#		AllowMultiple: true
-#		SelectTargetSpeechNotification: SelectTarget
-#		IncomingSpeechNotification: AbombLaunchDetected
-#		SkipAscent: true
-#		MissileWeapon: atomic
-#		DisplayBeacon: True
-#		DisplayRadarPing: True
-#		BeaconPoster: atomicon
-#		FlashType: Nuke
-#		CameraRange: 10c0
-#		ArrowSequence: arrow
-#		ClockSequence: clock
-#		CircleSequence: circles
-#	WithNukeLaunchAnimation:
+powerproxy.abomb:
+	AlwaysVisible:
+	NukePower:
+		OrderName: NukePowerCrateInfoOrder
+		Cursor: nuke
+		Icon: abomb
+		ChargeInterval: 19500
+		FlightDelay: 100
+		FlightVelocity: 1c0
+		Description: Atom Bomb
+		LongDesc: Launches a devastating atomic bomb\nat a target location.
+		OneShot: true
+		AllowMultiple: true
+		BeginChargeSpeechNotification: AbombPrepping
+		EndChargeSpeechNotification: AbombReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: AbombLaunchDetected
+		SkipAscent: true
+		MissileWeapon: atomic
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		BeaconPoster: atomicon
+		FlashType: Nuke
+		CameraRange: 10c0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
 
 powerproxy.paratroopers:
 	AlwaysVisible:
