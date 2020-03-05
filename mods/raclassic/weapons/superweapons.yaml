@@ -55,3 +55,7 @@ Atomic:
 		ImpactSounds: kaboom1.aud
 		ValidTargets: Ground, Water, Air
 		ImpactActors: false
+	Warhead@21Shake: ShakeScreen
+		Duration: 20
+		Intensity: 5
+		Multiplier: 1,1

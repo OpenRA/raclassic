@@ -1,6 +1,6 @@
 Metadata:
 	Title: Red Alert Classic
-	Version: release-20200202
+	Version: playtest-20200303
 	Website: https://www.openra.net
 	WebIcon32: https://raw.githubusercontent.com/OpenRA/ra-classic/mods/raclassic/icon.png
 
@@ -36,7 +36,7 @@ Packages:
 
 MapFolders:
 	raclassic|maps: System
-	~^maps/raclassic/release-20200202: User
+	~^maps/raclassic/playtest-20200303: User
 
 Rules:
 	raclassic|rules/misc.yaml
@@ -100,6 +100,7 @@ ChromeLayout:
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/ingame-infochat.yaml
 	common|chrome/mainmenu.yaml
+	common|chrome/mainmenu-prompts.yaml
 	common|chrome/settings.yaml
 	common|chrome/credits.yaml
 	common|chrome/lobby.yaml
@@ -158,6 +159,8 @@ Hotkeys:
 
 LoadScreen: LogoStripeLoadScreen
 	Image: raclassic|uibits/loadscreen.png
+	Image2x: raclassic|uibits/loadscreen-2x.png
+	Image3x: raclassic|uibits/loadscreen-3x.png
 	Text: Filling Crates..., Planting Trees..., Building Bridges..., Compiling EVA..., Preparing A-Bomb..., Launching Satellite..., Adding Checkboxes..., Moving Hind Back to Soviets..., Moving Thief Back to Allies..., Converting Maps..., Awaiting Orders..., Installing Expansions..., Removing Defence Queue..., Converting Values..., Updating Engine...
 
 ServerTraits:
@@ -225,6 +228,9 @@ SpriteSequenceFormat: TilesetSpecificSpriteSequence
 		DESERT: .des
 
 ModelSequenceFormat: PlaceholderModelSequence
+
+AssetBrowser:
+	SupportedExtensions: .shp, .tmp, .tem, .des, .sno, .int, .vqa
 
 GameSpeeds:
 	slower:

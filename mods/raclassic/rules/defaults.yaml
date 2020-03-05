@@ -921,9 +921,9 @@
 		GenericName: Destroyed Plane
 	Aircraft:
 	FallsToEarth:
-		Spins: False
 		Moves: True
 		Velocity: 86
+		MaximumSpinSpeed: 0
 	-MapEditorData:
 	RevealOnDeath:
 		Duration: 60

@@ -390,7 +390,7 @@ PDOX:
 		BeginChargeSpeechNotification: ChronosphereCharging
 		EndChargeSpeechNotification: ChronosphereReady
 		Duration: 4500
-		KillCargo: yes
+		KillCargo: true
 		DisplayRadarPing: True
 	SupportPowerChargeBar:
 	ProvidesPrerequisite@enoughpdox:
@@ -872,7 +872,7 @@ ATEK:
 	GpsPower:
 		PauseOnCondition: disabled
 		Icon: gps
-		OneShot: yes
+		OneShot: true
 		ChargeInterval: 12000
 		Description: GPS Satellite
 		LongDesc: Reveals map terrain and provides tactical\ninformation. Requires power and active radar.
@@ -1711,7 +1711,7 @@ KENN:
 	RevealsShroud:
 		Range: 4c0
 	RallyPoint:
-		Offset: 0,2
+		Path: 0,2
 	Exit@1:
 		SpawnOffset: -280,400,0
 		ExitCell: 0,1

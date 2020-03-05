@@ -546,6 +546,7 @@ MNLY.AP:
 		Name: Minelayer (Anti-Personnel)
 	Minelayer:
 		Mine: MINP
+		TileUnknownName: build-valid
 	Selectable:
 		Class: MNLY.AP
 	SpawnActorOnDeath:
@@ -567,6 +568,7 @@ MNLY.AV:
 		Name: Minelayer (Anti-Tank)
 	Minelayer:
 		Mine: MINV
+		TileUnknownName: build-valid
 	Selectable:
 		Class: MNLY.AV
 	SpawnActorOnDeath:
@@ -756,7 +758,7 @@ DTRK:
 	KillsSelf:
 		RequiresCondition: invulnerability || triggered
 	Chronoshiftable:
-		ExplodeInstead: yes
+		ExplodeInstead: true
 	Selectable:
 		Class: DTRK
 	RenderSprites:
