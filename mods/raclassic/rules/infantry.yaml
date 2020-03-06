@@ -389,6 +389,8 @@ VLKV:
 		Voice: Action
 	Demolition:
 		Voice: Action
+	WithInfantryBody:
+		IdleSequences: idle1
 	Voiced:
 		VoiceSet: VolkovVoice
 	-AnnounceOnKill:
