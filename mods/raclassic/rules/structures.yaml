@@ -1830,7 +1830,7 @@ FIX:
 	Tooltip:
 		Name: Service Depot
 	Building:
-		Footprint: _=_ xxx _=_
+		Footprint: _+_ +++ _+_
 		Dimensions: 3,3
 	Selectable:
 		Class: FIX
