@@ -306,7 +306,7 @@ IRON:
 		Queue: Building
 		BuildDuration: 2800
 		BuildPaletteOrder: 290
-		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~!global-missionrules, ~techlevel.9
+		Prerequisites: building-stek, !enoughiron, ~structures.soviet, ~techlevel.9
 		Description: Makes a unit invulnerable\nfor a while.\nRequires power to operate.\n  Special Ability: Invulnerability
 	Valued:
 		Cost: 2800
@@ -327,6 +327,7 @@ IRON:
 	RevealsShroud:
 		Range: 10c0
 	GrantExternalConditionPower@IRONCURTAIN:
+		OrderName: SovietIronCurtain
 		PauseOnCondition: disabled
 		Icon: invuln
 		ChargeInterval: 7500
@@ -342,6 +343,28 @@ IRON:
 		DisplayRadarPing: True
 		Condition: invulnerability
 		OnFireSound: ironcur9.aud
+		RequiresCondition: !missionrules
+	GrantExternalConditionPower@IRONCURTAIN-MISSION:
+		OrderName: SovietIronCurtainMission
+		PauseOnCondition: disabled
+		Icon: invuln
+		ChargeInterval: 16500
+		AllowMultiple: true
+		Description: Invulnerability
+		LongDesc: Makes a unit invulnerable\nfor 45 seconds.
+		Range: 0
+		Duration: 1125
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: IronCurtainCharging
+		EndChargeSpeechNotification: IronCurtainReady
+		DisplayRadarPing: True
+		Condition: invulnerability
+		OnFireSound: ironcur9.aud
+		RequiresCondition: missionrules
+	GrantConditionOnPrerequisite@GLOBALMISSIONRULES:
+		Condition: missionrules
+		Prerequisites: global-missionrules
 	SupportPowerChargeBar:
 	ProvidesPrerequisite@enoughiron:
 		Prerequisite: enoughiron
@@ -1956,6 +1979,9 @@ BRIK:
 		Cost: 50
 	CustomSellValue:
 		Value: 0
+	ProductionCostMultiplier@Mission:
+		Multiplier: 200
+		Prerequisites: global-missionrules
 	Tooltip:
 		Name: Concrete Wall
 	SoundOnDamageTransition:
