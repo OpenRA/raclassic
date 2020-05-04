@@ -1734,13 +1734,41 @@ KENN:
 	RevealsShroud:
 		Range: 4c0
 	RallyPoint:
-		Path: 0,2
+	Exit@0:
+		SpawnOffset: -280,400,0
+		ExitCell: -1,1
+		ProductionTypes: Dog, Infantry
+		Priority: 3
 	Exit@1:
 		SpawnOffset: -280,400,0
 		ExitCell: 0,1
+		ProductionTypes: Dog, Infantry
+		Priority: 2
 	Exit@2:
 		SpawnOffset: -280,400,0
 		ExitCell: -1,0
+		ProductionTypes: Dog, Infantry
+		Priority: 2
+	Exit@fallback1:
+		SpawnOffset: -280,400,0
+		ExitCell: -1,-1
+		ProductionTypes: Dog, Infantry
+	Exit@fallback2:
+		SpawnOffset: -280,400,0
+		ExitCell: 0,-1
+		ProductionTypes: Dog, Infantry
+	Exit@fallback3:
+		SpawnOffset: -280,400,0
+		ExitCell: 1,-1
+		ProductionTypes: Dog, Infantry
+	Exit@fallback4:
+		SpawnOffset: -280,400,0
+		ExitCell: 1,0
+		ProductionTypes: Dog, Infantry
+	Exit@fallback5:
+		SpawnOffset: -280,400,0
+		ExitCell: 1,1
+		ProductionTypes: Dog, Infantry
 	Production:
 		Produces: Infantry, Dog
 	PrimaryBuilding:
