@@ -88,7 +88,3 @@ cncdesert: C&C Desert Tileset
 	MirrorList: http://www.openra.net/packages/ra-cncdesert-mirrors.txt
 	Extract:
 		^Content/ra/v2/cnc/desert.mix: cnc/desert.mix
-music: Freeware Music
-	MirrorList: http://www.openra.net/packages/ra-scores-mirrors.txt
-	Extract:
-		^Content/ra/v2/scores.mix: scores.mix
