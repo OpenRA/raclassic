@@ -566,12 +566,6 @@ railmine:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 
-ctflag:
-	idle:
-		Length: 9
-		Tick: 50
-		Offset: 0,-12
-
 paradirection:
 	arrow-t: mouse
 		Start: 1

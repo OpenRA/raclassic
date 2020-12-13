@@ -537,27 +537,6 @@ fact.colorpicker:
 		Image: fact
 		Palette: colorpicker
 
-CTFLAG:
-	Inherits: ^TechBuilding
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-	Tooltip:
-		Name: Flag
-	WithBuildingBib:
-		HasMinibib: true
-	-HitShape:
-	-Health:
-	-Explodes:
-	-Selectable:
-	-SelectionDecorations:
-	-Targetable:
-	MapEditorData:
-		Categories: Decoration
-	RequiresBuildableArea:
-		AreaTypes: building
-	Interactable:
-
 ^Sticky:
 	Interactable:
 	AlwaysVisible:
