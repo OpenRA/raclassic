@@ -224,7 +224,6 @@ Player:
 		Name: 10
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7, techlevel.8, techlevel.9, techlevel.10
 		Id: 10
-	ConditionManager:
 	GrantConditionOnPrerequisiteManager:
 	EnemyWatcher:
 	ResourceStorageWarning:

@@ -1,31 +1,31 @@
 mcv:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	icon: mcvicon
 
 mcvhusk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -1023
 
 truk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	icon: trukicon
 
 truk.destroyed:
 	idle: truk
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 harv:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	harvest:
 		Start: 32
 		Length: 8
@@ -48,23 +48,23 @@ harvhalf:
 hhusk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -1023
 
 hhusk2:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -1023
 
 1tnk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	turret:
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	muzzle: gunfire2
 		Length: 2
 	icon: 1tnkicon
@@ -72,22 +72,22 @@ hhusk2:
 1tnk.destroyed:
 	idle: 1tnk
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 	turret: 1tnk
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 2tnk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	turret:
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	muzzle: gunfire2
 		Length: 5
 	icon: 2tnkicon
@@ -95,22 +95,22 @@ hhusk2:
 2tnk.destroyed:
 	idle: 2tnk
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 	turret: 2tnk
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 3tnk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	turret:
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	muzzle: gunfire2
 		Length: 5
 	icon: 3tnkicon
@@ -118,22 +118,22 @@ hhusk2:
 3tnk.destroyed:
 	idle: 3tnk
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 	turret: 3tnk
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 4tnk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	turret:
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	muzzle: gunfire2
 		Length: 5
 	icon: 4tnkicon
@@ -141,22 +141,22 @@ hhusk2:
 4tnk.destroyed:
 	idle: 4tnk
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 	turret: 4tnk
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 v2rl:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	empty-idle:
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	aim:
 		Start: 64
 		Facings: 8
@@ -169,13 +169,13 @@ v2rl.destroyed:
 	idle: v2rl
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 arty:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	muzzle: gunfire2
 		Length: 5
 	icon: artyicon
@@ -183,17 +183,17 @@ arty:
 arty.destroyed:
 	idle: arty
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 jeep:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	turret:
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	muzzle: minigun
 		Length: 6
 		Facings: 8
@@ -202,18 +202,18 @@ jeep:
 jeep.destroyed:
 	idle: jeep
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 	turret: jeep
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 apc:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	muzzle: minigun
 		Length: 6
 		Facings: 8
@@ -227,25 +227,25 @@ apc:
 apc.destroyed:
 	idle: apc
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 mnly:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	icon: mnlyicon
 
 mnly.destroyed:
 	idle: mnly
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 mrj:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	spinner:
 		Start: 32
 		Length: 32
@@ -254,7 +254,7 @@ mrj:
 mrj.destroyed:
 	idle: mrj
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 	spinner: mrj
 		Start: 32
@@ -263,7 +263,7 @@ mrj.destroyed:
 mgg:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	spinner:
 		Start: 32
 		Length: 8
@@ -275,7 +275,7 @@ mgg:
 mgg.destroyed:
 	idle: mgg
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 	spinner: mgg
 		Start: 32
@@ -287,7 +287,7 @@ mgg.destroyed:
 ttnk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	spinner:
 		Start: 32
 		Length: 32
@@ -296,7 +296,7 @@ ttnk:
 ttnk.destroyed:
 	idle: ttnk
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 	spinner: ttnk
 		Start: 32
@@ -306,19 +306,19 @@ ttnk.destroyed:
 dtrk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	icon: dtrkicon
 
 dtrk.destroyed:
 	idle: dtrk
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 ctnk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	muzzle: gunfire2
 		Length: 5
 	icon: ctnkicon
@@ -326,13 +326,13 @@ ctnk:
 ctnk.destroyed:
 	idle: ctnk
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 
 qtnk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	piston:
 		Start: 32
 		Facings: 8
@@ -342,7 +342,7 @@ qtnk:
 qtnk.destroyed:
 	idle: qtnk
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 	piston: qtnk
 		Start: 32
@@ -353,7 +353,7 @@ qtnk.destroyed:
 stnk:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	turret:
 		Start: 38
 		Facings: 32
@@ -362,7 +362,7 @@ stnk:
 stnk.destroyed:
 	idle: stnk
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		ZOffset: -512
 	turret: stnk
 		Start: 38

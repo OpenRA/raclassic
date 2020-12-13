@@ -4,11 +4,15 @@
 	GivesExperience:
 		PlayerExperienceModifier: 1
 	ScriptTriggers:
-	ConditionManager:
 	RenderDebugState:
 
 ^SpriteActor:
 	BodyOrientation:
+	QuantizeFacingsFromSequence:
+	RenderSprites:
+
+^ClassicFacingSpriteActor:
+	ClassicFacingBodyOrientation:
 	QuantizeFacingsFromSequence:
 	RenderSprites:
 
@@ -151,11 +155,11 @@
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
-	SelfHealing@LOWPOWER:
+	ChangesHealth@LOWPOWER:
 		Step: 0
 		PercentageStep: -1
 		Delay: 1500
-		HealIfBelow: 101
+		StartIfBelow: 101
 		DamageCooldown: 0
 		RequiresCondition: lowpower && global-lpdamage
 
@@ -166,7 +170,7 @@
 ^Vehicle:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^IronCurtainable
-	Inherits@3: ^SpriteActor
+	Inherits@3: ^ClassicFacingSpriteActor
 	Inherits@4: ^AffectedByCountryBonuses
 	Inherits@5: ^GenericSpeedModifier
 	Inherits@husks: ^GlobalHusks
@@ -176,7 +180,7 @@
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
 	Mobile:
-		TurnSpeed: 5
+		TurnSpeed: 20
 		Locomotor: wheeled-non-crusher
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
@@ -242,8 +246,6 @@
 		OpeningSequence: open
 		Offset: 0,0,200
 		RequiresCondition: parachute
-	BodyOrientation:
-		UseClassicFacingFudge: True
 	HitShape:
 	MapEditorData:
 		Categories: Vehicle
@@ -564,8 +566,8 @@
 		CanSlide: True
 	Hovers@CRUISING:
 		RequiresCondition: cruising
-	BodyOrientation:
-		UseClassicFacingFudge: True
+	-BodyOrientation:
+	ClassicFacingBodyOrientation:
 	Rearmable:
 		RearmActors: hpad
 
@@ -644,7 +646,7 @@
 	WithBuildingRepairDecoration:
 		Image: allyrepair
 		Sequence: repair
-		ReferencePoint: Center
+		Position: Center
 		Palette: player
 		IsPlayerPalette: True
 	CaptureManager:
@@ -733,11 +735,11 @@
 	RevealsShroud:
 		Range: 4c0
 	WithDecoration@fake:
-		RequiresSelection: true
+		Position: Top
+		Margin: 0, 4
+		RequiresSelection: false
 		Image: pips
 		Sequence: tag-fake
-		ReferencePoint: Top
-		ZOffset: 256
 	-SpawnActorsOnSell:
 	-MustBeDestroyed:
 	Power:
@@ -756,14 +758,12 @@
 		RequiresSelection: true
 		Image: pips
 		Sequence: tag-fake
-		ReferencePoint: Top
-		ZOffset: 256
+		Position: Top
 
 ^AmmoBox:
 	Inherits: ^TechBuilding
 	-Selectable:
 	SelectionDecorations:
-		RenderSelectionBars: False
 	Health:
 		HP: 10
 	Explodes:
@@ -891,13 +891,12 @@
 
 ^Husk:
 	Inherits: ^BasicHusk
+	Inherits@2: ^ClassicFacingSpriteActor
 	Husk:
 		AllowedTerrain: Clear, Rough, Road, Ore, Gems, Beach
-	Burns:
-		Damage: 2
 	Capturable:
 		Types: husk
-		ValidStances: Enemy, Neutral, Ally
+		ValidRelationships: Enemy, Neutral, Ally
 	TransformOnCapture:
 		ForceHealthPercentage: 25
 	WithColoredOverlay@IDISABLE:
@@ -908,9 +907,15 @@
 	Chronoshiftable:
 	Tooltip:
 		GenericName: Destroyed Vehicle
-	BodyOrientation:
-		UseClassicFacingFudge: True
 	CaptureManager:
+	WithIdleOverlay@Burns:
+		Image: fire
+		Sequence: 1
+		IsDecoration: True
+	ChangesHealth:
+		Step: -2
+		StartIfBelow: 101
+		Delay: 8
 
 ^PlaneHusk:
 	Inherits: ^BasicHusk
@@ -931,6 +936,7 @@
 
 ^HelicopterHusk:
 	Inherits: ^BasicHusk
+	Inherits@2: ^ClassicFacingSpriteActor
 	WithShadow:
 		Offset: 43, 128, 0
 		ZOffset: -129
@@ -942,8 +948,6 @@
 		VTOL: true
 		CanSlide: True
 	FallsToEarth:
-	BodyOrientation:
-		UseClassicFacingFudge: True
 	-MapEditorData:
 	RevealOnDeath:
 		Duration: 60
@@ -1029,7 +1033,6 @@
 		ShadowImage: parach-shadow
 		ShadowSequence: idle
 		RequiresCondition: parachute
-	ConditionManager:
 	MapEditorData:
 		Categories: System
 
@@ -1055,6 +1058,10 @@
 		Weapon: UnitExplodeSmall
 	RenderSprites:
 		Image: MNLY
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
 
 ^Mine:
 	Inherits: ^SpriteActor
@@ -1093,3 +1100,26 @@
 	GrantCondition@IDISABLE:
 		RequiresCondition: lowpower
 		Condition: disabled
+
+^CargoPips:
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		CustomPipSequences:
+			gray: pip-gray
+			yellow: pip-yellow
+			blue: pip-blue
+			red: pip-red
+
+^PrimaryBuilding:
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	WithDecoration@primary:
+		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 4
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary

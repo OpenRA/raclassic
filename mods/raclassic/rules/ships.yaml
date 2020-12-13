@@ -22,7 +22,7 @@ SS:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 7
+		TurnSpeed: 28
 		Speed: 60
 	RevealsShroud:
 		Range: 6c0
@@ -91,7 +91,7 @@ MSUB:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 7
+		TurnSpeed: 28
 		Speed: 50
 	RevealsShroud:
 		Range: 6c0
@@ -162,12 +162,12 @@ DD:
 	Armor:
 		Type: Heavy
 	Mobile:
-		TurnSpeed: 7
+		TurnSpeed: 28
 		Speed: 60
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 7
+		TurnSpeed: 28
 		Offset: 341,0,128
 	Armament@PRIMARY:
 		Weapon: Stinger
@@ -237,17 +237,17 @@ CA:
 		Type: Heavy
 	Mobile:
 		Speed: 40
-		TurnSpeed: 5
+		TurnSpeed: 20
 	RevealsShroud:
 		Range: 7c0
 	Turreted@PRIMARY:
 		Turret: primary
 		Offset: -864,0,128
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Turreted@SECONDARY:
 		Turret: secondary
 		Offset: 768,0,128
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament@PRIMARY:
 		Turret: primary
 		Weapon: 8Inch
@@ -280,6 +280,7 @@ CA:
 
 LST:
 	Inherits: ^Ship
+	Inherits@CARGOPIPS: ^CargoPips
 	Buildable:
 		Queue: Ship
 		BuildDuration: 700
@@ -295,7 +296,7 @@ LST:
 	Armor:
 		Type: Heavy
 	Mobile:
-		TurnSpeed: 10
+		TurnSpeed: 40
 		Speed: 140
 		PauseOnCondition: notmobile
 	RevealsShroud:
@@ -306,7 +307,6 @@ LST:
 	Cargo:
 		Types: Infantry, Vehicle
 		MaxWeight: 5
-		PipCount: 5
 		PassengerFacing: 0
 		LoadingCondition: notmobile
 	-Chronoshiftable:
@@ -337,12 +337,12 @@ PT:
 	Armor:
 		Type: Heavy
 	Mobile:
-		TurnSpeed: 7
+		TurnSpeed: 28
 		Speed: 90
 	RevealsShroud:
 		Range: 7c0
 	Turreted:
-		TurnSpeed: 7
+		TurnSpeed: 28
 		Offset: 512,0,0
 	Armament@PRIMARY:
 		Weapon: 2Inch

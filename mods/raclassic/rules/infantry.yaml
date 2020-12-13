@@ -249,7 +249,7 @@ E6:
 	Tooltip:
 		Name: Engineer
 	Passenger:
-		PipType: Yellow
+		CustomPipType: yellow
 	EngineerRepair:
 	RepairsBridges:
 	Captures@Single:
@@ -289,7 +289,7 @@ SPY:
 	RevealsShroud:
 		Range: 5c0
 	Passenger:
-		PipType: Yellow
+		CustomPipType: yellow
 		Voice: Move
 	Infiltrates:
 		Types: SpyInfiltrate
@@ -340,7 +340,7 @@ E7:
 		DetonationDelay: 45
 		Voice: Demolish
 	Passenger:
-		PipType: Red
+		CustomPipType: red
 		Voice: Move
 	Armament@PRIMARY:
 		Weapon: Colt45
@@ -422,13 +422,13 @@ MEDI:
 	RevealsShroud:
 		Range: 3c0
 	Passenger:
-		PipType: Yellow
+		CustomPipType: yellow
 	Armament:
 		Weapon: Heal
 		Cursor: heal
 		OutsideRangeCursor: heal
-		TargetStances: Ally
-		ForceTargetStances: None
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
 	AttackFrontal:
 	WithInfantryBody:
 		StandSequences: stand
@@ -466,14 +466,14 @@ MECH:
 	RevealsShroud:
 		Range: 3c0
 	Passenger:
-		PipType: Yellow
+		CustomPipType: yellow
 		Voice: Move
 	Armament:
 		Weapon: Repair
 		Cursor: repair
 		OutsideRangeCursor: repair
-		TargetStances: Ally
-		ForceTargetStances: None
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
 	AttackFrontal:
 		Voice: Move
 	WithInfantryBody:
@@ -552,7 +552,7 @@ THF:
 	RevealsShroud:
 		Range: 5c0
 	Passenger:
-		PipType: Yellow
+		CustomPipType: yellow
 	Infiltrates:
 		Types: ThiefInfiltrate
 		PlayerExperience: 50
@@ -636,7 +636,7 @@ ANT:
 		HP: 750
 	Mobile:
 		Speed: 99
-		TurnSpeed: 12
+		TurnSpeed: 48
 		Locomotor: wheeled-non-crusher
 	-Crushable@NOWARN:
 	-Crushable@WARN:

@@ -197,11 +197,11 @@ Actors:
 	Actor52: agun
 		Owner: Greece
 		Location: 56,68
-		TurretFacing: 224
+		TurretFacing: 896
 	Actor53: hbox
 		Owner: Greece
 		Location: 51,67
-		TurretFacing: 92
+		TurretFacing: 368
 	Actor54: proc
 		Owner: Greece
 		Location: 41,70
@@ -214,7 +214,7 @@ Actors:
 	Actor57: pbox
 		Owner: Greece
 		Location: 44,63
-		TurretFacing: 92
+		TurretFacing: 368
 	Actor58: silo
 		Owner: Greece
 		Location: 39,71
@@ -246,30 +246,27 @@ Actors:
 		Owner: USSR
 		Location: 81,62
 		SubCell: 3
-		Facing: 128
+		Facing: 512
 	SDog2: dog
 		Owner: USSR
 		Location: 79,62
 		SubCell: 3
-		Facing: 128
+		Facing: 512
 	SRifle1: e1
 		Owner: USSR
 		Location: 72,59
 		SubCell: 3
-		Facing: 64
-		TurretFacing: 64
+		Facing: 256
 	SRifle2: e1
 		Owner: USSR
 		Location: 72,60
 		SubCell: 3
-		Facing: 64
-		TurretFacing: 64
+		Facing: 256
 	SGren1: e2
 		Owner: USSR
 		Location: 76,56
 		SubCell: 3
-		Facing: 96
-		TurretFacing: 96
+		Facing: 384
 	Actor72: silo
 		Owner: USSR
 		Location: 81,59
@@ -303,55 +300,49 @@ Actors:
 	Actor82: ftur
 		Owner: USSR
 		Location: 70,58
-		TurretFacing: 92
+		TurretFacing: 368
 	SSubPen1: spen
 		Owner: USSR
 		Location: 70,73
 	SSub1: ss
 		Owner: USSR
 		Location: 69,73
-		Facing: 64
+		Facing: 256
 	SGBoat1: pt
 		Owner: Greece
 		Location: 55,79
-		Facing: 192
-		TurretFacing: 192
+		Facing: 768
 	ARifle1: e1
 		Owner: Greece
 		Location: 49,68
 		SubCell: 3
-		Facing: 224
-		TurretFacing: 224
+		Facing: 896
 	ARifle2: e1
 		Owner: Greece
 		Location: 53,68
 		SubCell: 3
 		Facing: 0
-		TurretFacing: 0
 	ARocket1: e3
 		Owner: Greece
 		Location: 47,64
 		SubCell: 3
 		Facing: 0
-		TurretFacing: 0
 	AMedic1: medi
 		Owner: Greece
 		Location: 50,70
 		SubCell: 3
-		Facing: 64
-		TurretFacing: 64
+		Facing: 256
 	Actor90: sam
 		Owner: USSR
 		Location: 70,69
-		TurretFacing: 0
 	Actor91: harv
 		Owner: USSR
 		Location: 82,64
-		Facing: 192
+		Facing: 768
 	Actor92: harv
 		Owner: Greece
 		Location: 42,78
-		Facing: 64
+		Facing: 256
 	Actor93: apwr
 		Owner: Greece
 		Location: 41,65
