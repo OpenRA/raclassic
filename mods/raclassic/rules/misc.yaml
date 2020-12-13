@@ -28,7 +28,7 @@ CRATE:
 		Weapon: TimeQuake
 		SelectionShares: 3
 		Sequence: timequake
-	HealUnitsCrateAction:
+	HealActorsCrateAction:
 		Sound: heal2.aud
 		SelectionShares: 1
 		Sequence: heal
@@ -184,7 +184,7 @@ HEALCRATE:
 	Inherits: ^Crate
 	Tooltip:
 		Name: Heal Crate
-	HealUnitsCrateAction:
+	HealActorsCrateAction:
 		Sound: heal2.aud
 		SelectionShares: 1
 		Sequence: heal
@@ -370,7 +370,6 @@ LAR2:
 
 powerproxy.parabombs:
 	AlwaysVisible:
-	ConditionManager:
 	AirstrikePower:
 		OrderName: Parabombs
 		Icon: parabombs
@@ -427,6 +426,7 @@ powerproxy.sonarpulse:
 		DeploySound: sonpulse.aud
 		EffectImage: moveflsh
 		EffectPalette: moveflash
+		EffectSequence: idle
 
 powerproxy.sonarpulse.crate:
 	AlwaysVisible:
@@ -443,6 +443,7 @@ powerproxy.sonarpulse.crate:
 		DeploySound: sonpulse.aud
 		EffectImage: moveflsh
 		EffectPalette: moveflash
+		EffectSequence: idle
 
 powerproxy.abomb:
 	AlwaysVisible:
@@ -466,7 +467,6 @@ powerproxy.abomb:
 		DisplayBeacon: True
 		DisplayRadarPing: True
 		BeaconPoster: atomicon
-		FlashType: Nuke
 		CameraRange: 10c0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -562,7 +562,6 @@ CTFLAG:
 	Interactable:
 	AlwaysVisible:
 	Aircraft:
-	ConditionManager:
 	KillsSelf:
 		Delay: 1
 		RemoveInstead: true

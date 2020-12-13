@@ -30,7 +30,6 @@ V2RL:
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 1
-		PipCount: 0
 		AmmoCondition: ammo
 	ReloadAmmoPool:
 		Delay: 400
@@ -84,7 +83,7 @@ V2RL:
 	RevealsShroud:
 		Range: 4c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: 75mm
 		Recoil: 85
@@ -131,7 +130,7 @@ V2RL:
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: 90mm
 		Recoil: 128
@@ -180,7 +179,7 @@ V2RL:
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: 105mm
 		Recoil: 128
@@ -226,7 +225,7 @@ V2RL:
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament@PRIMARY:
 		Weapon: 120mm
 		LocalOffset: 900,180,340, 900,-180,340
@@ -264,10 +263,10 @@ V2RL:
 		Actor: 4TNK.Husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
-	SelfHealing:
+	ChangesHealth:
 		Step: 1
 		Delay: 3
-		HealIfBelow: 50
+		StartIfBelow: 50
 		DamageCooldown: 150
 	SelectionDecorations:
 	Selectable:
@@ -300,7 +299,7 @@ ARTY:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 2
+		TurnSpeed: 8
 		Speed: 60
 	RevealsShroud:
 		Range: 5c0
@@ -365,16 +364,24 @@ HARV:
 	HarvesterHuskModifier:
 		FullHuskActor: HARV.FullHusk
 		FullnessThreshold: 50
-	SelfHealing:
+	ChangesHealth:
 		Step: 1
 		Delay: 25
-		HealIfBelow: 50
+		StartIfBelow: 50
 		DamageCooldown: 500
 	WithHarvesterSpriteBody:
 		ImageByFullness: harvempty, harvhalf, harv
 	-WithFacingSpriteBody:
 	RenderSprites:
 		Image: HARV
+	WithHarvesterPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 7
+		ResourceSequences:
+			Ore: pip-yellow
+			Gems: pip-red
 
 MCV:
 	Inherits: ^Vehicle
@@ -405,7 +412,7 @@ MCV:
 	Transforms:
 		IntoActor: fact
 		Offset: -1,-1
-		Facing: 96
+		Facing: 384
 		TransformSounds: placbldg.aud, build5.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
 	MustBeDestroyed:
@@ -441,12 +448,12 @@ JEEP:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 10
+		TurnSpeed: 40
 		Speed: 100
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 10
+		TurnSpeed: 40
 		Offset: 0,0,128
 	Armament:
 		Weapon: M60mg
@@ -477,6 +484,7 @@ APC:
 	Inherits: ^Vehicle
 	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@CARGOPIPS: ^CargoPips
 	RangeMultiplier@Spain:
 		RequiresCondition: spain
 		Modifier: 125
@@ -522,7 +530,6 @@ APC:
 		LoadedCondition: Loaded
 		Types: Infantry
 		MaxWeight: 5
-		PipCount: 5
 		LoadingCondition: notmobile
 		EjectOnDeath: true
 	SpawnActorOnDeath:
@@ -661,7 +668,7 @@ MRJ:
 		Offset: -256,0,256
 	ProximityExternalCondition@JAMMER:
 		Range: 15c0
-		ValidStances: Enemy, Neutral
+		ValidRelationships: Enemy, Neutral
 		Condition: jammed
 	WithRangeCircle@JAMMER:
 		Type: jammer
@@ -747,7 +754,7 @@ DTRK:
 		EmptyWeapon: MiniNuke
 		DamageSource: Killer
 	AttackFrontal:
-		FacingTolerance: 128
+		FacingTolerance: 512
 	Armament@PRIMARY:
 		Weapon: DemoTruckTargeting
 	GrantConditionOnAttack:
@@ -868,6 +875,7 @@ STNK:
 	Inherits: ^Vehicle
 	Inherits@TRACK-CRUSH: ^CrusherTracked
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@CARGOPIPS: ^CargoPips
 	Buildable:
 		Queue: Vehicle
 		BuildDuration: 800
@@ -906,7 +914,7 @@ STNK:
 		LocalOffset: 192,0,176
 		RequiresCondition: spain
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	AttackTurreted:
 	WithSpriteTurret:
 	Sellable:
@@ -915,7 +923,6 @@ STNK:
 		LoadedCondition: Loaded
 		Types: Infantry
 		MaxWeight: 1
-		PipCount: 1
 		LoadingCondition: notmobile
 	Cloak:
 		InitialDelay: 0

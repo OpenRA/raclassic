@@ -12,7 +12,7 @@
 		TrailInterval: 1
 		Image: DRAGON
 		Shadow: True
-		HorizontalRateOfTurn: 5
+		HorizontalRateOfTurn: 20
 		RangeLimit: 6c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -80,7 +80,7 @@ Hellfire:
 	Burst: 2
 	Projectile: Missile
 		Speed: 450
-		HorizontalRateOfTurn: 10
+		HorizontalRateOfTurn: 40
 		RangeLimit: 5c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 40
@@ -104,7 +104,7 @@ MammothTusk:
 	ValidTargets: Air, Infantry
 	Projectile: Missile
 		Speed: 450
-		HorizontalRateOfTurn: 15
+		HorizontalRateOfTurn: 60
 		RangeLimit: 9c614
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
@@ -140,7 +140,7 @@ Nike:
 		Arm: 3
 		Inaccuracy: 0
 		Image: MISSILE
-		HorizontalRateOfTurn: 25
+		HorizontalRateOfTurn: 100
 		RangeLimit: 9c0
 		Speed: 750
 	Warhead@1Dam: SpreadDamage
@@ -179,7 +179,7 @@ Stinger:
 	Projectile: Missile
 		Arm: 3
 		Inaccuracy: 0
-		HorizontalRateOfTurn: 20
+		HorizontalRateOfTurn: 80
 		RangeLimit: 9c512
 		Speed: 300
 		CloseEnough: 149
@@ -218,7 +218,7 @@ APTusk:
 	Range: 5c0
 	Projectile: Missile
 		Speed: 450
-		HorizontalRateOfTurn: 10
+		HorizontalRateOfTurn: 40
 		RangeLimit: 7c204
 	Warhead@1Dam: SpreadDamage
 		Damage: 75
@@ -246,7 +246,7 @@ TorpTube:
 		Arm: 3
 		Speed: 225
 		TrailImage: bubbles
-		HorizontalRateOfTurn: 1
+		HorizontalRateOfTurn: 4
 		RangeLimit: 10c819
 		BoundToTerrainType: Water
 		Palette: shadow
@@ -288,7 +288,7 @@ SubSCUD:
 	Projectile: Missile
 		Speed: 300
 		Inaccuracy: 0c614
-		HorizontalRateOfTurn: 5
+		HorizontalRateOfTurn: 20
 		RangeLimit: 15c0
 		Image: MISSILE
 		TrailImage: smokey

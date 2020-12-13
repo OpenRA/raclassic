@@ -38,11 +38,10 @@ MSLO:
 		IncomingSpeechNotification: AbombLaunchDetected
 		MissileWeapon: atomic
 		SpawnOffset: 0,427,0
-		DisplayTimerStances: Ally, Neutral, Enemy
+		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayBeacon: True
 		DisplayRadarPing: True
 		BeaconPoster: atomicon
-		FlashType: Nuke
 		CameraRange: 10c0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -65,7 +64,7 @@ MSLO:
 		Amount: -100
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	WithNukeLaunchAnimation:
+	WithSupportPowerActivationAnimation:
 		RequiresCondition: !build-incomplete
 	Selectable:
 		Class: MSLO
@@ -115,6 +114,7 @@ GAP:
 
 SPEN:
 	Inherits: ^Building
+	Inherits@PRIMARY: ^PrimaryBuilding
 	InfiltrateForSupportPower:
 		Types: SpyInfiltrate
 		Proxy: powerproxy.sonarpulse
@@ -143,25 +143,22 @@ SPEN:
 		Range: 4c0
 	Exit@1:
 		SpawnOffset: 0,-213,0
-		Facing: 96
+		Facing: 384
 		ExitCell: -1,2
 	Exit@2:
 		SpawnOffset: 0,-213,0
-		Facing: 160
+		Facing: 640
 		ExitCell: 3,2
 	Exit@3:
 		SpawnOffset: 0,0,0
-		Facing: 32
+		Facing: 128
 		ExitCell: 0,0
 	Exit@4:
 		SpawnOffset: 0,0,0
-		Facing: 224
+		Facing: 896
 		ExitCell: 2,0
 	Production:
 		Produces: Ship, Submarine
-	PrimaryBuilding:
-		PrimaryCondition: primary
-		SelectionNotification: PrimaryBuildingSelected
 	-SpawnActorsOnSell:
 	RepairsUnits:
 		StartRepairingNotification: Repairing
@@ -182,13 +179,6 @@ SPEN:
 		Prerequisite: spen
 	MapEditorData:
 		ExcludeTilesets: INTERIOR
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	HitShape:
 		Type: Rectangle
 			TopLeft: -1536, -598
@@ -207,6 +197,7 @@ SPEN:
 
 SYRD:
 	Inherits: ^Building
+	Inherits@PRIMARY: ^PrimaryBuilding
 	InfiltrateForSupportPower:
 		Types: SpyInfiltrate
 		Proxy: powerproxy.sonarpulse
@@ -235,25 +226,22 @@ SYRD:
 		Range: 4c0
 	Exit@1:
 		SpawnOffset: -1024,1024,0
-		Facing: 160
+		Facing: 640
 		ExitCell: 0,2
 	Exit@2:
 		SpawnOffset: 1024,1024,0
-		Facing: 224
+		Facing: 896
 		ExitCell: 2,2
 	Exit@3:
 		SpawnOffset: -1024,-1024,0
-		Facing: 96
+		Facing: 384
 		ExitCell: 0,0
 	Exit@4:
 		SpawnOffset: 1024,-1024,0
-		Facing: 32
+		Facing: 128
 		ExitCell: 2,0
 	Production:
 		Produces: Ship, Boat
-	PrimaryBuilding:
-		PrimaryCondition: primary
-		SelectionNotification: PrimaryBuildingSelected
 	-SpawnActorsOnSell:
 	RepairsUnits:
 		StartRepairingNotification: Repairing
@@ -274,13 +262,6 @@ SYRD:
 		Prerequisite: syrd
 	MapEditorData:
 		ExcludeTilesets: INTERIOR
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	HitShape:
 		TargetableOffsets: 768,0,0, 768,-1024,0, 768,1024,0
 		Type: Rectangle
@@ -334,7 +315,6 @@ IRON:
 		AllowMultiple: true
 		Description: Invulnerability
 		LongDesc: Makes a unit invulnerable\nfor 45 seconds.
-		Range: 0
 		Duration: 1125
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -344,6 +324,8 @@ IRON:
 		Condition: invulnerability
 		OnFireSound: ironcur9.aud
 		RequiresCondition: !missionrules
+		Dimensions: 1, 1
+		Footprint: x
 	GrantExternalConditionPower@IRONCURTAIN-MISSION:
 		OrderName: SovietIronCurtainMission
 		PauseOnCondition: disabled
@@ -352,7 +334,6 @@ IRON:
 		AllowMultiple: true
 		Description: Invulnerability
 		LongDesc: Makes a unit invulnerable\nfor 45 seconds.
-		Range: 0
 		Duration: 1125
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -362,6 +343,8 @@ IRON:
 		Condition: invulnerability
 		OnFireSound: ironcur9.aud
 		RequiresCondition: missionrules
+		Dimensions: 1, 1
+		Footprint: x
 	GrantConditionOnPrerequisite@GLOBALMISSIONRULES:
 		Condition: missionrules
 		Prerequisites: global-missionrules
@@ -407,7 +390,6 @@ PDOX:
 		ChargeInterval: 10500
 		Description: Chronoshift
 		LongDesc: Teleports a unit across\nthe map for 3 minutes.
-		Range: 0
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		BeginChargeSpeechNotification: ChronosphereCharging
@@ -415,6 +397,8 @@ PDOX:
 		Duration: 4500
 		KillCargo: true
 		DisplayRadarPing: True
+		Dimensions: 1, 1
+		Footprint: x
 	SupportPowerChargeBar:
 	ProvidesPrerequisite@enoughpdox:
 		Prerequisite: enoughpdox
@@ -517,8 +501,8 @@ AGUN:
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 15
-		InitialFacing: 224
+		TurnSpeed: 60
+		InitialFacing: 896
 	-WithSpriteBody:
 	WithEmbeddedTurretSpriteBody:
 	Armament:
@@ -533,8 +517,8 @@ AGUN:
 		RangeCircleType: aa
 	Power:
 		Amount: -50
-	BodyOrientation:
-		UseClassicFacingFudge: True
+	-BodyOrientation:
+	ClassicFacingBodyOrientation:
 	RenderSprites:
 		Image: AGUN
 
@@ -625,7 +609,7 @@ PBOX:
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
-		TurnSpeed: 255
+		TurnSpeed: 1023
 		Offset: 0,0,64
 	Armament:
 		Weapon: Vulcan
@@ -680,7 +664,7 @@ HBOX:
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
-		TurnSpeed: 255
+		TurnSpeed: 1023
 		Offset: 0,0,64
 	Armament:
 		Weapon: Vulcan
@@ -736,8 +720,8 @@ GUN:
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 12
-		InitialFacing: 56
+		TurnSpeed: 48
+		InitialFacing: 224
 	-WithSpriteBody:
 	WithEmbeddedTurretSpriteBody:
 	Armament:
@@ -751,8 +735,8 @@ GUN:
 		Amount: -55
 	DetectCloaked:
 		Range: 6c0
-	BodyOrientation:
-		UseClassicFacingFudge: True
+	-BodyOrientation:
+	ClassicFacingBodyOrientation:
 	Selectable:
 		Class: GUN
 	RenderSprites:
@@ -782,7 +766,7 @@ FTUR:
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 255
+		TurnSpeed: 1023
 		Offset: 0,0,112
 	Armament:
 		Weapon: FireballLauncher
@@ -829,7 +813,7 @@ SAM:
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
-		TurnSpeed: 30
+		TurnSpeed: 120
 		InitialFacing: 0
 	-WithSpriteBody:
 	WithEmbeddedTurretSpriteBody:
@@ -850,8 +834,8 @@ SAM:
 		RangeCircleType: aa
 	Power:
 		Amount: -20
-	BodyOrientation:
-		UseClassicFacingFudge: True
+	-BodyOrientation:
+	ClassicFacingBodyOrientation:
 	Selectable:
 		Class: SAM
 	RenderSprites:
@@ -901,7 +885,7 @@ ATEK:
 		LongDesc: Reveals map terrain and provides tactical\ninformation. Requires power and active radar.
 		RevealDelay: 375
 		LaunchSpeechNotification: SatelliteLaunched
-		DisplayTimerStances: Ally, Neutral, Enemy
+		DisplayTimerRelationships: Ally, Neutral, Enemy
 	SupportPowerChargeBar:
 	Power:
 		Amount: -200
@@ -950,6 +934,7 @@ ATEK:
 WEAP:
 	Inherits: ^Building
 	Inherits@shape: ^3x2Shape
+	Inherits@PRIMARY: ^PrimaryBuilding
 	Buildable:
 		Queue: Building
 		BuildDuration: 2000
@@ -991,9 +976,6 @@ WEAP:
 	ProvidesPrerequisite@sovietstructure:
 		RequiresPrerequisites: structures.soviet
 		Prerequisite: vehicles.soviet
-	PrimaryBuilding:
-		PrimaryCondition: primary
-		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
 		ProductionType: Vehicle
 	Power:
@@ -1010,13 +992,6 @@ WEAP:
 		RequiresCondition: stickytech
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	Selectable:
 		Class: WEAP
 	RenderSprites:
@@ -1059,7 +1034,7 @@ FACT:
 	Transforms:
 		IntoActor: mcv
 		Offset: 1,1
-		Facing: 96
+		Facing: 384
 		RequiresCondition: factundeploy && !build-incomplete
 		PauseOnCondition: being-demolished
 	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
@@ -1117,23 +1092,22 @@ PROC:
 		Range: 6c0
 	WithBuildingBib:
 	Refinery:
-		DockAngle: 64
+		DockAngle: 256
 		DockOffset: 1,2
 		ShowTicks: false
 		DiscardExcessResources: true
 	StoresResources:
-		PipCount: 17
 		Capacity: 2000
 	DrawLineToTarget:
 	FreeActor:
 		Actor: HARV
 		SpawnOffset: 1,2
-		Facing: 64
+		Facing: 256
 	InfiltrateForCash:
 		Types: ThiefInfiltrate
 		Percentage: 50
 		ShowTicks: false
-		Notification: CreditsStolen
+		InfiltratedNotification: CreditsStolen
 	WithIdleOverlay@TOP:
 		Sequence: idle-top
 		RequiresCondition: !build-incomplete
@@ -1170,6 +1144,11 @@ PROC:
 			BottomRight: -512, 1280
 	RenderSprites:
 		Image: PROC
+	WithResourceStoragePipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 17
+		FullSequence: pip-yellow
 
 SILO:
 	Inherits: ^Building
@@ -1195,13 +1174,12 @@ SILO:
 	WithResourceLevelSpriteBody:
 		Sequence: stages
 	StoresResources:
-		PipCount: 5
 		Capacity: 1500
 	InfiltrateForCash:
 		Types: ThiefInfiltrate
 		Percentage: 50
 		ShowTicks: false
-		Notification: CreditsStolen
+		InfiltratedNotification: CreditsStolen
 	-SpawnActorsOnSell:
 	Power:
 		Amount: -10
@@ -1209,10 +1187,16 @@ SILO:
 		Class: SILO
 	RenderSprites:
 		Image: SILO
+	WithResourceStoragePipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 5
+		FullSequence: pip-yellow
 
 HPAD:
 	Inherits: ^Building
 	Inherits@shape: ^2x2Shape
+	Inherits@PRIMARY: ^PrimaryBuilding
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 768,-512,0, 768,512,0, -281,-512,0, -630,512,0
@@ -1240,7 +1224,7 @@ HPAD:
 	Exit@1:
 		SpawnOffset: 0,-256,0
 		ExitCell: 0,0
-		Facing: 224
+		Facing: 896
 	Production:
 		Produces: Aircraft, Helicopter
 		RequiresCondition: !unit.docked
@@ -1256,9 +1240,6 @@ HPAD:
 	ProvidesPrerequisite@PFME:
 		Prerequisite: availablehpads
 		RequiresCondition: !unit.docked
-	PrimaryBuilding:
-		PrimaryCondition: primary
-		SelectionNotification: PrimaryBuildingSelected
 	ProximityExternalCondition:
 		Condition: unit.sellable
 		Range: 1c0
@@ -1282,13 +1263,6 @@ HPAD:
 		Prerequisite: heli.soviet
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: hpad
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	WithResupplyAnimation:
 		RequiresCondition: !build-incomplete
 	Selectable:
@@ -1299,6 +1273,7 @@ HPAD:
 AFLD:
 	Inherits: ^Building
 	Inherits@shape: ^3x2Shape
+	Inherits@PRIMARY: ^PrimaryBuilding
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 420,0,0, 420,-1024,0, 420,1024,0, -777,0,0, -777,-1024,0, -777,1024,0
@@ -1323,7 +1298,7 @@ AFLD:
 		Range: 7c0
 	Exit@1:
 		ExitCell: 1,1
-		Facing: 192
+		Facing: 768
 	Production:
 		Produces: Aircraft, Plane
 	Reservable:
@@ -1417,9 +1392,6 @@ AFLD:
 	ProductionBar:
 		ProductionType: Aircraft
 	SupportPowerChargeBar:
-	PrimaryBuilding:
-		PrimaryCondition: primary
-		SelectionNotification: PrimaryBuildingSelected
 	ProximityExternalCondition:
 		Condition: unit.sellable
 		Range: 1c0
@@ -1431,13 +1403,6 @@ AFLD:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: afld
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	WithResupplyAnimation:
 		RequiresCondition: !build-incomplete
 	Selectable:
@@ -1648,6 +1613,7 @@ STEK:
 BARR:
 	Inherits: ^Building
 	Inherits@shape: ^2x2Shape
+	Inherits@PRIMARY: ^PrimaryBuilding
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 490,-470,0, 355,512,0, -355,-512,0, -630,512,0
@@ -1681,9 +1647,6 @@ BARR:
 		ExitCell: 0,2
 	Production:
 		Produces: Infantry, Soldier
-	PrimaryBuilding:
-		PrimaryCondition: primary
-		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
 		ProductionType: Infantry
 	ProvidesPrerequisite:
@@ -1703,13 +1666,6 @@ BARR:
 	FreeActor@1:
 		Actor: building-barr
 		RequiresCondition: stickytech
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	Selectable:
 		Class: BARR
 	RenderSprites:
@@ -1717,6 +1673,7 @@ BARR:
 
 KENN:
 	Inherits: ^Building
+	Inherits@PRIMARY: ^PrimaryBuilding
 	Buildable:
 		Queue: Building
 		BuildDuration: 200
@@ -1771,9 +1728,6 @@ KENN:
 		ProductionTypes: Dog, Infantry
 	Production:
 		Produces: Infantry, Dog
-	PrimaryBuilding:
-		PrimaryCondition: primary
-		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
 		ProductionType: Infantry
 	-SpawnActorsOnSell:
@@ -1781,13 +1735,6 @@ KENN:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
 		Prerequisite: kenn
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	Selectable:
 		Class: KENN
 	RenderSprites:
@@ -1796,6 +1743,7 @@ KENN:
 TENT:
 	Inherits: ^Building
 	Inherits@shape: ^2x2Shape
+	Inherits@PRIMARY: ^PrimaryBuilding
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
@@ -1829,9 +1777,6 @@ TENT:
 		ExitCell: 0,2
 	Production:
 		Produces: Infantry, Soldier
-	PrimaryBuilding:
-		PrimaryCondition: primary
-		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
 		ProductionType: Infantry
 	ProvidesPrerequisite@barracks:
@@ -1856,13 +1801,6 @@ TENT:
 	FreeActor@2:
 		Actor: vehicle-tent
 		RequiresCondition: stickytech
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	Selectable:
 		Class: TENT
 	RenderSprites:
@@ -2001,7 +1939,7 @@ BRIK:
 		Queue: Building
 		BuildDuration: 50
 		BuildPaletteOrder: 80
-		Prerequisites: ~!global-missionrules, ~techlevel.5
+		Prerequisites: ~techlevel.5
 		Description: Stop units and blocks enemy fire.
 	Valued:
 		Cost: 50

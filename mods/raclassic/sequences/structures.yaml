@@ -348,21 +348,21 @@ fix:
 gun:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	recoil:
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	make: gunmake
 		Length: *
 	damaged-idle:
 		Start: 64
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	damaged-recoil:
 		Start: 96
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 	muzzle: gunfire2
 		Length: 5
 	icon: gunicon
@@ -370,12 +370,12 @@ gun:
 agun:
 	idle:
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		Offset: 0,-13
 	recoil:
 		Start: 32
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		Offset: 0,-13
 	make: agunmake
 		Length: *
@@ -383,12 +383,12 @@ agun:
 	damaged-idle:
 		Start: 64
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		Offset: 0,-13
 	damaged-recoil:
 		Start: 96
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		Offset: 0,-13
 	muzzle: gunfire2
 		Start: 1
@@ -398,12 +398,12 @@ agun:
 sam:
 	idle: sam2
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		Offset: -1,-2
 	damaged-idle: sam2
 		Start: 34
 		Facings: 32
-		UseClassicFacingFudge: True
+		UseClassicFacings: True
 		Offset: -1,-2
 	make: sammake
 		Length: *

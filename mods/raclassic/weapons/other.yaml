@@ -101,7 +101,7 @@ Heal:
 	Projectile: InstantHit
 	Warhead@1Dam: TargetDamage
 		Damage: -50
-		ValidStances: Ally
+		ValidRelationships: Ally
 		ValidTargets: Heal
 		DebugOverlayColor: 00FF00
 
