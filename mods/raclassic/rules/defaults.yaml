@@ -141,6 +141,11 @@
 	AttackMove:
 		AssaultMoveCondition: assault-move
 
+^PlayerHandicaps:
+	HandicapFirepowerMultiplier:
+	HandicapDamageMultiplier:
+	HandicapProductionTimeMultiplier:
+
 ^GlobalHusks:
 	GrantConditionOnPrerequisite@GLOBALHUSKS:
 		Condition: global-husks
@@ -173,6 +178,7 @@
 	Inherits@3: ^ClassicFacingSpriteActor
 	Inherits@4: ^AffectedByCountryBonuses
 	Inherits@5: ^GenericSpeedModifier
+	Inherits@handicaps: ^PlayerHandicaps
 	Inherits@husks: ^GlobalHusks
 	Huntable:
 	OwnerLostAction:
@@ -268,6 +274,7 @@
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^AffectedByCountryBonuses
 	Inherits@4: ^GenericSpeedModifier
+	Inherits@handicaps: ^PlayerHandicaps
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -423,6 +430,7 @@
 	Inherits@3: ^SpriteActor
 	Inherits@4: ^AffectedByCountryBonuses
 	Inherits@5: ^GenericSpeedModifier
+	Inherits@handicaps: ^PlayerHandicaps
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -474,6 +482,7 @@
 	Inherits@3: ^SpriteActor
 	Inherits@4: ^AffectedByCountryBonuses
 	Inherits@5: ^GenericSpeedModifier
+	Inherits@handicaps: ^PlayerHandicaps
 	Inherits@husks: ^GlobalHusks
 	Huntable:
 	OwnerLostAction:
@@ -575,6 +584,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^IronCurtainable
 	Inherits@3: ^SpriteActor
+	Inherits@handicaps: ^PlayerHandicaps
 	Inherits@shape: ^1x1Shape
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
@@ -667,6 +677,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^AffectedByCountryBonuses
+	Inherits@handicaps: ^PlayerHandicaps
 	Inherits@shape: ^1x1Shape
 	Interactable:
 		Bounds: 24,24
