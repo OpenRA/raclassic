@@ -293,15 +293,15 @@ ModContent:
 			TestFiles: ^SupportDir|Content/ra/v2/expand/await.aud, ^SupportDir|Content/ra/v2/expand/bog.aud, ^SupportDir|Content/ra/v2/expand/float_v2.aud, ^SupportDir|Content/ra/v2/expand/gloom.aud, ^SupportDir|Content/ra/v2/expand/grndwire.aud, ^SupportDir|Content/ra/v2/expand/rpt.aud, ^SupportDir|Content/ra/v2/expand/search.aud, ^SupportDir|Content/ra/v2/expand/traction.aud, ^SupportDir|Content/ra/v2/expand/wastelnd.aud
 			Sources: aftermath, aftermath-linux, ra-origin
 	Downloads:
-		ra|installer/downloads.yaml
+		raclassic|installer/downloads.yaml
 	Sources:
-		ra|installer/aftermath.yaml
-		ra|installer/allies95.yaml
-		ra|installer/cnc95.yaml
-		ra|installer/counterstrike.yaml
-		ra|installer/firstdecade.yaml
-		ra|installer/origin.yaml
-		ra|installer/soviet95.yaml
+		raclassic|installer/aftermath.yaml
+		raclassic|installer/allies95.yaml
+		raclassic|installer/cnc95.yaml
+		raclassic|installer/counterstrike.yaml
+		raclassic|installer/firstdecade.yaml
+		raclassic|installer/origin.yaml
+		raclassic|installer/soviet95.yaml
 
 DiscordService:
 	ApplicationId: 787746983225196575
