@@ -1,20 +1,27 @@
 ^BasePlayer:
 	AlwaysVisible:
 	Shroud:
+	PlayerResources:
+		ResourceValues:
+			Ore: 25
+			Gems: 50
 
 EditorPlayer:
 	Inherits: ^BasePlayer
 
 Player:
 	Inherits: ^BasePlayer
-	AlwaysVisible:
 	TechTree:
 	ClassicProductionQueue@Building:
 		Type: Building
+		DisplayOrder: 0
 		LowPowerModifier: 300
 		ReadyAudio: ConstructionComplete
+		ReadyTextNotification: Construction complete.
 		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
 		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -22,10 +29,14 @@ Player:
 		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Vehicle:
 		Type: Vehicle
+		DisplayOrder: 2
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
+		ReadyTextNotification: Unit ready.
 		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
 		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -33,10 +44,14 @@ Player:
 		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Infantry:
 		Type: Infantry
+		DisplayOrder: 1
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
+		ReadyTextNotification: Unit ready.
 		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
 		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
 		QueuedAudio: Training
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -44,10 +59,14 @@ Player:
 		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Ship:
 		Type: Ship
+		DisplayOrder: 4
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
+		ReadyTextNotification: Unit ready.
 		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
 		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -55,10 +74,14 @@ Player:
 		BuildTimeSpeedReduction: 100, 91, 45, 30, 23, 18, 15, 13, 11, 10, 9, 8, 8, 7, 6, 6, 6, 5, 5, 5
 	ClassicProductionQueue@Aircraft:
 		Type: Aircraft
+		DisplayOrder: 3
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
+		ReadyTextNotification: Unit ready.
 		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
 		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
@@ -67,6 +90,8 @@ Player:
 	PlaceBuilding:
 		NewOptionsNotification: NewOptions
 		CannotPlaceNotification: BuildingCannotPlaceAudio
+		NewOptionsTextNotification: New construction options.
+		CannotPlaceTextNotification: Cannot deploy here.
 	SupportPowerManager:
 	ScriptTriggers:
 	MissionObjectives:
@@ -76,6 +101,7 @@ Player:
 	ConquestVictoryConditions:
 	PowerManager:
 		SpeechNotification: LowPower
+		TextNotification: Low power.
 	AllyRepair:
 	PlayerResources:
 		SelectableCash: 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000
@@ -83,6 +109,7 @@ Player:
 		CashTickUpNotification: CashTickUp
 		CashTickDownNotification: CashTickDown
 		InsufficientFundsNotification: InsufficientFunds
+		InsufficientFundsTextNotification: Insufficient funds.
 	DeveloperMode:
 		CheckboxDisplayOrder: 20
 	GpsWatcher:
@@ -182,6 +209,8 @@ Player:
 		Prerequisites: global-volkov
 	FrozenActorLayer:
 	BaseAttackNotifier:
+		TextNotification: Base under attack.
+		AllyTextNotification: Our ally is under attack.
 	PlayerStatistics:
 	PlaceBeacon:
 	ProvidesTechPrerequisite@infonly:
@@ -227,6 +256,7 @@ Player:
 	GrantConditionOnPrerequisiteManager:
 	EnemyWatcher:
 	ResourceStorageWarning:
+		TextNotification: Silos needed.
 	PlayerExperience:
 	PlayerRadarTerrain:
 	ProvidesPrerequisite@Russia:

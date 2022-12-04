@@ -177,12 +177,15 @@ Player:
 			dome: 10
 			powr.greece: 15
 			apwr.greece: 20
+		DefenseTypes: tsla, agun, pbox, hbox, gun, ftur, sam, gun.mission, tsla.mission
 	SquadManagerBotModule@rush:
 		RequiresCondition: enable-rush-ai
 		SquadSize: 20
 		ExcludeFromSquadsTypes: harv, mcv
 		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
 		ConstructionYardTypes: fact
+		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
+		ProtectionTypes: fact.colorpicker, harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
 	UnitBuilderBotModule@rush:
 		RequiresCondition: enable-rush-ai
 		UnitsToBuild:
@@ -262,6 +265,7 @@ Player:
 			mslo: 1
 			powr.greece: 1
 			apwr.greece: 30
+		DefenseTypes: tsla, agun, pbox, hbox, gun, ftur, sam, gun.mission, tsla.mission
 	SquadManagerBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		SquadSize: 40
@@ -269,6 +273,8 @@ Player:
 		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
 		ConstructionYardTypes: fact
 		NavalProductionTypes: spen, syrd
+		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
+		ProtectionTypes: fact.colorpicker, harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
 	UnitBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		UnitsToBuild:
@@ -354,6 +360,7 @@ Player:
 			mslo: 1
 			powr.greece: 1
 			apwr.greece: 20
+		DefenseTypes: tsla, agun, pbox, hbox, gun, ftur, sam, gun.mission, tsla.mission
 	SquadManagerBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
 		SquadSize: 10
@@ -361,6 +368,8 @@ Player:
 		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
 		ConstructionYardTypes: fact
 		NavalProductionTypes: spen, syrd
+		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
+		ProtectionTypes: fact.colorpicker, harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
 	UnitBuilderBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
 		UnitsToBuild:
@@ -440,6 +449,7 @@ Player:
 			mslo: 1
 			powr.greece: 1
 			apwr.greece: 24
+		DefenseTypes: tsla, agun, pbox, hbox, gun, ftur, sam, gun.mission, tsla.mission
 	SquadManagerBotModule@naval:
 		RequiresCondition: enable-naval-ai
 		SquadSize: 1
@@ -447,6 +457,8 @@ Player:
 		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
 		ConstructionYardTypes: fact
 		NavalProductionTypes: spen, syrd
+		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
+		ProtectionTypes: fact.colorpicker, harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
 	UnitBuilderBotModule@naval:
 		RequiresCondition: enable-naval-ai
 		UnitsToBuild:

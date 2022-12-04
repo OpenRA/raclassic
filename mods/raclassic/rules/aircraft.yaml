@@ -22,20 +22,35 @@ BADR:
 		Name: Badger
 	SpawnActorOnDeath:
 		Actor: BADR.Husk
-	SmokeTrailWhenDamaged@0:
-		Offset: -432,560,0
-		Interval: 2
-	SmokeTrailWhenDamaged@1:
-		Offset: -432,-560,0
-		Interval: 2
+	LeavesTrails@0:
+		Offsets: -432,560,0
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
+	LeavesTrails@1:
+		Offsets: -432,-560,0
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
 	RejectsOrders:
 	GivesExperience:
 		Experience: 1000
 	Interactable:
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke
 
 BADR.Bomber:
 	Inherits: ^Plane
 	AttackBomber:
+		FacingTolerance: 8
 	Armament:
 		Weapon: ParaBomb
 		PauseOnCondition: !ammo
@@ -59,12 +74,24 @@ BADR.Bomber:
 		Name: Badger
 	SpawnActorOnDeath:
 		Actor: BADR.Husk
-	SmokeTrailWhenDamaged@0:
-		Offset: -432,560,0
-		Interval: 2
-	SmokeTrailWhenDamaged@1:
-		Offset: -432,-560,0
-		Interval: 2
+	LeavesTrails@0:
+		Offsets: -432,560,0
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
+	LeavesTrails@1:
+		Offsets: -432,-560,0
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
 	RejectsOrders:
 	-MapEditorData:
 	RenderSprites:
@@ -72,6 +99,8 @@ BADR.Bomber:
 	GivesExperience:
 		Experience: 1000
 	Interactable:
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke
 
 MIG:
 	Inherits: ^Plane
@@ -121,14 +150,20 @@ MIG:
 		AmmoCondition: ammo
 	Selectable:
 		Class: MIG
-		Bounds: 36,28,0,2
-		DecorationBounds: 40,29,0,1
+		Bounds: 1536, 1194, 0, 85
+		DecorationBounds: 1706, 1237, 0, 42
 	SelectionDecorations:
 	SpawnActorOnDeath:
 		Actor: MIG.Husk
-	SmokeTrailWhenDamaged:
-		Offset: -853,0,171
-		Interval: 2
+	LeavesTrails:
+		Offsets: -853,0,171
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
 	RenderSprites:
 		Image: MIG
 	WithAmmoPipsDecoration:
@@ -136,6 +171,8 @@ MIG:
 		Margin: 4, 3
 		RequiresSelection: true
 		PipCount: 5
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke
 
 YAK:
 	Inherits: ^Plane
@@ -194,12 +231,18 @@ YAK:
 	WithMuzzleOverlay:
 	SpawnActorOnDeath:
 		Actor: YAK.Husk
-	SmokeTrailWhenDamaged:
-		Offset: -853,0,0
-		Interval: 2
+	LeavesTrails:
+		Offsets: -853,0,0
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
 	Selectable:
 		Class: YAK
-		DecorationBounds: 30,28,0,2
+		DecorationBounds: 1280, 1194, 0, 85
 	RenderSprites:
 		Image: YAK
 	WithAmmoPipsDecoration:
@@ -207,6 +250,8 @@ YAK:
 		Margin: 4, 3
 		RequiresSelection: true
 		PipCount: 5
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke
 
 TRAN:
 	Inherits: ^Helicopter
@@ -258,7 +303,7 @@ TRAN:
 	SelectionDecorations:
 	Selectable:
 		Class: TRAN
-		DecorationBounds: 40,36
+		DecorationBounds: 1706, 1536
 	RenderSprites:
 		Image: TRAN
 
@@ -318,11 +363,18 @@ HELI:
 	SelectionDecorations:
 	SpawnActorOnDeath:
 		Actor: HELI.Husk
-	SmokeTrailWhenDamaged:
-		Offset: -427,0,0
+	LeavesTrails:
+		Offsets: -427,0,0
+		Image: smokey
+		MovingInterval: 3
+		StationaryInterval: 3
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
 	Selectable:
 		Class: HELI
-		DecorationBounds: 36,28
+		DecorationBounds: 1536, 1194
 	RenderSprites:
 		Image: HELI
 	WithAmmoPipsDecoration:
@@ -330,6 +382,8 @@ HELI:
 		Margin: 4, 3
 		RequiresSelection: true
 		PipCount: 5
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke
 
 HIND:
 	Inherits: ^Helicopter
@@ -390,11 +444,18 @@ HIND:
 	WithMuzzleOverlay:
 	SpawnActorOnDeath:
 		Actor: HIND.Husk
-	SmokeTrailWhenDamaged:
-		Offset: -427,0,0
+	LeavesTrails:
+		Offsets: -427,0,0
+		Image: smokey
+		MovingInterval: 3
+		StationaryInterval: 3
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
 	Selectable:
 		Class: HIND
-		DecorationBounds: 38,32
+		DecorationBounds: 1621, 1365
 	RenderSprites:
 		Image: HIND
 	WithAmmoPipsDecoration:
@@ -402,6 +463,8 @@ HIND:
 		Margin: 4, 3
 		RequiresSelection: true
 		PipCount: 5
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke
 
 U2:
 	Inherits: ^Plane
@@ -418,6 +481,7 @@ U2:
 		Repulsable: False
 		MaximumPitch: 56
 	AttackBomber:
+		FacingTolerance: 8
 	-Selectable:
 	SelectionDecorations:
 	-Voiced:
@@ -428,9 +492,17 @@ U2:
 		Offset: -725,-683,0
 	SpawnActorOnDeath:
 		Actor: U2.Husk
-	SmokeTrailWhenDamaged:
-		Offset: -1c43,0,0
-		Interval: 2
+	LeavesTrails:
+		Offsets: -1c43,0,0
+		MovingInterval: 2
+		Image: smokey
+		StationaryInterval: 2
+		SpawnAtLastPosition: False
+		TrailWhileStationary: True
+		Type: CenterPosition
+		RequiresCondition: enable-smoke
 	RejectsOrders:
 	Interactable:
 	-MapEditorData:
+	GrantConditionOnDamageState@SmokeTrail:
+		Condition: enable-smoke

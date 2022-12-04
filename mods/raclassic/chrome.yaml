@@ -135,7 +135,7 @@ sidebar-bits:
 		production-tooltip-time: 136, 51, 16, 16
 		production-tooltip-power: 102, 51, 16, 16
 		production-tooltip-cost: 68, 51, 16, 16
-		indicator-muted: 68, 145, 24, 24
+		indicator-muted: 221, 17, 26, 24
 
 commandbar:
 	Inherits: ^Sidebar
@@ -203,16 +203,20 @@ stance-icons:
 	Regions:
 		attack-anything: 0, 119, 16, 16
 		attack-anything-disabled: 0, 136, 16, 16
-		attack-anything-active: 0, 153, 16, 16
 		defend: 17, 119, 16, 16
 		defend-disabled: 17, 136, 16, 16
-		defend-active: 17, 153, 16, 16
 		return-fire: 34, 119, 16, 16
 		return-fire-disabled: 34, 136, 16, 16
-		return-fire-active: 34, 153, 16, 16
 		hold-fire: 51, 119, 16, 16
 		hold-fire-disabled: 51, 136, 16, 16
-		hold-fire-active: 51, 153, 16, 16
+
+stance-icons-highlighted:
+	Inherits: stance-icons
+	Regions:
+		attack-anything: 0, 153, 16, 16
+		defend: 17, 153, 16, 16
+		return-fire: 34, 153, 16, 16
+		hold-fire: 51, 153, 16, 16
 
 command-icons:
 	Inherits: ^Glyphs
@@ -233,6 +237,9 @@ command-icons:
 		stop-disabled: 150, 232, 24, 24
 		queue-orders: 175, 207, 24, 24
 		queue-orders-disabled: 175, 232, 24, 24
+
+command-icons-highlighted:
+	Inherits: command-icons
 
 sidebar-observer:
 	Inherits: ^Sidebar
@@ -281,14 +288,22 @@ observer-scrollpanel-button-disabled:
 	Inherits: ^Dialog
 	PanelRegion: 769, 385, 2, 2, 122, 122, 2, 2
 
-observer-scrollheader-selected:
+observer-scrollheader:
 	Inherits: observer-scrollpanel-button-disabled
 
-observer-scrollitem-selected:
-	Inherits: observer-scrollpanel-button-pressed
+observer-scrollheader-highlighted:
+	Inherits: observer-scrollpanel-button-disabled
+
+observer-scrollitem:
 
 observer-scrollitem-hover:
 	Inherits: observer-scrollpanel-button
+
+observer-scrollitem-pressed:
+	Inherits: observer-scrollpanel-button
+
+observer-scrollitem-highlighted:
+	Inherits: observer-scrollpanel-button-pressed
 
 # Used for the main menu frame
 dialog:
@@ -363,9 +378,9 @@ strategic:
 	Inherits: ^Glyphs
 	Regions:
 		unowned: 68, 119, 22, 22
-		critical_unowned: 114, 119, 22, 22
-		enemy_owned: 137, 119, 22, 22
-		player_owned: 183, 119, 22, 22
+		critical_unowned: 137, 119, 22, 22
+		enemy_owned: 160, 119, 22, 22
+		player_owned: 160, 142, 22, 22
 
 flags:
 	Inherits: ^Glyphs
@@ -497,22 +512,50 @@ slider-thumb-pressed:
 	Inherits: button-pressed
 
 slider-thumb-disabled:
-	Inherits: button
+	Inherits: button-disabled
 
 checkbox:
 	Inherits: button-pressed
 
-checkbox-bits:
+checkmark-tick:
 	Inherits: ^Glyphs
 	Regions:
 		checked: 187, 0, 16, 16
-		checked-disabled: 204, 0, 16, 16
-		crossed: 221, 0, 16, 16
-		crossed-disabled: 238, 0, 16, 16
+		checked-pressed: 204, 0, 16, 16
+		unchecked: 0, 0, 0, 0
+		unchecked-pressed: 204, 0, 16, 16
+
+checkmark-tick-highlighted:
+	Inherits: checkmark-tick
+
+checkmark-cross:
+	Inherits: ^Glyphs
+	Regions:
+		checked: 221, 0, 16, 16
+		checked-pressed: 238, 0, 16, 16
+		unchecked: 0, 0, 0, 0
+		unchecked-pressed: 238, 0, 16, 16
+
+checkmark-cross-highlighted:
+	Inherits: checkmark-cross
+
+checkmark-mute:
+	Inherits: ^Glyphs
+	Regions:
+		unchecked: 0, 170, 16, 16
+		unchecked-pressed: 17, 170, 16, 16
+		checked: 17, 170, 16, 16
+		checked-pressed: 0, 170, 16, 16
+
+checkmark-mute-highlighted:
+	Inherits: checkmark-mute
 
 checkbox-hover:
 	Inherits: ^Dialog
 	PanelRegion: 641, 129, 2, 2, 122, 122, 2, 2
+
+checkbox-pressed:
+	Inherits: checkbox-hover
 
 checkbox-disabled:
 	Inherits: ^Dialog
@@ -525,19 +568,48 @@ checkbox-highlighted:
 checkbox-highlighted-hover:
 	Inherits: checkbox-highlighted
 
+checkbox-highlighted-pressed:
+	Inherits: checkbox-highlighted
+
 checkbox-highlighted-disabled:
 	Inherits: checkbox-disabled
 
-scrollitem-selected:
-	Inherits: button-pressed
+checkbox-toggle:
+
+checkbox-toggle-hover:
+	Inherits: button
+
+checkbox-toggle-pressed:
+	Inherits: checkbox-pressed
+
+checkbox-toggle-highlighted:
+
+checkbox-toggle-highlighted-hover:
+	Inherits: button-highlighted
+
+checkbox-toggle-highlighted-pressed:
+	Inherits: checkbox-highlighted-pressed
+
+scrollitem:
 
 scrollitem-hover:
 	Inherits: button
 
-scrollheader-selected:
+scrollitem-pressed:
 	Inherits: button
 
+scrollitem-highlighted:
+	Inherits: button-pressed
+
 scrollitem-nohover:
+
+scrollitem-nohover-highlighted:
+
+scrollheader:
+	Inherits: button
+
+scrollheader-highlighted:
+	Inherits: button
 
 logos:
 	Inherits: ^LoadScreen
@@ -558,23 +630,18 @@ scrollpanel-decorations:
 	Inherits: ^Glyphs
 	Regions:
 		down: 68, 17, 16, 16
-		down-pressed: 68, 17, 16, 16
 		down-disabled: 85, 17, 16, 16
 		up: 102, 17, 16, 16
-		up-pressed: 102, 17, 16, 16
 		up-disabled: 119, 17, 16, 16
 		right: 136, 17, 16, 16
-		right-pressed: 136, 17, 16, 16
 		right-disabled: 153, 17, 16, 16
 		left: 170, 17, 16, 16
-		left-pressed: 170, 17, 16, 16
 		left-disabled: 187, 17, 16, 16
 
 dropdown-decorations:
 	Inherits: ^Glyphs
 	Regions:
 		marker: 68, 17, 16, 16
-		marker-pressed: 68, 17, 16, 16
 		marker-disabled: 85, 17, 16, 16
 
 dropdown-separators:
@@ -585,3 +652,6 @@ dropdown-separators:
 		separator-pressed: 766, 2, 1, 19
 		separator-disabled: 513, 258, 1, 19
 		observer-separator: 769, 258, 1, 19
+
+separator:
+	Inherits: button

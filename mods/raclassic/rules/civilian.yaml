@@ -319,7 +319,7 @@ BARL:
 	MapEditorData:
 		Categories: Decoration
 	Interactable:
-		Bounds: 24,24
+		Bounds: 1024, 1024
 
 BRL3:
 	Inherits: ^TechBuilding
@@ -342,7 +342,7 @@ BRL3:
 	MapEditorData:
 		Categories: Decoration
 	Interactable:
-		Bounds: 24,24
+		Bounds: 1024, 1024
 
 AMMOBOX1:
 	Inherits: ^AmmoBox
@@ -502,7 +502,7 @@ BRIDGE1:
 	RequiresBuildableArea:
 		AreaTypes: building
 	Interactable:
-		Bounds: 120,72
+		Bounds: 5120, 3072
 	ShakeOnDeath:
 		Duration: 15
 		Intensity: 6
@@ -525,7 +525,7 @@ BRIDGE2:
 	RequiresBuildableArea:
 		AreaTypes: building
 	Interactable:
-		Bounds: 120,48
+		Bounds: 5120, 2048
 	ShakeOnDeath:
 		Duration: 15
 		Intensity: 6
@@ -548,7 +548,7 @@ SBRIDGE1:
 	RequiresBuildableArea:
 		AreaTypes: building
 	Interactable:
-		Bounds: 72,48
+		Bounds: 3072, 2048
 	ShakeOnDeath:
 		Duration: 15
 		Intensity: 6
@@ -571,7 +571,7 @@ SBRIDGE2:
 	RequiresBuildableArea:
 		AreaTypes: building
 	Interactable:
-		Bounds: 48,72
+		Bounds: 2048, 3072
 	ShakeOnDeath:
 		Duration: 15
 		Intensity: 6
@@ -614,7 +614,7 @@ BRIDGEHUT:
 		Footprint: __ __
 		Dimensions: 2,2
 	Selectable:
-		Bounds: 48,48
+		Bounds: 2048, 2048
 		Priority: 2
 	LegacyBridgeHut:
 	Targetable:
@@ -628,7 +628,7 @@ BRIDGEHUT.small:
 		Footprint: _
 		Dimensions: 1,1
 	Selectable:
-		Bounds: 24,24
+		Bounds: 1024, 1024
 		Priority: 2
 	LegacyBridgeHut:
 	Targetable:
@@ -820,7 +820,6 @@ SNOWHUT:
 		Footprint: x x
 		Dimensions: 1,2
 	RenderSprites:
-		Scale: 0.7
 	HitShape:
 		UseTargetableCellsOffsets: false
 	RequiresBuildableArea:
@@ -831,7 +830,7 @@ LHUS:
 	MapEditorData:
 		RequireTilesets: TEMPERAT
 	Selectable:
-		Bounds: 24,48,0,-16
+		Bounds: 1024, 2048, 0, -682
 	Tooltip:
 		Name: Lighthouse
 	Building:
@@ -845,8 +844,8 @@ WINDMILL:
 	MapEditorData:
 		RequireTilesets: TEMPERAT
 	Selectable:
-		Bounds: 24,24,0,-14
-		DecorationBounds: 36,36,0,-14
+		Bounds: 1024, 1024, 0, -597
+		DecorationBounds: 1536, 1536, 0, -597
 	SelectionDecorations:
 	Tooltip:
 		Name: Windmill
