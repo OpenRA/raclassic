@@ -29,14 +29,20 @@ MSLO:
 		ChargeInterval: 19500
 		FlightDelay: 100
 		FlightVelocity: 1c0
-		Description: Atom Bomb
-		LongDesc: Launches a devastating atomic bomb\nat a target location.
+		Name: Atom Bomb
+		Description: Launches a devastating atomic bomb\nat a target location.
 		BeginChargeSpeechNotification: AbombPrepping
 		EndChargeSpeechNotification: AbombReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		IncomingSpeechNotification: AbombLaunchDetected
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerTextNotification: Insufficient power.
+		BeginChargeTextNotification: A-bomb prepping.
+		EndChargeTextNotification: A-bomb ready.
+		IncomingTextNotification: A-bomb launch detected.
 		MissileWeapon: atomic
+		MissileImage: atomic
 		SpawnOffset: 0,427,0
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayBeacon: True
@@ -86,8 +92,8 @@ GAP:
 		Description: Obscures the enemy's view with shroud.\nRequires power to operate.
 	Selectable:
 		Class: GAP
-		Bounds: 24,24
-		DecorationBounds: 24,48,0,-12
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 2048, 0, -512
 	SelectionDecorations:
 	WithSpriteBody:
 		PauseOnCondition: disabled
@@ -162,8 +168,10 @@ SPEN:
 	-SpawnActorsOnSell:
 	RepairsUnits:
 		StartRepairingNotification: Repairing
+		StartRepairingTextNotification: Repairing.
 		FinishRepairingNotification: UnitRepaired
-		PlayerExperience: 15
+		FinishRepairingTextNotification: Unit repaired.
+		PlayerExperience: 5
 	RallyPoint:
 	ProductionBar:
 		ProductionType: Ship
@@ -245,8 +253,10 @@ SYRD:
 	-SpawnActorsOnSell:
 	RepairsUnits:
 		StartRepairingNotification: Repairing
+		StartRepairingTextNotification: Repairing.
 		FinishRepairingNotification: UnitRepaired
-		PlayerExperience: 15
+		FinishRepairingTextNotification: Unit repaired.
+		PlayerExperience: 5
 	RallyPoint:
 	ProductionBar:
 		ProductionType: Ship
@@ -298,8 +308,8 @@ IRON:
 		Dimensions: 2,1
 	Selectable:
 		Class: IRON
-		Bounds: 48,28,0,2
-		DecorationBounds: 50,50,0,-12
+		Bounds: 2048, 1194, 0, 85
+		DecorationBounds: 2133, 2133, 0, -512
 	SelectionDecorations:
 	Health:
 		HP: 400
@@ -313,13 +323,17 @@ IRON:
 		Icon: invuln
 		ChargeInterval: 7500
 		AllowMultiple: true
-		Description: Invulnerability
-		LongDesc: Makes a unit invulnerable\nfor 45 seconds.
+		Name: Invulnerability
+		Description: Makes a unit invulnerable\nfor 45 seconds.
 		Duration: 1125
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		BeginChargeSpeechNotification: IronCurtainCharging
 		EndChargeSpeechNotification: IronCurtainReady
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerTextNotification: Insufficient power.
+		BeginChargeTextNotification: Iron curtain charging.
+		EndChargeTextNotification: Iron curtain ready.
 		DisplayRadarPing: True
 		Condition: invulnerability
 		OnFireSound: ironcur9.aud
@@ -332,13 +346,17 @@ IRON:
 		Icon: invuln
 		ChargeInterval: 16500
 		AllowMultiple: true
-		Description: Invulnerability
-		LongDesc: Makes a unit invulnerable\nfor 45 seconds.
+		Name: Invulnerability
+		Description: Makes a unit invulnerable\nfor 45 seconds.
 		Duration: 1125
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		BeginChargeSpeechNotification: IronCurtainCharging
 		EndChargeSpeechNotification: IronCurtainReady
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerTextNotification: Insufficient power.
+		BeginChargeTextNotification: Iron curtain charging.
+		EndChargeTextNotification: Iron curtain ready.
 		DisplayRadarPing: True
 		Condition: invulnerability
 		OnFireSound: ironcur9.aud
@@ -388,12 +406,16 @@ PDOX:
 		Icon: chrono
 		AllowMultiple: true
 		ChargeInterval: 10500
-		Description: Chronoshift
-		LongDesc: Teleports a unit across\nthe map for 3 minutes.
+		Name: Chronoshift
+		Description: Teleports a unit across\nthe map for 3 minutes.
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		BeginChargeSpeechNotification: ChronosphereCharging
 		EndChargeSpeechNotification: ChronosphereReady
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerTextNotification: Insufficient power.
+		BeginChargeTextNotification: Chronosphere charging.
+		EndChargeTextNotification: Chronosphere ready.
 		Duration: 4500
 		KillCargo: true
 		DisplayRadarPing: True
@@ -431,8 +453,8 @@ TSLA:
 		Name: Tesla Coil
 	Selectable:
 		Class: TSLA
-		Bounds: 24,24
-		DecorationBounds: 24,40,0,-8
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1706, 0, -341
 	SelectionDecorations:
 	Health:
 		HP: 600
@@ -491,8 +513,8 @@ AGUN:
 		Name: AA Gun
 	Selectable:
 		Class: AGUN
-		Bounds: 24,24
-		DecorationBounds: 24,32,0,-4
+		Bounds: 1024, 1024
+		DecorationBounds: 1024, 1365, 0, -170
 	SelectionDecorations:
 	Health:
 		HP: 400
@@ -881,11 +903,13 @@ ATEK:
 		Icon: gps
 		OneShot: true
 		ChargeInterval: 12000
-		Description: GPS Satellite
-		LongDesc: Reveals map terrain and provides tactical\ninformation. Requires power and active radar.
+		Name: GPS Satellite
+		Description: Reveals map terrain and provides tactical\ninformation. Requires power and active radar.
 		RevealDelay: 375
 		LaunchSpeechNotification: SatelliteLaunched
+		LaunchTextNotification: Satellite launched.
 		DisplayTimerRelationships: Ally, Neutral, Enemy
+		SupportPowerPaletteOrder: 90
 	SupportPowerChargeBar:
 	Power:
 		Amount: -200
@@ -1079,8 +1103,8 @@ PROC:
 		LocalCenterOffset: 0,-512,0
 	Selectable:
 		Class: PROC
-		Bounds: 72,50,0,12
-		DecorationBounds: 72,70,0,-2
+		Bounds: 3072, 2133, 0, 512
+		DecorationBounds: 3072, 2986, 0, -85
 	SelectionDecorations:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, ThiefInfiltrate
@@ -1108,6 +1132,7 @@ PROC:
 		Percentage: 50
 		ShowTicks: false
 		InfiltratedNotification: CreditsStolen
+		InfiltratedTextNotification: Credits stolen.
 	WithIdleOverlay@TOP:
 		Sequence: idle-top
 		RequiresCondition: !build-incomplete
@@ -1180,6 +1205,7 @@ SILO:
 		Percentage: 50
 		ShowTicks: false
 		InfiltratedNotification: CreditsStolen
+		InfiltratedTextNotification: Credits stolen.
 	-SpawnActorsOnSell:
 	Power:
 		Amount: -10
@@ -1313,10 +1339,12 @@ AFLD:
 		Prerequisites: aircraft.soviet, ~techlevel.3
 		Icon: spyplane
 		ChargeInterval: 3750
-		Description: Spy Plane
-		LongDesc: Reveals an area of the map\nand cloaked enemy units.
+		Name: Spy Plane
+		Description: Reveals an area of the map\nand cloaked enemy units.
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: SpyPlaneReady
+		SelectTargetTextNotification: Select target.
+		EndChargeTextNotification: Spy plane ready.
 		CameraActor: camera.spyplane
 		CameraRemoveDelay: 150
 		UnitType: u2
@@ -1332,10 +1360,11 @@ AFLD:
 		Prerequisites: aircraft.soviet, ~techlevel.3
 		Icon: paratroopers
 		ChargeInterval: 7500
-		Description: Paratroopers
-		LongDesc: A Badger drops a squad of infantry\nanywhere on the map.
+		Name: Paratroopers
+		Description: A Badger drops a squad of infantry\nanywhere on the map.
 		DropItems: E1,E1,E1,E1,E1
 		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
 		AllowImpassableCells: false
 		QuantizedFacings: 8
 		CameraActor: camera.paradrop
@@ -1350,10 +1379,12 @@ AFLD:
 		Prerequisites: aircraft.soviet, ~techlevel.3
 		Icon: spyplane
 		ChargeInterval: 3750
-		Description: Spy Plane
-		LongDesc: Reveals an area of the map\nand cloaked enemy units.
+		Name: Spy Plane
+		Description: Reveals an area of the map\nand cloaked enemy units.
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: SpyPlaneReady
+		SelectTargetTextNotification: Select target.
+		EndChargeTextNotification: Spy plane ready.
 		CameraActor: camera.spyplane
 		CameraRemoveDelay: 150
 		UnitType: u2
@@ -1371,10 +1402,11 @@ AFLD:
 		Prerequisites: aircraft.soviet, ~techlevel.3
 		Icon: paratroopers
 		ChargeInterval: 7500
-		Description: Paratroopers
-		LongDesc: A Badger drops a squad of infantry\nanywhere on the map.
+		Name: Paratroopers
+		Description: A Badger drops a squad of infantry\nanywhere on the map.
 		DropItems: E1,E1,E1,E1,E1
 		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
 		AllowImpassableCells: false
 		QuantizedFacings: 8
 		CameraActor: camera.paradrop
@@ -1489,8 +1521,8 @@ APWR:
 		LocalCenterOffset: 0,-512,0
 	Selectable:
 		Class: APWR
-		Bounds: 72,48
-		DecorationBounds: 72,68,0,-10
+		Bounds: 3072, 2048
+		DecorationBounds: 3072, 2901, 0, -426
 	SelectionDecorations:
 	Health:
 		HP: 700
@@ -1823,8 +1855,8 @@ FIX:
 		Dimensions: 3,3
 	Selectable:
 		Class: FIX
-		Bounds: 68,34,0,3
-		DecorationBounds: 72,48
+		Bounds: 2901, 1450, 0, 128
+		DecorationBounds: 3072, 2048
 	SelectionDecorations:
 	Health:
 		HP: 800
@@ -1837,8 +1869,10 @@ FIX:
 	RepairsUnits:
 		Interval: 7
 		StartRepairingNotification: Repairing
+		StartRepairingTextNotification: Repairing.
 		FinishRepairingNotification: UnitRepaired
-		PlayerExperience: 15
+		FinishRepairingTextNotification: Unit repaired.
+		PlayerExperience: 5
 	ProximityExternalCondition:
 		Condition: unit.sellable
 		Range: 1c0

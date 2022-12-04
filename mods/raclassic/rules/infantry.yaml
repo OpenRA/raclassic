@@ -19,8 +19,8 @@ DOG:
 		AddToArmyValue: true
 	Selectable:
 		Class: DOG
-		Bounds: 12,17,-1,-4
-		DecorationBounds: 12,17,-1,-4
+		Bounds: 512, 725, -42, -170
+		DecorationBounds: 512, 725, -42, -170
 	SelectionDecorations:
 	Health:
 		HP: 12
@@ -102,6 +102,7 @@ E1:
 		Condition: blockablebullets
 		Prerequisites: global-blockablebullets
 	AttackFrontal:
+		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	RenderSprites:
@@ -139,6 +140,7 @@ E2:
 	TakeCover:
 		ProneOffset: 256,64,-331
 	AttackFrontal:
+		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: throw
 	Explodes:
@@ -190,6 +192,7 @@ E3:
 	TakeCover:
 		ProneOffset: 384,0,-395
 	AttackFrontal:
+		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	RenderSprites:
@@ -227,6 +230,7 @@ E4:
 	TakeCover:
 		ProneOffset: 160,0,-288
 	AttackFrontal:
+		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	RenderSprites:
@@ -361,6 +365,7 @@ E7:
 		Prerequisite: enoughtanya
 		RequiresPrerequisites: global-herolimit
 	AttackFrontal:
+		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		StandSequences: stand
@@ -430,6 +435,7 @@ MEDI:
 		TargetRelationships: Ally
 		ForceTargetRelationships: None
 	AttackFrontal:
+		FacingTolerance: 0
 	WithInfantryBody:
 		StandSequences: stand
 		DefaultAttackSequence: heal
@@ -476,6 +482,7 @@ MECH:
 		ForceTargetRelationships: None
 	AttackFrontal:
 		Voice: Move
+		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: repair
 		StandSequences: stand
@@ -522,6 +529,7 @@ GNRL:
 		Voice: Move
 	AttackFrontal:
 		Voice: Attack
+		FacingTolerance: 0
 	AttackMove:
 		Voice: Move
 	Passenger:
@@ -601,6 +609,7 @@ SHOK:
 		ProneOffset: 227,0,-245
 	AttackFrontal:
 		Voice: Attack
+		FacingTolerance: 0
 	AttackMove:
 		Voice: Move
 	Passenger:
@@ -629,8 +638,8 @@ ANT:
 		Prerequisites: ~barracks, ~bio, ~disabled
 		Description: Irradiated insect that grew oversize.
 	Selectable:
-		Bounds: 24,24,0,-5
-		DecorationBounds: 30,30,0,-2
+		Bounds: 1024, 1024, 0, -213
+		DecorationBounds: 1280, 1280, 0, -85
 	SelectionDecorations:
 	Health:
 		HP: 750
@@ -644,6 +653,7 @@ ANT:
 	AutoTarget:
 		ScanRadius: 5
 	AttackFrontal:
+		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: bite
 	Armament:

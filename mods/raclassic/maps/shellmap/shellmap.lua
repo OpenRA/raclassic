@@ -49,6 +49,8 @@ SetupFactories = function()
 	Utils.Do(ProducedUnitTypes, function(production)
 		Trigger.OnProduction(production.factory, function(_, a) BindActorTriggers(a) end)
 	end)
+
+	ANavalYard1.RallyPoint = ANavalYard1Rally.Location
 end
 
 ticks = 0

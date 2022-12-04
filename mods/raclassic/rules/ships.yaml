@@ -33,7 +33,7 @@ SS:
 		TargetTypes: Underwater, Submarine, Repair
 		RequiresCondition: underwater
 	Cloak:
-		CloakTypes: Underwater
+		DetectionTypes: Underwater
 		InitialDelay: 0
 		CloakDelay: 50
 		CloakSound: subshow1.aud
@@ -48,6 +48,7 @@ SS:
 		LocalOffset: 0,-171,0, 0,171,0
 		FireDelay: 2
 	AttackFrontal:
+		FacingTolerance: 0
 	SelectionDecorations:
 	AutoTarget:
 		InitialStance: HoldFire
@@ -57,7 +58,7 @@ SS:
 	AutoTargetPriority@ATTACKANYTHING:
 		ValidTargets: Water
 	DetectCloaked:
-		CloakTypes: Underwater
+		DetectionTypes: Underwater
 		Range: 4c0
 	RenderDetectionCircle:
 	Explodes:
@@ -66,7 +67,7 @@ SS:
 	-MustBeDestroyed:
 	Selectable:
 		Class: SS
-		DecorationBounds: 38,38
+		DecorationBounds: 1621, 1621
 	RenderSprites:
 		Image: SS
 
@@ -102,7 +103,7 @@ MSUB:
 		TargetTypes: Underwater, Submarine, Repair
 		RequiresCondition: underwater
 	Cloak:
-		CloakTypes: Underwater
+		DetectionTypes: Underwater
 		InitialDelay: 0
 		CloakDelay: 100
 		CloakSound: subshow1.aud
@@ -123,12 +124,13 @@ MSUB:
 		FireDelay: 2
 		RequiresCondition: spain
 	AttackFrontal:
+		FacingTolerance: 0
 	SelectionDecorations:
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
 	DetectCloaked:
-		CloakTypes: Underwater
+		DetectionTypes: Underwater
 		Range: 4c0
 	RenderDetectionCircle:
 	Explodes:
@@ -137,7 +139,7 @@ MSUB:
 	-MustBeDestroyed:
 	Selectable:
 		Class: MSUB
-		DecorationBounds: 44,44
+		DecorationBounds: 1877, 1877
 	RenderSprites:
 		Image: MSUB
 
@@ -203,12 +205,12 @@ DD:
 	SelectionDecorations:
 	WithSpriteTurret:
 	DetectCloaked:
-		CloakTypes: Underwater
+		DetectionTypes: Underwater
 		Range: 4c0
 	RenderDetectionCircle:
 	Selectable:
 		Class: DD
-		DecorationBounds: 38,38
+		DecorationBounds: 1621, 1621
 	RenderSprites:
 		Image: DD
 
@@ -274,7 +276,7 @@ CA:
 		Turret: secondary
 	Selectable:
 		Class: CA
-		DecorationBounds: 44,44
+		DecorationBounds: 1877, 1877
 	RenderSprites:
 		Image: CA
 
@@ -312,7 +314,7 @@ LST:
 	-Chronoshiftable:
 	Selectable:
 		Class: LST
-		DecorationBounds: 36,36
+		DecorationBounds: 1536, 1536
 	RenderSprites:
 		Image: LST
 
@@ -369,11 +371,11 @@ PT:
 	SelectionDecorations:
 	WithSpriteTurret:
 	DetectCloaked:
-		CloakTypes: Underwater
+		DetectionTypes: Underwater
 		Range: 4c0
 	RenderDetectionCircle:
 	Selectable:
 		Class: PT
-		DecorationBounds: 36,36
+		DecorationBounds: 1536, 1536
 	RenderSprites:
 		Image: PT

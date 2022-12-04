@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: raclassic
 
@@ -346,5 +346,8 @@ Actors:
 	Actor93: apwr
 		Owner: Greece
 		Location: 41,65
+	ANavalYard1Rally: waypoint
+		Owner: Neutral
+		Location: 57,78
 
 Rules: raclassic|rules/campaign-palettes.yaml, rules.yaml

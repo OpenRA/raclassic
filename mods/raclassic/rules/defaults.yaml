@@ -191,7 +191,7 @@
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
-		Bounds: 24, 24
+		Bounds: 1024, 1024
 	Targetable:
 		RequiresCondition: !parachute
 		TargetTypes: Ground, Vehicle, DetonateAttack
@@ -206,6 +206,7 @@
 	Chronoshiftable:
 	Sellable:
 		SellSounds: cashturn.aud
+		Notification: UnitSold
 		Cursor: sell2
 		ShowTicks: false
 		RequiresCondition: unit.sellable
@@ -219,6 +220,7 @@
 	AttackMove:
 	HiddenUnderFog:
 	ActorLostNotification:
+		TextNotification: Unit lost.
 	ProximityCaptor:
 		Types: Vehicle
 	WithDamageOverlay:
@@ -291,7 +293,7 @@
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
-		Bounds: 12,18,0,-8
+		Bounds: 512, 768, 0, -341
 	Targetable:
 		TargetTypes: Ground, Infantry, DetonateAttack
 		RequiresCondition: !parachute
@@ -318,6 +320,7 @@
 		CargoType: Infantry
 	HiddenUnderFog:
 	ActorLostNotification:
+		TextNotification: Unit lost.
 	Crushable@NOWARN:
 		CrushSound: squishy2.aud
 		WarnProbability: 0
@@ -421,6 +424,7 @@
 		Condition: blockablebullets
 		Prerequisites: global-blockablebullets
 	AttackFrontal:
+		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 
@@ -441,7 +445,7 @@
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
-		Bounds: 24,24
+		Bounds: 1024, 1024
 	Targetable:
 		TargetTypes: Ground, Water, Ship, DetonateAttack
 	Targetable@REPAIR:
@@ -454,6 +458,7 @@
 	AttackMove:
 	ActorLostNotification:
 		Notification: NavalUnitLost
+		TextNotification: Naval unit lost.
 	ProximityCaptor:
 		Types: Ship
 	Chronoshiftable:
@@ -494,7 +499,7 @@
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
-		Bounds: 24,24
+		Bounds: 1024, 1024
 	Aircraft:
 		TakeOffOnCreation: false
 		AirborneCondition: airborne
@@ -514,6 +519,7 @@
 		Type: GroundPosition
 	Sellable:
 		SellSounds: cashturn.aud
+		Notification: UnitSold
 		Cursor: sell2
 		ShowTicks: false
 		RequiresCondition: unit.sellable && !airborne
@@ -528,6 +534,7 @@
 	Guardable:
 	ActorLostNotification:
 		Notification: AirUnitLost
+		TextNotification: Airborne unit lost.
 	ProximityCaptor:
 		Types: Plane
 	# EjectOnDeath:
@@ -611,6 +618,7 @@
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
 	CaptureNotification:
+		TextNotification: Structure captured.
 	ShakeOnDeath:
 	ProximityCaptor:
 		Types: Building
@@ -651,6 +659,7 @@
 		Condition: being-demolished
 	Sellable:
 		SellSounds: cashturn.aud
+		Notification: StructureSold
 		ShowTicks: false
 		RequiresCondition: !build-incomplete && !being-demolished
 	WithBuildingRepairDecoration:
@@ -680,7 +689,7 @@
 	Inherits@handicaps: ^PlayerHandicaps
 	Inherits@shape: ^1x1Shape
 	Interactable:
-		Bounds: 24,24
+		Bounds: 1024, 1024
 	OwnerLostAction:
 		Action: ChangeOwner
 	Building:
@@ -690,7 +699,6 @@
 		TerrainTypes: Clear,Road
 		UndeploySounds: cashturn.aud
 	FootprintPlaceBuildingPreview:
-		LineBuildSegmentPalette: placelinesegment
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 7
@@ -788,7 +796,7 @@
 	MapEditorData:
 		Categories: Decoration
 	Interactable:
-		Bounds: 24,24
+		Bounds: 1024, 1024
 
 ^CivBuilding:
 	Inherits: ^TechBuilding
@@ -886,7 +894,6 @@
 		Categories: Tree
 
 ^BasicHusk:
-	Inherits@1: ^SpriteActor
 	Interactable:
 	Health:
 		HP: 280
@@ -894,6 +901,7 @@
 		Type: Heavy
 	HiddenUnderFog:
 		Type: CenterPosition
+		AlwaysVisibleRelationships: None
 	ScriptTriggers:
 	WithFacingSpriteBody:
 	HitShape:
@@ -905,31 +913,34 @@
 	Inherits@2: ^ClassicFacingSpriteActor
 	Husk:
 		AllowedTerrain: Clear, Rough, Road, Ore, Gems, Beach
+	WithIdleOverlay@Burns:
+		Image: fire
+		Sequence: 1
+		IsDecoration: true
+	ChangesHealth:
+		Step: -2
+		StartIfBelow: 101
+		Delay: 8
+	OwnerLostAction:
+		Action: ChangeOwner
+	CaptureManager:
 	Capturable:
 		Types: husk
 		ValidRelationships: Enemy, Neutral, Ally
 	TransformOnCapture:
-		ForceHealthPercentage: 25
+		ForceHealthPercentage: 15
 	WithColoredOverlay@IDISABLE:
-		Palette: disabled
+		Color: 000000B4
 	Targetable:
 		TargetTypes: Ground, Husk, NoAutoTarget
 		RequiresForceFire: true
 	Chronoshiftable:
 	Tooltip:
 		GenericName: Destroyed Vehicle
-	CaptureManager:
-	WithIdleOverlay@Burns:
-		Image: fire
-		Sequence: 1
-		IsDecoration: True
-	ChangesHealth:
-		Step: -2
-		StartIfBelow: 101
-		Delay: 8
 
 ^PlaneHusk:
 	Inherits: ^BasicHusk
+	Inherits@2: ^SpriteActor
 	WithShadow:
 		Offset: 43, 128, 0
 		ZOffset: -129
@@ -984,7 +995,7 @@
 	BodyOrientation:
 		QuantizedFacings: 1
 	Interactable:
-		Bounds: 96,48
+		Bounds: 4096, 2048
 
 ^Rock:
 	Inherits@1: ^SpriteActor
@@ -1023,7 +1034,7 @@
 		GenericName: Crate
 		ShowOwnerRow: false
 	Crate:
-		Lifetime: 180
+		Duration: 4500
 		TerrainTypes: Clear, Rough, Road, Ore, Beach
 	RenderSprites:
 		Palette: effect
@@ -1092,7 +1103,7 @@
 		CloakSound:
 		UncloakSound:
 		Palette:
-		CloakTypes: Mine
+		DetectionTypes: Mine
 		InitialDelay: 0
 	Tooltip:
 		Name: Mine
@@ -1127,6 +1138,7 @@
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
+		SelectionTextNotification: Primary building selected.
 	WithDecoration@primary:
 		RequiresCondition: primary
 		Position: Top
