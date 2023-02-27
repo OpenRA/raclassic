@@ -217,7 +217,7 @@ World:
 		ShortGameCheckboxDisplayOrder: 2
 		TechLevel: 10
 		TechLevelDropdownDisplayOrder: 2
-		GameSpeedDropdownDisplayOrder: 3
+		GameSpeedDropdownDisplayOrder: 1
 	CreateMapPlayers:
 	StartingUnits@0:
 		Class: none
@@ -412,7 +412,6 @@ World:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnStartingUnits:
 		StartingUnitsClass: 6
-		DropdownDisplayOrder: 1
 	PathFinder:
 	ValidateOrder:
 	DebugPauseState:
@@ -424,6 +423,7 @@ World:
 	ScriptTriggers:
 	CellTriggerOverlay:
 	TimeLimitManager:
+		TimeLimitDisplayOrder: 2
 		TimeLimitWarnings:
 			40: FourtyMinutesRemaining
 			30: ThirtyMinutesRemaining

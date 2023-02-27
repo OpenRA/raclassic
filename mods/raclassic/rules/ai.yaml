@@ -185,7 +185,7 @@ Player:
 		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
 		ConstructionYardTypes: fact
 		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
-		ProtectionTypes: fact.colorpicker, harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
+		ProtectionTypes: harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
 	UnitBuilderBotModule@rush:
 		RequiresCondition: enable-rush-ai
 		UnitsToBuild:
@@ -274,7 +274,7 @@ Player:
 		ConstructionYardTypes: fact
 		NavalProductionTypes: spen, syrd
 		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
-		ProtectionTypes: fact.colorpicker, harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
+		ProtectionTypes: harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
 	UnitBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		UnitsToBuild:
@@ -369,7 +369,7 @@ Player:
 		ConstructionYardTypes: fact
 		NavalProductionTypes: spen, syrd
 		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
-		ProtectionTypes: fact.colorpicker, harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
+		ProtectionTypes: harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
 	UnitBuilderBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
 		UnitsToBuild:
@@ -458,7 +458,7 @@ Player:
 		ConstructionYardTypes: fact
 		NavalProductionTypes: spen, syrd
 		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
-		ProtectionTypes: fact.colorpicker, harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
+		ProtectionTypes: harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
 	UnitBuilderBotModule@naval:
 		RequiresCondition: enable-naval-ai
 		UnitsToBuild:
