@@ -127,6 +127,7 @@ Sounds:
 		EnablePower: bleep12
 		ChatLine: rabeep1
 		ClickSound: ramenu1
+			InterruptType: Overlap
 		ClickDisabledSound:
 		Beacon: beepslct
 		AlertBuzzer: buzzy1
