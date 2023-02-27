@@ -1231,7 +1231,7 @@ HPAD:
 		BuildDuration: 1500
 		BuildPaletteOrder: 190
 		Prerequisites: building-dome, ~techlevel.6
-		Description: Produces and reloads\nhelicopters.
+		Description: Produces and reloads helicopters.\nComes with a free helicopter.
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1273,6 +1273,20 @@ HPAD:
 		RequiresCondition: !unit.docked && !build-incomplete && !being-demolished
 	ExternalCondition@Docked:
 		Condition: unit.docked
+	FreeActor@1:
+		Actor: HELI
+		Facing: 896
+		RequiresCondition: !build-incomplete && allies
+	FreeActor@2:
+		Actor: HIND
+		Facing: 896
+		RequiresCondition: !build-incomplete && soviet
+	GrantConditionOnFaction@allies:
+		Condition: allies
+		Factions: allies, england, germany, france, spain, greece, turkey
+	GrantConditionOnFaction@soviet:
+		Condition: soviet
+		Factions: soviet, russia, ukraine
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@allies:
