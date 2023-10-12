@@ -124,6 +124,7 @@ SPEN:
 	InfiltrateForSupportPower:
 		Types: SpyInfiltrate
 		Proxy: powerproxy.sonarpulse
+		PlayerExperience: 10
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -209,6 +210,7 @@ SYRD:
 	InfiltrateForSupportPower:
 		Types: SpyInfiltrate
 		Proxy: powerproxy.sonarpulse
+		PlayerExperience: 10
 	Buildable:
 		Queue: Building
 		BuildDuration: 650
@@ -578,6 +580,7 @@ DOME:
 		RequiresCondition: !jammed && !disabled
 	InfiltrateForExploration:
 		Types: SpyInfiltrate
+		PlayerExperience: 10
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
@@ -1130,6 +1133,8 @@ PROC:
 	InfiltrateForCash:
 		Types: ThiefInfiltrate
 		Percentage: 50
+		PlayerExperience: 5
+		PlayerExperiencePercentage: 1
 		ShowTicks: false
 		InfiltratedNotification: CreditsStolen
 		InfiltratedTextNotification: Credits stolen.
@@ -1203,6 +1208,8 @@ SILO:
 	InfiltrateForCash:
 		Types: ThiefInfiltrate
 		Percentage: 50
+		PlayerExperience: 5
+		PlayerExperiencePercentage: 1
 		ShowTicks: false
 		InfiltratedNotification: CreditsStolen
 		InfiltratedTextNotification: Credits stolen.

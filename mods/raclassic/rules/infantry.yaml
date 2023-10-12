@@ -254,7 +254,7 @@ E6:
 		Name: Engineer
 	Passenger:
 		CustomPipType: yellow
-	EngineerRepair:
+	InstantlyRepairs:
 	RepairsBridges:
 	Captures@Single:
 		CaptureTypes: building
@@ -297,7 +297,6 @@ SPY:
 		Voice: Move
 	Infiltrates:
 		Types: SpyInfiltrate
-		PlayerExperience: 50
 		Notification: BuildingInfiltrated
 	WithInfantryBody:
 	Targetable:
@@ -563,7 +562,6 @@ THF:
 		CustomPipType: yellow
 	Infiltrates:
 		Types: ThiefInfiltrate
-		PlayerExperience: 50
 		Notification: BuildingInfiltrated
 	Voiced:
 		VoiceSet: ThiefVoice

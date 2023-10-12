@@ -436,8 +436,7 @@ World:
 			1: WarningOneMinuteRemaining
 	ColorPickerManager:
 		PreviewActor: fact.colorpicker
-		PresetHues: 0.133, 0.583, 0, 0.333, 0.088, 0.85, 0.455, 0.016, 0.133, 0.583, 0, 0.333, 0.088, 0.85, 0.455, 0.016
-		PresetSaturations: 0.51, 0.7, 1, 1, 1, 0.7, 0.53, 0.68, 0.255, 0.35, 0.5, 0.5, 0.5, 0.35, 0.265, 0.34
+		PresetColors: c4b060, 4494e4, ec0000, 00c400, fc8800, 707070, 44907c, 702c24, 625830, 224A72, 760000, 006200, 7e4400, 383838, 22483e, 381612
 	OrderEffects:
 		TerrainFlashImage: moveflsh
 		TerrainFlashSequence: idle

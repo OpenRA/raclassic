@@ -54,7 +54,7 @@ CRATE:
 		SelectionShares: 1
 		Proxy: powerproxy.abomb
 		Sequence: nuke
-	GiveMcvCrateAction:
+	GiveBaseBuilderCrateAction:
 		SelectionShares: 0
 		NoBaseSelectionShares: 100
 		Units: mcv

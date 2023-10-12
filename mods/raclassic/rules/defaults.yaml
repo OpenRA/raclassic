@@ -646,7 +646,7 @@
 	RepairableBuilding:
 		RepairingNotification: Repairing
 		PlayerExperience: 25
-	EngineerRepairable:
+	InstantlyRepairable:
 	WithMakeAnimation:
 		Condition: build-incomplete
 	Capturable:
@@ -966,7 +966,6 @@
 		GenericName: Destroyed Helicopter
 	Aircraft:
 		CanHover: True
-		TakeOffOnResupply: true
 		VTOL: true
 		CanSlide: True
 	FallsToEarth:
