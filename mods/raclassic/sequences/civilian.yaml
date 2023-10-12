@@ -28,20 +28,18 @@
 	die5:
 		Start: 160
 		Length: 8
-	die6: electro
+	die6:
+		Filename: electro.tem
+		TilesetFilenames:
+			SNOW: electro.sno
 		Length: *
-		UseTilesetExtension: true
-		TilesetOverrides:
-			DESERT: TEMPERAT
-			INTERIOR: TEMPERAT
-	die-crushed: corpse1
+	die-crushed:
+		Filename: corpse1.tem
+		TilesetFilenames:
+			SNOW: corpse1.sno
 		Length: 6
 		Tick: 1600
 		ZOffset: -511
-		UseTilesetExtension: true
-		TilesetOverrides:
-			DESERT: TEMPERAT
-			INTERIOR: TEMPERAT
 	run:
 		Start: 56
 		Length: 6
@@ -50,35 +48,57 @@
 
 c1:
 	Inherits: ^civilian
+	Defaults:
+		Filename: c1.shp
 
 c2:
 	Inherits: ^civilian
+	Defaults:
+		Filename: c2.shp
 
 c3:
 	Inherits: ^civilian
+	Defaults:
+		Filename: c3.shp
 
 c4:
 	Inherits: ^civilian
+	Defaults:
+		Filename: c4.shp
 
 c5:
 	Inherits: ^civilian
+	Defaults:
+		Filename: c5.shp
 
 c6:
 	Inherits: ^civilian
+	Defaults:
+		Filename: c6.shp
 
 c7:
 	Inherits: ^civilian
+	Defaults:
+		Filename: c7.shp
 
 c8:
 	Inherits: ^civilian
+	Defaults:
+		Filename: c8.shp
 
 c9:
 	Inherits: ^civilian
+	Defaults:
+		Filename: c9.shp
 
 c10:
 	Inherits: ^civilian
+	Defaults:
+		Filename: c10.shp
 
 einstein:
+	Defaults:
+		Filename: einstein.shp
 	stand:
 		Facings: 8
 	panic-run:
@@ -109,22 +129,22 @@ einstein:
 	die5:
 		Start: 123
 		Length: 8
-	die6: electro
+	die6:
+		Filename: electro.tem
+		TilesetFilenames:
+			SNOW: electro.sno
 		Length: *
-		UseTilesetExtension: true
-		TilesetOverrides:
-			DESERT: TEMPERAT
-			INTERIOR: TEMPERAT
-	die-crushed: corpse1
+	die-crushed:
+		Filename: corpse1.tem
+		TilesetFilenames:
+			SNOW: corpse1.sno
 		Length: 6
 		Tick: 1600
 		ZOffset: -511
-		UseTilesetExtension: true
-		TilesetOverrides:
-			DESERT: TEMPERAT
-			INTERIOR: TEMPERAT
 
 delphi:
+	Defaults:
+		Filename: delphi.shp
 	stand:
 		Facings: 8
 	panic-run:
@@ -155,22 +175,22 @@ delphi:
 	die5:
 		Start: 123
 		Length: 8
-	die6: electro
+	die6:
+		Filename: electro.tem
+		TilesetFilenames:
+			SNOW: electro.sno
 		Length: *
-		UseTilesetExtension: true
-		TilesetOverrides:
-			DESERT: TEMPERAT
-			INTERIOR: TEMPERAT
-	die-crushed: corpse1
+	die-crushed:
+		Filename: corpse1.tem
+		TilesetFilenames:
+			SNOW: corpse1.sno
 		Length: 6
 		Tick: 1600
 		ZOffset: -511
-		UseTilesetExtension: true
-		TilesetOverrides:
-			DESERT: TEMPERAT
-			INTERIOR: TEMPERAT
 
 chan:
+	Defaults:
+		Filename: chan.shp
 	stand:
 		Facings: 8
 	panic-run:
@@ -201,17 +221,15 @@ chan:
 	die5:
 		Start: 123
 		Length: 8
-	die6: electro
+	die6:
+		Filename: electro.tem
+		TilesetFilenames:
+			SNOW: electro.sno
 		Length: *
-		UseTilesetExtension: true
-		TilesetOverrides:
-			DESERT: TEMPERAT
-			INTERIOR: TEMPERAT
-	die-crushed: corpse1
+	die-crushed:
+		Filename: corpse1.tem
+		TilesetFilenames:
+			SNOW: corpse1.sno
 		Length: 6
 		Tick: 1600
 		ZOffset: -511
-		UseTilesetExtension: true
-		TilesetOverrides:
-			DESERT: TEMPERAT
-			INTERIOR: TEMPERAT

@@ -76,7 +76,7 @@ FCOM:
 	WithBuildingBib:
 	Capturable:
 		Types: building
-	EngineerRepairable:
+	InstantlyRepairable:
 	Power:
 		Amount: -200
 	ProvidesPrerequisite@buildingname:
@@ -97,7 +97,7 @@ HOSP:
 		HP: 400
 	Capturable:
 		Types: building
-	EngineerRepairable:
+	InstantlyRepairable:
 	Tooltip:
 		Name: Hospital
 	RevealsShroud:
@@ -376,7 +376,7 @@ MISS:
 	WithBuildingBib:
 	Capturable:
 		Types: building
-	EngineerRepairable:
+	InstantlyRepairable:
 	ProvidesPrerequisite@buildingname:
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -397,7 +397,7 @@ BIO:
 		Range: 4c0
 	Capturable:
 		Types: building
-	EngineerRepairable:
+	InstantlyRepairable:
 	Tooltip:
 		Name: Bio-research laboratory
 	WithBuildingBib:
@@ -424,7 +424,7 @@ OILB:
 	Capturable:
 		Types: building
 	CapturableProgressBar:
-	EngineerRepairable:
+	InstantlyRepairable:
 	CashTrickler:
 		Interval: 375
 		Amount: 100

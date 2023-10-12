@@ -10,16 +10,8 @@ E6:
 	Captures:
 		PlayerExperience: 0
 
-SPY:
-	Infiltrates:
-		PlayerExperience: 0
-
 MECH:
 	Captures:
-		PlayerExperience: 0
-
-THF:
-	Infiltrates:
 		PlayerExperience: 0
 
 HIJACKER:
@@ -41,3 +33,25 @@ FIX:
 TRUK:
 	DeliversCash:
 		PlayerExperience: 0
+
+SPEN:
+	InfiltrateForSupportPower:
+		PlayerExperience: 0
+
+SYRD:
+	InfiltrateForSupportPower:
+		PlayerExperience: 0
+
+DOME:
+	InfiltrateForExploration:
+		PlayerExperience: 0
+
+PROC:
+	InfiltrateForCash:
+		PlayerExperience: 0
+		PlayerExperiencePercentage: 0
+
+SILO:
+	InfiltrateForCash:
+		PlayerExperience: 0
+		PlayerExperiencePercentage: 0
