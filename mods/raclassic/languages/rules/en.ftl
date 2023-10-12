@@ -1,10 +1,15 @@
 ## Player
 options-tech-level =
-    .infantry-only = Infantry Only
-    .low = Low
-    .medium = Medium
-    .no-superweapons = No Superweapons
-    .unrestricted = Unrestricted
+    .one = 1
+    .two = 2
+    .three = 3
+    .four = 4
+    .five = 5
+    .six = 6
+    .seven = 7
+    .eight = 8
+    .nine = 9
+    .ten = 10
 
 checkbox-redeployable-mcvs =
     .label = Redeployable MCVs
@@ -59,5 +64,20 @@ checkbox-enable-volkov =
     .description = Replaces Tanya with Volkov for Soviets, Visual Only
 
 ## World
+options-starting-units =
+    .zero = 0
+    .one = 1
+    .two = 2
+    .three = 3
+    .four = 4
+    .five = 5
+    .six = 6
+    .seven = 7
+    .eight = 8
+    .nine = 9
+    .ten = 10
+    .eleven = 11
+    .twelve = 12
+
 options-difficulty =
     .normal = Normal

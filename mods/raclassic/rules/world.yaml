@@ -221,12 +221,12 @@ World:
 	CreateMapPlayers:
 	StartingUnits@0:
 		Class: none
-		ClassName: 0
+		ClassName: options-starting-units.zero
 		Factions: allies, england, germany, france, spain, greece, turkey, soviet, russia, ukraine
 		BaseActor: mcv
 	StartingUnits@1:
 		Class: 1
-		ClassName: 1
+		ClassName: options-starting-units.one
 		Factions: allies, england, germany, france, spain, greece, turkey, soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1
@@ -234,7 +234,7 @@ World:
 		OuterSupportRadius: 3
 	StartingUnits@2_allies:
 		Class: 2
-		ClassName: 2
+		ClassName: options-starting-units.two
 		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk
@@ -242,7 +242,7 @@ World:
 		OuterSupportRadius: 4
 	StartingUnits@2_soviet:
 		Class: 2
-		ClassName: 2
+		ClassName: options-starting-units.two
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk
@@ -250,7 +250,7 @@ World:
 		OuterSupportRadius: 4
 	StartingUnits@3_allies:
 		Class: 3
-		ClassName: 3
+		ClassName: options-starting-units.three
 		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc
@@ -258,7 +258,7 @@ World:
 		OuterSupportRadius: 4
 	StartingUnits@3_soviet:
 		Class: 3
-		ClassName: 3
+		ClassName: options-starting-units.three
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl
@@ -266,7 +266,7 @@ World:
 		OuterSupportRadius: 4
 	StartingUnits@4_allies:
 		Class: 4
-		ClassName: 4
+		ClassName: options-starting-units.four
 		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3
@@ -274,7 +274,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@4_soviet:
 		Class: 4
-		ClassName: 4
+		ClassName: options-starting-units.four
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2
@@ -282,7 +282,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@5_allies:
 		Class: 5
-		ClassName: 5
+		ClassName: options-starting-units.five
 		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty
@@ -290,7 +290,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@5_soviet:
 		Class: 5
-		ClassName: 5
+		ClassName: options-starting-units.five
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk
@@ -298,7 +298,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@6_allies:
 		Class: 6
-		ClassName: 6
+		ClassName: options-starting-units.six
 		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk
@@ -306,7 +306,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@6_soviet:
 		Class: 6
-		ClassName: 6
+		ClassName: options-starting-units.six
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk
@@ -314,7 +314,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@7_allies:
 		Class: 7
-		ClassName: 7
+		ClassName: options-starting-units.seven
 		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3
@@ -322,7 +322,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@7_soviet:
 		Class: 7
-		ClassName: 7
+		ClassName: options-starting-units.seven
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4
@@ -330,7 +330,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@8_allies:
 		Class: 8
-		ClassName: 8
+		ClassName: options-starting-units.eight
 		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk
@@ -338,7 +338,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@8_soviet:
 		Class: 8
-		ClassName: 8
+		ClassName: options-starting-units.eight
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk
@@ -346,7 +346,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@9_allies:
 		Class: 9
-		ClassName: 9
+		ClassName: options-starting-units.nine
 		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc
@@ -354,7 +354,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@9_soviet:
 		Class: 9
-		ClassName: 9
+		ClassName: options-starting-units.nine
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl
@@ -362,7 +362,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@10_allies:
 		Class: 10
-		ClassName: 10
+		ClassName: options-starting-units.ten
 		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc, e1
@@ -370,7 +370,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@10_soviet:
 		Class: 10
-		ClassName: 10
+		ClassName: options-starting-units.ten
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl, e1
@@ -378,7 +378,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@11_allies:
 		Class: 11
-		ClassName: 11
+		ClassName: options-starting-units.eleven
 		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc, e1, jeep, arty
@@ -386,7 +386,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@11_soviet:
 		Class: 11
-		ClassName: 11
+		ClassName: options-starting-units.eleven
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl, e1, 3tnk
@@ -394,7 +394,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@12_allies:
 		Class: 12
-		ClassName: 12
+		ClassName: options-starting-units.twelve
 		Factions: allies, england, germany, france, spain, greece, turkey
 		BaseActor: mcv
 		SupportActors: e1, 1tnk, 2tnk, apc, e3, jeep, arty, 2tnk, 2tnk, e3, 1tnk, 2tnk, apc, e1, jeep, arty, 2tnk, 2tnk
@@ -402,7 +402,7 @@ World:
 		OuterSupportRadius: 5
 	StartingUnits@12_soviet:
 		Class: 12
-		ClassName: 12
+		ClassName: options-starting-units.twelve
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1, 3tnk, v2rl, e2, 3tnk, 4tnk, e4, 3tnk, v2rl, e1, 3tnk, 4tnk
