@@ -214,43 +214,43 @@ Player:
 	PlayerStatistics:
 	PlaceBeacon:
 	ProvidesTechPrerequisite@infonly:
-		Name: 1
+		Name: options-tech-level.one
 		Prerequisites: techlevel.1
 		Id: 1
 	ProvidesTechPrerequisite@low:
-		Name: 2
+		Name: options-tech-level.two
 		Prerequisites: techlevel.1, techlevel.2
 		Id: 2
 	ProvidesTechPrerequisite@medium:
-		Name: 3
+		Name: options-tech-level.three
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3
 		Id: 3
 	ProvidesTechPrerequisite@4:
-		Name: 4
+		Name: options-tech-level.four
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4
 		Id: 4
 	ProvidesTechPrerequisite@5:
-		Name: 5
+		Name: options-tech-level.five
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5
 		Id: 5
 	ProvidesTechPrerequisite@6:
-		Name: 6
+		Name: options-tech-level.six
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6
 		Id: 6
 	ProvidesTechPrerequisite@7:
-		Name: 7
+		Name: options-tech-level.seven
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7
 		Id: 7
 	ProvidesTechPrerequisite@8:
-		Name: 8
+		Name: options-tech-level.eight
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7, techlevel.8
 		Id: 8
 	ProvidesTechPrerequisite@9:
-		Name: 9
+		Name: options-tech-level.nine
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7, techlevel.8, techlevel.9
 		Id: 9
 	ProvidesTechPrerequisite@10:
-		Name: 10
+		Name: options-tech-level.ten
 		Prerequisites: techlevel.1, techlevel.2, techlevel.3, techlevel.4, techlevel.5, techlevel.6, techlevel.7, techlevel.8, techlevel.9, techlevel.10
 		Id: 10
 	GrantConditionOnPrerequisiteManager:
