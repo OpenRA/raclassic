@@ -256,76 +256,31 @@ TC05:
 		AreaTypes: building
 
 BOXES01:
-	Inherits: ^Tree
-	Tooltip:
-		Name: Boxes
-	MapEditorData:
-		ExcludeTilesets: DESERT
-		Categories: Decoration
+	Inherits: ^Box
 
 BOXES02:
-	Inherits: ^Tree
-	Tooltip:
-		Name: Boxes
-	MapEditorData:
-		ExcludeTilesets: DESERT
-		Categories: Decoration
+	Inherits: ^Box
 
 BOXES03:
-	Inherits: ^Tree
-	Tooltip:
-		Name: Boxes
-	MapEditorData:
-		ExcludeTilesets: DESERT
-		Categories: Decoration
+	Inherits: ^Box
 
 BOXES04:
-	Inherits: ^Tree
-	Tooltip:
-		Name: Boxes
-	MapEditorData:
-		ExcludeTilesets: DESERT
-		Categories: Decoration
+	Inherits: ^Box
 
 BOXES05:
-	Inherits: ^Tree
-	Tooltip:
-		Name: Boxes
-	MapEditorData:
-		ExcludeTilesets: DESERT
-		Categories: Decoration
+	Inherits: ^Box
 
 BOXES06:
-	Inherits: ^Tree
-	Tooltip:
-		Name: Boxes
-	MapEditorData:
-		ExcludeTilesets: DESERT
-		Categories: Decoration
+	Inherits: ^Box
 
 BOXES07:
-	Inherits: ^Tree
-	Tooltip:
-		Name: Boxes
-	MapEditorData:
-		ExcludeTilesets: DESERT
-		Categories: Decoration
+	Inherits: ^Box
 
 BOXES08:
-	Inherits: ^Tree
-	Tooltip:
-		Name: Boxes
-	MapEditorData:
-		ExcludeTilesets: DESERT
-		Categories: Decoration
+	Inherits: ^Box
 
 BOXES09:
-	Inherits: ^Tree
-	Tooltip:
-		Name: Boxes
-	MapEditorData:
-		ExcludeTilesets: DESERT
-		Categories: Decoration
+	Inherits: ^Box
 
 ICE01:
 	Inherits: ^Tree
@@ -333,7 +288,7 @@ ICE01:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Ice Floe
+		Name: actor-ice01-name
 	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 		Categories: Decoration
@@ -346,7 +301,7 @@ ICE02:
 		Footprint: x x
 		Dimensions: 1,2
 	Tooltip:
-		Name: Ice Floe
+		Name: actor-ice02-name
 	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 		Categories: Decoration
@@ -359,7 +314,7 @@ ICE03:
 		Footprint: xx
 		Dimensions: 2,1
 	Tooltip:
-		Name: Ice Floe
+		Name: actor-ice03-name
 	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 		Categories: Decoration
@@ -369,7 +324,7 @@ ICE03:
 ICE04:
 	Inherits: ^Tree
 	Tooltip:
-		Name: Ice Floe
+		Name: actor-ice04-name
 	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 		Categories: Decoration
@@ -377,7 +332,7 @@ ICE04:
 ICE05:
 	Inherits: ^Tree
 	Tooltip:
-		Name: Ice Floe
+		Name: actor-ice05-name
 	MapEditorData:
 		ExcludeTilesets: DESERT, INTERIOR
 		Categories: Decoration
@@ -441,7 +396,7 @@ ROCK7:
 UTILPOL1:
 	Inherits: ^Tree
 	Tooltip:
-		Name: Utility Pole
+		Name: actor-utilpol1-name
 	MapEditorData:
 		ExcludeTilesets: DESERT
 		Categories: Decoration
@@ -449,7 +404,7 @@ UTILPOL1:
 UTILPOL2:
 	Inherits: ^Tree
 	Tooltip:
-		Name: Utility Pole
+		Name: actor-utilpol2-name
 	MapEditorData:
 		ExcludeTilesets: DESERT
 		Categories: Decoration
@@ -460,7 +415,7 @@ TANKTRAP1:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Tank Trap
+		Name: actor-tanktrap1-name
 	MapEditorData:
 		ExcludeTilesets: DESERT
 		RequireTilesets: TEMPERAT, SNOW, INTERIOR
@@ -473,7 +428,7 @@ TANKTRAP2:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Tank Trap
+		Name: actor-tanktrap2-name
 	MapEditorData:
 		ExcludeTilesets: DESERT
 		RequireTilesets: TEMPERAT, SNOW, INTERIOR

@@ -9,12 +9,12 @@ DOG:
 		BuildDuration: 200
 		BuildPaletteOrder: 60
 		Prerequisites: ~kenn, ~techlevel.2
-		Description: Anti-infantry unit.\nCan detect spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-dog.description
 	Valued:
 		Cost: 200
 	Tooltip:
-		Name: Attack Dog
-		GenericName: Dog
+		Name: actor-dog.name
+		GenericName: actor-dog.generic-name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Selectable:
@@ -81,13 +81,13 @@ E1:
 		BuildDuration: 100
 		BuildPaletteOrder: 10
 		Prerequisites: ~barracks, ~techlevel.1
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-e1.description
 	Selectable:
 		Class: E1
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Rifle Infantry
+		Name: actor-e1.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -120,13 +120,13 @@ E2:
 		BuildDuration: 160
 		BuildPaletteOrder: 40
 		Prerequisites: ~barr, ~techlevel.1
-		Description: Infantry armed with grenades.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-e2.description
 	Selectable:
 		Class: E2
 	Valued:
 		Cost: 160
 	Tooltip:
-		Name: Grenadier
+		Name: actor-e2.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -143,7 +143,7 @@ E2:
 		FacingTolerance: 0
 	WithInfantryBody:
 		DefaultAttackSequence: throw
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		Chance: 50
 	RenderSprites:
@@ -158,13 +158,13 @@ E3:
 		BuildDuration: 300
 		BuildPaletteOrder: 20
 		Prerequisites: ~barracks, ~techlevel.1
-		Description: Anti-tank/Anti-aircraft infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+		Description: actor-e3.description
 	Selectable:
 		Class: E3
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Rocket Soldier
+		Name: actor-e3.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -210,13 +210,13 @@ E4:
 		BuildDuration: 300
 		BuildPaletteOrder: 110
 		Prerequisites: ~barr, infantry-stek, ~techlevel.4
-		Description: Advanced anti-structure unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+		Description: actor-e4.description
 	Selectable:
 		Class: E4
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Flamethrower
+		Name: actor-e4.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -244,14 +244,14 @@ E6:
 		BuildDuration: 500
 		BuildPaletteOrder: 50
 		Prerequisites: ~barracks, ~techlevel.3
-		Description: Infiltrates and captures\nenemy structures.\n  Unarmed
+		Description: actor-e6.description
 	Selectable:
 		Priority: 5
 		Class: E6
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Engineer
+		Name: actor-e6.name
 	Passenger:
 		CustomPipType: yellow
 	InstantlyRepairs:
@@ -283,13 +283,13 @@ SPY:
 		BuildDuration: 500
 		BuildPaletteOrder: 80
 		Prerequisites: infantry-dome, ~tent, ~techlevel.4
-		Description: Infiltrates enemy structures for intel.\nExact effect depends on the building infiltrated.
+		Description: actor-spy.description
 	Selectable:
 		Class: SPY
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Spy
+		Name: actor-spy.name
 	RevealsShroud:
 		Range: 5c0
 	Passenger:
@@ -318,7 +318,7 @@ E7:
 		BuildDuration: 1200
 		BuildPaletteOrder: 120
 		Prerequisites: ~barracks-tanya, infantry-tanya, !enoughtanya, ~techlevel.8
-		Description: Elite commando infantry. Armed with\ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4
+		Description: actor-e7.description
 	Selectable:
 		Class: E7
 	AutoTarget:
@@ -327,7 +327,7 @@ E7:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Tanya
+		Name: actor-e7.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -382,7 +382,7 @@ VLKV:
 		BuildPaletteOrder: 130
 		Prerequisites: ~barr, infantry-volkov, !enoughvolkov, ~global-volkov, ~techlevel.8
 	Tooltip:
-		Name: Volkov
+		Name: actor-vlkv-name
 	Selectable:
 		Class: VLKV
 	Mobile:
@@ -414,13 +414,13 @@ MEDI:
 		BuildDuration: 800
 		BuildPaletteOrder: 30
 		Prerequisites: ~tent, ~techlevel.1
-		Description: Heals nearby infantry.\n  Unarmed
+		Description: actor-medi.description
 	Selectable:
 		Class: MEDI
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Medic
+		Name: actor-medi.name
 	Health:
 		HP: 80
 	RevealsShroud:
@@ -457,13 +457,13 @@ MECH:
 		BuildDuration: 950
 		BuildPaletteOrder: 90
 		Prerequisites: ~tent, infantry-fix, ~global-aftermath, ~techlevel.5
-		Description: Repairs nearby vehicles.\n  Unarmed
+		Description: actor-mech.description
 	Selectable:
 		Class: MECH
 	Valued:
 		Cost: 950
 	Tooltip:
-		Name: Mechanic
+		Name: actor-mech.name
 	Health:
 		HP: 60
 	Mobile:
@@ -497,7 +497,7 @@ EINSTEIN:
 	Inherits: ^CivInfantry
 	-Wanders:
 	Tooltip:
-		Name: Prof. Einstein
+		Name: actor-einstein-name
 	Voiced:
 		VoiceSet: EinsteinVoice
 
@@ -505,7 +505,7 @@ DELPHI:
 	Inherits: ^CivInfantry
 	-Wanders:
 	Tooltip:
-		Name: Agent Delphi
+		Name: actor-delphi-name
 
 CHAN:
 	Inherits: ^CivInfantry
@@ -514,14 +514,14 @@ CHAN:
 	Selectable:
 		Class: CHAN
 	Tooltip:
-		Name: Agent Chan
+		Name: actor-chan-name
 
 GNRL:
 	Inherits@1: ^CivInfantry
 	Inherits@2: ^ArmedCivilian
 	-Wanders:
 	Tooltip:
-		Name: General
+		Name: actor-gnrl-name
 	Selectable:
 		Class: GNRL
 	Mobile:
@@ -546,14 +546,14 @@ THF:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Thief
+		Name: actor-thf.name
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildDuration: 500
 		BuildPaletteOrder: 100
 		Prerequisites: ~tent, infantry-atek, ~techlevel.8
-		Description: Steals enemy credits.\n  Unarmed
+		Description: actor-thf.description
 	Selectable:
 		Class: THF
 	RevealsShroud:
@@ -583,13 +583,13 @@ SHOK:
 		BuildDuration: 900
 		BuildPaletteOrder: 70
 		Prerequisites: ~barr, infantry-tsla, ~global-aftermath, ~techlevel.5
-		Description: Elite infantry with portable tesla coils.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Description: actor-shok.description
 	Selectable:
 		Class: SHOK
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Shock Trooper
+		Name: actor-shok.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -627,14 +627,14 @@ ANT:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Giant Ant
-		GenericName: Ant
+		Name: actor-ant.name
+		GenericName: actor-ant.generic-name
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 1954
 		Prerequisites: ~barracks, ~bio, ~disabled
-		Description: Irradiated insect that grew oversize.
+		Description: actor-ant.description
 	Selectable:
 		Bounds: 1024, 1024, 0, -213
 		DecorationBounds: 1280, 1280, 0, -85

@@ -1,19 +1,19 @@
 MINP:
 	Inherits: ^Mine
 	Tooltip:
-		Name: Anti-Pensonnel Mine
+		Name: actor-minp-name
 	Mine:
 		DetonateClasses: mine_ap
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: APMine
 
 MINV:
 	Inherits: ^Mine
 	Tooltip:
-		Name: Anti-Tank Mine
+		Name: actor-minv-name
 	Mine:
 		DetonateClasses: mine_av
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: AVMine
 
 CRATE:
@@ -178,7 +178,7 @@ CRATE:
 MONEYCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Money Crate
+		Name: actor-moneycrate-name
 	GiveCashCrateAction:
 		Amount: 500
 		SelectionShares: 1
@@ -187,7 +187,7 @@ MONEYCRATE:
 HEALCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Heal Crate
+		Name: actor-healcrate-name
 	HealActorsCrateAction:
 		Sound: heal2.aud
 		SelectionShares: 1
@@ -196,19 +196,19 @@ HEALCRATE:
 WCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Wooden Crate
+		Name: actor-wcrate-name
 
 SCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Steel Crate
+		Name: actor-scrate-name
 	RenderSprites:
 		Image: scrate
 
 CAMERA:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: (reveals area to owner)
+		Name: actor-camera-name
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -226,14 +226,14 @@ CAMERA:
 camera.paradrop:
 	Inherits: CAMERA
 	EditorOnlyTooltip:
-		Name: (support power proxy camera)
+		Name: actor-camera-paradrop-name
 	RevealsShroud:
 		Range: 6c0
 
 camera.spyplane:
 	Inherits: CAMERA
 	EditorOnlyTooltip:
-		Name: (support power proxy camera)
+		Name: actor-camera-spyplane-name
 	DetectCloaked:
 		Range: 10c0
 		DetectionTypes: Cloak, Hijacker
@@ -241,7 +241,7 @@ camera.spyplane:
 SONAR:
 	Inherits: camera.spyplane
 	EditorOnlyTooltip:
-		Name: (support power proxy camera)
+		Name: actor-sonar-name
 	-RevealsShroud:
 	DetectCloaked:
 		DetectionTypes: Underwater
@@ -262,7 +262,7 @@ FLARE:
 		Type: CenterPosition
 	Interactable:
 	Tooltip:
-		Name: Flare
+		Name: actor-flare-name
 		ShowOwnerRow: false
 	MapEditorData:
 		Categories: Decoration
@@ -273,7 +273,7 @@ MINE:
 	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
-		Name: Ore Mine
+		Name: actor-mine-name
 	RenderSprites:
 		Palette: terrain
 	WithSpriteBody:
@@ -294,7 +294,7 @@ GMINE:
 	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
-		Name: Gem Mine
+		Name: actor-gmine-name
 	RenderSprites:
 		Palette: player
 	WithSpriteBody:
@@ -316,7 +316,7 @@ RAILMINE:
 	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
-		Name: Abandoned Mine
+		Name: actor-railmine-name
 	RenderSprites:
 		Palette: player
 	WithSpriteBody:
@@ -335,7 +335,7 @@ QUEE:
 	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
-		Name: Queen Ant
+		Name: actor-quee-name
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -353,7 +353,7 @@ LAR1:
 	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
-		Name: Ant Larva
+		Name: actor-lar1-name
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -370,20 +370,21 @@ LAR1:
 LAR2:
 	Inherits@1: LAR1
 	Tooltip:
-		Name: Ant Larvae
+		Name: actor-lar2-name
 
 powerproxy.parabombs:
 	AlwaysVisible:
 	AirstrikePower:
 		OrderName: Parabombs
 		Icon: parabombs
-		Name: Parabombs
+		Name: actor-powerproxy-parabombs.airstrikepower-name
 		ChargeInterval: 21000
-		Description: A Badger drops a load of parachuted\nbombs on your target.
+		Description: actor-powerproxy-parabombs.airstrikepower-description
 		OneShot: true
 		AllowMultiple: true
 		UnitType: badr.bomber
 		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
 		QuantizedFacings: 8
 		DisplayBeacon: True
 		BeaconPoster: pbmbicon
@@ -395,13 +396,14 @@ powerproxy.parabombs:
 	AirstrikePower@directional:
 		OrderName: Parabombs
 		Icon: parabombs
-		Name: Parabombs
+		Name: actor-powerproxy-parabombs.airstrikepower-name
 		ChargeInterval: 21000
-		Description: A Badger drops a load of parachuted\nbombs on your target.
+		Description: actor-powerproxy-parabombs.airstrikepower-description
 		OneShot: true
 		AllowMultiple: true
 		UnitType: badr.bomber
 		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
 		QuantizedFacings: 8
 		DisplayBeacon: True
 		BeaconPoster: pbmbicon
@@ -420,34 +422,39 @@ powerproxy.sonarpulse:
 	AlwaysVisible:
 	SpawnActorPower:
 		Icon: sonar
-		Name: Sonar Pulse
-		Description: Reveals all submarines in the vicinity for a \nshort time.
+		Name: actor-powerproxy-sonarpulse.spawnactorpower-name
+		Description: actor-powerproxy-sonarpulse.spawnactorpower-description
 		ChargeInterval: 750
 		EndChargeSpeechNotification: SonarPulseReady
+		EndChargeTextNotification: notification-sonar-pulse-ready
 		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
 		Actor: sonar
 		LifeTime: 250
 		DeploySound: sonpulse.aud
 		EffectImage: moveflsh
 		EffectPalette: moveflash
 		EffectSequence: idle
+		BlockedCursor: move-blocked
 
 powerproxy.sonarpulse.crate:
 	AlwaysVisible:
 	SpawnActorPower:
 		Icon: sonar
-		Name: Sonar Pulse
-		Description: Reveals all submarines in the vicinity for a \nshort time.
+		Name: actor-powerproxy-sonarpulse.spawnactorpower-name
+		Description: actor-powerproxy-sonarpulse.spawnactorpower-description
 		ChargeInterval: 750
 		OneShot: true
 		AllowMultiple: true
 		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
 		Actor: sonar
 		LifeTime: 250
 		DeploySound: sonpulse.aud
 		EffectImage: moveflsh
 		EffectPalette: moveflash
 		EffectSequence: idle
+		BlockedCursor: move-blocked
 
 powerproxy.abomb:
 	AlwaysVisible:
@@ -458,14 +465,19 @@ powerproxy.abomb:
 		ChargeInterval: 19500
 		FlightDelay: 100
 		FlightVelocity: 1c0
-		Name: Atom Bomb
-		Description: Launches a devastating atomic bomb\nat a target location.
+		Name: actor-powerproxy-abomb.nukepower-name
+		Description: actor-powerproxy-abomb.nukepower-description
 		OneShot: true
 		AllowMultiple: true
 		BeginChargeSpeechNotification: AbombPrepping
 		EndChargeSpeechNotification: AbombReady
 		SelectTargetSpeechNotification: SelectTarget
 		IncomingSpeechNotification: AbombLaunchDetected
+		SelectTargetTextNotification: notification-select-target
+		InsufficientPowerTextNotification: notification-insufficient-power
+		BeginChargeTextNotification: notification-abomb-prepping
+		EndChargeTextNotification: notification-abomb-ready
+		IncomingTextNotification: notification-abomb-launch-detected
 		SkipAscent: true
 		MissileWeapon: atomic
 		DisplayBeacon: True
@@ -481,8 +493,9 @@ powerproxy.paratroopers:
 	AlwaysVisible:
 	ParatroopersPower:
 		Icon: paratroopers
-		Name: Paratroopers
-		Description: A Badger drops a squad of infantry\nanywhere on the map.
+		Name: actor-powerproxy-paratroopers.paratrooperspower-name
+		Description: actor-powerproxy-paratroopers.paratrooperspower-description
+		SelectTargetTextNotification: notification-select-target
 		DropItems: E1,E1,E1,E3,E3
 		SelectTargetSpeechNotification: SelectTarget
 		AllowImpassableCells: false
@@ -509,7 +522,7 @@ aircraft.upgraded:
 mpspawn:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: (multiplayer player starting point)
+		Name: actor-mpspawn-name
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -523,7 +536,7 @@ mpspawn:
 waypoint:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: (waypoint for scripted behavior)
+		Name: actor-waypoint-name
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -558,188 +571,188 @@ fact.colorpicker:
 building-power:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Power Plant
+		Name: actor-powr.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: fact
 
 building-proc:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Refinery
+		Name: actor-proc.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: fact
 
 building-tent:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Allied Barracks
+		Name: actor-tent.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: fact
 
 building-barr:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Soviet Barracks
+		Name: actor-barr.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: fact
 
 building-weap:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: War Factory
+		Name: actor-weap.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: fact
 
 building-dome:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Radar Dome
+		Name: actor-dome.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: fact
 
 building-tech:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Tech Center
+		Name: actor-techcenter-name
 	GrantConditionOnPrerequisite:
 		Prerequisites: fact
 
 building-atek:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Allied Tech Center
+		Name: actor-atek.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: fact
 
 building-stek:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Soviet Tech Center
+		Name: actor-stek.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: fact
 
 infantry-dome:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Radar Dome
+		Name: actor-dome.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: barracks
 
 infantry-fix:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Service Depot
+		Name: actor-fix.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: tent
 
 infantry-tsla:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Tesla Coil
+		Name: actor-tsla.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: barr
 
 infantry-tech:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Tech Center
+		Name: actor-techcenter-name
 	GrantConditionOnPrerequisite:
 		Prerequisites: barracks
 
 infantry-atek:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Allied Tech Center
+		Name: actor-atek.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: tent
 
 infantry-stek:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Soviet Tech Center
+		Name: actor-stek.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: barr
 
 infantry-tanya:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Tech Center
+		Name: actor-techcenter-name
 	GrantConditionOnPrerequisite:
 		Prerequisites: barracks
 
 infantry-volkov:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Tech Center
+		Name: actor-techcenter-name
 	GrantConditionOnPrerequisite:
 		Prerequisites: barracks
 
 vehicle-tent:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Allied Barracks
+		Name: actor-tent.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: weap
 
 vehicle-proc:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Refinery
+		Name: actor-proc.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: weap
 
 vehicle-dome:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Radar Dome
+		Name: actor-dome.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: weap
 
 vehicle-fix:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Service Depot
+		Name: actor-fix.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: weap
 
 vehicle-tsla:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Tesla Coil
+		Name: actor-tsla.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: weap
 
 vehicle-atek:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Allied Tech Center
+		Name: actor-atek.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: weap
 
 vehicle-stek:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Soviet Tech Center
+		Name: actor-stek.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: weap
 
 vehicle-mslo:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Missile Silo
+		Name: actor-mslo.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: weap
 
 naval-atek:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Allied Tech Center
+		Name: actor-atek.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: syrd
 
 naval-stek:
 	Inherits: ^Sticky
 	Tooltip:
-		Name: Soviet Tech Center
+		Name: actor-stek.name
 	GrantConditionOnPrerequisite:
 		Prerequisites: spen

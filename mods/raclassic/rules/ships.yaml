@@ -10,11 +10,11 @@ SS:
 		BuildDuration: 950
 		BuildPaletteOrder: 30
 		Prerequisites: ~spen, ~techlevel.3
-		Description: Submerged anti-ship unit\narmed with torpedoes.\nCan detect other submarines.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft\n  Special Ability: Submerge
+		Description: actor-ss.description
 	Valued:
 		Cost: 950
 	Tooltip:
-		Name: Submarine
+		Name: actor-ss.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -61,7 +61,7 @@ SS:
 		DetectionTypes: Underwater
 		Range: 4c0
 	RenderDetectionCircle:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSubmarine
 		EmptyWeapon: UnitExplodeSubmarine
 	-MustBeDestroyed:
@@ -80,11 +80,11 @@ MSUB:
 		BuildDuration: 1650
 		BuildPaletteOrder: 60
 		Prerequisites: ~spen, naval-stek, ~global-aftermath, ~techlevel.6
-		Description: Submerged anti-ground siege unit.\nCan detect other submarines.\n  Strong vs Buildings, Ground units, Aircraft\n  Weak vs Naval units\n  Special Ability: Submerge
+		Description: actor-msub.description
 	Valued:
 		Cost: 1650
 	Tooltip:
-		Name: Missile Submarine
+		Name: actor-msub.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -133,7 +133,7 @@ MSUB:
 		DetectionTypes: Underwater
 		Range: 4c0
 	RenderDetectionCircle:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSubmarine
 		EmptyWeapon: UnitExplodeSubmarine
 	-MustBeDestroyed:
@@ -152,11 +152,11 @@ DD:
 		BuildDuration: 1000
 		BuildPaletteOrder: 40
 		Prerequisites: ~syrd, ~techlevel.5
-		Description: Fast multi-role ship.\nCan detect submarines.\n  Strong vs Naval units, Light armor, Aircraft\n  Weak vs Infantry, Tanks
+		Description: actor-dd.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Destroyer
+		Name: actor-dd.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -226,11 +226,11 @@ CA:
 		BuildDuration: 2000
 		BuildPaletteOrder: 50
 		Prerequisites: ~syrd, naval-atek, ~techlevel.7
-		Description: Very slow long-range ship.\n  Strong vs Buildings, Ground units\n  Weak vs Naval units, Aircraft
+		Description: actor-ca.description
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Cruiser
+		Name: actor-ca.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -288,11 +288,11 @@ LST:
 		BuildDuration: 700
 		BuildPaletteOrder: 10
 		Prerequisites: ~techlevel.2
-		Description: General-purpose naval transport.\nCan carry infantry and tanks.\n  Unarmed
+		Description: actor-lst.description
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Transport
+		Name: actor-lst.name
 	Health:
 		HP: 350
 	Armor:
@@ -327,11 +327,11 @@ PT:
 		BuildAtProductionType: Boat
 		BuildPaletteOrder: 20
 		Prerequisites: ~syrd, ~techlevel.3
-		Description: Light scout & support ship.\nCan detect submarines.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft
+		Description: actor-pt.description
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Gunboat
+		Name: actor-pt.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
