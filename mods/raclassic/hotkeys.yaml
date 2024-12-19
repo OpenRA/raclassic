@@ -1,19 +1,24 @@
 ProductionTypeBuilding: E
-	Description: Building Tab
-	Types: Production, Player
+	Description: hotkey-description-productiontypebuilding
+	Types: Production
+	Contexts: player
 
 ProductionTypeInfantry: R
-	Description: Infantry Tab
-	Types: Production, Player
+	Description: hotkey-description-productiontypeinfantry
+	Types: Production
+	Contexts: player
 
 ProductionTypeVehicle: T
-	Description: Vehicle Tab
-	Types: Production, Player
+	Description: hotkey-description-productiontypevehicle
+	Types: Production
+	Contexts: player
 
 ProductionTypeAircraft: Y
-	Description: Aircraft Tab
-	Types: Production, Player
+	Description: hotkey-description-productiontypeaircraft
+	Types: Production
+	Contexts: player
 
 ProductionTypeNaval: U
-	Description: Naval Tab 
-	Types: Production, Player
+	Description: hotkey-description-productiontypenaval
+	Types: Production
+	Contexts: player

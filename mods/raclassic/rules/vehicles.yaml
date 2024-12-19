@@ -10,11 +10,11 @@ V2RL:
 		BuildDuration: 700
 		BuildPaletteOrder: 70
 		Prerequisites: vehicle-dome, ~vehicles.soviet, ~techlevel.2
-		Description: Long-range rocket artillery.\n  Strong vs Infantry, Light armor, Buildings\n  Weak vs Tanks, Aircraft
+		Description: actor-v2rl.description
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: V2 Rocket
+		Name: actor-v2rl.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -27,28 +27,21 @@ V2RL:
 		Range: 5c0
 	Armament:
 		Weapon: SCUD
-		PauseOnCondition: !ammo
-	AmmoPool:
-		Ammo: 1
-		AmmoCondition: ammo
-	ReloadAmmoPool:
-		Delay: 400
-		Count: 1
+		ReloadingCondition: reloading
 	AttackFrontal:
 		FacingTolerance: 0
 	WithFacingSpriteBody:
-		Name: full
-		RequiresCondition: ammo
+		Name: loaded
+		RequiresCondition: !reloading
 	WithFacingSpriteBody@EMPTY:
-		Name: empty
-		RequiresCondition: !ammo
+		Name: reloading
 		Sequence: empty-idle
+		RequiresCondition: reloading
 	SpawnActorOnDeath:
 		Actor: V2RL.Husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
-	SelectionDecorations:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: V2Explode
 	Selectable:
 		Class: V2RL
@@ -68,11 +61,11 @@ V2RL:
 		BuildDuration: 700
 		BuildPaletteOrder: 30
 		Prerequisites: ~vehicles.allies, ~techlevel.2
-		Description: Light Tank, good for scouting.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
+		Description: actor-1tnk.description
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Light Tank
+		Name: actor-1tnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -115,11 +108,11 @@ V2RL:
 		BuildDuration: 800
 		BuildPaletteOrder: 40
 		Prerequisites: ~vehicles.allies, ~techlevel.4
-		Description: Allied Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: actor-2tnk.description
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Medium Tank
+		Name: actor-2tnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -145,7 +138,6 @@ V2RL:
 		Actor: 2TNK.Husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
-	SelectionDecorations:
 	Selectable:
 		Class: 2TNK
 		DecorationBounds: 1194, 1194
@@ -164,11 +156,11 @@ V2RL:
 		BuildDuration: 950
 		BuildPaletteOrder: 50
 		Prerequisites: ~vehicles.soviet, ~techlevel.2
-		Description: Soviet Main Battle Tank, with dual cannons\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: actor-3tnk.description
 	Valued:
 		Cost: 950
 	Tooltip:
-		Name: Heavy Tank
+		Name: actor-3tnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -194,7 +186,6 @@ V2RL:
 		Actor: 3TNK.Husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
-	SelectionDecorations:
 	Selectable:
 		Class: 3TNK
 		DecorationBounds: 1194, 1194
@@ -210,11 +201,11 @@ V2RL:
 		BuildDuration: 1700
 		BuildPaletteOrder: 140
 		Prerequisites: vehicle-stek, ~vehicles.soviet, ~techlevel.7
-		Description: Big and slow tank, with anti-air capability.\n  Strong vs Vehicles, Infantry, Aircraft\n  Weak vs Nothing
+		Description: actor-4tnk.description
 	Valued:
 		Cost: 1700
 	Tooltip:
-		Name: Mammoth Tank
+		Name: actor-4tnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -269,7 +260,6 @@ V2RL:
 		Delay: 3
 		StartIfBelow: 50
 		DamageCooldown: 150
-	SelectionDecorations:
 	Selectable:
 		Class: 4TNK
 		DecorationBounds: 1877, 1621, 0, -170
@@ -288,11 +278,11 @@ ARTY:
 		BuildDuration: 600
 		BuildPaletteOrder: 60
 		Prerequisites: ~vehicles.allies, ~techlevel.5
-		Description: Long-range artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+		Description: actor-arty.description
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Artillery
+		Name: actor-arty.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -315,7 +305,7 @@ ARTY:
 		Actor: ARTY.Husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: UnitExplodeSmall
 		LoadedChance: 75
@@ -332,23 +322,25 @@ HARV:
 		BuildDuration: 1400
 		BuildPaletteOrder: 10
 		Prerequisites: vehicle-proc, ~techlevel.1
-		Description: Collects Ore and Gems for processing.\n  Unarmed
+		Description: actor-harv.description
 	Valued:
 		Cost: 1400
 	Tooltip:
-		Name: Ore Truck
-		GenericName: Harvester
+		Name: actor-harv.name
+		GenericName: actor-harv.generic-name
 	Selectable:
 		Class: HARV
 		Priority: 7
 		DecorationBounds: 1792, 1792
-	SelectionDecorations:
 	Harvester:
-		Capacity: 28
 		Resources: Ore,Gems
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 30
 		SearchFromHarvesterRadius: 11
+	StoresResources:
+		Capacity: 28
+		Resources: Ore,Gems
+	DockClientManager:
 	Health:
 		HP: 600
 	Armor:
@@ -376,7 +368,7 @@ HARV:
 	-WithFacingSpriteBody:
 	RenderSprites:
 		Image: HARV
-	WithHarvesterPipsDecoration:
+	WithStoresResourcesPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
@@ -393,16 +385,15 @@ MCV:
 		BuildDuration: 2500
 		BuildPaletteOrder: 130
 		Prerequisites: vehicle-fix, ~techlevel.8
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: actor-mcv.description
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Mobile Construction Vehicle
+		Name: actor-mcv.name
 	Selectable:
 		Class: MCV
 		Priority: 4
 		DecorationBounds: 1792, 1792
-	SelectionDecorations:
 	Health:
 		HP: 600
 	Armor:
@@ -438,11 +429,11 @@ JEEP:
 		BuildDuration: 600
 		BuildPaletteOrder: 20
 		Prerequisites: ~vehicles.allies, ~techlevel.2
-		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: actor-jeep.description
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Ranger
+		Name: actor-jeep.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -495,11 +486,11 @@ APC:
 		BuildDuration: 800
 		BuildPaletteOrder: 80
 		Prerequisites: ~vehicles.allies, vehicle-tent, ~techlevel.3
-		Description: Tough infantry transport.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: actor-apc.description
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Armored Personnel Carrier
+		Name: actor-apc.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -551,9 +542,9 @@ MNLY.AP:
 		BuildDuration: 800
 		BuildPaletteOrder: 110
 		Prerequisites: ~vehicles.soviet, vehicle-fix, ~techlevel.2
-		Description: Lays anti-personnel mines to destroy\nunwary enemy units.\n  Unarmed
+		Description: actor-mnly-ap.description
 	Tooltip:
-		Name: Minelayer (Anti-Personnel)
+		Name: actor-mnly-ap.name
 	Minelayer:
 		Mine: MINP
 		TileUnknownName: build-valid
@@ -573,9 +564,9 @@ MNLY.AV:
 		BuildDuration: 800
 		BuildPaletteOrder: 120
 		Prerequisites: ~vehicles.allies, vehicle-fix, ~techlevel.2
-		Description: Lays anti-tank mines to destroy\nunwary enemy units.\n  Unarmed
+		Description: actor-mnly-av.description
 	Tooltip:
-		Name: Minelayer (Anti-Tank)
+		Name: actor-mnly-av.name
 	Minelayer:
 		Mine: MINV
 		TileUnknownName: build-valid
@@ -593,7 +584,7 @@ TRUK:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Supply Truck
+		Name: actor-truk-name
 	Selectable:
 		Priority: 6
 	Health:
@@ -617,11 +608,11 @@ MGG:
 		BuildDuration: 600
 		BuildPaletteOrder: 160
 		Prerequisites: ~vehicles.allies, vehicle-atek, ~techlevel.8
-		Description: Regenerates the shroud nearby, \nobscuring the area.\n  Unarmed
+		Description: actor-mgg.description
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Mobile Gap Generator
+		Name: actor-mgg.name
 	Health:
 		HP: 110
 	Armor:
@@ -651,13 +642,13 @@ MRJ:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Mobile Radar Jammer
+		Name: actor-mrj.name
 	Buildable:
 		Queue: Vehicle
 		BuildDuration: 600
 		BuildPaletteOrder: 90
 		Prerequisites: ~vehicles.allies, vehicle-dome, ~techlevel.9
-		Description: Jams nearby enemy radar domes.\n  Unarmed
+		Description: actor-mrj.description
 	Health:
 		HP: 110
 	Armor:
@@ -698,11 +689,11 @@ TTNK:
 		BuildDuration: 1500
 		BuildPaletteOrder: 100
 		Prerequisites: ~vehicles.soviet, vehicle-tsla, ~global-aftermath, ~techlevel.5
-		Description: Tank with mounted tesla coil.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
+		Description: actor-ttnk.description
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Tesla Tank
+		Name: actor-ttnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -724,7 +715,6 @@ TTNK:
 		Actor: TTNK.Husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
-	SelectionDecorations:
 	Selectable:
 		Class: TTNK
 		DecorationBounds: 1280, 1280
@@ -738,11 +728,11 @@ DTRK:
 		BuildDuration: 2400
 		BuildPaletteOrder: 190
 		Prerequisites: vehicle-mslo, ~global-aftermath, ~techlevel.10
-		Description: Demolition Truck, actively armed with\nnuclear explosives. Has very weak armor.
+		Description: actor-dtrk.description
 	Valued:
 		Cost: 2400
 	Tooltip:
-		Name: Demolition Truck
+		Name: actor-dtrk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -753,7 +743,7 @@ DTRK:
 		Speed: 80
 	RevealsShroud:
 		Range: 3c0
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: MiniNuke
 		EmptyWeapon: MiniNuke
 		DamageSource: Killer
@@ -788,14 +778,13 @@ CTNK:
 		BuildDuration: 2400
 		BuildPaletteOrder: 150
 		Prerequisites: ~vehicles.allies, vehicle-atek, ~global-aftermath, ~techlevel.9
-		Description: Chrono Tank, teleports to areas within range.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft\n  Special ability: Can teleport
+		Description: actor-ctnk.description
 	Valued:
 		Cost: 2400
 	Tooltip:
-		Name: Chrono Tank
+		Name: actor-ctnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	SelectionDecorations:
 	Health:
 		HP: 350
 	Armor:
@@ -847,11 +836,11 @@ QTNK:
 		BuildDuration: 2300
 		BuildPaletteOrder: 170
 		Prerequisites: ~vehicles.soviet, vehicle-stek, ~global-aftermath, ~techlevel.7
-		Description: Deals seismic damage to nearby vehicles\nand structures.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
+		Description: actor-qtnk.description
 	Valued:
 		Cost: 2300
 	Tooltip:
-		Name: MAD Tank
+		Name: actor-qtnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -862,7 +851,6 @@ QTNK:
 		Speed: 30
 	RevealsShroud:
 		Range: 6c0
-	SelectionDecorations:
 	MadTank:
 	Targetable:
 		TargetTypes: Ground, MADTank, Repair, Vehicle
@@ -886,11 +874,11 @@ STNK:
 		BuildDuration: 800
 		BuildPaletteOrder: 180
 		Prerequisites: ~vehicles.allies, vehicle-atek, ~disabled
-		Description: Lightly armored infantry transport\nwhich can cloak.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
+		Description: actor-stnk.description
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Phase Transport
+		Name: actor-stnk.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

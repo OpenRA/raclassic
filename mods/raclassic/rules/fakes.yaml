@@ -6,11 +6,11 @@ SYRF:
 		BuildDuration: 50
 		BuildPaletteOrder: 860
 		Prerequisites: building-power, ~structures.allies, ~techlevel.2
-		Description: Looks like a Naval Yard.
+		Description: actor-syrf.description
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake Naval Yard
-		GenericName: Naval Yard
+		Name: actor-syrf.name
+		GenericName: actor-syrf.generic-name
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Targetable:
@@ -48,11 +48,11 @@ SPEF:
 		BuildDuration: 50
 		BuildPaletteOrder: 870
 		Prerequisites: building-power, ~disabled, ~techlevel.2
-		Description: Looks like a Sub Pen.
+		Description: actor-spef.description
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake Sub Pen
-		GenericName: Sub Pen
+		Name: actor-spef.name
+		GenericName: actor-spef.generic-name
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Building:
@@ -86,11 +86,11 @@ WEAF:
 		BuildDuration: 50
 		BuildPaletteOrder: 880
 		Prerequisites: building-proc, ~structures.allies, ~techlevel.2
-		Description: Looks like a War Factory.
+		Description: actor-weaf.description
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake War Factory
-		GenericName: War Factory
+		Name: actor-weaf.name
+		GenericName: actor-weaf.generic-name
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Building:
@@ -113,8 +113,8 @@ DOMF:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 630,-384,0, 630,384,0, -700,-512,0, -700,512,0
 	Tooltip:
-		Name: Fake Radar Dome
-		GenericName: Radar Dome
+		Name: actor-domf.name
+		GenericName: actor-domf.generic-name
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Buildable:
@@ -122,7 +122,7 @@ DOMF:
 		BuildDuration: 50
 		BuildPaletteOrder: 890
 		Prerequisites: building-proc, ~structures.allies, ~techlevel.2
-		Description: Looks like a Radar Dome.
+		Description: actor-domf.description
 		Icon: fake-icon
 	Building:
 		Footprint: xx xx ==
@@ -141,11 +141,11 @@ FACF:
 		BuildDuration: 50
 		BuildPaletteOrder: 900
 		Prerequisites: ~structures.allies, ~techlevel.1
-		Description: Looks like a Construction Yard.
+		Description: actor-facf.description
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake Construction Yard
-		GenericName: Construction Yard
+		Name: actor-facf.name
+		GenericName: actor-facf.generic-name
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Building:

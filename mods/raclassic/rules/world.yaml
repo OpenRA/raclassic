@@ -80,83 +80,83 @@
 		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
 		UseExtendedIndex: true
 	Faction@allies:
-		Name: Allies
+		Name: faction-allies.name
 		Side: Allies
 		InternalName: allies
-		Description: Allies\nGeneric Allied faction doesn't have any bonuses.
+		Description: faction-allies.description
 	Faction@england:
-		Name: England
+		Name: faction-england.name
 		Side: Allies
 		InternalName: england
-		Description: England\nEngland has 10% taken damage bonus on all units and structures.
+		Description: faction-england.description
 	Faction@germany:
-		Name: Germany
+		Name: faction-germany.name
 		Side: Allies
 		InternalName: germany
-		Description: Germany\nGermany has 10% dealt damage bonus on on all combat units and defenses.
+		Description: faction-germany.description
 	Faction@france:
-		Name: France
+		Name: faction-france.name
 		Side: Allies
 		InternalName: france
-		Description: France\nFrance has 10% rate of fire bonus on all combat units and defenses.
+		Description: faction-france.description
 	Faction@spain:
-		Name: Spain
+		Name: faction-spain.name
 		Side: Allies
 		InternalName: spain
-		Description: Spain\nSpain has +1 range bonus on all combat units and defenses.
+		Description: faction-spain.description
 	Faction@greece:
-		Name: Greece
+		Name: faction-greece.name
 		Side: Allies
 		InternalName: greece
-		Description: Greece\nGreece has 25% power output bonus on all power plants.
+		Description: faction-greece.description
 	Faction@turkey:
-		Name: Turkey
+		Name: faction-turkey.name
 		Side: Allies
 		InternalName: turkey
-		Description: Turkey\nTurkey has 10% build time bonus on all units and structures.
+		Description: faction-turkey.description
 	Faction@soviet:
-		Name: Soviet
+		Name: faction-soviet.name
 		Side: Soviet
 		InternalName: soviet
-		Description: Soviet\nGeneric Soviet faction doesn't have any bonuses.
+		Description: faction-soviet.description
 	Faction@russia:
-		Name: Russia
+		Name: faction-russia.name
 		Side: Soviet
 		InternalName: russia
-		Description: Russia\nRussia has 10% cost bonus on all units and structures.
+		Description: faction-russia.description
 	Faction@ukraine:
-		Name: Ukraine
+		Name: faction-ukraine.name
 		Side: Soviet
 		InternalName: ukraine
-		Description: Ukraine\nUkraine has 10% speed bonus on all units.
+		Description: faction-ukraine.description
 	Faction@random:
-		Name: Any
+		Name: faction-random.name
 		Side: Random
 		InternalName: Random
 		RandomFactionMembers: england, germany, france, spain, greece, turkey, russia, ukraine
-		Description: Random Country\nA random country will be chosen when the game starts.
+		Description: faction-random.description
 	Faction@randomallies:
-		Name: Allies
+		Name: faction-randomallies.name
 		InternalName: RandomAllies
 		RandomFactionMembers: england, germany, france, spain, greece, turkey
 		Side: Random
-		Description: Random Allied Country\nA random Allied country will be chosen when the game starts.
+		Description: faction-randomallies.description
 	Faction@randomsoviet:
-		Name: Soviet
+		Name: faction-randomsoviet.name
 		InternalName: RandomSoviet
 		RandomFactionMembers: russia, ukraine
 		Side: Random
-		Description: Random Soviet Country\nA random Soviet country will be chosen when the game starts.
+		Description: faction-randomsoviet.description
 	ResourceRenderer:
 		ResourceTypes:
 			Ore:
 				Sequences: gold01, gold02, gold03, gold04
 				Palette: player
-				Name: Valuable Minerals
+				Name: resource-minerals
 			Gems:
 				Sequences: gem01, gem02, gem03, gem04
 				Palette: player
-				Name: Valuable Minerals
+				Name: resource-minerals
 
 World:
 	Inherits: ^BaseWorld
@@ -459,8 +459,8 @@ EditorWorld:
 				TerrainType: Gems
 				AllowedTerrainTypes: Clear, Road
 				MaxDensity: 3
-	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:
 	BuildableTerrainOverlay:
 		AllowedTerrainTypes: Clear, Road
+	MarkerLayerOverlay:

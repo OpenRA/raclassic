@@ -220,14 +220,14 @@
 	AttackMove:
 	HiddenUnderFog:
 	ActorLostNotification:
-		TextNotification: Unit lost.
+		TextNotification: notification-unit-lost
 	ProximityCaptor:
 		Types: Vehicle
 	WithDamageOverlay:
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Vehicle
+		GenericName: meta-vehicle-generic-name
 	Capturable:
 		Types: vehicle
 		CancelActivity: True
@@ -242,7 +242,7 @@
 		WaterCorpseSequence:
 		WaterCorpsePalette:
 		ParachutingCondition: parachute
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	WithFacingSpriteBody:
@@ -320,7 +320,7 @@
 		CargoType: Infantry
 	HiddenUnderFog:
 	ActorLostNotification:
-		TextNotification: Unit lost.
+		TextNotification: notification-unit-lost
 	Crushable@NOWARN:
 		CrushSound: squishy2.aud
 		WarnProbability: 0
@@ -335,7 +335,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Soldier
+		GenericName: meta-infantry-generic-name
 	DeathSounds@NORMAL:
 		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
 	DeathSounds@BURNED:
@@ -392,7 +392,7 @@
 	Valued:
 		Cost: 10
 	Tooltip:
-		Name: Civilian
+		Name: meta-civinfantry-name
 		GenericVisibility: None
 	Mobile:
 		Speed: 50
@@ -458,20 +458,20 @@
 	AttackMove:
 	ActorLostNotification:
 		Notification: NavalUnitLost
-		TextNotification: Naval unit lost.
+		TextNotification: notification-naval-unit-lost
 	ProximityCaptor:
 		Types: Ship
 	Chronoshiftable:
 	RepairableNear:
 		RepairActors: syrd, spen
 	WithDamageOverlay:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeShip
 		EmptyWeapon: UnitExplodeShip
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Ship
+		GenericName: meta-ship-generic-name
 	MustBeDestroyed:
 	MapEditorData:
 		ExcludeTilesets: INTERIOR
@@ -534,7 +534,7 @@
 	Guardable:
 	ActorLostNotification:
 		Notification: AirUnitLost
-		TextNotification: Airborne unit lost.
+		TextNotification: notification-airborne-unit-lost
 	ProximityCaptor:
 		Types: Plane
 	# EjectOnDeath:
@@ -544,7 +544,7 @@
 	#	EjectInAir: true
 	#	AllowUnsuitableCell: true
 	Tooltip:
-		GenericName: Plane
+		GenericName: meta-plane-generic-name
 	WithShadow:
 		Offset: 43, 128, 0
 		ZOffset: -129
@@ -557,10 +557,10 @@
 		Categories: Aircraft
 	SpawnActorOnDeath:
 		RequiresCondition: airborne && global-husks
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplode
 		RequiresCondition: !airborne
-	Explodes@NOHUSK:
+	FireWarheadsOnDeath@NOHUSK:
 		Weapon: UnitExplodeAir
 		RequiresCondition: airborne && !global-husks
 	Repairable:
@@ -571,7 +571,7 @@
 ^Helicopter:
 	Inherits: ^Plane
 	Tooltip:
-		GenericName: Helicopter
+		GenericName: meta-helicopter-generic-name
 	Aircraft:
 		CanHover: True
 		CruisingCondition: cruising
@@ -613,12 +613,12 @@
 		DamagedSounds: kaboom1.aud
 		DestroyedSounds: kaboom22.aud
 	WithSpriteBody:
-	Explodes:
+	FireWarheadsOnDeath:
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
 	CaptureNotification:
-		TextNotification: Structure captured.
+		TextNotification: notification-structure-captured
 	ShakeOnDeath:
 	ProximityCaptor:
 		Types: Building
@@ -627,7 +627,7 @@
 	FrozenUnderFog:
 	FrozenUnderFogUpdatedByGps:
 	Tooltip:
-		GenericName: Structure
+		GenericName: meta-basicbuilding-generic-name
 	Demolishable:
 	MapEditorData:
 		Categories: Building
@@ -672,6 +672,8 @@
 
 ^Defense:
 	Inherits: ^Building
+	Selectable:
+		Bounds: 1024, 1024
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, Defense
 	MustBeDestroyed:
@@ -736,7 +738,7 @@
 	Armor:
 		Type: Wood
 	Tooltip:
-		Name: Civilian Building
+		Name: meta-techbuilding-name
 		GenericVisibility: None
 	FrozenUnderFog:
 	MapEditorData:
@@ -785,10 +787,10 @@
 	SelectionDecorations:
 	Health:
 		HP: 10
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplode
 	Tooltip:
-		Name: Ammo Box
+		Name: meta-ammobox-name
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, NoAutoTarget
 	Armor:
@@ -814,30 +816,49 @@
 	SpawnActorOnDeath@3:
 		Actor: c3
 		Probability: 15
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: CivBuildingExplosion
 
 ^CivField:
 	Inherits: ^CivBuilding
 	-HitShape:
 	-Health:
-	-Explodes:
+	-FireWarheadsOnDeath:
 	-Selectable:
 	-SelectionDecorations:
 	Tooltip:
-		Name: Field
+		Name: meta-civfield-name
 	-Targetable:
 	-Demolishable:
 	MapEditorData:
 		ExcludeTilesets: INTERIOR
 	Interactable:
 
+^CivHaystackOrIgloo:
+	Inherits: ^CivField
+	MapEditorData:
+		ExcludeTilesets: DESERT, INTERIOR
+	-Tooltip:
+	GrantConditionOnTileSet@WINTER:
+		Condition: winter
+		TileSets: SNOW
+	Tooltip@WINTER:
+		Name: meta-civhaystackorigloo.winter-name
+		RequiresCondition: winter
+		GenericVisibility: None
+		ShowOwnerRow: false
+	Tooltip@SUMMER:
+		Name: meta-civhaystackorigloo.summer-name
+		RequiresCondition: !winter
+		GenericVisibility: None
+		ShowOwnerRow: false
+
 ^Tree:
 	Inherits@1: ^SpriteActor
 	Inherits@shape: ^1x1Shape
 	Interactable:
 	Tooltip:
-		Name: Tree
+		Name: meta-tree-name
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: terrain
@@ -886,12 +907,22 @@
 		Dimensions: 1,1
 	WithSpriteBody:
 	Tooltip:
-		Name: Tree (Burnt)
+		Name: meta-treehusk-name
 		ShowOwnerRow: false
 	FrozenUnderFog:
 	ScriptTriggers:
 	MapEditorData:
 		Categories: Tree
+
+^Box:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: player
+	Tooltip:
+		Name: meta-box-name
+	MapEditorData:
+		-ExcludeTilesets:
+		Categories: Decoration
 
 ^BasicHusk:
 	Interactable:
@@ -926,7 +957,6 @@
 	CaptureManager:
 	Capturable:
 		Types: husk
-		ValidRelationships: Enemy, Neutral, Ally
 	TransformOnCapture:
 		ForceHealthPercentage: 15
 	WithColoredOverlay@IDISABLE:
@@ -936,7 +966,7 @@
 		RequiresForceFire: true
 	Chronoshiftable:
 	Tooltip:
-		GenericName: Destroyed Vehicle
+		GenericName: meta-husk-generic-name
 
 ^PlaneHusk:
 	Inherits: ^BasicHusk
@@ -945,7 +975,7 @@
 		Offset: 43, 128, 0
 		ZOffset: -129
 	Tooltip:
-		GenericName: Destroyed Plane
+		GenericName: meta-planehusk-generic-name
 	Aircraft:
 	FallsToEarth:
 		Moves: True
@@ -963,7 +993,7 @@
 		Offset: 43, 128, 0
 		ZOffset: -129
 	Tooltip:
-		GenericName: Destroyed Helicopter
+		GenericName: meta-helicopterhusk-generic-name
 	Aircraft:
 		CanHover: True
 		VTOL: true
@@ -978,7 +1008,7 @@
 	Inherits@shape: ^1x1Shape
 	AlwaysVisible:
 	Tooltip:
-		Name: Bridge
+		Name: meta-bridge-name
 		ShowOwnerRow: false
 	Targetable:
 		TargetTypes: Ground, Water, Bridge
@@ -1000,7 +1030,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Rock
+		Name: meta-rock-name
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: terrain
@@ -1029,8 +1059,8 @@
 	Interactable:
 	HiddenUnderFog:
 	Tooltip:
-		Name: Crate
-		GenericName: Crate
+		Name: meta-crate.name
+		GenericName: meta-crate.generic-name
 		ShowOwnerRow: false
 	Crate:
 		Duration: 4500
@@ -1063,7 +1093,7 @@
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Minelayer
+		Name: meta-minelayer-name
 	Health:
 		HP: 100
 	Armor:
@@ -1075,7 +1105,7 @@
 	AmmoPool:
 		Ammo: 5
 		RearmSound: minelay1.aud
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 	RenderSprites:
 		Image: MNLY
@@ -1101,11 +1131,11 @@
 	Cloak:
 		CloakSound:
 		UncloakSound:
-		Palette:
 		DetectionTypes: Mine
 		InitialDelay: 0
+		CloakStyle: None
 	Tooltip:
-		Name: Mine
+		Name: meta-mine-name
 	Targetable:
 		TargetTypes: Ground, Mine
 	Immobile:
@@ -1137,7 +1167,7 @@
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
-		SelectionTextNotification: Primary building selected.
+		SelectionTextNotification: notification-primary-building-selected
 	WithDecoration@primary:
 		RequiresCondition: primary
 		Position: Top

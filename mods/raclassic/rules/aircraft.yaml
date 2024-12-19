@@ -19,7 +19,7 @@ BADR:
 	SelectionDecorations:
 	-Voiced:
 	Tooltip:
-		Name: Badger
+		Name: actor-badr-name
 	SpawnActorOnDeath:
 		Actor: BADR.Husk
 	LeavesTrails@0:
@@ -71,7 +71,7 @@ BADR.Bomber:
 	SelectionDecorations:
 	-Voiced:
 	Tooltip:
-		Name: Badger
+		Name: actor-badr-name
 	SpawnActorOnDeath:
 		Actor: BADR.Husk
 	LeavesTrails@0:
@@ -114,11 +114,11 @@ MIG:
 		BuildDuration: 1200
 		BuildPaletteOrder: 50
 		Prerequisites: ~afld, ~techlevel.7
-		Description: Fast Ground-Attack Plane.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry, Light armor, Aircraft
+		Description: actor-mig.description
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: MiG
+		Name: actor-mig.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -186,11 +186,11 @@ YAK:
 		BuildDuration: 800
 		BuildPaletteOrder: 30
 		Prerequisites: ~afld, ~techlevel.3
-		Description: Anti-Tanks & Anti-Infantry Plane.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Description: actor-yak.description
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Yak
+		Name: actor-yak.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -262,11 +262,11 @@ TRAN:
 		BuildDuration: 1200
 		BuildPaletteOrder: 10
 		Prerequisites: ~hpad, ~techlevel.8
-		Description: Fast Infantry Transport Helicopter.\n  Unarmed
+		Description: actor-tran.description
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Chinook
+		Name: actor-tran.name
 	Health:
 		HP: 90
 	Armor:
@@ -316,11 +316,11 @@ HELI:
 		BuildDuration: 1200
 		BuildPaletteOrder: 40
 		Prerequisites: ~hpad, ~heli.allies, ~techlevel.6
-		Description: Helicopter gunship armed\nwith multi-purpose missiles.\n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: actor-heli.description
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Longbow
+		Name: actor-heli.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -397,11 +397,11 @@ HIND:
 		BuildDuration: 1200
 		BuildPaletteOrder: 20
 		Prerequisites: ~hpad, ~heli.soviet, ~techlevel.6
-		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor.\n  Weak vs Tanks, Aircraft
+		Description: actor-hind.description
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Hind
+		Name: actor-hind.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -471,7 +471,7 @@ U2:
 	Health:
 		HP: 2000
 	Tooltip:
-		Name: Spy Plane
+		Name: actor-u2-name
 	Armor:
 		Type: Heavy
 	Aircraft:
