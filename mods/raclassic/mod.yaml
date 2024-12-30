@@ -8,7 +8,7 @@ Metadata:
 PackageFormats: Mix
 
 FileSystem: ContentInstallerFileSystem
-    Packages:
+	SystemPackages:
 		^EngineDir
 		$raclassic: raclassic
 		^EngineDir|mods/common: common
