@@ -445,6 +445,14 @@ BR1:
 	FreeActor:
 		Actor: bridgehut
 		SpawnOffset: 2,0
+		RequiresCondition: !desert-bridge
+	FreeActor@DESERT:
+		Actor: bridgehut
+		SpawnOffset: 2,-1
+		RequiresCondition: desert-bridge
+	GrantConditionOnTileSet@DESERT:
+		Condition: desert-bridge
+		TileSets: DESERT
 	ShakeOnDeath:
 		Duration: 15
 		Intensity: 6
@@ -459,6 +467,14 @@ BR2:
 	FreeActor:
 		Actor: bridgehut
 		SpawnOffset: 1,1
+		RequiresCondition: !desert-bridge
+	FreeActor@DESERT:
+		Actor: bridgehut
+		SpawnOffset: 0,1
+		RequiresCondition: desert-bridge
+	GrantConditionOnTileSet@DESERT:
+		Condition: desert-bridge
+		TileSets: DESERT
 	ShakeOnDeath:
 		Duration: 15
 		Intensity: 6

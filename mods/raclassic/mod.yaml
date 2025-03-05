@@ -1,6 +1,6 @@
 Metadata:
 	Title: mod-title
-	Version: release-20241116
+	Version: release-20250303
 	Website: https://www.openra.net
 	WebIcon32: https://raw.githubusercontent.com/OpenRA/ra-classic/mods/raclassic/icon.png
 	WindowTitle: mod-windowtitle
@@ -67,7 +67,7 @@ FileSystem: ContentInstallerFileSystem
 
 MapFolders:
 	raclassic|maps: System
-	~^SupportDir|maps/ra/release-20241116: User
+	~^SupportDir|maps/ra/release-20250303: User
 
 Rules:
 	raclassic|rules/misc.yaml
@@ -173,6 +173,7 @@ FluentMessages:
 	common|fluent/rules.ftl
 	ra|fluent/chrome.ftl
 	ra|fluent/hotkeys.ftl
+	ra|fluent/rules.ftl
 	raclassic|fluent/raclassic.ftl
 	raclassic|fluent/rules.ftl
 
