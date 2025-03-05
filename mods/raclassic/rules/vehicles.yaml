@@ -584,7 +584,7 @@ TRUK:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: actor-truk-name
+		Name: actor-truk.name
 	Selectable:
 		Priority: 6
 	Health:
