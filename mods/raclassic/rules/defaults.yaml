@@ -572,7 +572,7 @@
 	#	EjectInAir: true
 	#	AllowUnsuitableCell: true
 	Tooltip:
-		GenericName: meta-plane-generic-name
+		GenericName: meta-neutralplane-generic-name
 	WithShadow:
 		Offset: 43, 128, 0
 		ZOffset: -129

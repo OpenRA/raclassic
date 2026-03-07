@@ -460,15 +460,15 @@ Player:
 			ca: 10
 			pt: 10
 			mnly.ap: 2
-			mnly.at: 2
+			mnly.av: 2
 		UnitLimits:
 			dog: 4
 			harv: 8
 			mnly.ap: 2
-			mnly.at: 2
+			mnly.av: 2
 	MinelayerBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
-		MinelayingActorTypes: mnly.ap, mnly.at
+		MinelayingActorTypes: mnly.ap, mnly.av
 		IgnoredEnemyTargetTypes: Structure, Defense, AirborneActor
 		UseEnemyLocationTargetTypes: Structure, Defense, AirborneActor
 		AwayFromAlliedTargetTypes: Structure, Defense

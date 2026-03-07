@@ -1,7 +1,6 @@
 General:
 	Name: tileset-desert
 	Id: DESERT
-	PlayerPalette: temperat.pal
 	EditorTemplateOrder: Terrain, Debris, Road, Cliffs, Water Cliffs, Beach, River, Bridge
 	HeightDebugColors: 880000
 
@@ -15,10 +14,6 @@ Terrain:
 		TargetTypes: Ground, Bridge
 		AcceptsSmudgeType: Crater, Scorch
 		Color: 606060
-	TerrainType@Brush:
-		Type: Brush
-		TargetTypes: Ground
-		Color: 1C2024
 	TerrainType@Clear:
 		Type: Clear
 		TargetTypes: Ground
@@ -4629,4 +4624,3 @@ MultiBrushCollections:
 			Weight: 100
 	CivilianBuildings:
 		FromActors@1: v20,v21,v22,v23,v24,v25,v26,v27,v28,v29,v30,v31,v32,v33,v34,v35,v36
-

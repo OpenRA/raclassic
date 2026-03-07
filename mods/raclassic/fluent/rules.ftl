@@ -180,6 +180,7 @@ actor-heli =
 
 ## civilian.yaml
 actor-oilb-name = Oil Derrick
+actor-miss-name = Technology center
 actor-bio-name = Bio-research laboratory
 actor-fcom-name = Forward Command
 actor-hosp-name = Hospital
@@ -246,14 +247,14 @@ actor-minp-name = Anti-Pensonnel Mine
 actor-minv-name = Anti-Tank Mine
 
 actor-powerproxy-parabombs =
-    .airstrikepower-name = Parabombs
-    .airstrikepower-description =
+    .name = Parabombs
+    .description =
     A Badger drops parachuted bombs
     over a selected location.
 
 actor-powerproxy-abomb =
-    .nukepower-name = Atom Bomb
-    .nukepower-description = Launches a devastating atomic bomb
+    .name = Atom Bomb
+    .description = Launches a devastating atomic bomb
     at the target location.
 
 ## ships.yaml

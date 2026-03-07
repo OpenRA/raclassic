@@ -917,7 +917,6 @@ STNK:
 		CloakDelay: 250
 		CloakSound: appear1.aud
 		UncloakSound: appear1.aud
-		CloakedCondition: cloaked
 		PauseOnCondition: cloak-force-disabled
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled

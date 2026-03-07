@@ -375,9 +375,9 @@ powerproxy.parabombs:
 	AirstrikePower:
 		OrderName: Parabombs
 		Icon: parabombs
-		Name: actor-powerproxy-parabombs.airstrikepower-name
+		Name: actor-powerproxy-parabombs.name
+		Description: actor-powerproxy-parabombs.description
 		ChargeInterval: 21000
-		Description: actor-powerproxy-parabombs.airstrikepower-description
 		OneShot: true
 		AllowMultiple: true
 		UnitType: badr.bomber
@@ -394,9 +394,9 @@ powerproxy.parabombs:
 	AirstrikePower@directional:
 		OrderName: Parabombs
 		Icon: parabombs
-		Name: actor-powerproxy-parabombs.airstrikepower-name
+		Name: actor-powerproxy-parabombs.name
+		Description: actor-powerproxy-parabombs.description
 		ChargeInterval: 21000
-		Description: actor-powerproxy-parabombs.airstrikepower-description
 		OneShot: true
 		AllowMultiple: true
 		UnitType: badr.bomber
@@ -419,8 +419,8 @@ powerproxy.parabombs:
 powerproxy.sonarpulse:
 	SpawnActorPower:
 		Icon: sonar
-		Name: actor-powerproxy-sonarpulse.spawnactorpower-name
-		Description: actor-powerproxy-sonarpulse.spawnactorpower-description
+		Name: actor-powerproxy-sonarpulse.name
+		Description: actor-powerproxy-sonarpulse.description
 		ChargeInterval: 750
 		EndChargeSpeechNotification: SonarPulseReady
 		EndChargeTextNotification: notification-sonar-pulse-ready
@@ -437,8 +437,8 @@ powerproxy.sonarpulse:
 powerproxy.sonarpulse.crate:
 	SpawnActorPower:
 		Icon: sonar
-		Name: actor-powerproxy-sonarpulse.spawnactorpower-name
-		Description: actor-powerproxy-sonarpulse.spawnactorpower-description
+		Name: actor-powerproxy-sonarpulse.name
+		Description: actor-powerproxy-sonarpulse.description
 		ChargeInterval: 750
 		OneShot: true
 		AllowMultiple: true
@@ -460,8 +460,8 @@ powerproxy.abomb:
 		ChargeInterval: 19500
 		FlightDelay: 100
 		FlightVelocity: 1c0
-		Name: actor-powerproxy-abomb.nukepower-name
-		Description: actor-powerproxy-abomb.nukepower-description
+		Name: actor-powerproxy-abomb.name
+		Description: actor-powerproxy-abomb.description
 		OneShot: true
 		AllowMultiple: true
 		BeginChargeSpeechNotification: AbombPrepping
@@ -487,8 +487,8 @@ powerproxy.abomb:
 powerproxy.paratroopers:
 	ParatroopersPower:
 		Icon: paratroopers
-		Name: actor-powerproxy-paratroopers.paratrooperspower-name
-		Description: actor-powerproxy-paratroopers.paratrooperspower-description
+		Name: actor-powerproxy-paratroopers.name
+		Description: actor-powerproxy-paratroopers.description
 		SelectTargetTextNotification: notification-select-target
 		DropItems: E1,E1,E1,E3,E3
 		SelectTargetSpeechNotification: SelectTarget
