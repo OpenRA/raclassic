@@ -15,6 +15,7 @@ World:
 	LuaScript:
 		Scripts: shellmap.lua
 	-StartGameNotification:
+	CameraOvalMover:
 
 ^Palettes:
 	-MenuPostProcessEffect:

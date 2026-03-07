@@ -38,7 +38,7 @@ end
 
 SetupDefensiveUnits = function()
 	Utils.Do(Map.NamedActors, function(a)
-		if (a.Owner == greece or a.Owner == ussr) and a.HasProperty("AcceptsCondition") and a.AcceptsCondition("unkillable") then
+		if (a.Owner == Greece or a.Owner == USSR) and a.HasProperty("AcceptsCondition") and a.AcceptsCondition("unkillable") then
 			a.GrantCondition("unkillable")
 			a.Stance = "Defend"
 		end
@@ -53,20 +53,9 @@ SetupFactories = function()
 	ANavalYard1.RallyPoint = ANavalYard1Rally.Location
 end
 
-ticks = 0
-speed = 5
-
-Tick = function()
-	ticks = ticks + 1
-
-	local t = (ticks + 45) % (360 * speed) * (math.pi / 180) / speed;
-	Camera.Position = viewportOrigin + WVec.New(19200 * math.sin(t), 20480 * math.cos(t), 0)
-end
-
 WorldLoaded = function()
-	greece = Player.GetPlayer("Greece")
-	ussr = Player.GetPlayer("USSR")
-	viewportOrigin = Camera.Position
+	Greece = Player.GetPlayer("Greece")
+	USSR = Player.GetPlayer("USSR")
 
 	SetupDefensiveUnits()
 	SetupFactories()
