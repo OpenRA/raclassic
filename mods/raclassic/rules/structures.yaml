@@ -125,6 +125,12 @@ SPEN:
 		Types: SpyInfiltrate
 		Proxy: powerproxy.sonarpulse
 		PlayerExperience: 10
+	InfiltrateForClassicProductionIconDecoration:
+		Types: SpyInfiltrate
+		Queue: Ship
+		ProductionTypes: Submarine
+		Position: Center
+		RequiresSelection: true
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -214,6 +220,12 @@ SYRD:
 		Types: SpyInfiltrate
 		Proxy: powerproxy.sonarpulse
 		PlayerExperience: 10
+	InfiltrateForClassicProductionIconDecoration:
+		Types: SpyInfiltrate
+		Queue: Ship
+		ProductionTypes: Boat
+		Position: Center
+		RequiresSelection: true
 	Buildable:
 		Queue: Building
 		BuildDuration: 650
@@ -1046,6 +1058,12 @@ WEAP:
 		RequiresCondition: stickytech
 	Targetable:
 		TargetTypes: GroundActor, C4, DetonateAttack, Structure, SpyInfiltrate
+	InfiltrateForClassicProductionIconDecoration:
+		Types: SpyInfiltrate
+		PlayerExperience: 10
+		Queue: Vehicle
+		Position: Center
+		RequiresSelection: true
 	RenderSprites:
 		Image: WEAP
 
@@ -1108,6 +1126,14 @@ FACT:
 		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
+	Targetable:
+		TargetTypes: GroundActor, C4, DetonateAttack, Structure, SpyInfiltrate
+	InfiltrateForClassicProductionIconDecoration:
+		Types: SpyInfiltrate
+		PlayerExperience: 10
+		Queue: Building
+		Position: Center
+		RequiresSelection: true
 	Selectable:
 		Class: FACT
 	RenderSprites:
@@ -1165,6 +1191,12 @@ PROC:
 		ShowTicks: false
 		InfiltratedNotification: CreditsStolen
 		InfiltratedTextNotification: notification-credits-stolen
+	InfiltrateForResourceTextDecoration:
+		Types: SpyInfiltrate
+		PlayerExperience: 10
+		Position: BottomLeft
+		Margin: 2, 3
+		RequiresSelection: true
 	WithIdleOverlay@TOP:
 		Sequence: idle-top
 		RequiresCondition: !build-incomplete
@@ -1206,6 +1238,12 @@ PROC:
 		RequiresSelection: true
 		PipCount: 17
 		FullSequence: pip-yellow
+	InfiltrateForResourceStoragePipsDecoration:
+		Types: SpyInfiltrate
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 17
+		FullSequence: pip-yellow
 
 SILO:
 	Inherits: ^Building
@@ -1240,6 +1278,12 @@ SILO:
 		ShowTicks: false
 		InfiltratedNotification: CreditsStolen
 		InfiltratedTextNotification: notification-credits-stolen
+	InfiltrateForResourceTextDecoration:
+		Types: SpyInfiltrate
+		PlayerExperience: 10
+		Position: BottomLeft
+		Margin: 2, 3
+		RequiresSelection: true
 	-SpawnActorsOnSell:
 	Power:
 		Amount: -10
@@ -1248,6 +1292,12 @@ SILO:
 	RenderSprites:
 		Image: SILO
 	WithResourceStoragePipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 5
+		FullSequence: pip-yellow
+	InfiltrateForResourceStoragePipsDecoration:
+		Types: SpyInfiltrate
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 5
@@ -1343,6 +1393,15 @@ HPAD:
 		Prerequisite: hpad
 	WithResupplyAnimation:
 		RequiresCondition: !build-incomplete
+	Targetable:
+		TargetTypes: GroundActor, C4, DetonateAttack, Structure, SpyInfiltrate
+	InfiltrateForClassicProductionIconDecoration:
+		Types: SpyInfiltrate
+		PlayerExperience: 10
+		Queue: Aircraft
+		ProductionTypes: Helicopter
+		Position: Center
+		RequiresSelection: true
 	Selectable:
 		Class: HPAD
 	RenderSprites:
@@ -1493,6 +1552,15 @@ AFLD:
 		Prerequisite: afld
 	WithResupplyAnimation:
 		RequiresCondition: !build-incomplete
+	Targetable:
+		TargetTypes: GroundActor, C4, DetonateAttack, Structure, SpyInfiltrate
+	InfiltrateForClassicProductionIconDecoration:
+		Types: SpyInfiltrate
+		PlayerExperience: 10
+		Queue: Aircraft
+		ProductionTypes: Plane
+		Position: Center
+		RequiresSelection: true
 	Selectable:
 		Class: AFLD
 	RenderSprites:
@@ -1546,6 +1614,12 @@ POWR:
 		RequiresCondition: stickytech
 	Targetable:
 		TargetTypes: GroundActor, Structure, C4, DetonateAttack, SpyInfiltrate
+	InfiltrateForPowerTextDecoration:
+		Types: SpyInfiltrate
+		PlayerExperience: 10
+		Position: BottomLeft
+		Margin: 2, 2
+		RequiresSelection: true
 	ScalePowerWithHealth:
 	Selectable:
 		Class: POWR
@@ -1604,6 +1678,12 @@ APWR:
 		RequiresCondition: stickytech
 	Targetable:
 		TargetTypes: GroundActor, Structure, C4, DetonateAttack, SpyInfiltrate
+	InfiltrateForPowerTextDecoration:
+		Types: SpyInfiltrate
+		PlayerExperience: 10
+		Position: BottomLeft
+		Margin: 2, 2
+		RequiresSelection: true
 	ScalePowerWithHealth:
 	RenderSprites:
 		Image: APWR
@@ -1757,6 +1837,15 @@ BARR:
 	FreeActor@1:
 		Actor: building-barr
 		RequiresCondition: stickytech
+	Targetable:
+		TargetTypes: GroundActor, C4, DetonateAttack, Structure, SpyInfiltrate
+	InfiltrateForClassicProductionIconDecoration:
+		Types: SpyInfiltrate
+		PlayerExperience: 10
+		Queue: Infantry
+		ProductionTypes: Soldier
+		Position: Center
+		RequiresSelection: true
 	Selectable:
 		Class: BARR
 	RenderSprites:
@@ -1898,6 +1987,15 @@ TENT:
 	FreeActor@2:
 		Actor: vehicle-tent
 		RequiresCondition: stickytech
+	Targetable:
+		TargetTypes: GroundActor, C4, DetonateAttack, Structure, SpyInfiltrate
+	InfiltrateForClassicProductionIconDecoration:
+		Types: SpyInfiltrate
+		PlayerExperience: 10
+		Queue: Infantry
+		ProductionTypes: Soldier
+		Position: Center
+		RequiresSelection: true
 	Selectable:
 		Class: TENT
 	RenderSprites:
