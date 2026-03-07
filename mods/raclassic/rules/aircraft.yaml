@@ -16,7 +16,6 @@ BADR:
 	Cargo:
 		MaxWeight: 10
 	-Selectable:
-	SelectionDecorations:
 	-Voiced:
 	Tooltip:
 		Name: actor-badr-name
@@ -68,7 +67,6 @@ BADR.Bomber:
 		Ammo: 7
 		AmmoCondition: ammo
 	-Selectable:
-	SelectionDecorations:
 	-Voiced:
 	Tooltip:
 		Name: actor-badr-name
@@ -152,7 +150,6 @@ MIG:
 		Class: MIG
 		Bounds: 1536, 1194, 0, 85
 		DecorationBounds: 1706, 1237, 0, 42
-	SelectionDecorations:
 	SpawnActorOnDeath:
 		Actor: MIG.Husk
 	LeavesTrails:
@@ -227,7 +224,6 @@ YAK:
 		Ammo: 15
 		ReloadDelay: 60
 		AmmoCondition: ammo
-	SelectionDecorations:
 	WithMuzzleOverlay:
 	SpawnActorOnDeath:
 		Actor: YAK.Husk
@@ -300,7 +296,6 @@ TRAN:
 		MaxWeight: 5
 	SpawnActorOnDeath:
 		Actor: TRAN.Husk
-	SelectionDecorations:
 	Selectable:
 		Class: TRAN
 		DecorationBounds: 1706, 1536
@@ -360,7 +355,6 @@ HELI:
 		Ammo: 6
 		ReloadDelay: 60
 		AmmoCondition: ammo
-	SelectionDecorations:
 	SpawnActorOnDeath:
 		Actor: HELI.Husk
 	LeavesTrails:
@@ -440,7 +434,6 @@ HIND:
 		Ammo: 12
 		ReloadDelay: 60
 		AmmoCondition: ammo
-	SelectionDecorations:
 	WithMuzzleOverlay:
 	SpawnActorOnDeath:
 		Actor: HIND.Husk
@@ -483,7 +476,6 @@ U2:
 	AttackBomber:
 		FacingTolerance: 8
 	-Selectable:
-	SelectionDecorations:
 	-Voiced:
 	-Targetable@AIRBORNE:
 	Contrail@1:

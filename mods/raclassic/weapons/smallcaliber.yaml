@@ -4,12 +4,12 @@ ZSU-23:
 	ReloadDelay: 10
 	Range: 6c0
 	Report: aacanon3.aud
-	ValidTargets: Air
+	ValidTargets: AirborneActor
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
 		Damage: 25
-		ValidTargets: Air
+		ValidTargets: AirborneActor
 		Versus:
 			None: 30
 			Wood: 75
@@ -24,10 +24,12 @@ ZSU-23:
 	ReloadDelay: 30
 	Range: 5c0
 	Report: gun13.aud
+	ValidTargets: Ground, Water, GroundActor, WaterActor
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 40
+		ValidTargets: GroundActor, WaterActor
 		Versus:
 			None: 100
 			Wood: 50
@@ -37,11 +39,11 @@ ZSU-23:
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
-		ValidTargets: Ground, Ship, Air, Trees
+		ValidTargets: Ground, GroundActor, Air, AirborneActor, WaterActor, Trees
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piffs
 		ValidTargets: Water, Underwater
-		InvalidTargets: Ship, Structure, Bridge
+		InvalidTargets: Bridge
 
 Vulcan:
 	Inherits: ^MachineGun
@@ -114,8 +116,7 @@ Colt45:
 	ReloadDelay: 5
 	Range: 5c768
 	Report: gun5.aud
-	ValidTargets: Ground, Infantry
-	InvalidTargets: Vehicle, Water, Structure, Wall, Husk
+	ValidTargets: Ground, Infantry, Barrel
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
@@ -129,7 +130,7 @@ Colt45:
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
-		ValidTargets: Ground, Ship, Air, Trees
+		ValidTargets: Ground, GroundActor, Air, AirborneActor, WaterActor, Trees
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ValidTargets: Water, Underwater

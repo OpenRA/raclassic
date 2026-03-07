@@ -23,7 +23,14 @@ Player:
 	GrantConditionOnBotOwner@naval:
 		Condition: enable-naval-ai
 		Bots: naval
-	SupportPowerBotModule@common:
+	ResourceMapBotModule:
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai
+		ResourceCreatorTypes: mine, gmine
+		ValuableResourceTypes: Ore, Gems
+		HarvesterTypes: harv
+		RefineryTypes: proc
+		EnemyBaseBuildingTypes: pbox, gun, ftur, tsla, agun, barr, tent, weap, afld, hpad, fact, powr, apwr, proc, powr.greece, apwr.greece, gun.mission, tsla.mission
+	SupportPowerBotModule:
 		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai || enable-naval-ai
 		Decisions:
 			spyplane:
@@ -122,25 +129,22 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
-	HarvesterBotModule@common:
-		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai || enable-naval-ai
+	HarvesterBotModule@rush-naval:
+		RequiresCondition: enable-rush-ai || enable-naval-ai
 		HarvesterTypes: harv
 		RefineryTypes: proc
-	BuildingRepairBotModule@common:
-		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai || enable-naval-ai
-	McvManagerBotModule@common:
-		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai || enable-naval-ai
-		McvTypes: mcv
-		ConstructionYardTypes: fact
-		McvFactoryTypes: weap
+		InitialHarvesters: 2
+	HarvesterBotModule@normal-turtle:
+		RequiresCondition: enable-normal-ai || enable-turtle-ai
+		HarvesterTypes: harv
+		RefineryTypes: proc
+		InitialHarvesters: 4
 	BaseBuilderBotModule@rush:
 		RequiresCondition: enable-rush-ai
 		MinimumExcessPower: 40
 		ConstructionYardTypes: fact
 		RefineryTypes: proc
 		PowerTypes: powr, powr.greece, apwr, apwr.greece
-		BarracksTypes: barr, tent
-		VehiclesFactoryTypes: weap
 		ProductionTypes: barr, tent, weap
 		SiloTypes: silo
 		BuildingLimits:
@@ -178,47 +182,12 @@ Player:
 			powr.greece: 15
 			apwr.greece: 20
 		DefenseTypes: tsla, agun, pbox, hbox, gun, ftur, sam, gun.mission, tsla.mission
-	SquadManagerBotModule@rush:
-		RequiresCondition: enable-rush-ai
-		SquadSize: 20
-		ExcludeFromSquadsTypes: harv, mcv
-		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
-		ConstructionYardTypes: fact
-		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
-		ProtectionTypes: harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
-	UnitBuilderBotModule@rush:
-		RequiresCondition: enable-rush-ai
-		UnitsToBuild:
-			e1: 65
-			e2: 25
-			e3: 40
-			e4: 15
-			dog: 15
-			shok: 15
-			e7: 1
-			volk: 1
-			harv: 10
-			apc: 30
-			jeep: 40
-			arty: 15
-			v2rl: 40
-			1tnk: 70
-			2tnk: 25
-			3tnk: 50
-			4tnk: 10
-			ttnk: 10
-			stnk: 5
-		UnitLimits:
-			dog: 4
-			harv: 8
 	BaseBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		MinimumExcessPower: 60
 		ConstructionYardTypes: fact
 		RefineryTypes: proc
 		PowerTypes: powr, powr.greece, apwr, apwr.greece
-		BarracksTypes: barr, tent
-		VehiclesFactoryTypes: weap
 		ProductionTypes: barr, tent, weap
 		NavalProductionTypes: spen, syrd
 		SiloTypes: silo
@@ -266,55 +235,12 @@ Player:
 			powr.greece: 1
 			apwr.greece: 30
 		DefenseTypes: tsla, agun, pbox, hbox, gun, ftur, sam, gun.mission, tsla.mission
-	SquadManagerBotModule@normal:
-		RequiresCondition: enable-normal-ai
-		SquadSize: 40
-		ExcludeFromSquadsTypes: harv, mcv
-		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
-		ConstructionYardTypes: fact
-		NavalProductionTypes: spen, syrd
-		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
-		ProtectionTypes: harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
-	UnitBuilderBotModule@normal:
-		RequiresCondition: enable-normal-ai
-		UnitsToBuild:
-			e1: 65
-			e2: 25
-			e3: 40
-			e4: 15
-			dog: 15
-			shok: 15
-			harv: 10
-			apc: 30
-			jeep: 40
-			arty: 15
-			v2rl: 40
-			1tnk: 70
-			2tnk: 25
-			3tnk: 50
-			4tnk: 15
-			ttnk: 15
-			stnk: 10
-			heli: 30
-			hind: 30
-			mig: 30
-			yak: 30
-			ss: 10
-			msub: 10
-			dd: 10
-			ca: 10
-			pt: 10
-		UnitLimits:
-			dog: 4
-			harv: 8
 	BaseBuilderBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
 		MinimumExcessPower: 100
 		ConstructionYardTypes: fact
 		RefineryTypes: proc
 		PowerTypes: powr, powr.greece, apwr, apwr.greece
-		BarracksTypes: barr, tent
-		VehiclesFactoryTypes: weap
 		ProductionTypes: barr, tent, weap
 		NavalProductionTypes: spen, syrd
 		SiloTypes: silo
@@ -361,54 +287,11 @@ Player:
 			powr.greece: 1
 			apwr.greece: 20
 		DefenseTypes: tsla, agun, pbox, hbox, gun, ftur, sam, gun.mission, tsla.mission
-	SquadManagerBotModule@turtle:
-		RequiresCondition: enable-turtle-ai
-		SquadSize: 10
-		ExcludeFromSquadsTypes: harv, mcv
-		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
-		ConstructionYardTypes: fact
-		NavalProductionTypes: spen, syrd
-		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
-		ProtectionTypes: harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
-	UnitBuilderBotModule@turtle:
-		RequiresCondition: enable-turtle-ai
-		UnitsToBuild:
-			e1: 65
-			e2: 25
-			e3: 40
-			e4: 15
-			dog: 15
-			shok: 15
-			harv: 10
-			apc: 30
-			jeep: 40
-			arty: 15
-			v2rl: 40
-			1tnk: 70
-			2tnk: 25
-			3tnk: 50
-			4tnk: 20
-			ttnk: 20
-			stnk: 15
-			heli: 30
-			hind: 30
-			mig: 30
-			yak: 30
-			ss: 10
-			msub: 10
-			dd: 10
-			ca: 10
-			pt: 10
-		UnitLimits:
-			dog: 4
-			harv: 8
 	BaseBuilderBotModule@naval:
 		RequiresCondition: enable-naval-ai
 		ConstructionYardTypes: fact
 		RefineryTypes: proc, proc.russia, proc.turkey
 		PowerTypes: powr, powr.russia, powr.greece, powr.turkey, apwr, apwr.russia, apwr.greece, apwr.turkey
-		BarracksTypes: barr, barr.russia, barr.turkey, tent.russia, tent.turkey
-		VehiclesFactoryTypes: weap, weap.russia, weap.turkey
 		ProductionTypes: barr, barr.russia, barr.turkey, tent.russia, tent.turkey, weap, weap.russia, weap.turkey, afld, afld.russia, afld.turkey, hpad, hpad.russia, hpad.turkey
 		NavalProductionTypes: spen, spen.russia, spen.turkey, syrd, syrd.russia, syrd.turkey
 		SiloTypes: silo, silo.russia, silo.turkey
@@ -450,19 +333,164 @@ Player:
 			powr.greece: 1
 			apwr.greece: 24
 		DefenseTypes: tsla, agun, pbox, hbox, gun, ftur, sam, gun.mission, tsla.mission
-	SquadManagerBotModule@naval:
-		RequiresCondition: enable-naval-ai
-		SquadSize: 1
-		ExcludeFromSquadsTypes: harv, mcv
+	BuildingRepairBotModule@common:
+		RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai || enable-naval-ai
+	SquadManagerBotModule@rush:
+		RequiresCondition: enable-rush-ai
+		SquadSize: 20
+		ExcludeFromSquadsTypes: harv, mcv, dog, badr.bomber, u2
+		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
+		ConstructionYardTypes: fact
+		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
+		AircraftTargetType: AirborneActor
+		ProtectionTypes: harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
+		IgnoredEnemyTargetTypes: AirborneActor
+	UnitBuilderBotModule@rush:
+		RequiresCondition: enable-rush-ai
+		UnitsToBuild:
+			e1: 65
+			e2: 25
+			e3: 40
+			e4: 15
+			dog: 15
+			shok: 15
+			e7: 1
+			volk: 1
+			harv: 10
+			apc: 30
+			jeep: 40
+			arty: 15
+			v2rl: 40
+			1tnk: 70
+			2tnk: 25
+			3tnk: 50
+			4tnk: 10
+			ttnk: 10
+			stnk: 5
+		UnitLimits:
+			dog: 4
+			harv: 8
+	SquadManagerBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		SquadSize: 40
+		ExcludeFromSquadsTypes: harv, mcv, dog, badr.bomber, u2
 		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
 		ConstructionYardTypes: fact
 		NavalProductionTypes: spen, syrd
 		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
+		AircraftTargetType: AirborneActor
 		ProtectionTypes: harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
+		IgnoredEnemyTargetTypes: AirborneActor
+		ProtectUnitScanRadius: 15
+		ProtectionScanRadius: 12
+	UnitBuilderBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		UnitsToBuild:
+			e1: 65
+			e2: 25
+			e3: 40
+			e4: 15
+			dog: 15
+			shok: 15
+			harv: 10
+			apc: 30
+			jeep: 40
+			arty: 15
+			v2rl: 40
+			1tnk: 70
+			2tnk: 25
+			3tnk: 50
+			4tnk: 15
+			ttnk: 15
+			stnk: 10
+			heli: 30
+			hind: 30
+			mig: 30
+			yak: 30
+			ss: 10
+			msub: 10
+			dd: 10
+			ca: 10
+			pt: 10
+		UnitLimits:
+			dog: 4
+			harv: 8
+	SquadManagerBotModule@turtle:
+		RequiresCondition: enable-turtle-ai
+		SquadSize: 10
+		ExcludeFromSquadsTypes: harv, mcv, dog, badr.bomber, u2
+		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
+		ConstructionYardTypes: fact
+		NavalProductionTypes: spen, syrd
+		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
+		AircraftTargetType: AirborneActor
+		ProtectionTypes: harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
+		IgnoredEnemyTargetTypes: AirborneActor
+		RushInterval: 100000
+		MinimumAttackForceDelay: 100000
+		ProtectUnitScanRadius: 30
+		ProtectionScanRadius: 15
+	UnitBuilderBotModule@turtle:
+		RequiresCondition: enable-turtle-ai
+		UnitsToBuild:
+			e1: 65
+			e2: 25
+			e3: 40
+			e4: 15
+			dog: 15
+			shok: 15
+			harv: 10
+			apc: 30
+			jeep: 40
+			arty: 15
+			v2rl: 40
+			1tnk: 70
+			2tnk: 25
+			3tnk: 50
+			4tnk: 20
+			ttnk: 20
+			stnk: 15
+			heli: 30
+			hind: 30
+			mig: 30
+			yak: 30
+			ss: 10
+			msub: 10
+			dd: 10
+			ca: 10
+			pt: 10
+			mnly.ap: 2
+			mnly.at: 2
+		UnitLimits:
+			dog: 4
+			harv: 8
+			mnly.ap: 2
+			mnly.at: 2
+	MinelayerBotModule@turtle:
+		RequiresCondition: enable-turtle-ai
+		MinelayingActorTypes: mnly.ap, mnly.at
+		IgnoredEnemyTargetTypes: Structure, Defense, AirborneActor
+		UseEnemyLocationTargetTypes: Structure, Defense, AirborneActor
+		AwayFromAlliedTargetTypes: Structure, Defense
+		AwayFromEnemyTargetTypes: Structure, Defense
+	SquadManagerBotModule@naval:
+		RequiresCondition: enable-naval-ai
+		SquadSize: 1
+		ExcludeFromSquadsTypes: harv, mcv, dog, badr.bomber, u2
+		NavalUnitsTypes: ss, msub, dd, ca, lst, pt
+		ConstructionYardTypes: fact
+		NavalProductionTypes: spen, syrd
+		AirUnitsTypes: badr.bomber, mig, yak, heli, hind, u2
+		AircraftTargetType: AirborneActor
+		ProtectionTypes: harv, mcv, mslo, gap, spen, syrd, iron, pdox, tsla, agun, dome, pbox, hbox, gun, ftur, sam, atek, weap, fact, proc, silo, hpad, afld, powr, apwr, stek, barr, kenn, tent, fix, syrf, spef, weaf, domf, facf, powr.greece, apwr.greece, gun.mission, tsla.mission, gap.mission
+		IgnoredEnemyTargetTypes: AirborneActor
 	UnitBuilderBotModule@naval:
 		RequiresCondition: enable-naval-ai
 		UnitsToBuild:
 			harv: 1
+			arty: 40
+			v2rl: 40
+			jeep: 40
 			heli: 30
 			hind: 30
 			mig: 30
@@ -474,3 +502,32 @@ Player:
 			pt: 10
 		UnitLimits:
 			harv: 8
+			arty: 1
+			v2rl: 1
+			jeep: 1
+	McvManagerBotModule@naval:
+		RequiresCondition: enable-naval-ai
+		McvTypes: mcv
+		ConstructionYardTypes: fact
+		McvFactoryTypes: weap
+	McvExpansionManagerBotModule@rush:
+		RequiresCondition: enable-rush-ai
+		McvTypes: mcv
+		ConstructionYardTypes: fact
+		McvFactoryTypes: weap
+		MoveOldConyardFirst: true
+		MinimumConstructionYardCount: 2
+	McvExpansionManagerBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		McvTypes: mcv
+		ConstructionYardTypes: fact
+		McvFactoryTypes: weap
+		MinimumConstructionYardCount: 2
+	McvExpansionManagerBotModule@turtle:
+		RequiresCondition: enable-turtle-ai
+		McvTypes: mcv
+		ConstructionYardTypes: fact
+		McvFactoryTypes: weap
+		MoveOldConyardFirst: false
+		MoveConyardTick: 8000
+		MinimumConstructionYardCount: 2

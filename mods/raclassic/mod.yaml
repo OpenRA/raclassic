@@ -1,6 +1,6 @@
 Metadata:
 	Title: mod-title
-	Version: release-20250303
+	Version: playtest-20260222
 	Website: https://www.openra.net
 	WebIcon32: https://raw.githubusercontent.com/OpenRA/ra-classic/mods/raclassic/icon.png
 	WindowTitle: mod-windowtitle
@@ -67,7 +67,7 @@ FileSystem: ContentInstallerFileSystem
 
 MapFolders:
 	raclassic|maps: System
-	~^SupportDir|maps/ra/release-20250303: User
+	~^SupportDir|maps/ra/playtest-20260222: User
 
 Rules:
 	raclassic|rules/misc.yaml
@@ -85,6 +85,7 @@ Rules:
 	raclassic|rules/aircraft.yaml
 	raclassic|rules/ships.yaml
 	raclassic|rules/fakes.yaml
+	raclassic|rules/map-generators.yaml
 	raclassic|rules/duplicates.yaml
 
 Sequences:
@@ -214,9 +215,9 @@ LoadScreen: LogoStripeLoadScreen
 
 ServerTraits:
 	LobbyCommands
+	SkirmishLogic
 	PlayerPinger
 	MasterServerPinger
-	LobbySettingsNotification
 
 ChromeMetrics:
 	common|metrics.yaml

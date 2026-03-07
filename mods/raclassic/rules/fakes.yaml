@@ -14,7 +14,7 @@ SYRF:
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Targetable:
-		TargetTypes: Ground, Water, Structure, SpyInfiltrate
+		TargetTypes: WaterActor, Structure, SpyInfiltrate
 	Building:
 		Footprint: XXX xxx XXX
 		Dimensions: 3,3
@@ -42,7 +42,7 @@ SPEF:
 	Inherits: ^FakeBuilding
 	Inherits@infiltrate: ^InfiltratableFake
 	Targetable:
-		TargetTypes: Ground, Water, Structure, SpyInfiltrate
+		TargetTypes: WaterActor, Structure, SpyInfiltrate
 	Buildable:
 		Queue: Building
 		BuildDuration: 50

@@ -98,11 +98,11 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Infantry, Vehicle, Ship, Water, Underwater, Defense
-		InvalidTargets: NoAutoTarget, WaterStructure, Spy
+		ValidTargets: Infantry, Vehicle, Ship, Underwater, Defense, Mine
+		InvalidTargets: NoAutoTarget, Spy
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Vehicle, Ship, Water, Underwater, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Ship, Underwater, Structure, Defense, Mine
 		InvalidTargets: NoAutoTarget, Spy
 
 ^AutoTargetGroundAssaultMove:
@@ -117,7 +117,7 @@
 ^AutoTargetAir:
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Air
+		ValidTargets: AirborneActor
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetAll:
@@ -125,11 +125,11 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Infantry, Vehicle, Ship, Water, Underwater, Air, Defense
-		InvalidTargets: NoAutoTarget, WaterStructure, Spy
+		ValidTargets: Infantry, Vehicle, Ship, Underwater, AirborneActor, Defense, Mine
+		InvalidTargets: NoAutoTarget, Spy
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Vehicle, Ship, Water, Underwater, Air, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Ship, Underwater, AirborneActor, Structure, Defense, Mine
 		InvalidTargets: NoAutoTarget, Spy
 
 ^AutoTargetAllAssaultMove:
@@ -194,7 +194,7 @@
 		Bounds: 1024, 1024
 	Targetable:
 		RequiresCondition: !parachute
-		TargetTypes: Ground, Vehicle, DetonateAttack
+		TargetTypes: GroundActor, Vehicle
 	Targetable@REPAIR:
 		RequiresCondition: !parachute && damaged
 		TargetTypes: Repair
@@ -224,6 +224,9 @@
 	ProximityCaptor:
 		Types: Vehicle
 	WithDamageOverlay:
+		StartSequence: idle
+		LoopCount: 1
+		EndSequence: end
 	Guard:
 	Guardable:
 	Tooltip:
@@ -295,7 +298,7 @@
 	Selectable:
 		Bounds: 512, 768, 0, -341
 	Targetable:
-		TargetTypes: Ground, Infantry, DetonateAttack
+		TargetTypes: GroundActor, Infantry, DetonateAttack
 		RequiresCondition: !parachute
 	Targetable@HEAL:
 		TargetTypes: Heal
@@ -447,7 +450,7 @@
 	Selectable:
 		Bounds: 1024, 1024
 	Targetable:
-		TargetTypes: Ground, Water, Ship, DetonateAttack
+		TargetTypes: WaterActor, Ship, DetonateAttack
 	Targetable@REPAIR:
 		TargetTypes: Repair
 		RequiresCondition: damaged
@@ -465,6 +468,9 @@
 	RepairableNear:
 		RepairActors: syrd, spen
 	WithDamageOverlay:
+		StartSequence: idle
+		LoopCount: 1
+		EndSequence: end
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeShip
 		EmptyWeapon: UnitExplodeShip
@@ -480,6 +486,28 @@
 		VoiceSet: VehicleVoice
 	WithFacingSpriteBody:
 	HitShape:
+
+^Submarine:
+	Inherits: ^Ship
+	Targetable:
+		TargetTypes: WaterActor, Ship, Submarine, Repair
+		RequiresCondition: !underwater
+	Targetable@UNDERWATER:
+		TargetTypes: Underwater, Submarine
+		RequiresCondition: underwater
+	Cloak:
+		DetectionTypes: Underwater
+		InitialDelay: 0
+		CloakDelay: 100
+		CloakStyle: Color
+		CloakSound: subshow1.aud
+		UncloakSound: subshow1.aud
+		CloakedCondition: underwater
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	-MustBeDestroyed:
 
 ^Plane:
 	Inherits@1: ^ExistsInWorld
@@ -504,10 +532,10 @@
 		TakeOffOnCreation: false
 		AirborneCondition: airborne
 	Targetable@GROUND:
-		TargetTypes: Ground, Vehicle, DetonateAttack
+		TargetTypes: GroundActor, Vehicle
 		RequiresCondition: !airborne
 	Targetable@AIRBORNE:
-		TargetTypes: Air
+		TargetTypes: AirborneActor
 		RequiresCondition: airborne
 	Targetable@REPAIR:
 		TargetTypes: Repair
@@ -598,7 +626,7 @@
 	Selectable:
 		Priority: 3
 	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
+		TargetTypes: GroundActor, C4, DetonateAttack, Structure
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -675,7 +703,7 @@
 	Selectable:
 		Bounds: 1024, 1024
 	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, Defense
+		TargetTypes: GroundActor, C4, DetonateAttack, Structure, Defense
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	DrawLineToTarget:
@@ -715,7 +743,7 @@
 	LineBuildNode:
 		Types: wall
 	Targetable:
-		TargetTypes: Ground, DetonateAttack, Wall, NoAutoTarget
+		TargetTypes: GroundActor, DetonateAttack, Wall, NoAutoTarget
 	RenderSprites:
 		Palette: effect
 	WithWallSpriteBody:
@@ -773,13 +801,13 @@
 
 ^InfiltratableFake:
 	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: GroundActor, Structure, C4, DetonateAttack, SpyInfiltrate
 	InfiltrateForDecoration:
 		Types: SpyInfiltrate
+		Position: Tops
 		RequiresSelection: true
 		Image: pips
 		Sequence: tag-fake
-		Position: Top
 
 ^AmmoBox:
 	Inherits: ^TechBuilding
@@ -792,7 +820,7 @@
 	Tooltip:
 		Name: meta-ammobox-name
 	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, NoAutoTarget
+		TargetTypes: GroundActor, C4, DetonateAttack, Structure, NoAutoTarget
 	Armor:
 		Type: Light
 	MapEditorData:
@@ -880,16 +908,25 @@
 		Image: burn-s
 		MinimumDamageState: Light
 		MaximumDamageState: Medium
+		StartSequence: idle
+		LoopCount: 1
+		EndSequence: end
 	WithDamageOverlay@MediumBurn:
 		DamageTypes: Incendiary
 		Image: burn-m
 		MinimumDamageState: Medium
 		MaximumDamageState: Heavy
+		StartSequence: idle
+		LoopCount: 1
+		EndSequence: end
 	WithDamageOverlay@LargeBurn:
 		DamageTypes: Incendiary
 		Image: burn-l
 		MinimumDamageState: Heavy
 		MaximumDamageState: Dead
+		StartSequence: idle
+		LoopCount: 1
+		EndSequence: end
 	HiddenUnderShroud:
 	ScriptTriggers:
 	MapEditorData:
@@ -962,7 +999,7 @@
 	WithColoredOverlay@IDISABLE:
 		Color: 000000B4
 	Targetable:
-		TargetTypes: Ground, Husk, NoAutoTarget
+		TargetTypes: GroundActor, Husk, NoAutoTarget
 		RequiresForceFire: true
 	Chronoshiftable:
 	Tooltip:
@@ -1006,12 +1043,11 @@
 
 ^Bridge:
 	Inherits@shape: ^1x1Shape
-	AlwaysVisible:
 	Tooltip:
 		Name: meta-bridge-name
 		ShowOwnerRow: false
 	Targetable:
-		TargetTypes: Ground, Water, Bridge
+		TargetTypes: GroundActor, WaterActor, Bridge
 		RequiresForceFire: true
 	Building:
 		Footprint: ____ ____
@@ -1025,6 +1061,16 @@
 		QuantizedFacings: 1
 	Interactable:
 		Bounds: 4096, 2048
+
+^ExplosiveBridge:
+	ExplosionOnDamageTransition@DAMAGED:
+		DamageState: Heavy
+		Weapon: BridgeExplode
+	ExplosionOnDamageTransition@COLLAPSED:
+		DamageState: Dead
+		Weapon: BridgeExplode
+	SoundOnDamageTransition:
+		DestroyedSounds: crmble2.aud
 
 ^Rock:
 	Inherits@1: ^SpriteActor
@@ -1137,7 +1183,7 @@
 	Tooltip:
 		Name: meta-mine-name
 	Targetable:
-		TargetTypes: Ground, Mine
+		TargetTypes: GroundActor, Mine
 	Immobile:
 		OccupiesSpace: true
 	HitShape:

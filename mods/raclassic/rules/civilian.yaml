@@ -52,7 +52,7 @@ TECN_YELLOW:
 	Inherits@1: ^CivInfantry
 	Inherits@2: ^ArmedCivilian
 	Tooltip:
-		Name: actor-tecn-yellow-name
+		Name: actor-tecn2-name
 	Selectable:
 		Class: C7
 	RenderSprites:
@@ -272,7 +272,7 @@ V19:
 	SpawnActorOnDeath:
 		Actor: V19.Husk
 	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, NoAutoTarget
+		TargetTypes: GroundActor, C4, DetonateAttack, Structure, NoAutoTarget
 
 V19.Husk:
 	Inherits: ^CivBuilding
@@ -308,7 +308,7 @@ BARL:
 	Armor:
 		Type: None
 	Targetable:
-		TargetTypes: Ground, DemoTruck, Barrel, NoAutoTarget
+		TargetTypes: GroundActor, DemoTruck, Barrel, NoAutoTarget
 	-ShakeOnDeath:
 	-SoundOnDamageTransition:
 	-Demolishable:
@@ -331,7 +331,7 @@ BRL3:
 	Armor:
 		Type: None
 	Targetable:
-		TargetTypes: Ground, DemoTruck, Barrel, NoAutoTarget
+		TargetTypes: GroundActor, DemoTruck, Barrel, NoAutoTarget
 	-ShakeOnDeath:
 	-SoundOnDamageTransition:
 	-Demolishable:
@@ -437,6 +437,7 @@ OILB:
 
 BR1:
 	Inherits: ^Bridge
+	Inherits@EXPLOSIVE: ^ExplosiveBridge
 	Bridge:
 		Template: 235
 		DamagedTemplate: 236
@@ -459,6 +460,7 @@ BR1:
 
 BR2:
 	Inherits: ^Bridge
+	Inherits@EXPLOSIVE: ^ExplosiveBridge
 	Bridge:
 		Template: 238
 		DamagedTemplate: 239
@@ -481,6 +483,7 @@ BR2:
 
 BR3:
 	Inherits: ^Bridge
+	Inherits@EXPLOSIVE: ^ExplosiveBridge
 	Bridge:
 		Long: true
 		ShorePieces: br1,br2
@@ -498,6 +501,7 @@ BR3:
 
 BRIDGE1:
 	Inherits: ^Bridge
+	Inherits@EXPLOSIVE: ^ExplosiveBridge
 	Bridge:
 		Template: 131
 		DamagedTemplate: 378
@@ -521,6 +525,7 @@ BRIDGE1:
 
 BRIDGE2:
 	Inherits: ^Bridge
+	Inherits@EXPLOSIVE: ^ExplosiveBridge
 	Bridge:
 		Template: 133
 		DamagedTemplate: 379
@@ -544,6 +549,7 @@ BRIDGE2:
 
 SBRIDGE1:
 	Inherits: ^Bridge
+	Inherits@EXPLOSIVE: ^ExplosiveBridge
 	Bridge:
 		Template: 520
 		DamagedTemplate: 521
@@ -567,6 +573,7 @@ SBRIDGE1:
 
 SBRIDGE2:
 	Inherits: ^Bridge
+	Inherits@EXPLOSIVE: ^ExplosiveBridge
 	Bridge:
 		Template: 531
 		DamagedTemplate: 532
@@ -590,6 +597,7 @@ SBRIDGE2:
 
 SBRIDGE3:
 	Inherits: ^Bridge
+	Inherits@EXPLOSIVE: ^ExplosiveBridge
 	Bridge:
 		Template: 523
 		DamagedTemplate: 524
@@ -606,6 +614,7 @@ SBRIDGE3:
 
 SBRIDGE4:
 	Inherits: ^Bridge
+	Inherits@EXPLOSIVE: ^ExplosiveBridge
 	Bridge:
 		Template: 527
 		DamagedTemplate: 528
@@ -621,7 +630,6 @@ SBRIDGE4:
 		Intensity: 6
 
 BRIDGEHUT:
-	AlwaysVisible:
 	Building:
 		Footprint: __ __
 		Dimensions: 2,2
@@ -635,7 +643,6 @@ BRIDGEHUT:
 		AreaTypes: building
 
 BRIDGEHUT.small:
-	AlwaysVisible:
 	Building:
 		Footprint: _
 		Dimensions: 1,1

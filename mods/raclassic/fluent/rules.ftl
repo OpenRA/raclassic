@@ -60,6 +60,8 @@ checkbox-enable-volkov =
     .description = Replaces Tanya with Volkov for Soviets, Visual Only
 
 ## world.yaml
+notification-game-saved = Game saved.
+
 options-starting-units =
     .zero = 0
     .one = 1

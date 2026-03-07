@@ -300,7 +300,7 @@ SPY:
 		Notification: BuildingInfiltrated
 	WithInfantryBody:
 	Targetable:
-		TargetTypes: Ground, Infantry, Spy
+		TargetTypes: GroundActor, Infantry, DetonateAttack, Spy
 	Voiced:
 		VoiceSet: SpyVoice
 	RenderSprites:
@@ -657,7 +657,7 @@ ANT:
 	Armament:
 		Weapon: mandible
 	Targetable:
-		TargetTypes: Ground, Infantry, Ant
+		TargetTypes: GroundActor, Infantry, Ant
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 	Voiced:

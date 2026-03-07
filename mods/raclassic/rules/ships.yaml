@@ -1,5 +1,5 @@
 SS:
-	Inherits: ^Ship
+	Inherits: ^Submarine
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	RangeMultiplier@Spain:
 		RequiresCondition: spain
@@ -26,23 +26,6 @@ SS:
 		Speed: 60
 	RevealsShroud:
 		Range: 6c0
-	Targetable:
-		TargetTypes: Ground, Water, Ship, Submarine, Repair
-		RequiresCondition: !underwater
-	Targetable@UNDERWATER:
-		TargetTypes: Underwater, Submarine, Repair
-		RequiresCondition: underwater
-	Cloak:
-		DetectionTypes: Underwater
-		InitialDelay: 0
-		CloakDelay: 50
-		CloakSound: subshow1.aud
-		UncloakSound: subshow1.aud
-		CloakedCondition: underwater
-		PauseOnCondition: cloak-force-disabled
-	GrantConditionOnDamageState@UNCLOAK:
-		Condition: cloak-force-disabled
-		ValidDamageStates: Critical
 	Armament:
 		Weapon: TorpTube
 		LocalOffset: 0,-171,0, 0,171,0
@@ -64,7 +47,6 @@ SS:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSubmarine
 		EmptyWeapon: UnitExplodeSubmarine
-	-MustBeDestroyed:
 	Selectable:
 		Class: SS
 		DecorationBounds: 1621, 1621
@@ -72,7 +54,7 @@ SS:
 		Image: SS
 
 MSUB:
-	Inherits: ^Ship
+	Inherits: ^Submarine
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Ship
@@ -96,23 +78,6 @@ MSUB:
 		Speed: 50
 	RevealsShroud:
 		Range: 6c0
-	Targetable:
-		TargetTypes: Ground, Water, Ship, Submarine, Repair
-		RequiresCondition: !underwater
-	Targetable@UNDERWATER:
-		TargetTypes: Underwater, Submarine, Repair
-		RequiresCondition: underwater
-	Cloak:
-		DetectionTypes: Underwater
-		InitialDelay: 0
-		CloakDelay: 100
-		CloakSound: subshow1.aud
-		UncloakSound: subshow1.aud
-		CloakedCondition: underwater
-		PauseOnCondition: cloak-force-disabled
-	GrantConditionOnDamageState@UNCLOAK:
-		Condition: cloak-force-disabled
-		ValidDamageStates: Critical
 	Armament:
 		Weapon: SubSCUD
 		LocalOffset: 0,-171,0, 0,171,0
@@ -136,7 +101,6 @@ MSUB:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSubmarine
 		EmptyWeapon: UnitExplodeSubmarine
-	-MustBeDestroyed:
 	Selectable:
 		Class: MSUB
 		DecorationBounds: 1877, 1877

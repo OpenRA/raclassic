@@ -2,6 +2,7 @@ ParaBomb:
 	ReloadDelay: 10
 	Range: 4c512
 	Report: chute1.aud
+	ValidTargets: Ground, Water, GroundActor, WaterActor
 	Projectile: GravityBomb
 		Image: PARABOMB
 		OpenSequence: open
@@ -11,6 +12,7 @@ ParaBomb:
 	Warhead@1Dam: SpreadDamage
 		Spread: 768
 		Damage: 300
+		ValidTargets: GroundActor, WaterActor
 		Versus:
 			None: 90
 			Wood: 75
@@ -20,24 +22,23 @@ ParaBomb:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
-		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees
+		ValidTargets: Ground, Infantry
 	Warhead@3Eff: CreateEffect
 		Explosions: building
 		ImpactSounds: kaboom15.aud
-		ValidTargets: Ground, Ship, Trees
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
 	Warhead@4EffWater: CreateEffect
 		Explosions: small_splash
 		ImpactSounds: splash9.aud
 		ValidTargets: Water, Underwater
-		InvalidTargets: Ship, Structure
 
 Atomic:
-	ValidTargets: Ground, Trees, Water, Underwater
+	ValidTargets: Ground, Water, GroundActor, WaterActor, Underwater, AirborneActor, Trees
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 2c512
 		Damage: 1000
 		Falloff: 100, 100, 0
-		ValidTargets: Ground, Trees, Water, Underwater
+		ValidTargets: GroundActor, WaterActor, Underwater, AirborneActor, Trees
 		Versus:
 			None: 90
 			Light: 60
@@ -48,7 +49,7 @@ Atomic:
 		Size: 4
 	Warhead@3Smu_impact: LeaveSmudge
 		SmudgeType: Scorch
-		InvalidTargets: Vehicle, Structure, Wall
+		ValidTargets: Ground, Infantry
 		Size: 4
 	Warhead@4Eff_impact: CreateEffect
 		Explosions: nuke

@@ -2,6 +2,7 @@
 	ReloadDelay: 50
 	Range: 4c768
 	Report: cannon1.aud
+	ValidTargets: Ground, Water, GroundActor, WaterActor
 	Projectile: Bullet
 		Speed: 600
 		Image: 120MM
@@ -9,6 +10,7 @@
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 30
+		ValidTargets: GroundActor, WaterActor
 		Versus:
 			None: 30
 			Wood: 75
@@ -18,16 +20,16 @@
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
-		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees
+		ValidTargets: Ground, Infantry
 	Warhead@3Eff: CreateEffect
 		Explosions: small_explosion
 		ImpactSounds: kaboom12.aud
-		ValidTargets: Ground, Ship, Trees
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
 	Warhead@4EffWater: CreateEffect
 		Explosions: small_splash
 		ImpactSounds: splash9.aud
 		ValidTargets: Water, Underwater
-		InvalidTargets: Ship, Structure, Bridge
+		InvalidTargets: Bridge
 
 75mm:
 	Inherits: ^Cannon
@@ -66,6 +68,7 @@
 	InvalidTargets: Air, Infantry
 	Warhead@1Dam: SpreadDamage
 		Damage: 40
+		InvalidTargets: Air
 
 120mm.spain:
 	Inherits: 120mm
@@ -146,7 +149,7 @@ TurretGun.mission:
 	ReloadDelay: 60
 	Range: 5c512
 	Report: cannon2.aud
-	InvalidTargets: Underwater
+	InvalidTargets: Submarine
 	Projectile: Bullet
 		Speed: 375
 	Warhead@1Dam: SpreadDamage
@@ -185,7 +188,7 @@ DepthCharge:
 	-Report:
 	ReloadDelay: 60
 	Range: 5c0
-	ValidTargets: Underwater
+	ValidTargets: Submarine
 	Projectile: Bullet
 		Speed: 75
 		Image: BOMB
@@ -201,14 +204,18 @@ DepthCharge:
 			Heavy: 100
 			Concrete: 50
 		DamageTypes: ExplosionDeath
-	Warhead@4EffWater: CreateEffect
-		Explosions: large_splash
-		ImpactSounds: h2obomb2.aud
-		ValidTargets: Water, Underwater
 	Warhead@3Eff: CreateEffect
-		Explosions: small_explosion
+		Explosions: med_explosion
 		ImpactSounds: kaboom15.aud
 		ValidTargets: Submarine
+		InvalidTargets: Underwater
+	Warhead@4EffWater: CreateEffect
+		Explosions: large_splash
+		ImpactSounds: splash9.aud
+		ValidTargets: Water, Underwater
+	Warhead@5EffSubmergedHitSound: CreateEffect
+		ImpactSounds: h2obomb2.aud
+		ValidTargets: Underwater
 
 DepthCharge.spain:
 	Inherits: DepthCharge

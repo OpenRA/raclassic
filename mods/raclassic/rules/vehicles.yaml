@@ -853,7 +853,7 @@ QTNK:
 		Range: 6c0
 	MadTank:
 	Targetable:
-		TargetTypes: Ground, MADTank, Repair, Vehicle
+		TargetTypes: GroundActor, MADTank, Vehicle
 	SpawnActorOnDeath:
 		Actor: QTNK.Husk
 		OwnerType: InternalName
@@ -885,11 +885,6 @@ STNK:
 		HP: 200
 	Armor:
 		Type: Heavy
-	Targetable:
-		RequiresCondition: !parachute && !cloaked
-	Targetable@CLOAKED:
-		TargetTypes: Ground, Vehicle
-		RequiresCondition: !parachute && cloaked
 	Mobile:
 		Speed: 100
 		PauseOnCondition: notmobile

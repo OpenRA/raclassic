@@ -136,7 +136,7 @@ SPEN:
 		Prerequisites: building-power, ~structures.soviet, ~techlevel.2
 		Description: actor-spen.description
 	Targetable:
-		TargetTypes: Ground, Water, Structure, WaterStructure, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: WaterActor, Structure, C4, DetonateAttack, SpyInfiltrate
 	Building:
 		Footprint: XXX xxx XXX
 		Dimensions: 3,3
@@ -225,7 +225,7 @@ SYRD:
 	Tooltip:
 		Name: actor-syrd.name
 	Targetable:
-		TargetTypes: Ground, Water, Structure, WaterStructure, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: WaterActor, Structure, C4, DetonateAttack, SpyInfiltrate
 	Building:
 		Footprint: XXX xxx XXX
 		Dimensions: 3,3
@@ -579,7 +579,7 @@ DOME:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: GroundActor, Structure, C4, DetonateAttack, SpyInfiltrate
 	Health:
 		HP: 1000
 	Armor:
@@ -1045,7 +1045,7 @@ WEAP:
 		Actor: building-weap
 		RequiresCondition: stickytech
 	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+		TargetTypes: GroundActor, C4, DetonateAttack, Structure, SpyInfiltrate
 	RenderSprites:
 		Image: WEAP
 
@@ -1135,7 +1135,7 @@ PROC:
 		DecorationBounds: 3072, 2986, 0, -85
 	SelectionDecorations:
 	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, ThiefInfiltrate
+		TargetTypes: GroundActor, Structure, C4, DetonateAttack, SpyInfiltrate, ThiefInfiltrate
 	Health:
 		HP: 900
 	Armor:
@@ -1220,7 +1220,7 @@ SILO:
 	Tooltip:
 		Name: actor-silo.name
 	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, ThiefInfiltrate
+		TargetTypes: GroundActor, Structure, C4, DetonateAttack, SpyInfiltrate, ThiefInfiltrate
 	Health:
 		HP: 300
 	Armor:
@@ -1545,7 +1545,7 @@ POWR:
 		Actor: building-power
 		RequiresCondition: stickytech
 	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: GroundActor, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
 	Selectable:
 		Class: POWR
@@ -1603,7 +1603,7 @@ APWR:
 		Actor: building-power
 		RequiresCondition: stickytech
 	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: GroundActor, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
 	RenderSprites:
 		Image: APWR
@@ -2109,19 +2109,16 @@ WOOD:
 		Type: woodfence
 
 BARRACKS:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-barracks-name
 
 TECHCENTER:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-techcenter-name
 
 ANYPOWER:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-anypower-name

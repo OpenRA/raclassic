@@ -125,7 +125,6 @@ function build_platform()
 	wine64 rcedit-x64.exe "${BUILTDIR}/${PACKAGING_WINDOWS_LAUNCHER_NAME}.exe" --set-version-string "CompanyName" "The OpenRA team"
 	wine64 rcedit-x64.exe "${BUILTDIR}/${PACKAGING_WINDOWS_LAUNCHER_NAME}.exe" --set-version-string "FileDescription" "${PACKAGING_WINDOWS_LAUNCHER_NAME} mod for OpenRA"
 	wine64 rcedit-x64.exe "${BUILTDIR}/${PACKAGING_WINDOWS_LAUNCHER_NAME}.exe" --set-version-string "LegalCopyright" "Copyright (c) The OpenRA Developers and Contributors"
-
 	wine64 rcedit-x64.exe "${BUILTDIR}/${PACKAGING_WINDOWS_LAUNCHER_NAME}.exe" --set-icon "${BUILTDIR}/${MOD_ID}.ico"
 
 	echo "Building Windows setup.exe (${PLATFORM})"
