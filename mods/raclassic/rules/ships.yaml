@@ -37,9 +37,10 @@ SS:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Water
+		ValidTargets: WaterActor, Underwater
+		InvalidTargets: NoAutoTarget, Structure
 	AutoTargetPriority@ATTACKANYTHING:
-		ValidTargets: Water
+		ValidTargets: WaterActor, Underwater
 	DetectCloaked:
 		DetectionTypes: Underwater
 		Range: 4c0

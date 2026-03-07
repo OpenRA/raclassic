@@ -489,7 +489,7 @@ MECH:
 		VoiceSet: MechanicVoice
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Vehicle
+		ValidTargets: Vehicle, Ship
 	RenderSprites:
 		Image: MECH
 

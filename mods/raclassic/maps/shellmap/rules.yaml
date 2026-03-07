@@ -21,12 +21,12 @@ World:
 
 ^AutoTargetGround:
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Vehicle, Water, Underwater, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Ship, Underwater, Structure, Defense
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetAll:
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Vehicle, Water, Underwater, Structure, Defense
+		ValidTargets: Infantry, Vehicle, Ship, Underwater, AirborneActor, Structure, Defense
 		InvalidTargets: NoAutoTarget
 
 ^Vehicle:
