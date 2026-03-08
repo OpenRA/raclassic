@@ -121,6 +121,13 @@ MIG:
 		AddToArmyValue: true
 	Health:
 		HP: 50
+	RevealsShroud: # Workaround for AI trying to attack but being unable to target things they can't see.
+		Range: 7c0
+		Type: GroundPosition
+		RequiresCondition: ai-owner
+	GrantConditionOnBotOwner@ai-owner:
+		Condition: ai-owner
+		Bots: rush, normal, turtle, naval
 	Armor:
 		Type: Light
 	Armament:
@@ -192,6 +199,13 @@ YAK:
 		AddToArmyValue: true
 	Health:
 		HP: 60
+	RevealsShroud: # Workaround for AI trying to attack but being unable to target things they can't see.
+		Range: 6c0
+		Type: GroundPosition
+		RequiresCondition: ai-owner
+	GrantConditionOnBotOwner@ai-owner:
+		Condition: ai-owner
+		Bots: rush, normal, turtle, naval
 	Armor:
 		Type: Light
 	Armament@PRIMARY:
@@ -320,6 +334,13 @@ HELI:
 		AddToArmyValue: true
 	Health:
 		HP: 225
+	RevealsShroud: # Workaround for AI trying to attack but being unable to target things they can't see.
+		Range: 5c0
+		Type: GroundPosition
+		RequiresCondition: ai-owner
+	GrantConditionOnBotOwner@ai-owner:
+		Condition: ai-owner
+		Bots: rush, normal, turtle, naval
 	Armor:
 		Type: Heavy
 	Armament:
@@ -400,6 +421,13 @@ HIND:
 		AddToArmyValue: true
 	Health:
 		HP: 225
+	RevealsShroud: # Workaround for AI trying to attack but being unable to target things they can't see.
+		Range: 6c0
+		Type: GroundPosition
+		RequiresCondition: ai-owner
+	GrantConditionOnBotOwner@ai-owner:
+		Condition: ai-owner
+		Bots: rush, normal, turtle, naval
 	Armor:
 		Type: Heavy
 	Armament@PRIMARY:
