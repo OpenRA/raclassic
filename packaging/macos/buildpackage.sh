@@ -133,8 +133,8 @@ clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher.m" -o "${LA
 lipo -create -output "${LAUNCHER_ASSEMBLY_DIR}/Launcher" "${LAUNCHER_ASSEMBLY_DIR}/Launcher-x86_64" "${LAUNCHER_ASSEMBLY_DIR}/Launcher-arm64"
 rm "${LAUNCHER_ASSEMBLY_DIR}/Launcher-x86_64" "${LAUNCHER_ASSEMBLY_DIR}/Launcher-arm64"
 
-install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}/x86_64" "osx-x64" "net6" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
-install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}/arm64" "osx-arm64" "net6" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
+install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}/x86_64" "osx-x64" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
+install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}/arm64" "osx-arm64" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
 install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_RESOURCES_DIR}"
 
 for f in ${PACKAGING_COPY_ENGINE_FILES}; do
@@ -143,8 +143,8 @@ for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 done
 
 echo "Building mod files"
-install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}/x86_64" "osx-x64" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
-install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}/arm64" "osx-arm64" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
+install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}/x86_64" "osx-x64" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
+install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}/arm64" "osx-arm64" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
 
 cp -LR "${TEMPLATE_ROOT}mods/"* "${LAUNCHER_RESOURCES_DIR}/mods"
 
