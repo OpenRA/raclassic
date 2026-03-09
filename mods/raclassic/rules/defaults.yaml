@@ -497,6 +497,7 @@
 		RequiresCondition: underwater
 	Cloak:
 		DetectionTypes: Underwater
+		UncloakOn: Attack
 		InitialDelay: 0
 		CloakDelay: 100
 		CloakStyle: Color
